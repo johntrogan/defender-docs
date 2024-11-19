@@ -65,6 +65,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ChangeSource` [*](#mdi-only)  | `string` |Identifies which identity provider or process triggered the addition of the new row. For example, the `System-UserPersistence` value is used for any rows added by an automated process.|
 | `Tags` [*](#mdi-only)  | `dynamic` | Tags assigned to the account user by Defender for Identity |
 | `AssignedRoles` [*](#mdi-only) | `dynamic` | For identities from Microsoft Entra-only, the roles assigned to the account user|
+| `PrivilegedEntraPimRoles` | `dynamic` | A snapshot of privileged role assignment schedules and eligibility schedules for the account as maintained by Microsoft Entra Privileged Identity Management (excluding activated assignments) |
 | `TenantId` | `string` | Unique identifier representing your organization's instance of Microsoft Entra ID |
 | `SourceSystem` [*](#mdi-only) | `string` | The source system for the record|
 
