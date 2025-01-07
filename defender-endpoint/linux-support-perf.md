@@ -268,12 +268,12 @@ Output on the console;
    6       /opt/microsoft/mdatp/sbin/wdavdaemonclient
    4       /usr/bin/sleep
    ```
-To improve this performance, locate the path with the highest number in `count` row and add a process exclusion (in case of executable) or a file/folder exclusion (in case of file) for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in `count` row and add a global process exclusion (in case of executable) or a global file/folder exclusion (in case of file) for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
 ## Troubleshoot performance issues using eBPF Statistics
 
 **Applies to:**
-- All file/ process events, specifically for syscall based performance issues.
+- All file/ process events, including for syscall based performance issues.
 
 eBPF (extended Berkeley Packet Filter) statistics command gives insights into the top event/process that's generating the most file events, along with their syscall ids.
 
@@ -305,7 +305,7 @@ To collect current statistics using eBPF statistics, run:
    41 : 15
    ```
 
-To improve this performance, locate the one with the highest `count` in the `Top initiator path` row and add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+To improve the performance of Defender for Endpoint on Linux, locate the one with the highest `count` in the `Top initiator path` row and add a global process exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
    
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
@@ -316,7 +316,7 @@ The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, 
 
 > [!NOTE]
 > - The Microsoft Defender for Endpoint Client Analyzer tool is regularly used by Microsoft Customer Support Services (CSS) to collect information such as (but not limited to) IP addresses, PC names that will help troubleshoot issues you may be experiencing with Microsoft Defender for Endpoint. For more information about our privacy statement, see [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
-> - As a general best practice, it is recommended to update the [Microsoft Defender for Endpoint agent to latest available version](mac-whatsnew.md) and confirming that the issue still persists before investigating further.
+> - As a general best practice, it is recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming that the issue still persists before investigating further.
 
 To run the client analyzer for troubleshooting performance issues, see [Run the client analyzer on macOS and Linux](run-analyzer-macos-linux.md).
 
