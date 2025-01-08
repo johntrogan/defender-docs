@@ -6,8 +6,8 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 10/17/2024
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.custom: 
 - nextgen
 - partner-contribution

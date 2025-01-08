@@ -30,6 +30,10 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## January 2025
+
+- **Defender Boxed** is available for a limited time in January and July of each year. This series of slides highlights your organization’s security successes, improvements, and response actions in the Microsoft Defender portal for the past six months/year. To learn how you can share your security operations team’s achievements, see [Defender Boxed](incident-queue.md#defender-boxed).
+
 ## December 2024
 
 - (GA) [Content distribution via tenant groups in multitenant management](mto-tenantgroups.md) is now generally available. Create tenant groups to manage content across tenants in multitenant management in Microsoft Defender XDR.
@@ -75,7 +79,6 @@ You can also get product updates and important notifications through the [messag
 - (Preview) Microsoft Sentinel data is now available with Defender XDR data in Microsoft Defender multitenant management. Only one Microsoft Sentinel workspace per tenant is currently supported in the Microsoft unified security operations platform. So, Microsoft Defender multitenant management shows security information and event management (SIEM) data from one Microsoft Sentinel workspace per tenant. For more information, see [Microsoft Defender multitenant management](mto-overview.md) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 - To ensure a smooth experience while navigating the Microsoft Defender portal, configure your network firewall by adding the appropriate addresses to your allow list. For more information, see [Network firewall configuration for Microsoft Defender XDR](m365d-enable.md#configure-your-network-firewall).
 
-
 ## July 2024
 
 - Incidents with alerts where a compromised device communicated with an operational technology (OT) device are now visible in the Microsoft Defender portal through the [Microsoft Defender for IoT license and Defender for Endpoint’s device discovery capabilities](/defender-endpoint/device-discovery#device-discovery-integration). Using Defender for Endpoint data, Defender XDR automatically correlates these new OT alerts to incidents to provide a comprehensive attack story. To filter related incidents, see [Prioritize incidents in the Microsoft Defender portal](incident-queue.md#filters-).  
@@ -100,8 +103,6 @@ You can also get product updates and important notifications through the [messag
 - (GA) The **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** table in advanced hunting is now generally available. Use this table to get information about [Safe Links](/defender-office-365/safe-links-about) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
 
 - (GA) You can now **release or move email messages from quarantine** back to the user's inbox directly from [Take actions in advanced hunting](advanced-hunting-take-action.md#take-various-actions-on-emails) and in [custom detections](custom-detection-rules.md#actions-on-emails). This allows security operators to manage false positives more efficiently and without losing context. 
-
-
 
 ## June 2024
 

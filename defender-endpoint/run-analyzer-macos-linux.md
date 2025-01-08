@@ -4,8 +4,9 @@ description: Learn how to run the Microsoft Defender for Endpoint Client Analyze
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
 ms.date: 01/05/2025
 manager: deniseb

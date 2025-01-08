@@ -934,6 +934,15 @@
               antivirus windows defender antivirus
           - name: Troubleshoot performance issues related to real-time protection
             href: troubleshoot-performance-issues.md
+          - name: Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
+            href: troubleshoot-av-performance-issues-with-wprui.md
+            displayName: Troubleshoot antivirus performance issues with WPRUI windows
+              performance recorder UI WPR windows performance recorder
+          - name: Troubleshoot Microsoft Defender Antivirus performance issues with Process
+              Monitor
+            href: troubleshoot-av-performance-issues-with-procmon.md
+            displayName: Troubleshoot Microsoft Defender Antivirus MDAV performance perf
+              issues with Process Monitor ProcMon
         - name: Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus
           href: troubleshoot-microsoft-defender-antivirus.yml
         - name: Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution
