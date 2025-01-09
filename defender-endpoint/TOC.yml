@@ -511,6 +511,8 @@
           href: troubleshoot-collect-support-log.md
         - name: Troubleshoot Microsoft Defender Antivirus settings
           href: troubleshoot-settings.md
+        - name: Troubleshoot Microsoft Defender Antivirus service startup problems
+          href: troubleshoot-service-startup-problems.md
         - name: Troubleshooting Security Intelligence Updates from Microsoft Update source
           href: security-intelligence-update-tshoot.md
           displayName: Troubleshooting Security Intelligence Updates from Microsoft Update source

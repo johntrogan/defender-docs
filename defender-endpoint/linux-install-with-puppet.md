@@ -64,9 +64,9 @@ Download the onboarding package from Microsoft Defender portal.
    inflating: mdatp_onboard.json
    ```
 
-## Create a directory
+## Create a directory structure
 
-You need to create a directory for deploying Defender for Endpoint on Linux to devices managed by a Puppet server. This example makes use of the `apt` and `yumrepo` modules available from `puppetlabs`, and assumes that the modules are installed on your Puppet server.
+You need to create a directory structure for deploying Defender for Endpoint on Linux to devices managed by a Puppet server. This example makes use of the `apt` and `yumrepo` modules available from `puppetlabs`, and assumes that the modules are installed on your Puppet server.
 
 1. Under the **modules** folder if your Puppet installation, create the folders `install_mdatp/files` and `install_mdatp/manifests`. The **modules** folder is typically located at `/etc/puppetlabs/code/environments/production/modules` on your Puppet server. 
 
@@ -94,7 +94,7 @@ You need to create a directory for deploying Defender for Endpoint on Linux to d
        └── init.pp
    ```
 
-## Create a Puppet manifest file
+## Create a Puppet manifest
 
 There are two ways to create a manifest file:
 
