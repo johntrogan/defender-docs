@@ -64,7 +64,7 @@ The choice of the channel determines the type and frequency of updates that are 
 In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
 > [!WARNING]
-> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
+> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location.
 
 ## Installer script
 
@@ -79,7 +79,7 @@ sudo yum install mdatp
 ```
 
 > [!NOTE]
-> If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you are using multiple Microsoft products on your device. Depending on the distribution and the version of your server, the repository alias might be different than the one in the following example.
+> If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you're using multiple Microsoft products on your device. Depending on the distribution and the version of your server, the repository alias might be different than the one in the following example.
 
 ```bash
 # list all repositories
@@ -105,7 +105,7 @@ sudo zypper install mdatp
 ```
 
 > [!NOTE]
-> If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you are using multiple Microsoft products on your device.
+> If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you're using multiple Microsoft products on your device.
 
 ```bash
 zypper repos
@@ -130,7 +130,7 @@ sudo apt-get install mdatp
 ```
 
 > [!NOTE]
-> If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you are using multiple Microsoft products on your device.
+> If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you're using multiple Microsoft products on your device.
 
 ```bash
 cat /etc/apt/sources.list.d/*
@@ -155,7 +155,7 @@ sudo dnf install mdatp
 ```
 
 > [!NOTE]
-> If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-slow` repository channel configured on this device. This situation can happen if you are using multiple Microsoft products on your device.
+> If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-slow` repository channel configured on this device. This situation can happen if you're using multiple Microsoft products on your device.
 
 ```bash
 sudo dnf config-manager --disable mariner-official-extras-preview
@@ -169,7 +169,7 @@ Download the onboarding package from Microsoft Defender portal.
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 > [!IMPORTANT]
-> If you miss this step, any command executed will show a warning message indicating that the product is unlicensed. Also the `mdatp health` command returns a value of `false`.
+> If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the `mdatp health` command returns a value of `false`.
 
 1. In the Microsoft Defender portal, go to **Settings > Endpoints > Device management > Onboarding**.
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Local Script** as the deployment method.
@@ -202,7 +202,7 @@ Download the onboarding package from Microsoft Defender portal.
 1. Copy MicrosoftDefenderATPOnboardingLinuxServer.py to the target device.
 
    > [!NOTE]
-   > Initially the client device is not associated with an organization and the *orgId* attribute is blank.
+   > Initially the client device isn't associated with an organization and the *orgId* attribute is blank.
 
    ```bash
    mdatp health --field org_id
@@ -241,7 +241,7 @@ Download the onboarding package from Microsoft Defender portal.
    ```
 
    > [!IMPORTANT]
-   > When the product starts for the first time, it downloads the latest antimalware definitions. This may take up to a few minutes depending on the network connectivity. During this time the above command returns a value of `false`. You can check the status of the definition update using the following command:
+   > When the product starts for the first time, it downloads the latest anti-malware definitions. This process may take up to a few minutes depending on the network connectivity. During this time the above command returns a value of `false`. You can check the status of the definition update using the following command:
    >
    > ```bash
    > mdatp health --field definitions_status
