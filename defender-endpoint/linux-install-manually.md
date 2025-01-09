@@ -241,11 +241,9 @@ Download the onboarding package from Microsoft Defender portal.
    ```
 
    > [!IMPORTANT]
-   > When the product starts for the first time, it downloads the latest anti-malware definitions. This process may take up to a few minutes depending on the network connectivity. During this time the above command returns a value of `false`. You can check the status of the definition update using the following command:
+   > When the product starts for the first time, it downloads the latest anti-malware definitions. This process may take up to a few minutes depending on the network connectivity. During this time, the command mentioned earlier returns a value of `false`. You can check the status of the definition update using the following command:
    >
-   > ```bash
-   > mdatp health --field definitions_status
-   > ```
+   > `mdatp health --field definitions_status`
    >
    > Please note that you may also need to configure a proxy after completing the initial installation. See [Configure Defender for Endpoint on Linux for static proxy discovery: Post-installation configuration](linux-static-proxy-configuration.md#post-installation-configuration).
 
