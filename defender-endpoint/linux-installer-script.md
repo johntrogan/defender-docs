@@ -18,7 +18,7 @@ search.appverid: met150
 ms.date: 01/08/2025
 ---
 
-# Deploy Microsoft Defender for Endpoint on Linux manually
+# Use the installer script to deploy Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
