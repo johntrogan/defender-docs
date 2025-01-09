@@ -29,9 +29,9 @@
         - name: Defender for Office 365
           href: microsoft-365-security-center-mdo.md
         - name: Defender for Identity
-          href: microsoft-365-security-center-mdi.md
+          href: /defender-for-identity/microsoft-365-security-center-mdi.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
         - name: Defender for Cloud Apps
-          href: microsoft-365-security-center-defender-cloud-apps.md
+          href: /defender-cloud-apps/microsoft-365-security-center-defender-cloud-apps.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
         - name: Defender for Cloud
           href: microsoft-365-security-center-defender-cloud.md
         - name: Microsoft Sentinel
@@ -667,8 +667,6 @@
           href: virus-initiative-criteria.md
         - name: Software developer FAQ
           href: developer-faq.yml
-    - name: Microsoft Sentinel docs
-      href: /azure/sentinel
     - name: Microsoft Defender XDR docs
       items:
        - name: Defender for Office 365
