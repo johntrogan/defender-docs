@@ -57,7 +57,16 @@ Link incidents to a case from the case or from the incident.
 
 ## Tasks
 
+Tasks have the following statuses available
 
+- New
+- In progress
+- Failed
+- Partially completed
+- Skipped
+- Completed
+
+:::image type="content" source="media/cases-overview/add-task.png" alt-text="Screenshot showing the add task pane with tasks populated for the case and 6 statuses available.":::
 
 ## Activity log
 
