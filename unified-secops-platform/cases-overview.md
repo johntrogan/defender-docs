@@ -25,13 +25,19 @@ The Case Management Starter Kit (CMSK) is the beginning of an end-to-end solutio
 
 The CMSK is available in the Defender portal for all Microsoft Sentinel customers that have onboarded to the unified SecOps platform. For more information on connecting a Microsoft Sentinel workspace, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 
+Bring the best processes from your non-Microsoft ticketing system to the CMSK. SecOps teams should consider these foundational features as they plan to make case maanagement fit their needs.
+
+- Define your own case workflow with custom status values
+- Decide how to assign tasks and configure due dates
+- Handle escalations and complex cases by linking multiple incidents to a case
+- Link an incident to multiple cases to spread the work out and track SLAs
+- Manage access to your cases using RBAC
+
 | Cases feature | Minimum permissions required |
 |---|---|
 | View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Microsoft Defender XDR Unified RBAC</br>Security operations > Security data basics (read)|
 | Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Microsoft Defender XDR Unified RBAC</br>Security operations > Alerts (manage)|
 | Customize case status options | Microsoft Defender XDR Unified RBAC</br>Authorization and setting > Core Security settings (manage)|
-
-Bring the best processes from your non-Microsoft ticketing system to the CMSK. SecOps teams 
 
 Here are some of the priorities that are important to us as we work towards a robust case management experience:
 
@@ -41,17 +47,35 @@ Here are some of the priorities that are important to us as we work towards a ro
 
 ## Case queue
 
-View and filter cases from **Cases** in the Defender portal.
+View and filter cases by selecting **Cases** in the Defender portal.
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
-Each case on the page
+Each case has a page showing the following:
+
+| Case feature | Options | Default |
+|---|---|---|
+| Summary | Priority: Very low, Low, Medium, High, Critical | none |
+| Assigned to: | Tenant? | none |
+| Status: | [Customizable by admins](#customize-status) | **New**|
+| Description | Plain text | none |
+| Case details | Case ID | Case IDs start at 1000 and aren't deleted. Use custom statuses and filters to archive cases.|
+| | Created by</br>Created on</br>Last updated by</br>Last updated on | automatically set |
+| | Due on | none |
+| | Linked incidents | none |
+| [Activity log](#activity-log) | Add and edit comments | plain text |
+| | View audit events | events are added automatically |
+| [Tasks](#tasks) | Add, edit and delete tasks | none |
+
+In the following example, a threat hunter is investigating a new hypothetical "Burrowing Attack" that consists of multiple MITRE ATT&CK techniques and IoCs.
 
 :::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details.":::
 
 ## Customize status
 
 Architect case management to fit the needs of your security operations center (SOC). Customize the status options available to your analysts to fit the processes you have in place.
+
+Following the previous example, the SOC admins configured statuses enabling threat hunters to keep a backlog of threats for triage on a weekly basis. Custom statuses such as *Research phase* and *Generating hypothesis* match this threat hunting team's established process.
 
 :::image type="content" source="media/cases-overview/customize-status.png" alt-text="Screenshot showing default status options and customized statuses.":::
 
@@ -63,16 +87,8 @@ Link incidents to a case from the case or from the incident.
 
 ## Tasks
 
-Tasks have the following statuses available
-
-- New
-- In progress
-- Failed
-- Partially completed
-- Skipped
-- Completed
-
-:::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task-small.png":::
+:::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task.png":::
+*Image shows the following static statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
 
 ## Activity log
 
