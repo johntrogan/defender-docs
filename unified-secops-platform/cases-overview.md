@@ -19,7 +19,7 @@ ms.topic: conceptual
 
 # Manage cases natively in Microsoft's unified security operations (SecOps) platform
 
-The Case Management Starter Kit (CMSK) is the beginning of an end-to-end solution that provides seamless management of security alerts, incidents and investigations. This first step builds rich collaboration, customization, evidence collection, and reporting  within Microsoft's unified SecOps platform. SOC analysts maintain security context and work more efficiently when they manage ticketing and case work within the Defender portal.
+The Case Management Starter Kit (CMSK) is the beginning of an end-to-end solution that provides seamless management of security alerts, incidents, and investigations. This first step builds rich collaboration, customization, evidence collection, and reporting within Microsoft's unified SecOps platform. SOC analysts maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal.
 
 ## Plan for cases
 
@@ -31,7 +31,9 @@ The CMSK is available in the Defender portal for all Microsoft Sentinel customer
 | Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Microsoft Defender XDR Unified RBAC</br>Security operations > Alerts (manage)|
 | Customize case status options | Microsoft Defender XDR Unified RBAC</br>Authorization and setting > Core Security settings (manage)|
 
-Here are some of the priorities that are important to us as we continue to develop case management:
+Bring the best processes from your non-Microsoft ticketing system to the CMSK. SecOps teams 
+
+Here are some of the priorities that are important to us as we work towards a robust case management experience:
 
 - Automation
 - Rich text with images
@@ -39,9 +41,11 @@ Here are some of the priorities that are important to us as we continue to devel
 
 ## Case queue
 
-View and filter cases from 
+View and filter cases from **Cases** in the Defender portal.
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
+
+Each case on the page
 
 :::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details.":::
 
@@ -68,7 +72,7 @@ Tasks have the following statuses available
 - Skipped
 - Completed
 
-:::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the add task pane with tasks populated for the case and 6 statuses available." lightbox="media/cases-overview/add-task-small.png":::
+:::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task-small.png":::
 
 ## Activity log
 
@@ -77,5 +81,5 @@ Create comments and review the audit events in the activity log.
 ## Related content
 
 [Case Management Starter Kit blog announcement](https://techcommunity.microsoft.com/category/microsoft-sentinel/blog/MicrosoftSentinelBlog)
-[Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting.md)
+[Microsoft Defender Experts for Hunting](../defender-xdr/defender-experts-for-hunting.md)
 [Hunts for Microsoft Sentinel]
