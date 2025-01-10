@@ -254,6 +254,9 @@ Some incidents might have similar incidents listed on the **Similar incidents** 
 
 :::image type="content" source="/defender/media/investigate-incidents/incident-similartab-small.png" alt-text="Screenshot that shows the Similar incidents tab for an incident in the Microsoft Defender portal." lightbox="/defender/media/investigate-incidents/incident-similartab.png":::
 
+> [!TIP]
+> **Defender Boxed**, a series of cards showcasing your organization's security successes, improvements, and response actions in the past six months/year, appears for a limited time during January and July of each year. Learn how you can share your [Defender Boxed](incident-queue.md#defender-boxed) highlights.
+
 ## Next steps
 
 As needed:
