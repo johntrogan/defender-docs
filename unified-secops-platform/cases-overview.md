@@ -47,14 +47,14 @@ Here are some of the priorities that are important to us as we work towards a ro
 
 ## Case queue
 
-View and filter cases by selecting **Cases** in the Defender portal.
+View cases by selecting **Cases** in the Defender portal. Filter your cases view to fit what you need to focus on.
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
 Each case has a page which allows analysts to manage the case and displays the following features:
 
 | Displayed case feature | Manage case options | Default |
-|:---:|:---:|---|
+|:---|:---|:---|
 | Priority| Very low, Low, Medium, High, Critical | none |
 | [Status](#customize-status) | Set by analysts, customizable by admins | **New**|
 | Assigned to | A single user or group in the tenant | none |
