@@ -25,11 +25,11 @@ Collaborate and investigate in Microsoft's unified SecOps platform with builtin 
 
 The CSMK is available in the Defender portal for all Microsoft Sentinel customers that have onboarded to the unified SecOps platform. For more information on connecting a Microsoft Sentinel workspace, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 
-| **Cases feature** | **Minimum permissions required**<BR>in Microsoft Defender XDR Unified RBAC |
+| Cases feature | Minimum permissions required |
 |---|---|
-| View only case queue including case details, tasks, comments and case audits | **Security operations > Security data basics (read)** |
-| Create and Manage cases and case tasks including assign, update status,  and link and unlink incidents | **Security operations > Alerts (manage)** |
-| Customize case status options | **Authorization and setting** > **Core Security settings (manage)** |
+| View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Microsoft Defender XDR Unified RBAC</br>Security operations > Security data basics (read)|
+| Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Microsoft Defender XDR Unified RBAC</br>Security operations > Alerts (manage)|
+| Customize case status options | Microsoft Defender XDR Unified RBAC</br>Authorization and setting > Core Security settings (manage)|
 
 ## Case queue
 
