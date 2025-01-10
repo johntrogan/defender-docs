@@ -51,25 +51,25 @@ View and filter cases by selecting **Cases** in the Defender portal.
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
-Each case has a page showing the following:
+Each case has a page which allows analysts to manage the case and displays the following features:
 
-| Case feature | Options | Default |
-|---|---|---|
-| Summary | Priority: Very low, Low, Medium, High, Critical | none |
-| Assigned to: | Tenant? | none |
-| Status: | [Customizable by admins](#customize-status) | **New**|
+| Displayed case feature | Manage case options | Default |
+|:---:|:---:|---|
+| Priority| Very low, Low, Medium, High, Critical | none |
+| [Status](#customize-status) | Set by analysts, customizable by admins | **New**|
+| Assigned to | A single user or group in the tenant | none |
 | Description | Plain text | none |
-| Case details | Case ID | Case IDs start at 1000 and aren't deleted. Use custom statuses and filters to archive cases.|
-| | Created by</br>Created on</br>Last updated by</br>Last updated on | automatically set |
-| | Due on | none |
-| | Linked incidents | none |
-| [Activity log](#activity-log) | Add and edit comments | plain text |
+| Case details | Case ID | Case IDs start at 1000 and aren't deleted. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
+| | Created by </br>Created on</br>Last updated by</br>Last updated on | automatically set |
+| | Due on</br>Linked incidents | none |
+| [Activity log](#activity-log) | Add and edit comments in plain text | none |
 | | View audit events | events are added automatically |
 | [Tasks](#tasks) | Add, edit and delete tasks | none |
+| [Linked incidents](#link-incidents) | Link and unlink | none |
 
-In the following example, a threat hunter is investigating a new hypothetical "Burrowing Attack" that consists of multiple MITRE ATT&CK techniques and IoCs.
+In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK techniques and IoCs.
 
-:::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details.":::
+:::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details." lightbox="media/cases-overview/case-details.png":::
 
 ## Customize status
 
@@ -79,16 +79,18 @@ Following the previous example, the SOC admins configured statuses enabling thre
 
 :::image type="content" source="media/cases-overview/customize-status.png" alt-text="Screenshot showing default status options and customized statuses.":::
 
+## Tasks
+
+Add tasks to manage granular components of your cases. Each task comes with its own name, status, priority, owner and due date. With this information, you always know who is accountable to complete which task and by what time, ensuring all necessary steps are completed.
+
+:::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task.png":::
+*Image shows the following static statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
+
 ## Link incidents
 
 Link incidents to a case from the case or from the incident.
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
-
-## Tasks
-
-:::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task.png":::
-*Image shows the following static statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
 
 ## Activity log
 
@@ -97,5 +99,5 @@ Create comments and review the audit events in the activity log.
 ## Related content
 
 [Case Management Starter Kit blog announcement](https://techcommunity.microsoft.com/category/microsoft-sentinel/blog/MicrosoftSentinelBlog)
-[Microsoft Defender Experts for Hunting](../defender-xdr/defender-experts-for-hunting.md)
+[Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
 [Hunts for Microsoft Sentinel]
