@@ -65,7 +65,7 @@ Each case has a page which allows analysts to manage the case and displays the f
 | [Activity log](#activity-log) | Add and edit comments in plain text | none |
 | | View audit events | events are added automatically |
 | [Tasks](#tasks) | Add, edit and delete tasks | none |
-| [Linked incidents](#link-incidents) | Link and unlink | none |
+| [Linked incidents](#link-incidents) | Link and unlink one or more incidents | none |
 
 In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK techniques and IoCs.
 
@@ -88,7 +88,11 @@ Add tasks to manage granular components of your cases. Each task comes with its 
 
 ## Link incidents
 
-Link incidents to a case from the case or from the incident.
+Linking a case and an incident helps your SOC teams collaborate in the method that works best for them. For example, a threat hunter who finds malicious activity and created an incident for the incident response(IR) team. That threat hunter links the incident to a case so it's clear they are related. Now the IR team understands the context of hunt that found the activity.
+
+:::image type="content" source="media/cases-overview/link-incidents.png" alt-text="Screenshot showing linked incidents for the hypothetical burrowing attack case.":::
+
+Alternatively, if the IR team needs to escalate one or more incident to the hunting team, they can create a case and link the incidents there. Create and link a case from from incident management, **Investigation & response > Incidents & alerts > Incidents**.
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
