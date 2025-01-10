@@ -1,5 +1,5 @@
 ---
-title: Manage cases natively
+title: Manage cases natively with the Case Management Starter Kit (Preview)
 description: Learn about case management features across Microsoft's unified security operations (SecOps) platform.
 search.appverid: met150
 ms.service: unified-secops-platform
@@ -19,11 +19,11 @@ ms.topic: conceptual
 
 # Manage cases natively in Microsoft's unified security operations (SecOps) platform
 
-Collaborate and investigate in Microsoft's unified SecOps platform with builtin case management. The Case Management Starter Kit (CMSK) is the end-to-end solution that provides seamless management of security alerts, incidents and investigations. Maintain security context and work all the jobs to be done more efficiently.
+The Case Management Starter Kit (CMSK) is the beginning of an end-to-end solution that provides seamless management of security alerts, incidents and investigations. This first step builds rich collaboration, customization, evidence collection, and reporting  within Microsoft's unified SecOps platform. SOC analysts maintain security context and work more efficiently when they manage ticketing and case work within the Defender portal.
 
 ## Plan for cases
 
-The CSMK is available in the Defender portal for all Microsoft Sentinel customers that have onboarded to the unified SecOps platform. For more information on connecting a Microsoft Sentinel workspace, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
+The CMSK is available in the Defender portal for all Microsoft Sentinel customers that have onboarded to the unified SecOps platform. For more information on connecting a Microsoft Sentinel workspace, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 
 | Cases feature | Minimum permissions required |
 |---|---|
@@ -31,15 +31,17 @@ The CSMK is available in the Defender portal for all Microsoft Sentinel customer
 | Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Microsoft Defender XDR Unified RBAC</br>Security operations > Alerts (manage)|
 | Customize case status options | Microsoft Defender XDR Unified RBAC</br>Authorization and setting > Core Security settings (manage)|
 
+Here are some of the priorities that are important to us as we continue to develop case management:
+
+- Automation
+- Rich text with images
+- ?
+
 ## Case queue
 
-:::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
+View and filter cases from 
 
-Key screenshot show - Catch what others miss (run security copilot on incidents), strengthen team expertise (run security copilot for summaries)
-investigations, use security copilot to train jr analyst.
-TI
-DEX
-Vuln management
+:::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
 :::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details.":::
 
@@ -66,7 +68,7 @@ Tasks have the following statuses available
 - Skipped
 - Completed
 
-:::image type="content" source="media/cases-overview/add-task.png" alt-text="Screenshot showing the add task pane with tasks populated for the case and 6 statuses available.":::
+:::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the add task pane with tasks populated for the case and 6 statuses available." lightbox="media/cases-overview/add-task-small.png":::
 
 ## Activity log
 
