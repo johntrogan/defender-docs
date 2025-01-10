@@ -19,11 +19,11 @@ ms.topic: conceptual
 
 # Manage cases natively in Microsoft's unified security operations (SecOps) platform
 
-Collaborate and investigate in Microsoft's unified SecOps platform with builtin case management. Cases is the end-to-end solution that provides seamless management of security alerts, incidents and investigations. Maintain security context and work all the jobs to be done more efficiently.
+Collaborate and investigate in Microsoft's unified SecOps platform with builtin case management. The Case Management Starter Kit (CMSK) is the end-to-end solution that provides seamless management of security alerts, incidents and investigations. Maintain security context and work all the jobs to be done more efficiently.
 
 ## Plan for cases
 
-Case management is only available in the Defender portal and requires a Microsoft Sentinel connected workspace. For more information, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
+The CSMK is available in the Defender portal for all Microsoft Sentinel customers that have onboarded to the unified SecOps platform. For more information on connecting a Microsoft Sentinel workspace, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 
 | **Cases feature** | **Minimum permissions required**<BR>in Microsoft Defender XDR Unified RBAC |
 |---|---|
@@ -38,6 +38,8 @@ investigations, use security copilot to train jr analyst.
 TI
 DEX
 Vuln management
+
+:::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
 ## Customize status
 
