@@ -1,5 +1,5 @@
 ---
-title: Get email notifications for Threat analytics updates in Microsoft Defender XDR
+title: Get email notifications for Threat analytics updates
 ms.reviewer: 
 description: Set up email notifications to get notified of new Threat analytics reports in Microsoft Defender XDR.
 ms.service: defender-xdr
@@ -20,7 +20,7 @@ search.appverid: met150
 ms.date: 03/28/2024
 ---
 
-# Get email notifications for Threat analytics updates in Microsoft Defender XDR
+# Get email notifications for Threat analytics updates
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -28,7 +28,7 @@ ms.date: 03/28/2024
 
 - Microsoft Defender XDR
 
-You can set up email notifications that will send you updates on [threat analytics](threat-analytics.md) reports.
+You can set up email notifications that sends you updates on [threat analytics](threat-analytics.md) reports.
 
 ## Set up email notifications for report updates
 

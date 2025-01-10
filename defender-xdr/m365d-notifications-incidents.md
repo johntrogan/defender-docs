@@ -1,6 +1,6 @@
 ---
-title: Get incident notifications by email in Microsoft Defender XDR
-description: Set up email notifications to get notified of new incidents or updates to incidents in Microsoft Defender XDR.
+title: Get incident notifications by email
+description: Set up email notifications to get notified of new incidents or updates to incidents in the Microsoft Defender portal.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
@@ -19,7 +19,7 @@ search.appverid:
 ms.date: 07/08/2024
 ---
 
-# Get incident notifications by email in Microsoft Defender XDR
+# Get incident notifications by email
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 

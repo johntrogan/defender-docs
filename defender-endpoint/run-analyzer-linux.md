@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 11/01/2024
+ms.date: 01/08/2024
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -189,7 +189,7 @@ This section provides instructions on how to run the tool locally on the Linux m
 
 ### Run the binary version of the client analyzer
 
-#### Summary:
+#### Summary
 
 1. Obtain from [https://go.microsoft.com/fwlink/?linkid=2297517](https://go.microsoft.com/fwlink/?linkid=2297517). Or, if your Linux server has internet access use `wget` to download the file:
 
@@ -215,7 +215,7 @@ This section provides instructions on how to run the tool locally on the Linux m
 
 6. Upload the file for the support engineer.
 
-#### Details:
+#### Details
 
 1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2297517) tool to the Linux machine you need to investigate.
 
@@ -262,7 +262,7 @@ This section provides instructions on how to run the tool locally on the Linux m
    sudo ./MDESupportTool -d
    ```
 
-## Rung the Python-based client analyzer
+## Run the Python-based client analyzer
 
 > [!NOTE]
 > - The analyzer depends on few extra PIP packages (`decorator`, `sh`, `distro`, `lxml`, and `psutil`) which are installed in the operating system when in root to produce the result output. If not installed, the analyzer attempts to fetch it from the [official repository for Python packages](https://pypi.org/search/?q=lxml).
@@ -344,7 +344,8 @@ Use the following command to get the machine diagnostic.
 
 Usage example: `sudo ./MDESupportTool -d`
 
-NOTE: The log level autoreset feature only available in 2405 or newer client version.
+> [!NOTE]
+> The log level autoreset feature only available in 2405 or newer client version.
 
 ### Positional arguments
 
@@ -363,7 +364,7 @@ Usage example: `sudo ./MDESupportTool performance --frequency 2`
 
 #### Exclude mode
 
-Add exclusions for audit-d monitoring.
+Add exclusions for auditd monitoring.
 
 > [!NOTE]
 > This functionality exists for Linux only.
@@ -442,11 +443,32 @@ Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
 ## See also
 
 - [Client analyzer overview](overview-client-analyzer.md)
+
 - [Download and run the client analyzer](download-client-analyzer.md)
+
 - [Run the client analyzer on Windows](run-analyzer-windows.md)
+
 - [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
+
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
+
 - [Understand the analyzer HTML report](analyzer-report.md)
+
+#### Defender for Endpoint on Linux troubleshooting documents
+
+- [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install)
+
+- [Investigate agent health issues](/defender-endpoint/health-status)
+
+- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
+
+- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
+
+- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-events)
+
+- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+
+ 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
