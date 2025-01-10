@@ -33,20 +33,38 @@ The CSMK is available in the Defender portal for all Microsoft Sentinel customer
 
 ## Case queue
 
+:::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
+
 Key screenshot show - Catch what others miss (run security copilot on incidents), strengthen team expertise (run security copilot for summaries)
 investigations, use security copilot to train jr analyst.
 TI
 DEX
 Vuln management
 
-:::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
+:::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details.":::
 
 ## Customize status
 
-## Tasks
+Architect case management to fit the needs of your security operations center (SOC). Customize the status options available to your analysts to fit the processes you have in place.
+
+:::image type="content" source="media/cases-overview/customize-status.png" alt-text="Screenshot showing default status options and customized statuses.":::
 
 ## Link incidents
 
+Link incidents to a case from the case or from the incident.
+
+:::image type="content" source="media/cases-overview/link-incident-from-incident.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
+
+## Tasks
+
+
+
 ## Activity log
 
+Create comments and review the audit events in the activity log.
+
 ## Related content
+
+[Case Management Starter Kit blog announcement](https://techcommunity.microsoft.com/category/microsoft-sentinel/blog/MicrosoftSentinelBlog)
+[Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting.md)
+[Hunts for Microsoft Sentinel]
