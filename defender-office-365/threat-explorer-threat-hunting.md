@@ -154,7 +154,7 @@ After you determine that an email message is a threat, the next step is remediat
 
 - Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
 
-  :::image type="content" source="../defender-office-365/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active.":::
+  :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
   > [!TIP]
   > **Take action** replaces the **Message actions** drop down list.
@@ -183,7 +183,7 @@ Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" b
 |**Initiate automated investigation**|✔||
 |**Propose remediation**|✔||
 
-¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
+¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md) or the **Security operations/Security data/Email & collaboration advanced actions (manage)** permission in [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac). By default, the **Search and Purge** role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
 ² This option is available for quarantined messages when you select **Inbox** as the move location.
 
