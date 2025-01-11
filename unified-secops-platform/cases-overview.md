@@ -62,7 +62,7 @@ Each case has a page which allows analysts to manage the case and displays the f
 | Case details | Case ID | Case IDs start at 1000 and aren't deleted. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
 | | Created by </br>Created on</br>Last updated by</br>Last updated on | automatically set |
 | | Due on</br>Linked incidents | none |
-| [Activity log](#activity-log) | Add and edit comments in plain text | none |
+| [Activity log](#activity-log) | Add and edit your own comments in plain text | none |
 | | View audit events | events are added automatically |
 | [Tasks](#tasks) | Add, edit and delete tasks | none |
 | [Linked incidents](#link-incidents) | Link and unlink one or more incidents | none |
@@ -84,7 +84,7 @@ Following the previous example, the SOC admins configured statuses enabling thre
 Add tasks to manage granular components of your cases. Each task comes with its own name, status, priority, owner and due date. With this information, you always know who is accountable to complete which task and by what time, ensuring all necessary steps are completed.
 
 :::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task.png":::
-*Image shows the following static statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
+</br>*Image shows the following task statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
 
 ## Link incidents
 
@@ -98,10 +98,14 @@ Alternatively, if the IR team needs to escalate one or more incident to the hunt
 
 ## Activity log
 
-Create comments and review the audit events in the activity log.
+Create comments and review the audit events in the activity log. Need to write down temporary notes, or that key detection logic to pass along? This is a great place to quickly add information to a case without creating an additional task.
+
+:::image type="content" source="media/cases-overview/informal-comments.png" alt-text="Screenshot showing informal comments between analysts.":::
+
+Audit activity shows the latest events at the top. Change the filter if you need to focus on comments or audit history.
 
 ## Related content
 
 [Case Management Starter Kit blog announcement](https://techcommunity.microsoft.com/category/microsoft-sentinel/blog/MicrosoftSentinelBlog)
 [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
-[Hunts for Microsoft Sentinel]
+[Hunts for Microsoft Sentinel](/azure/sentinel/hunts)
