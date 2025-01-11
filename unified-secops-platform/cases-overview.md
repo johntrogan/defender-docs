@@ -19,27 +19,32 @@ ms.topic: conceptual
 
 # Manage cases natively in Microsoft's unified security operations (SecOps) platform
 
-The Case Management Starter Kit (CMSK) is the beginning of an end-to-end solution that provides seamless management of security alerts, incidents, and investigations. This first step builds rich collaboration, customization, evidence collection, and reporting within Microsoft's unified SecOps platform. SOC analysts maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal.
+The Case management starter kit (CMSK) is the beginning of an end-to-end solution that provides seamless management of security alerts, incidents, and investigations. This first step builds rich collaboration, customization, evidence collection, and reporting within Microsoft's unified SecOps platform. SOC analysts maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
+
+> [!IMPORTANT]
+> Some information in this article relates to a prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ## Plan for cases
 
 The CMSK is available in the Defender portal for all Microsoft Sentinel customers that have onboarded to the unified SecOps platform. For more information on connecting a Microsoft Sentinel workspace, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 
-Bring the best processes from your non-Microsoft ticketing system to the CMSK. SecOps teams should consider these foundational features as they plan to make case maanagement fit their needs.
+Bring the best processes from your non-Microsoft ticketing system to the CMSK. Consider these foundational features to make case maanagement fit your needs.
 
 - Define your own case workflow with custom status values
 - Decide how to assign tasks and configure due dates
 - Handle escalations and complex cases by linking multiple incidents to a case
-- Link an incident to multiple cases to spread the work out and track SLAs
+- Link an incident to multiple cases to spread the work out and track service level agreements
 - Manage access to your cases using RBAC
 
-| Cases feature | Minimum permissions required |
-|---|---|
-| View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Microsoft Defender XDR Unified RBAC</br>Security operations > Security data basics (read)|
-| Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Microsoft Defender XDR Unified RBAC</br>Security operations > Alerts (manage)|
-| Customize case status options | Microsoft Defender XDR Unified RBAC</br>Authorization and setting > Core Security settings (manage)|
+Use this table to plan your roles for case management:
 
-Here are some of the priorities that are important to us as we work towards a robust case management experience:
+| Cases feature | Minimum permissions required in Microsoft Defender XDR Unified RBAC |
+|---|---|
+| View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Security operations > Security data basics (read)|
+| Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Security operations > Alerts (manage)|
+| Customize case status options | Authorization and setting > Core Security settings (manage)|
+
+Here are some of the priorities important to us as we work towards a robust case management experience:
 
 - Automation
 - Rich text with images
@@ -47,16 +52,16 @@ Here are some of the priorities that are important to us as we work towards a ro
 
 ## Case queue
 
-View cases by selecting **Cases** in the Defender portal. Filter your cases view to fit what you need to focus on.
+Select **Cases** in the Defender portal to access the CMSK. Filter your cases view to fit what you need to focus on.
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
 Each case has a page which allows analysts to manage the case and displays the following features:
 
-| Displayed case feature | Manage case options | Default |
+| Displayed case feature | Manage case options | Default value |
 |:---|:---|:---|
-| Priority| Very low, Low, Medium, High, Critical | none |
-| [Status](#customize-status) | Set by analysts, customizable by admins | **New**|
+| Priority| `Very low`, `Low`, `Medium`, `High`, `Critical` | none |
+| [Status](#customize-status) | Set by analysts, customizable by admins | `New`|
 | Assigned to | A single user or group in the tenant | none |
 | Description | Plain text | none |
 | Case details | Case ID | Case IDs start at 1000 and aren't deleted. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
@@ -64,7 +69,7 @@ Each case has a page which allows analysts to manage the case and displays the f
 | | Due on</br>Linked incidents | none |
 | [Activity log](#activity-log) | Add and edit your own comments in plain text | none |
 | | View audit events | events are added automatically |
-| [Tasks](#tasks) | Add, edit and delete tasks | none |
+| [Tasks](#tasks) | Add, edit, and delete tasks | none |
 | [Linked incidents](#link-incidents) | Link and unlink one or more incidents | none |
 
 In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK techniques and IoCs.
@@ -81,24 +86,24 @@ Following the previous example, the SOC admins configured statuses enabling thre
 
 ## Tasks
 
-Add tasks to manage granular components of your cases. Each task comes with its own name, status, priority, owner and due date. With this information, you always know who is accountable to complete which task and by what time, ensuring all necessary steps are completed.
+Add tasks to manage granular components of your cases. Each task comes with its own name, status, priority, owner, and due date. With this information, you always know who is accountable to complete which task and by what time, ensuring all necessary steps are completed.
 
 :::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task.png":::
 </br>*Image shows the following task statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
 
 ## Link incidents
 
-Linking a case and an incident helps your SOC teams collaborate in the method that works best for them. For example, a threat hunter who finds malicious activity and created an incident for the incident response(IR) team. That threat hunter links the incident to a case so it's clear they are related. Now the IR team understands the context of hunt that found the activity.
+Linking a case and an incident helps your SOC teams collaborate in the method that works best for them. For example, a threat hunter who finds malicious activity and created an incident for the incident response(IR) team. That threat hunter links the incident to a case so it's clear they're related. Now the IR team understands the context of hunt that found the activity.
 
 :::image type="content" source="media/cases-overview/link-incidents.png" alt-text="Screenshot showing linked incidents for the hypothetical burrowing attack case.":::
 
-Alternatively, if the IR team needs to escalate one or more incident to the hunting team, they can create a case and link the incidents there. Create and link a case from from incident management, **Investigation & response > Incidents & alerts > Incidents**.
+Alternatively, if the IR team needs to escalate one or more incidents to the hunting team, they can create a case and link the incidents there. Create and link a case from incident management, **Investigation & response > Incidents & alerts > Incidents**.
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
 ## Activity log
 
-Create comments and review the audit events in the activity log. Need to write down temporary notes, or that key detection logic to pass along? This is a great place to quickly add information to a case without creating an additional task.
+Create comments and review the audit events in the activity log. Need to write down temporary notes, or that key detection logic to pass along? Comments are a great place to quickly add information to a case without creating an another task.
 
 :::image type="content" source="media/cases-overview/informal-comments.png" alt-text="Screenshot showing informal comments between analysts.":::
 
