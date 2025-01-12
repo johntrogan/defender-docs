@@ -105,7 +105,7 @@ Linking a case and an incident helps your SecOps teams collaborate in the method
 
 :::image type="content" source="media/cases-overview/link-incidents.png" alt-text="Screenshot showing linked incidents for the hypothetical burrowing attack case.":::
 
-Alternatively, if the IR team needs to escalate one or more incidents to the hunting team, they can create a case and link the incidents there. Create and link a case from incident management by going to **Investigation & response > Incidents & alerts > Incidents**.
+Alternatively, if the IR team needs to escalate one or more incidents to the hunting team, they can create a case and link the incidents from the **Investigation & response** incident details page.
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
