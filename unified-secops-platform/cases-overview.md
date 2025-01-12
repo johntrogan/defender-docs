@@ -28,7 +28,7 @@ CMSK is our initial step toward delivering a unified, security-focused case mana
 
 ## What is the case management starter kit (Preview)
 
-CMSK enables you to manage SecOps cases natively in the Defender portal. Here is the initial set of scenarios and features that CMSK supports.
+CMSK enables you to manage SecOps cases natively in the Defender portal. Here's the initial set of scenarios and features that CMSK supports.
 
 - Define your own case workflow with custom status values
 - Assign tasks to collaborators and configure due dates
@@ -36,7 +36,7 @@ CMSK enables you to manage SecOps cases natively in the Defender portal. Here is
 - Link an incident to multiple cases to spread the work out and track service level agreements
 - Manage access to your cases using RBAC
 
-As we build on this foundation of the CMSK, we are prioritizing these additional robust capabilities:
+As we build on this foundation of the CMSK, we're prioritizing these additional robust capabilities:
 
 - Automation
 - Dashboards
@@ -48,7 +48,7 @@ As we build on this foundation of the CMSK, we are prioritizing these additional
 
 The CMSK is available in the Defender portal, and to use it, you must have a Microsoft Sentinel workspace connected. No access is available from the Azure portal.
 
-For more information, see [Connect Microsoft Sentinel to the Defender portal](/defender-xdr/microsoft-sentinel-onboard.md).
+For more information, see [Connect Microsoft Sentinel to the Defender portal](/defender-xdr/microsoft-sentinel-onboard).
 
 Use this table to plan your RBAC of case management:
 
@@ -60,7 +60,7 @@ Use this table to plan your RBAC of case management:
 
 ## Case queue
 
-To start using CMSK, select **Cases** in the Defender portal to access the case queue. Filter, sort or search your cases to find what you need to focus on.
+To start using CMSK, select **Cases** in the Defender portal to access the case queue. Filter, sort, or search your cases to find what you need to focus on.
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
@@ -72,12 +72,12 @@ In the following example, a threat hunter is investigating a hypothetical "Burro
 
 :::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details." lightbox="media/cases-overview/case-details.png":::
 
-Manage the following case details to describe, prioritize, assign and track work:
+Manage the following case details to describe, prioritize, assign, and track work:
 
 | Displayed case feature | Manage case options | Default value |
 |:---|:---|:---|
 | Priority| `Very low`, `Low`, `Medium`, `High`, `Critical` | none |
-| [Status](#customize-status) | Set by analysts, customizable by admins</br>Default statuses are `New`, `Open` and `Closed` | `New`|
+| [Status](#customize-status) | Set by analysts, customizable by admins | Default statuses are `New`, `Open`, and `Closed`<</br>Default value is `New`|
 | Assigned to | A single user in the tenant | none |
 | Description | Plain text | none |
 | Case details | Case ID | Case IDs start at 1000 and aren't purged. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
@@ -98,8 +98,6 @@ Add tasks to manage granular components of your cases. Each task comes with its 
 
 :::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task.png":::
 </br>*Image shows the following task statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
-
-| Task option
 
 ### Link incidents
 
