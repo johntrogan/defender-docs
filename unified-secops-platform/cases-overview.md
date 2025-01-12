@@ -19,7 +19,7 @@ ms.topic: conceptual
 
 # Manage cases natively in Microsoft's unified security operations (SecOps) platform
 
-The case management starter kit (CMSK) is the first installment for new case management capabilities when you onboard to the Microsoft’s unified SecOps platform.
+The case management starter kit (CMSK) is the first installment of new case management capabilities when you onboard to the Microsoft’s unified SecOps platform.
 
 CMSK is our initial step toward delivering a unified, security-focused case management experience that centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
 
@@ -28,15 +28,21 @@ CMSK is our initial step toward delivering a unified, security-focused case mana
 
 ## What is the case management starter kit (Preview)
 
-CMSK enables you to manage SecOps work in in a native case management system. Here is the initial set of scenarios and features that CMSK supports.
+CMSK enables you to manage SecOps cases natively in the Defender portal. Here is the initial set of scenarios and features that CMSK supports.
 
 - Define your own case workflow with custom status values
-- Decide how to assign tasks and configure due dates
+- Assign tasks to collaborators and configure due dates
 - Handle escalations and complex cases by linking multiple incidents to a case
 - Link an incident to multiple cases to spread the work out and track service level agreements
 - Manage access to your cases using RBAC
 
-We are prioritizing automation, workflow customization, Defender portal integrations, and additional robust capabilities as we build on this foundation of the case management starter kit.
+As we build on this foundation of the CMSK, we are prioritizing these additional robust capabilities:
+
+- Automation
+- Dashboards
+- More evidence
+- Workflow customization
+- More Defender portal integrations
 
 ## Plan for case management
 
@@ -54,7 +60,7 @@ Use this table to plan your RBAC of case management:
 
 ## Case queue
 
-Select **Cases** in the Defender portal to access the CMSK. Filter, sort or search your cases to find what you need to focus on.
+To start using CMSK, select **Cases** in the Defender portal to access the case queue. Filter, sort or search your cases to find what you need to focus on.
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
@@ -65,6 +71,8 @@ Each case has a page which allows analysts to manage the case and displays impor
 In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK techniques and IoCs.
 
 :::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details." lightbox="media/cases-overview/case-details.png":::
+
+Manage the following case details to describe, prioritize, assign and track work:
 
 | Displayed case feature | Manage case options | Default value |
 |:---|:---|:---|
@@ -105,11 +113,11 @@ Alternatively, if the IR team needs to escalate one or more incidents to the hun
 
 ### Activity log
 
-Create plain text comments and review the audit events in the activity log. Need to write down notes, or that key detection logic to pass along? Comments are a great place to quickly add information to a case without creating an another task.
+Need to write down notes, or that key detection logic to pass along? Create plain text comments and review the audit events in the activity log. Comments are a great place to quickly add information to a case without creating another task.
 
 :::image type="content" source="media/cases-overview/informal-comments.png" alt-text="Screenshot showing informal comments between analysts.":::
 
-Audit events are automatically added and the latest events are shown at the top. Change the filter if you need to focus on comments or audit history.
+Audit events are automatically added to the activity log of the case and the latest events are shown at the top. Change the filter if you need to focus on comments or audit history.
 
 ## Related content
 
