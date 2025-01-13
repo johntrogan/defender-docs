@@ -33,7 +33,6 @@ CMSK enables you to manage SecOps cases natively in the Defender portal. Here's 
 - Define your own case workflow with custom status values
 - Assign tasks to collaborators and configure due dates
 - Handle escalations and complex cases by linking multiple incidents to a case
-- Link an incident to multiple cases to spread the work out and track service level agreements
 - Manage access to your cases using RBAC
 
 As we build on this foundation of the CMSK, we're prioritizing these additional robust capabilities:
@@ -94,7 +93,7 @@ Following the previous example, the SOC admins configured statuses enabling thre
 
 ### Tasks
 
-Add tasks to manage granular components of your cases. Each task comes with its own name, status, priority, owner, and due date. With this information, you always know who is accountable to complete which task and by what time, ensuring all necessary steps are completed.
+Add tasks to manage granular components of your cases. Each task comes with its own name, status, priority, owner, and due date. With this information, you always know who is accountable to complete which task and by what time. The task description summarizes the work to do and some space for describing the progress. Closing notes provide more context about the outcome of completed tasks.
 
 :::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task.png":::
 </br>*Image shows the following task statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
@@ -121,4 +120,4 @@ Audit events are automatically added to the activity log of the case and the lat
 
 [Case Management Starter Kit blog announcement](https://techcommunity.microsoft.com/category/microsoft-sentinel/blog/MicrosoftSentinelBlog)
 [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
-[Microsoft Sentinel in the Defender](/azure/sentinel/microsoft-sentinel-defender-portal)
+[Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
