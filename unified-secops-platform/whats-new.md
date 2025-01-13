@@ -22,7 +22,7 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## January 2025
 
-- [Case management starter kit](#case-management-starter-kit-preview)
+- [Manage cases natively with the case management starter kit (Preview)](#case-management-starter-kit-preview)
 - [SOC optimization updates for unified coverage management](#soc-optimization-updates-for-unified-coverage-management)
 
 ### Case management starter kit (Preview)
