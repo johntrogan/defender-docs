@@ -22,7 +22,19 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## January 2025
 
+- [Case management starter kit](#case-management-starter-kit)
 - [SOC optimization updates for unified coverage management](#soc-optimization-updates-for-unified-coverage-management)
+
+### Case management starter kit (Preview)
+
+The case management starter kit (CMSK) is the beginning of an end-to-end solution that provides seamless management of your security work. SecOps teams maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal. Here's the initial set of scenarios and features that CMSK supports.
+
+- Define your own case workflow with custom status values
+- Assign tasks to collaborators and configure due dates
+- Handle escalations and complex cases by linking multiple incidents to a case
+- Manage access to your cases using RBAC
+
+For more information, see [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md) and the blog announcement, [Improve SecOps collaboration with the Case Management Starter Kit](https://techcommunity.microsoft.com/category/microsoft-sentinel/blog/MicrosoftSentinelBlog).
 
 ### SOC optimization updates for unified coverage management
 
@@ -48,7 +60,7 @@ For more information, see [Optimize your security operations](/azure/sentinel/so
 ### New SOC optimization recommendations based on similar organizations (Preview)
 
 SOC optimizations now include new recommendations for adding data sources to your workspace based on the security posture of other organizations in similar industries and sectors as you, and with similar data ingestion patterns.
-	
+
 For more information, see [SOC optimization reference of recommendations](/azure/sentinel/soc-optimization/soc-optimization-reference).
 
 ### Microsoft Sentinel workbooks now available to view directly in the Microsoft Defender portal
