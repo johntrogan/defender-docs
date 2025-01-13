@@ -41,6 +41,8 @@ Use this guide to:
 - [Get started using the Microsoft Defender portal, where you can view incidents and alerts, manage devices, and use reports about detected threats](mde-plan1-getting-started.md)
 - [Get an overview of maintenance and operations](preferences-setup.md)
 
+For minimum requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint requirements](/defender-endpoint/minimum-requirements)
+
 ## Defender for Endpoint Plan 1 capabilities
 
 Defender for Endpoint Plan 1 includes the following capabilities:
@@ -49,7 +51,6 @@ Defender for Endpoint Plan 1 includes the following capabilities:
 - **[Manual response actions](#manual-response-actions)**, such as sending a file to quarantine, that your security team can take on devices or files when threats are detected
 - **[Attack surface reduction capabilities](#attack-surface-reduction)** that harden devices, prevent zero-day attacks, and offer granular control over endpoint access and behaviors
 - **[Centralized configuration and management](#centralized-management)** with the Microsoft Defender portal and integration with Microsoft Intune
-- **[Protection for a variety of platforms](#cross-platform-support)**, including Windows, macOS, iOS, and Android devices
 
 The following sections provide more details about these capabilities. 
 
@@ -82,13 +83,23 @@ To learn more, see the following articles:
 
 Your organization's attack surfaces are all the places where you're vulnerable to cyberattacks. With Defender for Endpoint Plan 1, you can reduce your attack surfaces by protecting the devices and applications that your organization uses. The attack surface reduction capabilities that are included in Defender for Endpoint Plan 1 are described in the following sections.
 
-- [Attack surface reduction rules](#attack-surface-reduction-rules)
-- [Ransomware mitigation](#ransomware-mitigation)
-- [Device control](#device-control)
-- [Web protection](#web-protection)
-- [Network protection](#web-protection)
-- [Network firewall](#network-firewall)
-- [Application control](#application-control)
+- [Overview of Microsoft Defender for Endpoint Plan 1](#overview-of-microsoft-defender-for-endpoint-plan-1)
+  - [Defender for Endpoint Plan 1 capabilities](#defender-for-endpoint-plan-1-capabilities)
+  - [Next-generation protection](#next-generation-protection)
+  - [Manual response actions](#manual-response-actions)
+  - [Attack surface reduction](#attack-surface-reduction)
+    - [Attack surface reduction rules](#attack-surface-reduction-rules)
+    - [Ransomware mitigation](#ransomware-mitigation)
+    - [Device control](#device-control)
+    - [Web protection](#web-protection)
+    - [Network protection](#network-protection)
+    - [Network firewall](#network-firewall)
+    - [Application control](#application-control)
+  - [Centralized management](#centralized-management)
+    - [Role-based access control](#role-based-access-control)
+    - [Reporting](#reporting)
+    - [APIs](#apis)
+  - [Next steps](#next-steps)
 
 To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](overview-attack-surface-reduction.md).
 
@@ -175,19 +186,6 @@ To learn more, see [Get started with Microsoft Defender for Endpoint Plan 1](mde
 With the Defender for Endpoint APIs, you can automate workflows and integrate with your organization's custom solutions. 
 
 To learn more, see [Defender for Endpoint APIs](api/management-apis.md). 
-
-## Cross-platform support
-
-Most organizations use various devices and operating systems. Defender for Endpoint Plan 1 supports the following operating systems:
-
-- Windows 10 and 11
-- Windows 7 ([ESU required](/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq)) Pro or Enterprise 
-- Windows 8.1 Pro, Enterprise, and Pro Education 
-- macOS (the three most recent releases are supported)
-- iOS
-- Android OS
-
-Servers require an additional license, such as:
 
 - **Microsoft Defender for Servers Plan 1 or Plan 2** (*recommended for enterprise customers*) as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering. To learn more. see [Overview of Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
 - **Microsoft Defender for Endpoint Server** (*recommended for enterprise customers*). To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).

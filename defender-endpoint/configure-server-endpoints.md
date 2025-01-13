@@ -7,7 +7,7 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 12/13/2024
+ms.date: 01/13/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -57,7 +57,7 @@ Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender fo
 > - If you use Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant even if you integrate with Microsoft Defender for Cloud at a later time.
 > - Once configured, you cannot change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
 > - Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
-> - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022, Windows Server 2019, and Windows 10 or later, doesn't support this gateway.
+> - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022, Windows Server 2019, Windows Server 2025, and Windows 10 or later, doesn't support this gateway.
 > - Linux servers onboarded through Microsoft Defender for Cloud have their initial configuration set to run Defender Antivirus in [passive mode](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
 
 **Windows Server 2016 and Windows Server 2012 R2**:
@@ -66,7 +66,7 @@ Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender fo
 - Apply the installation package
 - Follow the onboarding steps for the corresponding tool
 
-**Windows Server Semi-Annual Enterprise Channel and Windows Server 2019**:
+**Windows Server Semi-Annual Enterprise Channel, Windows Server 2019, and Windows 2025**:
 
 - Download the onboarding package
 - Follow the onboarding steps for the corresponding tool
@@ -85,7 +85,7 @@ Depending on the server that you're onboarding, the unified solution installs Mi
 |----|----|----|
 |Windows Server 2012 R2|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|
 |Windows Server 2016|Built-in|![Yes.](media/svg/check-yes.svg)|
-|Windows Server 2019 or later|Built-in|Built-in|
+|Windows Server 2019 and Windows Server 2025 or later|Built-in|Built-in|
 
 If you've previously onboarded your servers using MMA, follow the guidance provided in [Server migration](server-migration.md) to migrate to the new solution.
 
@@ -281,7 +281,7 @@ The following steps are only applicable if you're using a third-party anti-malwa
 
 1. In Microsoft Defender XDR, go to **Settings > Endpoints > Device Management > Onboarding**.
 
-2. Select **Windows Server 1803 and 2019**.
+2. Select **Windows Server 1803, 2019, and 2025**.
 
 3. Select **Download package**. Save it as WindowsDefenderATPOnboardingPackage.zip.
 
@@ -329,7 +329,7 @@ After successfully onboarding devices to the service, you'll need to configure t
 
 ## Offboard Windows servers
 
-You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, and Windows Server 2019 Core edition in the same method available for Windows 10 client devices.
+You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, and Windows Server 2025 in the same method available for Windows 10 client devices.
 
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)

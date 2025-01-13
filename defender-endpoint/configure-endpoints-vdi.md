@@ -26,7 +26,7 @@ ms.subservice: onboard
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 - Virtual desktop infrastructure (VDI) devices
-- Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2008R2/2012R2/2016
+- Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2025, and Windows Server 2008R2/2012R2/2016.
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)

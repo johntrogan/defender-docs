@@ -32,7 +32,7 @@ Learn how to [Onboard devices and configure Microsoft Defender for Endpoint capa
 
 The following table gives information about the supported Microsoft Defender for Endpoint capabilities by platform.
 
-|Operating System|Windows 10 & 11|Windows Server 2012 R2 <sup>[1]</sup>, <br> 2016 <sup>[1]</sup>, <br> 2019 & 2022, <br> 1803+|macOS|Linux|
+|Operating System|Windows 10 & 11|Windows Server 2012 R2 <sup>[1]</sup>, <br> 2016 <sup>[1]</sup>, <br> 2019, 2022, 2025 <br> 1803+|macOS|Linux|
 |---|:---:|:---:|:---:|:---:|
 |**Prevention**|||||
 |[Attack Surface Reduction](attack-surface-reduction.md)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
@@ -69,7 +69,7 @@ The following table gives information about the supported Microsoft Defender for
 
 <sup>[4]</sup> Collect file only. Or, you can use Live Response [2].
 
-<sup>[5]</sup> Endpoint & network device discovery is supported on Windows Server 2019 or later, Windows 10, and Windows 11.
+<sup>[5]</sup> Endpoint & network device discovery is supported on Windows Server 2019, Windows Server 2025 or later, Windows 10, and Windows 11.
 
 <sup>[6]</sup>  Microsoft Defender Vulnerability Management is not supported on Rocky and Alma currently.
 > [!NOTE]

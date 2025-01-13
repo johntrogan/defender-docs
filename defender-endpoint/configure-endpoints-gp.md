@@ -35,7 +35,7 @@ search.appverid: met150
 > [!NOTE]
 > To use Group Policy (GP) updates to deploy the package, you must be on Windows Server 2008 R2 or later.
 >
-> For Windows Server 2019 and Windows Server 2022, you may need to replace NT AUTHORITY\Well-Known-System-Account with NT AUTHORITY\SYSTEM of the XML file that the Group Policy preference creates.
+> For Windows Server 2019 and newer, you may need to replace NT AUTHORITY\Well-Known-System-Account with NT AUTHORITY\SYSTEM of the XML file that the Group Policy preference creates.
 
 > [!NOTE]
 > If you're using the new, unified Microsoft Defender for Endpoint solution for Windows Server 2012 R2 and 2016, please ensure you are using the latest ADMX files in your central store to get access to the correct Microsoft Defender for Endpoint policy options. Please reference [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
