@@ -35,11 +35,11 @@ CMSK enables you to manage SecOps cases natively in the Defender portal. Here's 
 - Handle escalations and complex cases by linking multiple incidents to a case
 - Manage access to your cases using RBAC
 
-As we build on this foundation of the CMSK, we're prioritizing these additional robust capabilities:
+As we build on this foundation of the CMSK, we're prioritizing these additional robust capabilities as we evolve this solution:
 
 - Automation
 - Dashboards
-- More evidence
+- Add more evidence
 - Workflow customization
 - More Defender portal integrations
 
@@ -76,7 +76,7 @@ Manage the following case details to describe, prioritize, assign, and track wor
 | Displayed case feature | Manage case options | Default value |
 |:---|:---|:---|
 | Priority| `Very low`, `Low`, `Medium`, `High`, `Critical` | none |
-| [Status](#customize-status) | Set by analysts, customizable by admins | Default statuses are `New`, `Open`, and `Closed`<</br>Default value is `New`|
+| Status | Set by analysts, customizable by admins | Default statuses are `New`, `Open`, and `Closed`<</br>Default value is `New`|
 | Assigned to | A single user in the tenant | none |
 | Description | Plain text | none |
 | Case details | Case ID | Case IDs start at 1000 and aren't purged. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
@@ -106,11 +106,11 @@ Linking a case and an incident helps your SecOps teams collaborate in the method
 
 Alternatively, if the IR team needs to escalate one or more incidents to the hunting team, they can create a case and link the incidents from the **Investigation & response** incident details page.
 
-:::image type="content" source="media/cases-overview/link-incident-from-incident.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
+:::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
 ### Activity log
 
-Need to write down notes, or that key detection logic to pass along? Create plain text comments and review the audit events in the activity log. Comments are a great place to quickly add information to a case without creating another task.
+Need to write down notes, or that key detection logic to pass along? Create plain text comments and review the audit events in the activity log. Comments are a great place to quickly add information to a case.
 
 :::image type="content" source="media/cases-overview/informal-comments.png" alt-text="Screenshot showing informal comments between analysts.":::
 
@@ -118,6 +118,5 @@ Audit events are automatically added to the activity log of the case and the lat
 
 ## Related content
 
-[Case Management Starter Kit blog announcement](https://techcommunity.microsoft.com/category/microsoft-sentinel/blog/MicrosoftSentinelBlog)
 [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
 [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
