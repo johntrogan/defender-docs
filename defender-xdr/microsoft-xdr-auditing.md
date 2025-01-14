@@ -54,7 +54,7 @@ Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/a
 
 Follow these steps to search the audit log:
 
-1. To get audit logs for Microsoft Defender XDR activities, navigate to the [Microsoft Defender XDR Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://compliance.microsoft.com) and select **Audit**.
+1. To get audit logs for Microsoft Defender XDR activities, navigate to the [Microsoft Defender portal's Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://compliance.microsoft.com) and select **Audit**.
 
    :::image type="content" source="/defender/media/defender/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-log-xdr.png":::
 
