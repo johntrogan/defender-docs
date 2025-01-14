@@ -22,11 +22,9 @@ ms.subservice: onboard
 
 
 **Applies to:**
-- Windows 11
-- Supported Windows 10 versions
 - Windows Server 2012 R2
 - Windows Server 2016
-- Windows Server, version 1803
+- Windows Server
 - Windows Server 2019
 - Windows Server 2022
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
