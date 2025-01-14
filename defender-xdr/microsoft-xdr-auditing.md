@@ -10,7 +10,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: concept-article
+ms.topic: how-to
 ms.date: 01/14/2025
 search.appverid: met150
 appliesto:
@@ -50,7 +50,7 @@ Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/a
 > [!IMPORTANT]
 > Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role. Microsoft recommends that you use roles with the fewest permissions. Using accounts with lower permissions helps improve security for your organization.
 
-## Using audit search
+## Search the audit log
 
 Follow these steps to search the audit log:
 
