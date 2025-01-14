@@ -39,7 +39,7 @@ As we build on this foundation of the CMSK, we're prioritizing these additional 
 
 - Automation
 - Dashboards
-- Add more evidence
+- More evidence to add
 - Workflow customization
 - More Defender portal integrations
 
@@ -118,5 +118,5 @@ Audit events are automatically added to the activity log of the case and the lat
 
 ## Related content
 
-[Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
-[Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
+- [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
