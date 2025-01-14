@@ -11,18 +11,16 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: overview
-ms.date: 08/14/2024
+ms.date: 01/14/2025
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender XDR
 ---
 
 # Search the audit log for events in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 The audit log can help you investigate specific activities across Microsoft 365 services. In the Microsoft Defender portal, Microsoft Defender XDR and Microsoft Defender for Endpoint activities are audited. Some of the activities audited are:
 
@@ -43,26 +41,20 @@ To access the audit log, you need to have the **View-Only Audit Logs** or **Audi
 > [!NOTE]
 > Global administrators in Office 365 and Microsoft 365 are automatically added as members of the Organization Management role group in Exchange Online.
 
-## Turn on auditing in Microsoft Defender XDR
+## Turn on auditing
 
-Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview), before you can look at the audit data in the Microsoft Defender XDR portal:
+Auditing is automatically turned on for Microsoft Defender XDR. Features that are audited are logged in the audit log automatically. Auditing can also collect audit logs from GCC environments.
 
-- You should confirm that auditing is turned on in the Microsoft Purview compliance portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
-
-- Follow the steps below to enable the unified audit log in the Microsoft Defender XDR portal:
-    1. Log in to [Microsoft Defender XDR](https://security.microsoft.com/homepage) using an account with the Security administrator or Global administrator role assigned.
-    2. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
-    3. Scroll own to **Unified audit log** and toggle the setting to **On**.
-
-   :::image type="content" source="/defender/media/defender/unified-audit-log.png" alt-text="Screenshot of the unified audit log toggle in Microsoft Defender XDR advanced settings" lightbox="/defender/media/defender/unified-audit-log.png":::
-    4. Select **Save preferences**.
+Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview). Before you can look at the audit data in the Microsoft Defender portal, you need to turn on auditing in the Microsoft Purview compliance portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
 > [!IMPORTANT]
 > Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role. Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization.
 
 ## Using the audit search in Microsoft Defender XDR
 
-1. To retrieve audit logs for Microsoft Defender XDR activities, navigate to the [Microsoft Defender XDR Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://compliance.microsoft.com) and select **Audit**.
+Follow these steps to search the audit log:
+
+1. To get audit logs for Microsoft Defender XDR activities, navigate to the [Microsoft Defender XDR Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://compliance.microsoft.com) and select **Audit**.
 
    :::image type="content" source="/defender/media/defender/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-log-xdr.png":::
 
@@ -108,7 +100,7 @@ Search-UnifiedAuditLog -StartDate 2023/03/12 -EndDate 2023/03/20 -RecordType <ID
 >[!NOTE]
 > See the API column in Audit activities included for the record type values.
 
-## Additional resources
+## See also
 
 - [Search the audit log in the compliance center](/purview/audit-new-search)
 - [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)
