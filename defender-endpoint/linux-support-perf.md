@@ -36,6 +36,11 @@ Depending on the applications that you are running and your device characteristi
 > [!WARNING]
 > Before starting, **please make sure that other security products are not currently running on the device**. Multiple security products may conflict and impact the host performance.
 
+There are 3 distinct ways to troubleshoot noisy processes and directories using exclusions provided by the Diagnostic tools from Microsoft Defender for Endpoint on Linux:
+1. Using Real-time Protection Statistics
+2. Using Hot Event Sources
+3. Using eBPF Statistics
+
 ## Troubleshoot performance issues using Real-time Protection Statistics
 
 **Applies to:**
@@ -146,9 +151,9 @@ The following steps can be used to troubleshoot and mitigate these issues:
 ## Troubleshoot performance issues using Hot Event Sources
 
 **Applies to:**
--  Performance issues in global files and executables.
+-  Performance issues in files and executables which are consuming most CPU cycles.
 
-Hot event sources is a feature that will specifically show the events which have highest count (highest frequency of occurrence) for generating file events.
+Hot event sources is a feature that allows customers to identify which process or directory is responsible for high resource consumption. To investigate which process/executable is generating the most noise, follow the steps below.
 
    > [!NOTE]
    > These commmands require you to have root permissions. Ensure that sudo can be used.
@@ -273,9 +278,9 @@ To improve the performance of Defender for Endpoint on Linux, locate the path wi
 ## Troubleshoot performance issues using eBPF Statistics
 
 **Applies to:**
-- All file/ process events, including for syscall based performance issues.
+- All file/ process events, including system call based performance issues.
 
-eBPF (extended Berkeley Packet Filter) statistics command gives insights into the top event/process that's generating the most file events, along with their syscall ids.
+eBPF (extended Berkeley Packet Filter) statistics command gives insights into the top event/process that's generating the most file events, along with their syscall ids. When system calls are being made from the system, there is a high amount of workload geenrated on your system. eBPF statistcs can be used to identify such issues.
 
 To collect current statistics using eBPF statistics, run:
 
