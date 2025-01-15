@@ -151,7 +151,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
 ## Troubleshoot performance issues using Hot Event Sources
 
 **Applies to:**
--  Performance issues in files and executables which are consuming most CPU cycles.
+-  Performance issues in files and executables which are consuming most CPU cycles in the entire filesystem.
 
 Hot event sources is a feature that allows customers to identify which process or directory is responsible for high resource consumption. To investigate which process/executable is generating the most noise, follow the steps below.
 
@@ -204,7 +204,7 @@ The output of which will look similar to the following (JSON);
        ]
    }
    ```
-And similarly output on the console looks like the following (this is just a snippet of the entire output). Here the first row is the count (frequency of occurrence) and the second is the file path.
+And similarly output on the console looks like the following (this is just a snippet of the entire output). Here, the first row is the count (frequency of occurrence) and the second is the file path.
 
    ```console
    Total Events: 11179 Time: 12s. Throughput: 75.3333 events/sec. 
@@ -221,8 +221,9 @@ And similarly output on the console looks like the following (this is just a sni
    514     /mnt/RamDisk/postgres_data/base/635594/635598_fsm
    496     /mnt/RamDisk/postgres_data/base/635597/635610_fsm
    ```
+In the above example, we can see that postgres_data/pg_wal file generates the most activity.
 
-and similarly for the executables, 
+Also, similarly for the executables, 
 
 ```bash
 sudo mdatp diagnostic hot-event-sources executables
@@ -273,6 +274,8 @@ Output on the console;
    6       /opt/microsoft/mdatp/sbin/wdavdaemonclient
    4       /usr/bin/sleep
    ```
+In this example, after 18s the command shows that bin/psql and bin/postgres executables generate the most activity.
+
 To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in `count` row and add a global process exclusion (in case of executable) or a global file/folder exclusion (in case of file) for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
 ## Troubleshoot performance issues using eBPF Statistics
@@ -288,7 +291,7 @@ To collect current statistics using eBPF statistics, run:
    mdatp diagnostic ebpf-statistics
    ```
 
-   The output is always on the console and would look similar to the following (this is only a snippet of the entire output):
+   The output is directly shown on the console and would look similar to the following (this is only a snippet of the entire output):
 
    ```console
    Top initiator paths:
@@ -309,6 +312,7 @@ To collect current statistics using eBPF statistics, run:
    288 : 19
    41 : 15
    ```
+This command monitors the system for 20 seconds and shows the results. Here the top initiator path (postgresql/12/bin/psql) shows the path of the process that generated the most system calls.
 
 To improve the performance of Defender for Endpoint on Linux, locate the one with the highest `count` in the `Top initiator path` row and add a global process exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
    
