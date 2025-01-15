@@ -71,6 +71,12 @@ In our example, the MpCmdRun utility starts a full antivirus scan on the device.
 |`-ResetPlatform`| Reset platform binaries back to `%ProgramFiles%\Windows Defender`.|
 |`-RevertPlatform`| Revert platform binaries back to the previously installed version of the Defender platform.|
 
+> [!NOTE]
+> For the "Scan" command, the following are the default timeout values for Quick or Full scans where the scan will stop at that time by default.
+> - Portal initiated scans (Quick or Full) or Windows Security app (Quick or Full): No time limit
+> - Scheduled Full Scans or MpCmdRun -scan: 7 day limit
+> - Scheduled Quick Scans or MpCmdRun -scan: 1 day limit
+
 ## Common errors in running commands via mpcmdrun.exe
 
 The following table lists common errors that can occur while using the MpCmdRun tool.

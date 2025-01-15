@@ -126,7 +126,7 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 | Microsoft Defender XDR | `ra{GUID}` <br> `ta{GUID}` for alerts from ThreatExperts <br> `ea{GUID}` for alerts from custom detections |
 | Microsoft Defender for Office 365 | `fa{GUID}` <br> Example: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Defender for Endpoint | `da{GUID}` <br> `ed{GUID}` for alerts from custom detections |
-| Microsoft Defender for Identity | `aa{GUID}` <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i` |
+| Microsoft Defender for Identity | `aa{GUID}` <br> `ri{GUID}` <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i`, `ri638724443630474445_-1629192583` |
 | Microsoft Defender for Cloud Apps |`ca{GUID}` <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Entra ID Protection | `ad{GUID}` |
 | App Governance | `ma{GUID}` |
