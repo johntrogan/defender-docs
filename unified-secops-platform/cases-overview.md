@@ -45,7 +45,7 @@ As we build on this foundation of case management, we're prioritizing these addi
 
 ## Requirements
 
-Case management is available in the Defender portal, and to use it, you must have a Microsoft Sentinel workspace connected. There is no access to cases from the Azure portal.
+Case management is available in the Defender portal, and to use it, you must have a Microsoft Sentinel workspace connected. There's no access to cases from the Azure portal.
 
 For more information, see [Connect Microsoft Sentinel to the Defender portal](/defender-xdr/microsoft-sentinel-onboard).
 
@@ -56,6 +56,8 @@ Use this table to plan your RBAC of case management:
 | View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Security operations > Security data basics (read)|
 | Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Security operations > Alerts (manage)|
 | Customize case status options | Authorization and setting > Core Security settings (manage)|
+
+For more information, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 ## Case queue
 
@@ -83,7 +85,7 @@ Manage the following case details to describe, prioritize, assign, and track wor
 | | Created by</br>Created on</br>Last updated by</br>Last updated on | automatically set |
 | | Due on</br>Linked incidents | none |
 
-Manage cases further by setting customized status, assigning tasks, linking incidents and adding comments.
+Manage cases further by setting customized status, assigning tasks, linking incidents, and adding comments.
 
 ### Customize status
 
