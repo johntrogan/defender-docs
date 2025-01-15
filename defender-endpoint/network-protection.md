@@ -72,7 +72,7 @@ There might be up to two hours of latency (usually less) between the time when t
  
 Watch this video to learn how network protection helps reduce the attack surface of your devices from phishing scams, exploits, and other malicious content:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4r4yZ]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2d0270f9-f216-4e9e-85c7-5e2b183c6d73]
 
 ## Requirements for network protection
 
