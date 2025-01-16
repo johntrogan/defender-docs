@@ -29,14 +29,14 @@ search.appverid: met150
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-This document provides instructions on how to narrow down performance issues related to Defender for Endpoint on Linux using the available diagnostic tools to be able to understand and mitigate the existing resource shortages and the processes that are making the system into such situations. Performance problems are mainly caused by bottlenecks in one or more hardware subsystems, depending on the profile of resource utilization on the system. Sometimes applications are sensitive to disk I/O resources and may need more CPU capacity, and sometimes some configurations are not sustainable, and may trigger too many new processes, and open too many file descriptors.
+This document provides instructions on how to narrow down performance issues related to Defender for Endpoint on Linux using the available diagnostic tools to be able to understand and mitigate the existing resource shortages and the processes that are making the system into such situations. Bottlenecks in one or more hardware subsystems mainly cause performance problems, depending on the profile of resource utilization on the system. Sometimes applications are sensitive to disk I/O resources and may need more CPU capacity, and sometimes some configurations are not sustainable, and may trigger too many new processes, and open too many file descriptors.
 
 Depending on the applications that you are running and your device characteristics, you may experience suboptimal performance when running Defender for Endpoint on Linux. In particular, applications or system processes that access many resources such as CPU, Disk, and Memory over a short timespan can lead to performance issues in Defender for Endpoint on Linux.
 
 > [!WARNING]
-> Before starting, **please make sure that other security products are not currently running on the device**. Multiple security products may conflict and impact the host performance.
+> Before starting, **make sure that other security products are not currently running on the device**. Multiple security products may conflict and impact the host performance.
 
-There are 3 distinct ways to troubleshoot noisy processes and directories using exclusions provided by the Diagnostic tools from Microsoft Defender for Endpoint on Linux:
+There are three distinct ways to troubleshoot noisy processes and directories using exclusions provided by the Diagnostic tools from Microsoft Defender for Endpoint on Linux:
 1. Using Real-time Protection Statistics
 2. Using Hot Event Sources
 3. Using eBPF Statistics
@@ -60,10 +60,10 @@ The following steps can be used to troubleshoot and mitigate these issues:
    Configuration property updated
    ```
 
-   If your device is managed by your organization, real-time protection can be disabled by your administrator using the instructions in [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
+   If your organization manages your device, your administrator can disable real-time protection using the instructions in [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
    > [!NOTE]
-   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component. In this case please follow the steps from the **Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer** section of this article.
+   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component. In this case, please follow the steps from the **Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer** section of this article.
 
 2. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on Linux.
 
@@ -153,10 +153,9 @@ The following steps can be used to troubleshoot and mitigate these issues:
 **Applies to:**
 -  Performance issues in files and executables which are consuming most CPU cycles in the entire filesystem.
 
-Hot event sources is a feature that allows customers to identify which process or directory is responsible for high resource consumption. To investigate which process/executable is generating the most noise, follow the steps below.
-
+Hot event sources is a feature that allows customers to identify which process or directory is responsible for high resource consumption. To investigate which process/executable is generating the most noise, follow these steps.
    > [!NOTE]
-   > These commmands require you to have root permissions. Ensure that sudo can be used.
+   > These commands require you to have root permissions. Ensure that sudo can be used.
 
 First, check the log level on your machine.
 
@@ -177,8 +176,7 @@ To collect current statistics (for files),
    ```bash
    sudo mdatp diagnostic hot-event-sources files
    ```
-The output of which will look similar to the following on the console (this is just a snippet of the entire output). Here, the first row is the count (frequency of occurrence) and the second is the file path.;
-
+The output looks similar to the following on the console (this is just a snippet of the entire output). Here, the first row shows the count (frequency of occurrence) and the second shows the file path.
    ```console
    Total Events: 11179 Time: 12s. Throughput: 75.3333 events/sec. 
    =========== Top 684 Hot Event Sources ===========
@@ -223,15 +221,14 @@ The output of which will look similar to the following on the console (this is j
    }
    ```
 
-In the above example, we can see that the file /mnt/RamDisk/postgres_data/pg_wal/0000000100000014000000A5 generates the most activity.
-
+In the example, we can see that the file /mnt/RamDisk/postgres_data/pg_wal/0000000100000014000000A5 generates the most activity.
 Also, similarly for the executables, 
 
 ```bash
 sudo mdatp diagnostic hot-event-sources executables
 ```
 
-The output of which will look similar to the following on the console;
+The output looks similar to the following on the console.
 
    ```console
    Total Events: 47382 Time: 18s. Throughput: 157 events/sec.
@@ -278,14 +275,14 @@ This is the output saved in the hot event source report in json;
    ```
 In this example, after 18s the command shows that the executables; /usr/lib/postgresql/12/bin/psql and /usr/lib/postgresql/12/bin/postgres (deleted) generate the most activity.
 
-To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in `count` row and add a global process exclusion (in case of executable) or a global file/folder exclusion (in case of file) for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in the count row and add a global process exclusion (if it's an executable) or a global file/folder exclusion (if it's a file) for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
 ## Troubleshoot performance issues using eBPF Statistics
 
 **Applies to:**
 - All file/ process events, including system call based performance issues.
 
-eBPF (extended Berkeley Packet Filter) statistics command gives insights into the top event/process that's generating the most file events, along with their syscall ids. When system calls are being made from the system, there is a high amount of workload geenrated on your system. eBPF statistcs can be used to identify such issues.
+eBPF (extended Berkeley Packet Filter) statistics command gives insights into the top event/process that's generating the most file events, along with their syscall IDs. When system calls are being made from the system, there's a high amount of workload generated on your system. eBPF statistics can be used to identify such issues.
 
 To collect current statistics using eBPF statistics, run:
 
@@ -340,7 +337,7 @@ Configure Microsoft Defender for Endpoint on Linux with exclusions for the proce
 The XMDEClientAnalyzer support tool contains syntax that can be used to limit the number of events being reported by the auditD plugin. This option will set the rate limit globally for AuditD causing a drop in all the audit events.
 
 > [!NOTE]
-> This functionality should be carefully used as limits the number of events being reported by the auditd subsystem as a whole. This could reduces the number of events for other subscribers as well.
+> This functionality should be carefully used as limits the number of events being reported by the auditd subsystem as a whole. This  the number of events for other subscribers as well.
 
 The ratelimit option can be used to enable/disable this rate limit.
 
