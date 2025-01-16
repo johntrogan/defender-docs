@@ -177,7 +177,25 @@ To collect current statistics (for files),
    ```bash
    sudo mdatp diagnostic hot-event-sources files
    ```
-The output of which will look similar to the following (JSON);
+The output of which will look similar to the following on the console (this is just a snippet of the entire output). Here, the first row is the count (frequency of occurrence) and the second is the file path.;
+
+   ```console
+   Total Events: 11179 Time: 12s. Throughput: 75.3333 events/sec. 
+   =========== Top 684 Hot Event Sources ===========
+   count   file path
+   2832    /mnt/RamDisk/postgres_data/pg_wal/0000000100000014000000A5
+   632     /mnt/RamDisk/postgres_data/base/635594/2601
+   619     /mnt/RamDisk/postgres_data/base/635597/2601
+   618     /mnt/RamDisk/postgres_data/base/635596/2601
+   618     /mnt/RamDisk/postgres_data/base/635595/2601
+   616     /mnt/RamDisk/postgres_data/base/635597/635610
+   615     /mnt/RamDisk/postgres_data/base/635596/635602
+   614     /mnt/RamDisk/postgres_data/base/635595/635606
+   514     /mnt/RamDisk/postgres_data/base/635594/635598_fsm
+   496     /mnt/RamDisk/postgres_data/base/635597/635610_fsm
+   ```
+   This command generates a Hot event source report which is saved in your local folder that can further investigated.
+   The output looks like follows on the json file;
 
    ```console
    {
@@ -204,24 +222,8 @@ The output of which will look similar to the following (JSON);
        ]
    }
    ```
-And similarly output on the console looks like the following (this is just a snippet of the entire output). Here, the first row is the count (frequency of occurrence) and the second is the file path.
 
-   ```console
-   Total Events: 11179 Time: 12s. Throughput: 75.3333 events/sec. 
-   =========== Top 684 Hot Event Sources ===========
-   count   file path
-   2832    /mnt/RamDisk/postgres_data/pg_wal/0000000100000014000000A5
-   632     /mnt/RamDisk/postgres_data/base/635594/2601
-   619     /mnt/RamDisk/postgres_data/base/635597/2601
-   618     /mnt/RamDisk/postgres_data/base/635596/2601
-   618     /mnt/RamDisk/postgres_data/base/635595/2601
-   616     /mnt/RamDisk/postgres_data/base/635597/635610
-   615     /mnt/RamDisk/postgres_data/base/635596/635602
-   614     /mnt/RamDisk/postgres_data/base/635595/635606
-   514     /mnt/RamDisk/postgres_data/base/635594/635598_fsm
-   496     /mnt/RamDisk/postgres_data/base/635597/635610_fsm
-   ```
-In the above example, we can see that postgres_data/pg_wal file generates the most activity.
+In the above example, we can see that the file /mnt/RamDisk/postgres_data/pg_wal/0000000100000014000000A5 generates the most activity.
 
 Also, similarly for the executables, 
 
@@ -229,7 +231,25 @@ Also, similarly for the executables,
 sudo mdatp diagnostic hot-event-sources executables
 ```
 
-The output of which will look similar to the following (JSON);
+The output of which will look similar to the following on the console;
+
+   ```console
+   Total Events: 47382 Time: 18s. Throughput: 157 events/sec.
+   =========== Top 23 Hot Event Sources ===========
+   count    executable path
+   8216    /usr/lib/postgresql/12/bin/psql
+   5721    /usr/lib/postgresql/12/bin/postgres (deleted)
+   3557    /usr/bin/bash
+   378     /usr/bin/clamscan
+   88      /usr/bin/sudo
+   70      /usr/bin/dash
+   30      /usr/sbin/zabbix_agent2
+   10      /usr/bin/grep
+   8       /usr/bin/gawk
+   6       /opt/microsoft/mdatp/sbin/wdavdaemonclient
+   4       /usr/bin/sleep
+   ```
+This is the output saved in the hot event source report in json;
 
    ```console
    {
@@ -256,25 +276,7 @@ The output of which will look similar to the following (JSON);
        ]
    }
    ```
-Output on the console;
-
-   ```console
-   Total Events: 47382 Time: 18s. Throughput: 157 events/sec.
-   =========== Top 23 Hot Event Sources ===========
-   count    executable path
-   8216    /usr/lib/postgresql/12/bin/psql
-   5721    /usr/lib/postgresql/12/bin/postgres (deleted)
-   3557    /usr/bin/bash
-   378     /usr/bin/clamscan
-   88      /usr/bin/sudo
-   70      /usr/bin/dash
-   30      /usr/sbin/zabbix_agent2
-   10      /usr/bin/grep
-   8       /usr/bin/gawk
-   6       /opt/microsoft/mdatp/sbin/wdavdaemonclient
-   4       /usr/bin/sleep
-   ```
-In this example, after 18s the command shows that bin/psql and bin/postgres executables generate the most activity.
+In this example, after 18s the command shows that the executables; /usr/lib/postgresql/12/bin/psql and /usr/lib/postgresql/12/bin/postgres (deleted) generate the most activity.
 
 To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in `count` row and add a global process exclusion (in case of executable) or a global file/folder exclusion (in case of file) for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
