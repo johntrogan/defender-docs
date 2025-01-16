@@ -8,7 +8,7 @@ ms.author: ewalsh
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: deniseb
-ms.date: 06/06/2023
+ms.date: 01/15/2025
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -70,6 +70,12 @@ In our example, the MpCmdRun utility starts a full antivirus scan on the device.
 |`-ValidateMapsConnection`|Verifies that your network can communicate with the Microsoft Defender Antivirus cloud service. This command will only work on Windows 10, version 1703 or higher.|
 |`-ResetPlatform`| Reset platform binaries back to `%ProgramFiles%\Windows Defender`.|
 |`-RevertPlatform`| Revert platform binaries back to the previously installed version of the Defender platform.|
+
+> [!NOTE]
+> For the "Scan" command, the following are the default timeout values for Quick or Full scans where the scan will stop at that time by default.
+- Scheduled Full Scans or MpCmdRun -scan: 7 day limit
+- Scheduled Quick Scans or MpCmdRun -scan: 1 day limit
+
 
 ## Common errors in running commands via mpcmdrun.exe
 

@@ -52,7 +52,7 @@ From here, you can select **Open incident page**. This opens the main page for t
 Attack stories help you to quickly review, investigate, and remediate attacks while viewing the full story of the attack on the same tab. It also allows you to review the entity details and take remediation actions, such as deleting a file or isolating a device without losing context.
 
 The attack story is briefly described in the following video. 
- > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW129Jc]
+ > [!VIDEO https://learn-video.azurefd.net/vod/player?id=7004c8ca-43e7-430c-92f5-562c2d240b91]
 
 Within the attack story you can find the alert page and the incident graph.
 

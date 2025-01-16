@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 09/24/2024
+ms.date: 01/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -185,6 +185,8 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
   > [!NOTE]
   > To see data for a specific date, use the day after. For example, to see January 10 data, use January 11 in the filter. Today's data is available for filtering tomorrow.
+  >
+  > Report data for some days is updated continuously, so the longer you wait to run the report, the more stable the message counts and classifications will be. For example, to return comprehensive weekly data from Sunday the 10th to Saturday the 17th, run the report on Friday the 23rd. The same report run on Sunday the 18th or Tuesday the 20th might contain slightly different message counts and classifications.
 
 - **Mail direction**: Select **Inbound**, **Outbound**, and **Intra-org**.
 - **Type**: Select one or more of the following values:
