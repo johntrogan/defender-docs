@@ -20,33 +20,41 @@ Zero Trust is a security strategy for designing and implementing the following s
 
 This article describes how Microsoft's unified security operations (SecOps) platform provides centralized access to the tools and capabilities necessary to implement a comprehensive Zero Trust solution.
 
-## Verify explicitly with unified security operations
+## Verify explicitly with unified SecOps
 
-Microsoft Sentinel collects data from across the environment and analyzes threats and anomalies so that your organization and any automation implemented, can act based on all available and verified data points.
+To effectively verify explicitly, Microsoft's unified SecOps platform provides a variety of tools and services to ensure that every access request is authenticated and authorized based on comprehensive data analysis. For example:
 
-Microsoft Defender XDR provides extended detection and response across users, identities, devices, apps, and emails. Add Microsoft Defender for Cloud to stretch that threat protection across multi-cloud and hybrid environments, and Microsoft Entra ID Protection to help you evaluate risk data from sign-in attempts. Microsoft Sentinel automation can then help you use risk-based signals captured across the Defender portal to take action, such as blocking or authorizing traffic based on the level of risk.
+- **Microsoft Sentinel** collects data from across the environment and analyzes threats and anomalies so that your organization and any automation implemented, can act based on all available and verified data points.
 
-Use Microsoft Defender Threat Intelligence to enrich your data with the latest threat updates and indicators of compromise (IoCs), and Microsoft Security Copilot for AI-driven insights and recommendations that enhance and automate your security operations. Add Microsoft Security Exposure Management to enrich your asset information with extra security context.
+- **Microsoft Defender XDR** provides extended detection and response across users, identities, devices, apps, and emails. Add **Microsoft Defender for Cloud** to stretch that threat protection across multi-cloud and hybrid environments, and **Microsoft Entra ID Protection** to help you evaluate risk data from sign-in attempts. **Microsoft Sentinel** automation can then help you use risk-based signals captured across the Defender portal to take action, such as blocking or authorizing traffic based on the level of risk.
 
-## Use least privileged access across unified security operations
+- Use **Microsoft Defender Threat Intelligence** to enrich your data with the latest threat updates and indicators of compromise (IoCs), and **Microsoft Security Copilot** for AI-driven insights and recommendations that enhance and automate your security operations. Add **Microsoft Security Exposure Management** to enrich your asset information with extra security context.
 
-The unified SecOps platform provides a comprehensive set of tools to help you implement least privilege access across your environment. For example:
+## Use least privileged access across unified SecOps
 
-- Implement Microsoft Defender XDR unified role-based access control (RBAC) to assign permissions based on roles, ensuring users have only the access they need to perform their tasks.
-- Use Microsoft Entra ID Protection's Privileged Identity Management (PIM) to provide just-in-time activations for privileged role assignments.
-- Implement Defender for Cloud Apps conditional access policies to enforce adaptive access policies based on user, location, device, and risk signals to ensure secure access to resources.
-- Configure Microsoft Defender for Cloud threat protection to automatically block and flag risky behavior, and employ hardening mechanisms to implement least privilege access and JIT VM access.
+Microsoft's unified SecOps platform also provides a comprehensive set of tools to help you implement least privilege access across your environment. For example:
 
-Microsoft Security Copilot also authenticates users with on-behalf-of (OBO) authentication, ensuring that users have access only to the resources they need.
+- Implement **Microsoft Defender XDR** unified role-based access control (RBAC) to assign permissions based on roles, ensuring users have only the access they need to perform their tasks.
 
-## Assume breach
+- Use **Microsoft Entra ID Protection's** Privileged Identity Management (PIM) to provide just-in-time activations for privileged role assignments.
+
+- Implement **Microsoft Defender for Cloud Apps** conditional access policies to enforce adaptive access policies based on user, location, device, and risk signals to ensure secure access to resources.
+
+- Configure **Microsoft Defender for Cloud** threat protection to automatically block and flag risky behavior, and employ hardening mechanisms to implement least privilege access and JIT VM access.
+
+**Microsoft Security Copilot** also authenticates users with on-behalf-of (OBO) authentication, ensuring that users have access only to the resources they need.
+
+## Assume breach across unified SecOps
 
 Assuming breach helps organizations prepare for and respond to security incidents more effectively. For example, with the unified SecOps platform:
 
-- Configure Microsoft Defender XDR automatic attack disruption to contain attacks in progress, limiting lateral movement and reducing impact with high-fidelity signals and continuous investigation insights.
-- Use Microsoft Sentinel's automation rules and playbooks to automatically respond to security threats across the enterprise.
-- Implement Microsoft Defender for Cloud's recommendations to automatically block and flag risky or suspicious behavior, and automate responses across coverage areas with Azure Logic Apps.
-- Enable Microsoft Entra ID Protection notifications so that you can respond appropriately when a user is flagged as at risk.
+- Configure **Microsoft Defender XDR** automatic attack disruption to contain attacks in progress, limiting lateral movement and reducing impact with high-fidelity signals and continuous investigation insights.
+
+- Use **Microsoft Sentinel's** automation rules and playbooks to automatically respond to security threats across the enterprise.
+
+- Implement **Microsoft Defender for Cloud's** recommendations to automatically block and flag risky or suspicious behavior, and automate responses across coverage areas with Azure Logic Apps.
+
+- Enable **Microsoft Entra ID Protection** notifications so that you can respond appropriately when a user is flagged as at risk.
 
 ## Next step
 
