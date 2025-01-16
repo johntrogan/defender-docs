@@ -150,7 +150,7 @@ For the following services, use the different roles available, or create custom 
 
 ## Plan Zero Trust activities
 
-Microsoft's unified SecOps platform is part of [Microsoft's Zero Trust security model](/security/zero-trust/), which includes the following principles:
+Microsoft's unified SecOps platform is part of [Microsoft's Zero Trust security model](zero-trust.md), which includes the following principles:
 
 |Principle	| Description| 
 | ------------------------ | ------------------------------------------- |
@@ -172,6 +172,8 @@ For more information about implementing Zero Trust principles in Microsoft's uni
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/zero-trust?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json)
 - [Microsoft Security Copilot](/security/zero-trust/copilots/zero-trust-microsoft-copilot-for-security)
 - [Microsoft Entra ID Protection](/entra/id-protection/how-to-deploy-identity-protection)
+
+For more information, see the [Zero Trust Guidance Center](/security/zero-trust/zero-trust-overview).
 
 ## Next step
 
