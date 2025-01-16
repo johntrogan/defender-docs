@@ -164,7 +164,7 @@
           items:
           - name: Onboarding Windows Server overview
             href: onboard-windows-server.md
-          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019, and 2022
+          - name: Onboard Windows Server 2012 R2, 2016, Semi-Annual Channel, 2019, 2022 and 2025
             href: configure-server-endpoints.md
           - name: Onboard Windows devices using Configuration Manager
             href: configure-endpoints-sccm.md
