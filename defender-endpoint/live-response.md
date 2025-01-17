@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 01/10/2025
 ---
 
 # Investigate entities on devices using live response
@@ -31,7 +31,7 @@ Live response gives security operations teams instantaneous access to a device (
 
 Live response is designed to enhance investigations by enabling your security operations team to collect forensic data, run scripts, send suspicious entities for analysis, remediate threats, and proactively hunt for emerging threats.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUW]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=38c8abec-021a-4cda-9198-5ff6402a79ee]
 
 With live response, analysts can do all of the following tasks:
 
@@ -229,9 +229,9 @@ Here are some examples:
 
 Live response has a library where you can put files into. The library stores files (such as scripts) that can be run in a live response session at the tenant level.
 
-Live response allows PowerShell scripts to run, however you must first put the files into the library before you can run them.
+Live response allows PowerShell and Bash scripts to run; however, you must first put the files into the library before you can run them.
 
-You can have a collection of PowerShell scripts that can run on devices that you initiate live response sessions with.
+You can have a collection of PowerShell and Bash scripts that can run on devices that you initiate live response sessions with.
 
 #### To upload a file in the library
 
@@ -311,7 +311,7 @@ Live response supports table and JSON format output types. For each command, the
 
 ## Supported output pipes
 
-Live response supports output piping to CLI and file. CLI is the default output behavior. You can pipe the output to a file using the following command: [command] > [filename].txt.
+Live response supports output piping to CLI and file. CLI is the default output behavior. You can pipe the output to a file using the following command: `[command] > [filename].txt`.
 
 Example:
 
