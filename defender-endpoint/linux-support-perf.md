@@ -36,7 +36,7 @@ Depending on the applications that you are running and your device characteristi
 > [!WARNING]
 > Before starting, **make sure that other security products are not currently running on the device**. Multiple security products may conflict and impact the host performance.
 
-There are three distinct ways to troubleshoot noisy processes and directories using exclusions provided by the Diagnostic tools from Microsoft Defender for Endpoint on Linux:
+There are three distinct ways to troubleshoot noisy processes and directories using the Diagnostic tools from Microsoft Defender for Endpoint on Linux:
 1. Using Real-time Protection Statistics
 2. Using Hot Event Sources
 3. Using eBPF Statistics
@@ -103,47 +103,46 @@ The following steps can be used to troubleshoot and mitigate these issues:
 
    The output of this command shows all processes and their associated scan activity.
 
-3. On your Linux system, download the sample Python parser **high_cpu_parser.py** using the command:
+3. Type the following commands:
 
    ```bash
-   wget -c https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/linux/diagnostic/high_cpu_parser.py
+   mdatp diagnostic real-time-protection-statistics --sort --top 4
    ```
-
-   The output of this command should be similar to the following:
+   The output of the which is a list of the top 4 contributors to performance issues. For example, the output of the command will be something like the following:
 
    ```console
-   --2020-11-14 11:27:27-- https://raw.githubusercontent.com/microsoft.mdatp-xplat/master/linus/diagnostic/high_cpu_parser.py
-   Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.xxx.xxx
-   Connecting to raw.githubusercontent.com (raw.githubusercontent.com)| 151.101.xxx.xxx| :443... connected.
-   HTTP request sent, awaiting response... 200 OK
-   Length: 1020 [text/plain]
-   Saving to: 'high_cpu_parser.py'
-   100%[===========================================>] 1,020    --.-K/s   in 0s
+   =====================================
+   Process id: 560
+   Name: NetworkManager
+   Path: "/usr/sbin/NetworkManager"
+   Total files scanned: 261
+   Scan time (ns): "3070788919"
+   Status: Active
+   =====================================
+   Process id: 1709561
+   Name: snapd
+   Path: "/snap/snapd/23545/usr/lib/snapd/snapd"
+   Total files scanned: 247
+   Scan time (ns): "19926516003"
+   Status: Active
+   =====================================
+   Process id: 596
+   Name: systemd-logind
+   Path: "/usr/lib/systemd/systemd-logind"
+   Total files scanned: 29
+   Scan time (ns): "716836547"
+   Status: Active
+   =====================================
+   Process id: 1977683
+   Name: cupsd
+   Path: "/usr/sbin/cupsd"
+   Total files scanned: 20
+   Scan time (ns): "985110892"
+   Status: Active
+   =====================================
    ```
 
-4. Type the following commands:
-
-   ```bash
-   mdatp diagnostic real-time-protection-statistics --output json | python high_cpu_parser.py
-   ```
-
-   The output of the above is a list of the top contributors to performance issues. The first column is the process identifier (PID), the second column is the process name, and the last column is the number of scanned files, sorted by impact. For example, the output of the command will be something like the below:
-
-   ```console
-   ... > mdatp diagnostic real-time-protection-statistics --output json | python high_cpu_parser.py | head
-   27432 None 76703
-   73467 actool    1249
-   73914 xcodebuild 1081
-   73873 bash 1050
-   27475 None 836
-   1    launchd     407
-   73468 ibtool     344
-   549  telemetryd_v1   325
-   4764 None 228
-   125  CrashPlanService 164
-   ```
-
-   To improve the performance of Defender for Endpoint on Linux, locate the one with the highest number under the `Total files scanned` row and add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+   To improve the performance of Defender for Endpoint on Linux, locate the one with the highest number under the `Total files scanned` row and add an exclusion for it (carefully evaluate if it is safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
    > [!NOTE]
    > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off are not counted. Additionally, only events which triggered scans are counted.
@@ -266,16 +265,25 @@ This is the output saved in the hot event source report in json;
                "authCount": "5127",
                "csId": "",
                "notifyCount": "0",
-               "path": "/usr/lib/postgresql/12/bin/postgres (deleted)",
+               "path": "/usr/lib/postgresql/12/bin/postgres",
                "pidCount": "2144",
                "teamId": ""
            }
        ]
    }
    ```
-In this example, after 18s the command shows that the executables; /usr/lib/postgresql/12/bin/psql and /usr/lib/postgresql/12/bin/postgres (deleted) generate the most activity.
+In this example, after 18s the command shows that the executables; /usr/lib/postgresql/12/bin/psql and /usr/lib/postgresql/12/bin/postgres generate the most activity.
 
-To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in the count row and add a global process exclusion (if it's an executable) or a global file/folder exclusion (if it's a file) for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+Once you've finished the investigation, you can change the log level back to "info".
+
+   ```bash
+   sudo mdatp log level set --level info
+   ```
+   ```console
+   Log level configured successfully
+   ```
+
+To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in the count row and add a global process exclusion (if it's an executable) or a global file/folder exclusion (if it's a file) for it (carefully evaluate if it is safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
 ## Troubleshoot performance issues using eBPF Statistics
 
@@ -313,7 +321,7 @@ To collect current statistics using eBPF statistics, run:
    ```
 This command monitors the system for 20 seconds and shows the results. Here the top initiator path (postgresql/12/bin/psql) shows the path of the process that generated the most system calls.
 
-To improve the performance of Defender for Endpoint on Linux, locate the one with the highest `count` in the `Top initiator path` row and add a global process exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+To improve the performance of Defender for Endpoint on Linux, locate the one with the highest `count` in the `Top initiator path` row and add a global process exclusion for it (carefully evaluate if it is safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
    
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
@@ -331,24 +339,6 @@ To run the client analyzer for troubleshooting performance issues, see [Run the 
 ## Configure Global Exclusions for better performance
 
 Configure Microsoft Defender for Endpoint on Linux with exclusions for the processes or disk locations that contribute to the performance issues. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md). IF you still have performance issues, contact support for further instructions and mitigation.
-
-### Rate Limiter
-
-The XMDEClientAnalyzer support tool contains syntax that can be used to limit the number of events being reported by the auditD plugin. This option will set the rate limit globally for AuditD causing a drop in all the audit events.
-
-> [!NOTE]
-> This functionality should be carefully used as limits the number of events being reported by the auditd subsystem as a whole. This  the number of events for other subscribers as well.
-
-The ratelimit option can be used to enable/disable this rate limit.
-
-Enable: `./mde_support_tool.sh ratelimit -e true`
-
-Disable: `./mde_support_tool.sh ratelimit -e false`
-
-When the ratelimit is enabled a rule will be added in AuditD to handle 2500 events/sec.
-
-> [!NOTE]
-> Please contact Microsoft support if you need assistance with analyzing and mitigating AuditD related performance issues, or with deploying AuditD exclusions at scale.
 
 ## See also
 
