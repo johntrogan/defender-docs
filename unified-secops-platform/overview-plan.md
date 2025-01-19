@@ -152,11 +152,11 @@ For the following services, use the different roles available, or create custom 
 
 Microsoft's unified SecOps platform is part of [Microsoft's Zero Trust security model](zero-trust.md), which includes the following principles:
 
-|Principle	| Description| 
-| ------------------------ | ------------------------------------------- |
-| **Verify explicitly**	| Always authenticate and authorize based on all available data points. |
-| **Use least privilege access**	| Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection. |
-| **Assume breach**	| Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses. |
+|Security principle |Description|
+|---|---|
+|**Verify explicitly** |Always authenticate and authorize based on all available data points. |
+|**Use least privilege access** |Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.      |
+|**Assume breach** |Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses. |
 
 Zero Trust security is designed to protect modern digital environments by leveraging network segmentation, preventing lateral movement, providing least-privileged access, and using advanced analytics to detect and respond to threats.
 
