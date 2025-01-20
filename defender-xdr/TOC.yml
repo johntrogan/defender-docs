@@ -54,30 +54,16 @@
           href: microsoft-365-defender-train-security-staff.md
         - name: Setup guides for Microsoft Defender XDR
           href: deploy-configure-m365-defender.md
-        - name: Turning on Microsoft Defender XDR FAQs
-          href: m365d-enable-faq.md
     - name: Protect against threats
       items:
       - name: Protect your endpoints
         href: /defender-endpoint
       - name: Protect your identities
-        items:
-          - name: Sensor settings and health
-            href: /defender-for-identity/sensor-settings?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Directory Services account
-            href: /defender-for-identity/deploy/directory-service-accounts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: VPN integration
-            href: /defender-for-identity/vpn-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Set entity tags
-            href: /defender-for-identity/entity-tags?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Investigate Defender for Identity alerts
-            href: /defender-for-identity/manage-security-alerts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Configure detection exclusions
-            href: /defender-for-identity/exclusions?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-          - name: Email and syslog notifications
-            href: /defender-for-identity/notifications?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        href: /defender-for-identity
       - name: Protect your Office 365 workloads
         href: /defender-office-365
+      - name: Protect your cloud apps
+        href: /defender-cloud-apps
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -478,6 +464,8 @@
               href: custom-permissions-details.md
     - name: Reference
       items:
+        - name: Microsoft Defender XDR FAQs
+          href: m365d-enable-faq.md      
         - name: Audit activities and events
           href: microsoft-xdr-auditing.md
         - name: Configure email notifications
