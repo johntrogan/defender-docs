@@ -198,7 +198,7 @@ remediate process 7960
 # See list of all remediated entities
 remediate list
 ```
-
+Note: As of now we do not support HKEY_USERS reg hive for Remediate. This is a known issue and we are working on to support HKEY_USERS reg hive. 
 ## `run`
 
 ```console
