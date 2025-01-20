@@ -19,7 +19,7 @@ ms.topic: conceptual
 
 # Manage cases natively in Microsoft's unified security operations platform
 
-Case management is the first installment of new capabilities for cases when you onboard to Microsoft's unified security operations (SecOps) platform.
+Case management is the first installment of new capabilities for managing security work when you onboard to Microsoft's unified security operations (SecOps) platform.
 
 This initial step toward delivering a unified, security-focused case management experience centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
 
