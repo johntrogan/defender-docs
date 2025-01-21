@@ -26,7 +26,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!IMPORTANT]
-> Some information in this article relates to a prereleased product, which may be substantially modified before it’s commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
+> Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
 
 [Microsoft Purview Insider Risk Management alerts](/purview/insider-risk-management-activities#alert-dashboard) in the Microsoft Defender portal are vital for protecting an organization's sensitive information and maintaining security. These alerts and insights from Microsoft Purview Insider Risk Management help identify and mitigate internal threats like data leaks and intellectual property theft by employees or contractors. Monitoring these alerts allows organizations to address security incidents proactively, ensuring sensitive data remains protected and compliance requirements are met.
 
@@ -41,11 +41,11 @@ You can manage insider risk management alerts in the Microsoft Defender portal b
 - View individual insider risk alerts in the [alert queue](investigate-alerts.md).
 - Filter by service source on the incident and alert queues.
 - Hunt for all activities and all alerts related to the user in the insider risk alert.
-- View a user’s insider risk activity summary and risk level in the user entity page.
+- View a user's insider risk activity summary and risk level in the user entity page.
 
 ## Know before you begin
 
-If you’re new to Microsoft Purview and insider risk management, consider reading the following articles:
+If you're new to Microsoft Purview and insider risk management, consider reading the following articles:
 
 - [Learn about Microsoft Purview](/purview/purview)
 - [Learn about Microsoft Purview Insider Risk Management](/purview/insider-risk-management)
