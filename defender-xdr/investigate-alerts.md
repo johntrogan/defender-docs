@@ -62,7 +62,7 @@ You can filter alerts according to these criteria:
 - Product name
 - Entities (the impacted assets)
 - Automated investigation state
-- Data stream
+- Data stream (workload or location)
 - Alert subscription IDs
 
 > [!NOTE]
