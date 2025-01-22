@@ -38,7 +38,7 @@ Case management enables you to manage SecOps cases natively in the Defender port
 As we build on this foundation of case management, we're prioritizing these additional robust capabilities as we evolve this solution:
 
 - Automation
-- Dashboards
+- Multi-tenant support
 - More evidence to add
 - Workflow customization
 - More Defender portal integrations
