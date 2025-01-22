@@ -22,12 +22,13 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## January 2025
 
-- [Manage cases natively with the case management starter kit (Preview)](#case-management-starter-kit-preview)
+- [Manage SecOps work natively with case management (Preview)](#case-management-preview)
+- [Unified device timeline in Microsoft Defender portal (Preview)](#unified-device-timeline-in-microsoft-defender-portal-preview)
 - [SOC optimization updates for unified coverage management](#soc-optimization-updates-for-unified-coverage-management)
 
-### Case management starter kit (Preview)
+### Case management (Preview)
 
-The case management starter kit (CMSK) is the first installment of an end-to-end solution that provides seamless management of your security work. SecOps teams maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal. Here's the initial set of scenarios and features that CMSK supports.
+Case management is the first installment of an end-to-end solution that provides seamless management of your security work. SecOps teams maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal. Here's the initial set of scenarios and features that CMSK supports.
 
 - Define your own case workflow with custom status values
 - Assign tasks to collaborators and configure due dates
@@ -37,6 +38,12 @@ The case management starter kit (CMSK) is the first installment of an end-to-end
 This is just the start. Stay tuned for additional capabilities as we evolve this solution.
 
 For more information, see [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md).
+
+### Unified device timeline in Microsoft Defender portal (Preview)
+
+The **unified device timeline**, a single, cohesive view that integrates device activity from Microsoft Sentinel and Defender XDR into a single timeline, is now available in Preview. This feature streamlines security investigations by enabling analysts to access all relevant device activities in one place, reducing the need to switch between platforms and lowering incident response times.
+
+For more information, see [Device entity page in Microsoft Defender](/defender-xdr/entity-page-device#timeline-tab).
 
 ### SOC optimization updates for unified coverage management
 
