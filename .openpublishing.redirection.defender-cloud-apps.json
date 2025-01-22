@@ -997,8 +997,8 @@
     },
      {
       "source_path": "CloudAppSecurityDocs/tutorial-ueba.md",
-      "redirect_url": "CloudAppSecurityDocs/index.yml",
-      "redirect_document_id": false
+      "redirect_url": "/CloudAppSecurityDocs/index.yml",
+      "redirect_document_id": true
     },
     {
       "source_path": "CloudAppSecurityDocs/file-filters.md",
