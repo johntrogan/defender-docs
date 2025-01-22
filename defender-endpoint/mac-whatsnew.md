@@ -46,7 +46,7 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 - On macOS Sequoia (Version 15.0 - 15.1.1), users may encounter prompts about incoming network connections from applications when the native firewall is active.  
 
    ![Screenshot showing prompts about incoming network connections](media/mac-whatsnew/image.png)
-
+  
 If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't impact Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web).  This issue is fixed in macOS Sequoia 15.2.
 
 ## Sequoia support
@@ -63,6 +63,20 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 ### Behavior Monitoring for macOS is now in public preview
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+
+### Dec-2024 (Build: 101.24102.0018  | Release version: 20.124102.18.0)
+
+| Build:             | **101.24102.0018**         |
+|--------------------|-----------------------|
+| Release version:   | **20.124102.18.0** |
+| Engine version:    | **1.1.24080.10**       |
+| Signature version: | **1.419.298.0**      |
+
+##### What's new
+
+- Enhanced health reporting to provide better insights into file user/group permission issues.
+- Bug and performance fixes.
+
 
 ### Oct-2024 (Build: 101.24092.0004  | Release version: 20.124092.4.0)
 
