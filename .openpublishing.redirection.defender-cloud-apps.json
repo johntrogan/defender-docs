@@ -997,7 +997,7 @@
     },
      {
       "source_path": "CloudAppSecurityDocs/tutorial-ueba.md",
-      "redirect_url": "/CloudAppSecurityDocs/index",
+      "redirect_url": "CloudAppSecurityDocs/index",
       "redirect_document_id": true
     },
     {
