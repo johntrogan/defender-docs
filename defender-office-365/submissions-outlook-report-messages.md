@@ -161,4 +161,4 @@ To review messages that users have reported to Microsoft, admins can use the **U
 
 Admins can watch this short video to learn how to use Microsoft Defender for Office 365 to easily investigate user reported messages. Admins can determine the contents of a message and how to respond by applying the appropriate remediation action.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBHof]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f420f4a0-56a3-4054-8963-6eb72403f875]

@@ -32,7 +32,7 @@ Wondering what to do with suspicious email messages, URLs, email attachments, or
 In addition, admins in Microsoft 365 organizations with Microsoft Defender for Endpoint also have several methods for reporting files.
 
 Watch this video that shows more information about the unified submissions experience.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE50HhM]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=65c688e4-8b79-4a39-a731-ddbffa053448]
 
 ## Report suspicious email messages to Microsoft
 

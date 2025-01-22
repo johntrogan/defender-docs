@@ -1000,5 +1000,10 @@
       "redirect_url": "CloudAppSecurityDocs/index.yml",
       "redirect_document_id": true
     },
+    {
+      "source_path": "CloudAppSecurityDocs/file-filters.md",
+      "redirect_url": "/defender-cloud-apps/data-protection-policies",
+      "redirect_document_id": false
+    }
   ]
 }

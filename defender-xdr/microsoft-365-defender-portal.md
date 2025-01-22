@@ -43,7 +43,7 @@ To learn more about the services that are part of the Microsoft Defender portal,
 
 Watch this short video to learn about the Defender portal.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBKau]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=d97b17c8-8900-4a18-a099-7d30d9a316ea]
 
 ## What to expect
 
