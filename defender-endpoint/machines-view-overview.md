@@ -147,7 +147,6 @@ The available device properties to use as filters vary based on the device inven
 |**First seen**|All tabs except **Network devices**|How long ago the device was first seen on the network or when it was first reported by the Microsoft Defender for Endpoint sensor. The available values are **Last 7 days** or **Over 7 days ago**.|
 |**Group**|**All devices**, **Computers & mobile**, **Network devices**|Device groups. Enter a value in the box.|
 |**Internet facing**|**Tabs**|**Description**|
-|---|---|---|
 |**All devices**|**Computers & mobile**|Whether the device is internet facing. The available values are **Yes** and **No**.|
 |**Managed by**|**All devices**, **Computers & mobile**|How the device is being managed. The available values are: <br/> - **Intune**: Microsoft Intune, including co-management with Microsoft Configuration Manager via tenant attach <br/> - **ConfigMgr**: Microsoft Configuration manager <br/> - **MDE**: Microsoft Defender for Endpoint <br/> - **Unknown**: This value is caused by one of the following conditions: An outdated version of Windows, GPO management, Non-Microsoft mobile device management (MDM).|
 |**Mitigation status**|**All devices**, **Computers & mobile**|The available values are **Contained** and **Isolated**.|
@@ -161,15 +160,8 @@ The available device properties to use as filters vary based on the device inven
 |**Tags**|All|The grouping and tagging that you added to individual devices. For more information, see [Create and manage device tags](machine-tags.md).|
 |**Transient device**|All|The available values are **No** and **Yes**. By default, transient devices are filtered to reduce inventory noise. For more information, see [Identifying transient devices](transient-device-tagging.md).|
 |**Vendor**|**All devices**|The vendor of the device. Enter a value or select from the available values.|
-|**Windows version**|**Computers & mobile**|The version of Windows. The **OS version** filter is also available.  
-
-  The value **Future version** for this property is caused by one of the following scenarios:
-
-- A prerelease build of a future Windows release.
-- The build has no version name.
-- The build version name isn't yet supported
-
-  The full OS version is visible on the device details page.|
+|**Windows version**|**Computers & mobile**|The version of Windows. The **OS version** filter is also available.  <br/><br/>The value **Future version** for this property is caused by one of the following scenarios:<br/>- A prerelease build of a future Windows release.
+- The build has no version name.<br/>- The build version name isn't yet supported<br/>The full OS version is visible on the device details page.|
 
 ## Use columns to customize the device inventory views
 
