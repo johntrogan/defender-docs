@@ -39,7 +39,7 @@ This is just the start. Stay tuned for additional capabilities as we evolve this
 
 For more information, see the following articles:
 - [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md)
-- [Microsoft Sentinel blog - Improve SecOps collaboration with case managmeent](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
+- [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
 
 ### Unified device timeline in Microsoft Defender portal (Preview)
 
