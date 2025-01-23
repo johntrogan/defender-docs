@@ -997,7 +997,7 @@
     },
      {
       "source_path": "CloudAppSecurityDocs/tutorial-ueba.md",
-      "redirect_url": "CloudAppSecurityDocs/index",
+      "redirect_url": "https://learn.microsoft.com/en-us/defender-cloud-apps/",
       "redirect_document_id": true
     },
     {
