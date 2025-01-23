@@ -213,6 +213,7 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 > - To switch Microsoft Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
 > 
 > Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
+>Microsoft Defender for Endpoint – EDR response actions always operate in Passive mode, even if EDR is in block mode.
 
 ### Use the Windows Security app to identify your antivirus app
 
