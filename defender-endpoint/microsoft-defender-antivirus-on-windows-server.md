@@ -9,7 +9,7 @@ ms.author: ewalsh
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.topic: conceptual
-ms.date: 05/17/2024
+ms.date: 01/23/2025
 ms.collection: 
 - m365-security
 - tier2
