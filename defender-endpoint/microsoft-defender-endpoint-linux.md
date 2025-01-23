@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/07/2025
+ms.date: 01/10/2025
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -45,7 +45,7 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
 
 > [!NOTE]
 > Linux distribution using system manager supports both SystemV and Upstart.
-> Microsoft Defender for Endpoint on Linux agent is independent from [OMS agent](/azure/azure-monitor/agents/agents-overview#log-analytics-agent). 
+> Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/agents-overview#log-analytics-agent). 
 > Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
 ### System requirements
@@ -106,30 +106,30 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
   
 - List of supported filesystems for RTP, Quick, Full, and Custom Scan.
 
-   |RTP, Quick, Full Scan| Custom Scan|
-   |---|---|
-   |`btrfs`|All filesystems supported for RTP, Quick, Full Scan|
-   |`ecryptfs`|`Efs`|
-   |`ext2`|`S3fs`|
-   |`ext3`|`Blobfuse`|
-   |`ext4`|`Lustr`|
-   |`fuse`|`glustrefs`|
-   |`fuseblk`|`Afs`|
-   |`jfs`|`sshfs`|
-   |`nfs` (v3 only)|`cifs`|
-   |`overlay`|`smb`|
-   |`ramfs`|`gcsfuse`|
-   |`reiserfs`|`sysfs`|
-   |`tmpfs`||
-   |`udf`||
-   |`vfat`||
-   |`xfs`||
-    
+ |RTP, Quick, Full Scan| Custom Scan|
+ |---|---|
+ |`btrfs`|All filesystems supported for RTP, Quick, Full Scan|
+ |`ecryptfs`|`Efs`|
+ |`ext2`|`S3fs`|
+ |`ext3`|`Blobfuse`|
+ |`ext4`|`Lustr`|
+ |`fuse`|`glustrefs`|
+ |`fuseblk`|`Afs`|
+ |`jfs`|`sshfs`|
+ |`nfs` (v3 only)|`cifs`|
+ |`overlay`|`smb`|
+ |`ramfs`|`gcsfuse`|
+ |`reiserfs`|`sysfs`|
+ |`tmpfs`||
+ |`udf`||
+ |`vfat`||
+ |`xfs`||
+  
   > [!NOTE]
-  > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
+  > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient extended Berkeley Packet Filter (eBPF) technology.
   > If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, then Audit framework (`auditd`) must be enabled on your system.
   > If you're using Auditd, then system events captured by rules added to `/etc/audit/rules.d/` adds to `audit.log`(s) and might affect host auditing and upstream collection. Events added by Microsoft Defender for Endpoint on Linux are tagged with the `mdatp` key.
-
+  
 - /opt/microsoft/mdatp/sbin/wdavdaemon requires executable permission. For more information, see "Ensure that the daemon has executable permission" in [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md).
 
 ### Installation instructions
