@@ -63,7 +63,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
    If your organization manages your device, your administrator can disable real-time protection using the instructions in [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
    > [!NOTE]
-   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component. In this case, please follow the steps from the **Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer** section of this article.
+   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component as well. For this, you need to add global exclusions from Antivirus and EDR. In this case, please follow the steps from the **Troubleshoot performance issues using Hot Event Sources section of this article.**
 
 2. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on Linux.
 
@@ -142,7 +142,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
    =====================================
    ```
 
-   To improve the performance of Defender for Endpoint on Linux, locate the one with the highest number under the `Total files scanned` row and add an exclusion for it (carefully evaluate if it is safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+   To improve the performance of Defender for Endpoint on Linux, locate the one with the highest number under the `Total files scanned` row and add an antivirus exclusion for it (carefully evaluate if it is safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
    > [!NOTE]
    > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off are not counted. Additionally, only events which triggered scans are counted.
