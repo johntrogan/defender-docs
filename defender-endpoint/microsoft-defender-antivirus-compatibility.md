@@ -67,7 +67,18 @@ The following table summarizes what to expect:
 |Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 |A non-Microsoft antivirus/antimalware solution|Disabled<br/>(set manually; see the note that follows this table) |
 
 > [!NOTE]
-> On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlet (as an administrator): `Uninstall-WindowsFeature Windows-Defender`. Restart your server to finish removing Microsoft Defender Antivirus.
+> On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlet (as an administrator): 
+> Windows Server 2019 and newer:
+> ```powershell
+> Uninstall-WindowsFeature Windows-Defender
+> ```
+> Windows Server 2016:
+> ```powershell
+> Uninstall-WindowsFeature Windows-Defender
+> ```
+> Uninstall-WindowsFeature Windows-Defender-Gui
+> ```
+> Restart your server to finish removing Microsoft Defender Antivirus.
 > On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*.
 > If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled).
 
