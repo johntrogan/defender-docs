@@ -180,13 +180,13 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 | --- | --- |
 | Prevent users and apps from accessing dangerous websites | Enabled, Block |
 | This settings controls whether Network Protection is allowed to be configured into block or audit mode on Windows Server | Enabled |
-| Allow Network Protection Down Level | Network protection is enabled downlevel |
-| Allow Datagram Processing On Win Server | Datagram processing on Windows Server is enabled |
-| Disable DNS over TCP parsing | DNS over TCP parsing is enabled |
-| Disable HTTP parsing | HTTP parsing is enabled |
-| Disable SSH parsing | SSH parsing is enabled |
-| Disable TLS parsing | TLS parsing is enabled |
-| Enable DNS Sinkhole | DNS Sinkhole is enabled |
+
+To enable Network Protection for Windows Servers, for now, please use Powershell:
+
+| OS | Powershell cmdlet |
+| --- | --- |
+| Windows Server 2012 R2Windows Server 2022 and later	| set-mpPreference -AllowNetworkProtectionOnWinServer $true |
+| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | set-MpPreference -AllowNetworkProtectionOnWinServer $true and set-MpPreference -AllowNetworkProtectionDownLevel $true
 
 ## Attack Surface Reduction Rules
 
