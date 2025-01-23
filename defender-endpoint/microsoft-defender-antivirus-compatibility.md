@@ -68,19 +68,17 @@ The following table summarizes what to expect:
 
 If the device is onboarded to Microsoft Defender for Endpoint, you can use Microsoft Defender Antivirus in passive mode as described later in this article.
 
-
-### If you must uninstall Microsoft Defender Antivirus on Windows Server
-
-On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlets (as an administrator):
-
-| Version | PowerShell cmdlet |
-|--|--| 
-| Windows Server 2019 and newer |`Uninstall-WindowsFeature Windows-Defender` |
-| Windows Server 2016 | `Uninstall-WindowsFeature Windows-Defender` <br/>``Uninstall-WindowsFeature Windows-Defender-Gui` <br/><br/>On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*. |
-
-Make sure to restart your server to finish removing Microsoft Defender Antivirus.
-
-If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled).
+> [!NOTE]
+> On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlets (as an administrator):
+>
+> - Windows Server 2019 and newer: `Uninstall-WindowsFeature Windows-Defender`
+> - Windows Server 2016: `Uninstall-WindowsFeature Windows-Defender` and `Uninstall-WindowsFeature Windows-Defender-Gui`
+> 
+> On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*. 
+> 
+> Make sure to restart your server to finish removing Microsoft Defender Antivirus.
+> 
+> If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled).
 
 ## Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware solutions
 
