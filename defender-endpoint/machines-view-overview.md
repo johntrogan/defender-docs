@@ -161,7 +161,7 @@ The available device properties to use as filters vary based on the device inven
 |**Transient device**|All|The available values are **No** and **Yes**. By default, transient devices are filtered to reduce inventory noise. For more information, see [Identifying transient devices](transient-device-tagging.md).|
 |**Vendor**|**All devices**|The vendor of the device. Enter a value or select from the available values.|
 |**Windows version**|**Computers & mobile**|The version of Windows. The **OS version** filter is also available.  <br/><br/>The value **Future version** for this property is caused by one of the following scenarios:<br/>- A prerelease build of a future Windows release.
-- The build has no version name.<br/>- The build version name isn't yet supported<br/>The full OS version is visible on the device details page.|
+- The build has no version name.<br/>- The build version name isn't yet supported<br/><br/>The full OS version is visible on the device details page.|
 
 ## Use columns to customize the device inventory views
 
