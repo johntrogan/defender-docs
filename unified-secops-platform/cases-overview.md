@@ -122,5 +122,6 @@ Audit events are automatically added to the activity log of the case and the lat
 
 ## Related content
 
+- [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
 - [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
 - [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
