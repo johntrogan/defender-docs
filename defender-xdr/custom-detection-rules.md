@@ -75,7 +75,7 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 To create a custom detection rule, the query must return the following columns:
 1. `Timestamp` - Used to set the timestamp for generated alerts
 2. A column or combination of columns that uniquely identify the event in Defender XDR tables:
-      - For Device* tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
+      - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
       - For Alert* tables, `Timestamp` must appear in the event
       - For Observation* tables, `Timestamp`and `ObservationId` must appear in the same event
       - For all others, `Timestamp` and `ReportId` must appear in the same event
