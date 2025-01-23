@@ -168,6 +168,7 @@ The available device properties to use as filters vary based on the device inven
 You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (*):
 
 - **All devices** tab:
+
   - **Name***
   - **IP***
   - **MAC address**
@@ -200,6 +201,7 @@ You can sort the entries by clicking on an available column header. Select :::im
   Firmware information for OT devices is displayed in the **OS version** and **Model** columns.
 
 - **Computers & mobile** tab:
+
   - **Name***
   - **Domain***
   - **Device AAD id***
@@ -225,7 +227,8 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **Mitigation status***
   - **Cloud platforms***
 
-- **Network devices** tab
+- **Network devices** tab:
+
   - **IP***
   - **MAC address**
   - **Vendor***
@@ -244,7 +247,8 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **Tags***
   - **Exclusion state**
 
-- **IoT/OT devices** tab
+- **IoT/OT devices** tab:
+
   - **IP***
   - **MAC address***
   - **Name***
