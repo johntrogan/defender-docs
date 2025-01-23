@@ -54,7 +54,7 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
 
   If user reporting is turned off and a non-Microsoft add-in button is selected, the **Report** button isn't available in supported versions of Outlook.
 
-- The built-in **Report** button in Outlook on the web and the new Outlook for Windows supports reporting messages from shared mailboxes or other mailboxes by a delegate.
+- The built-in **Report** button in Outlook on the web, Outlook for Android and the new Outlook for Windows supports reporting messages from shared mailboxes or other mailboxes by a delegate.
   - Shared mailboxes require Send As or Send On Behalf permission for the user.
   - Other mailboxes require Send As or Send On Behalf permission _and_ Read and Manage permissions for the delegate.
 
