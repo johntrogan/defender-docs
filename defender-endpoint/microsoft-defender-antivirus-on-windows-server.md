@@ -9,7 +9,7 @@ ms.author: ewalsh
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.topic: conceptual
-ms.date: 05/17/2024
+ms.date: 01/23/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -56,7 +56,7 @@ By default, Microsoft Defender Antivirus is installed and functional on Windows 
 | Procedure | What to do |
 |:---|:---|
 | Turn on the GUI using the Add Roles and Features Wizard | 1. See [Install roles, role services, and features by using the add Roles and Features Wizard](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard), and use the **Add Roles and Features Wizard**. <br/><br/>2. When you get to the **Features** step of the wizard, under **Windows Defender Features**, select the **GUI for Windows Defender** option. |
-| Turn on the GUI using PowerShell | 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender-GUI` |
+| Turn on the GUI using PowerShell (Windows Server 2016 only)| 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender-GUI` |
 
 For more information, see [Getting Started with PowerShell](/powershell/scripting/learn/ps101/01-getting-started).
 
