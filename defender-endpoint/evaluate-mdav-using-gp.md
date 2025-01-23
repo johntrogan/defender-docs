@@ -185,7 +185,7 @@ To enable Network Protection for Windows Servers, for now, please use Powershell
 
 | OS | Powershell cmdlet |
 | --- | --- |
-| Windows Server 2012 R2Windows Server 2022 and later	| set-mpPreference -AllowNetworkProtectionOnWinServer $true |
+| Windows Server 2012 R2Windows Server 2022 and later	| set-MpPreference -AllowNetworkProtectionOnWinServer $true |
 | Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | set-MpPreference -AllowNetworkProtectionOnWinServer $true and set-MpPreference -AllowNetworkProtectionDownLevel $true
 
 ## Attack Surface Reduction Rules
@@ -207,7 +207,7 @@ To enable Network Protection for Windows Servers, for now, please use Powershell
 | c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb<br><br>**Note:** ( \[PREVIEW\] Block use of copied or impersonated system tools) | 1 (Block) |
 | d3e037e1-3eb8-44c8-a917-57927947596d<br><br>**Note:** (Block JavaScript or VBScript from launching downloaded executable content) | 1 (Block) |
 | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2<br><br>**Note:** (Block credential stealing from the Windows local security authority subsystem) | 1 (Block) |
-| a8f5898e-1dc8-49a9-9878-85004b8a61e6<br><br>**Note:** (Block Webshell creation for Servers) | 1 (Block) |
+| a8f5898e-1dc8-49a9-9878-85004b8a61e6<br><br>**Note:** (Block Web shell creation for Servers) | 1 (Block) |
 | 3b576869-a4ec-4529-8536-b80a7769e899<br><br>**Note:** (Block Office applications from creating executable content) | 1 (Block) |
 | b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4<br><br>**Note:** (Block untrusted and unsigned processes that run from USB) | 1 (Block) |
 | 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84<br><br>**Note:** (Block Office applications from injecting code into other processes) | 1 (Block) |
