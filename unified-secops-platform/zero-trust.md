@@ -8,6 +8,7 @@ ms.topic: concept-article #Don't change.
 ms.date: 01/16/2025
 ms.collection:
 - usx-security
+#customerIntent: As a security operations professional, I want to implement a Zero Trust architecture using Microsoft's unified SecOps platform to enhance our organization's security posture by ensuring explicit verification, least privilege access, and preparation for potential breaches.
 ---
 
 # Zero Trust with Microsoft's unified security operations platform
