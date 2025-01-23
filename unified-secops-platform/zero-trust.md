@@ -8,6 +8,7 @@ ms.topic: concept-article #Don't change.
 ms.date: 01/16/2025
 ms.collection:
 - usx-security
+#customerIntent: As a security operations professional, I want to implement a Zero Trust architecture using Microsoft's unified SecOps platform to enhance our organization's security posture by ensuring explicit verification, least privilege access, and preparation for potential breaches.
 ---
 
 # Zero Trust with Microsoft's unified security operations platform
@@ -52,7 +53,7 @@ Microsoft's unified SecOps platform also provides a comprehensive set of tools t
 
 - Provide just-in-time activations for privileged role assignments by using **Microsoft Entra ID Protection's** Privileged Identity Management (PIM).
 
-- Implement **Microsoft Defender for Cloud Apps** conditional access policies to enforce adaptive access policies based on user, location, device, and risk signals to ensure secure access to resources.
+- Implement **Microsoft Defender for Cloud Apps** Conditional Access policies to enforce adaptive access policies based on user, location, device, and risk signals to ensure secure access to resources.
 
 - Configure **Microsoft Defender for Cloud** threat protection to automatically block and flag risky behavior, and employ hardening mechanisms to implement least privilege access and JIT VM access.
 
