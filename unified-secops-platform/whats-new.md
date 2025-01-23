@@ -37,7 +37,9 @@ Case management is the first installment of an end-to-end solution that provides
 
 This is just the start. Stay tuned for additional capabilities as we evolve this solution.
 
-For more information, see [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md).
+For more information, see the following articles:
+- [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md)
+- [Microsoft Sentinel blog - Improve SecOps collaboration with case managmeent](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
 
 ### Unified device timeline in Microsoft Defender portal (Preview)
 
