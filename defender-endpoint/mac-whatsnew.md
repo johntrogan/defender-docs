@@ -74,7 +74,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- **Improved User/Group Permission Handling** - Added reporting in mdatp health for user/group permission issues for Defender files. On restart Defender attempts to cure these issues.
+- **Improved User/Group Permission Handling** - Added reporting in `mdatp-health` for user/group permission issues for Defender files. On restart Defender attempts to cure these issues.
 
 - Bug and performance fixes.
 
