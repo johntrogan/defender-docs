@@ -6,7 +6,7 @@ author: deniseb
 ms.author: deniseb
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 12/11/2024
+ms.date: 01/24/2025
 audience: ITPro
 ms.collection:
 - m365-security
@@ -74,7 +74,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- **Improved User/Group Permission Handling -** Added reporting in mdatp health for user/group permission issues for Defender files. On restart Defender attempts to cure these issues.
+- **Improved User/Group Permission Handling** - Added reporting in mdatp health for user/group permission issues for Defender files. On restart Defender attempts to cure these issues.
 
 - Bug and performance fixes.
 
@@ -113,15 +113,15 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- Resolved the issue causing outdated vulnerability assessments impacting some MAC OSs devices
+- Resolved the issue causing outdated vulnerability assessments impacting some macOS devices
 
 ### Aug-2024 (Build: 101.24072.0006  | Release version: 20.124072.6.0)
 
 | Build:             | **101.24072.0006**    |
 |--------------------|-----------------------|
-| Release version:   | 20.124072.6.0         |
-| Engine version:    | 1.1.24060.7           |
-| Signature version: | 1.417.325.0           |
+| Release version:   | **20.124072.6.0** |
+| Engine version:    | **1.1.24060.7**  |
+| Signature version: | **1.417.325.0**  |
 
 ##### What's new
 
@@ -131,9 +131,9 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 | Build:             | **101.24062.0009**         |
 |--------------------|-----------------------|
-| Release version:   | 20.124062.9.0 |
-| Engine version:    | 1.1.24050.7       |
-| Signature version: | 1.411.410.0      |
+| Release version:   | **20.124062.9.0** |
+| Engine version:    | **1.1.24050.7**       |
+| Signature version: | **1.411.410.0**      |
 
 ##### What's new
 
