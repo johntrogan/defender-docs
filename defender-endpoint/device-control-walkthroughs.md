@@ -37,6 +37,7 @@ By default, [device control](device-control-overview.md) is disabled and there a
 Device control in Defender for Endpoint identifies a device based on its properties. Device properties are visible by selecting an entry in the report. 
 
 The **Device ID**, **Vendor ID** (VID), **Serial number**, and **Bus type** can all be used to identify a device (see [Device control policies in Microsoft Defender for Endpoint](device-control-policies.md)). Data is also available in [Advanced Hunting](/defender-xdr/advanced-hunting-overview), by searching for the Plug and Play Device Connected action (`PnPDeviceConnected`), as shown in the following example query:
+
 ```kusto
 
 DeviceEvents
