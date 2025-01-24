@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 01/24/2025
 ---
 
 # Live response command examples
@@ -198,7 +198,10 @@ remediate process 7960
 # See list of all remediated entities
 remediate list
 ```
-Note: As of now we do not support HKEY_USERS reg hive for Remediate. This is a known issue and we are working on to support HKEY_USERS reg hive. 
+
+> [!NOTE]
+> Currently, `HKEY_USERS` reg hive is not supported for `remediate`. This is a known issue, and we're looking into it. 
+
 ## `run`
 
 ```console
