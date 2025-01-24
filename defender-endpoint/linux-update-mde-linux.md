@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/16/2024
+ms.date: 01/24/2025
 ---
 
 # Schedule an update for Microsoft Defender for Endpoint on Linux
@@ -53,7 +53,7 @@ sudo crontab -l > /var/tmp/cron_backup_201118.dat
 ```
 
 > [!NOTE]
-> Where 201118 == YYMMDD
+> In our example, `201118` == `YYMMDD`.
 
 > [!TIP]
 > Do this before you edit or remove.
