@@ -1,5 +1,5 @@
 ---
-title: Manage cases natively with the Case Management Starter Kit (Preview)
+title: Manage cases natively in Microsoft's unified SecOps platform
 description: Learn about case management features across Microsoft's unified security operations (SecOps) platform.
 search.appverid: met150
 ms.service: unified-secops-platform
