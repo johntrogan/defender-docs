@@ -107,12 +107,12 @@ getfile c:\Users\user\Desktop\work.txt -auto
 
 > [!NOTE]
 >
-> The following file types *cannot* be downloaded using this command from within Live Response:
+> The following file types *can't* be downloaded using this command from within Live Response:
 >
 > - [Reparse point files](/windows-hardware/drivers/ifs/reparse-points)
 > - [Sparse files](/windows-server/administration/windows-commands/fsutil-sparse)
 > - Empty files
-> - Virtual files, or files that are not fully present locally
+> - Virtual files, or files that aren't fully present locally
 >
 > These file types *are* supported by [PowerShell](/powershell/scripting/overview).
 >
@@ -200,7 +200,7 @@ remediate list
 ```
 
 > [!NOTE]
-> Currently, `HKEY_USERS` reg hive is not supported for `remediate`. This is a known issue, and we're looking into it. 
+> Currently, `HKEY_USERS` reg hive isn't supported for `remediate`. This is a known issue, and we're looking into it. 
 
 ## `run`
 
@@ -219,7 +219,7 @@ run get-process-by-name.ps1 -parameters "-processName Registry"
 > For long running commands such as '**run**' or '**getfile**', you may want to use the '**&**' symbol at the end of the command to perform that action in the background.
 > This will allow you to continue investigating the machine and return to the background command when done using '**fg**' [basic command](live-response.md#basic-commands).
 >
-> When passing parameters to a live response script, do not include the following forbidden characters: **';'**, **'&'**, **'|'**, **'!'**, and **'$'**.
+> When passing parameters to a live response script, don't include the following forbidden characters: **';'**, **'&'**, **'|'**, **'!'**, and **'$'**.
 
 ## `scheduledtask`
 
