@@ -336,8 +336,6 @@
           href: threat-analytics-analyst-reports.md
         - name: Defender Threat Intelligence in Microsoft Defender XDR
           href: defender-threat-intelligence.md
-        - name: Microsoft Sentinel threat intelligence management
-          href: intel-management-sentinel.md
       - name: Collaborate with Microsoft Defender Experts for Hunting
         items:
         - name: Overview
