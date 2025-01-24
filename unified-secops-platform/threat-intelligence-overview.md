@@ -25,6 +25,8 @@ Uncover and neutralize modern adversaries with threat intelligence in Microsoft�
 
 :::image type="content" source="/unified-secops-platform/media/threat-intel-overview/usx-threat-intel.png" alt-text="Screenshot of Threat intelligence section of the Microsoft Defender portal." lightbox="/unified-secops-platform/media/threat-intel-overview/usx-threat-intel.png":::
 
+_Threat intelligence in Microsoft Defender portal_
+
 The emergence of new cybersecurity threats and threat actors and the continuous evolution of threat landscapes results in an ever-increasing amount of threat intelligence that security operations centers (SOCs) must investigate. This threat intelligence takes many forms—from specific indicators of compromise (IOCs) to reports and analyses—and can come from various sources. Microsoft's unified security operations (SecOps) platform in the Microsoft Defender portal consolidates all your threat intelligence in one location so SOCs can accurately assess this intelligence quickly to make informed decisions. 
 Microsoft's unified SecOps platform in the Defender portal pulls threat intelligence from the following sources:
 - Microsoft Defender XDR Threat analytics reports
