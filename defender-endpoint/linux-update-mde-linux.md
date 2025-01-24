@@ -27,9 +27,9 @@ ms.date: 01/24/2025
 
 To run an update on Microsoft Defender for Endpoint on Linux, see [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
 
-Linux (and Unix) have a tool called **crontab** (similar to Task Scheduler) to be able to run scheduled tasks.
+Linux and Unix have a tool called **crontab** (similar to Task Scheduler) to be able to run scheduled tasks.
 
-## Pre-requisite
+## Prerequisite
 
 > [!NOTE]
 > To get a list of all the time zones, run the following command:
