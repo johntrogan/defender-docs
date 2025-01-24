@@ -109,7 +109,7 @@ CRON_TZ=America/Los_Angeles
 
 > [!NOTE]
 > In the previous examples, we specified `00` minutes, 6 a.m. (hour using the 24-hour format), any day of the month, any month, on Sundays. 
-> `[$(date +\%d) -le 15]` won't run unless it's equal or less than the 15th day (third week). 
+> `[$(date +\%d) -le 15]` doesn't run unless it's equal or less than the 15th day (third week). 
 > This means the job runs at 6 a.m. every Sunday, but only if the day of the month is the 15th or earlier.
 
 Press "Esc"
