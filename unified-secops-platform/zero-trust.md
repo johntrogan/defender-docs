@@ -55,7 +55,7 @@ Microsoft's unified SecOps platform also provides a comprehensive set of tools t
 
 - Implement **Microsoft Defender for Cloud Apps** Conditional Access policies to enforce adaptive access policies based on user, location, device, and risk signals to ensure secure access to resources.
 
-- Configure **Microsoft Defender for Cloud** threat protection to automatically block and flag risky behavior, and employ hardening mechanisms to implement least privilege access and JIT VM access.
+- Configure **Microsoft Defender for Cloud** threat protection to block and flag risky behavior, and employ hardening mechanisms to implement least privilege access and JIT VM access.
 
 **Microsoft Security Copilot** also authenticates users with on-behalf-of (OBO) authentication, ensuring that users have access only to the resources they need.
 
@@ -75,7 +75,7 @@ Assuming breach helps organizations prepare for and respond to security incident
 
 - Automatically respond to security threats across the enterprise by using **Microsoft Sentinel's** automation rules and playbooks.
 
-- Implement **Microsoft Defender for Cloud's** recommendations to automatically block and flag risky or suspicious behavior, and automate responses across coverage areas with Azure Logic Apps.
+- Implement **Microsoft Defender for Cloud's** recommendations to block and flag risky or suspicious behavior, and automate responses across coverage areas with Azure Logic Apps.
 
 - Enable **Microsoft Entra ID Protection** notifications so that you can respond appropriately when a user is flagged as at risk.
 
