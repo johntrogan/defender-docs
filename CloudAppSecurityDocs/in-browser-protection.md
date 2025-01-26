@@ -105,7 +105,7 @@ Administrators who understand the power of Microsoft Edge browser protection can
 
 4. When you're finished on the **Edge for Business protection** page, select **Save**.
 
-![Screenshot of Microsoft Edge for business protection settings.](\Desktop\Screenshot-of-edge-for-business-protection-settings.png)
+:::image type="content" source="Desktop\Screenshot-of-edge-for-business-protection-settings.png" alt-text="Screenshot of Microsoft Edge for business protection settings.":::
 
 ## Related content
 
