@@ -1,7 +1,7 @@
 ---
 title: In-browser protection with Microsoft Edge for Business | Microsoft Defender for Cloud Apps
 description: Learn about using in-browser protection with Microsoft Defender for Cloud Apps session policies and Microsoft Edge for Business.
-ms.date: 10/31/2024
+ms.date: 01/26/2025
 ms.topic: conceptual
 #customerIntent: As a Defender for Cloud Apps admin, I want to learn about the user experience with in-browser protection.
 ---
@@ -104,6 +104,8 @@ Administrators who understand the power of Microsoft Edge browser protection can
    - **Unmanaged devices only**
 
 4. When you're finished on the **Edge for Business protection** page, select **Save**.
+
+![Screenshot of Microsoft Edge for business protection settings.](\Desktop\Screenshot-of-edge-for-business-protection-settings.png)
 
 ## Related content
 
