@@ -63,7 +63,7 @@ You can access Defender TI in the following pages within the **Threat intelligen
 
 _Defender TI's **Intel explorer** page in the Defender portal_
 
-[Learn more about Defender TI](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
+For more information, see [What is Microsoft Defender Threat Intelligence?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti).
 
 ## Intelligence management
 **Intel management** is powered by [Microsoft Sentinel](/azure/sentinel/overview) and provides tools to update, search, and create threat intelligence and manage it at scale. 
