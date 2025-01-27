@@ -79,7 +79,7 @@ Intel management operationalizes your threat intelligence while Microsoft Sentin
 
 _Example of adding a new STIX object in Intel management_
 
-[Learn more about threat intelligence in Microsoft Sentinel](/azure/sentinel/understand-threat-intelligence)
+For more information, see [Understand threat intelligence in Microsoft Sentinel](/azure/sentinel/understand-threat-intelligence).
 
 ## Related content
 
