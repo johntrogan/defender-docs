@@ -81,3 +81,8 @@ _Example of adding a new STIX object in Intel management_
 
 [Learn more about threat intelligence in Microsoft Sentinel](/azure/sentinel/understand-threat-intelligence)
 
+## Related content
+
+- [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
+- [Microsoft Security Copilot in Microsoft Defender Threat Intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence)
+- [Infrastructure chaining](/defender/threat-intelligence/infrastructure-chaining)
