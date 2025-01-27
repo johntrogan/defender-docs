@@ -22,14 +22,14 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## January 2025
 
-- []
+- [Unified threat intelligence](#unified-threat-intelligence)
 - [Manage SecOps work natively with case management (Preview)](#case-management-preview)
 - [Unified device timeline in Microsoft Defender portal (Preview)](#unified-device-timeline-in-microsoft-defender-portal-preview)
 - [SOC optimization updates for unified coverage management](#soc-optimization-updates-for-unified-coverage-management)
 
 ### Unified threat intelligence
 
-Microsoft Sentinel-powered threat intelligence has moved in the Defender portal to **Intel management**. In the Azure portal, the location remains unchanged.
+Microsoft Sentinel-powered threat intelligence has moved in the Defender portal to **Intel management**, unifying threat intelligence features. In the Azure portal, the location remains unchanged.
 
 :::image type="content" source="media/whats-new/intel-management-navigation.png" alt-text="Screenshot showing new menu placement for Microsoft Sentinel threat intelligence.":::
 
@@ -57,6 +57,7 @@ Case management is the first installment of an end-to-end solution that provides
 This is just the start. Stay tuned for additional capabilities as we evolve this solution.
 
 For more information, see the following articles:
+
 - [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md)
 - [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
 
