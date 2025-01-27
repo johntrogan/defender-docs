@@ -43,7 +43,7 @@ You view and manage quarantined messages in the Microsoft Defender portal or in 
 
 Watch this short video to learn how to manage quarantined messages as an admin.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGPF]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=038517f8-6eb7-46b8-b6cc-034a2c45ae06]
 
 [!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
