@@ -45,7 +45,7 @@ Before you get started with Removable Storage Access Control, you must confirm y
 Now, you have `groups`, `rules`, and `settings`, replace the mobileconfig file with those values and put it under the Device Control node. Here's the demo file: [mdatp-devicecontrol/demo.mobileconfig at main - microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/mobileconfig/demo.mobileconfig). Make sure validate your policy with the JSON schema and make sure your policy format is correct: [mdatp-devicecontrol/device_control_policy_schema.json at main - microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json).
 
 > [!NOTE]
-> See [Device Control for macOS](mac-device-control-overview.md) for information about settings, rules and groups.
+> See [Device Control for macOS](mac-device-control-overview.md) for information about settings, rules, and groups.
 
 ### Deploy the mobileconfig file using Intune
 

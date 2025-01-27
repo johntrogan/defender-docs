@@ -52,7 +52,7 @@ Microsoft Defender for Endpoint Device Control feature enables you to:
 
 - Microsoft Defender for Endpoint entitlement (can be trial)
 - Minimum OS version: macOS 11 or higher
-- Deploy Full Disk Access: you may already have previously created and deployed this [https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) for other MDE features. You need to grant Full Disk Access permission for a new application: `com.microsoft.dlp.daemon`.
+- Deploy Full Disk Access: you might have created and deployed this [https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) for other MDE features. You need to grant Full Disk Access permission for a new application: `com.microsoft.dlp.daemon`.
 - Enable Device Control on the MDE Preference setting:
 
   - Data Loss Prevention (DLP)/Features/
@@ -90,7 +90,7 @@ Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/
 
 ## Understanding policies
 
-Policies determine the behavior of device control for macOS.  The policy is targeted via Intune or JAMF to a collection of machines or users.  
+Policies determine the behavior of device control for macOS. The policy is targeted via Intune or JAMF to a collection of machines or users.  
 
 The Device Control for macOS policy includes settings, groups, and rules:
 
@@ -112,9 +112,9 @@ The Device Control for macOS policy includes settings, groups, and rules:
 
 Device control for macOS has similar capabilities to Device control for Windows, but macOS and Windows provide different underlying capabilities to manage devices, so there are some important differences:
 
-- macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices.  This is why on macOS there are a richer set of [access types](#access-types).  For example on a ```portableDevice``` device control for macOS can deny or allow ```download_photos_from_device```.
-- To stay consistent with Windows, there are ```generic_read```,```generic_write``` and ```generic_execute``` access types.  Policies with generic access types don't need to be changed if/when more specific access types are added in the future.  The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
-- Creating a ```deny``` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there may still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
+- macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices. This is why on macOS there are a richer set of [access types](#access-types). For example of a ```portableDevice``` device control for macOS can deny or allow ```download_photos_from_device```.
+- To stay consistent with Windows, there are ```generic_read```,```generic_write``` ,and ```generic_execute``` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
+- Creating a ```deny``` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there might still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
 
 
 ### Settings
@@ -123,7 +123,7 @@ Here are the properties you can use when you create the groups, rules, and setti
 
 | Property name | Description | Options |
 |:---|:---|:---|
-| features | Feature specific configurations | You can set `disable` to false or true for following features: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `portableDevice`, including camera or PTP media<br/>- `bluetoothDevice`<br/><br/>The default is `true`, so if you don't configure this value, it will not apply even if you create a custom policy for `removableMedia`, because it's disabled by default. |
+| features | Feature specific configurations | You can set `disable` to false or true for following features: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `portableDevice`, including camera or PTP media<br/>- `bluetoothDevice`<br/><br/>The default is `true`, so if you don't configure this value, it won't apply even if you create a custom policy for `removableMedia`, because it's disabled by default. |
 | global | Set default enforcement  | You can set `defaultEnforcement` to<br/>- `allow` (_default_)<br/>- `deny` |
 | ux | You can set a hyperlink on notification. | `navigationTarget: string`. Example: `"http://www.microsoft.com"` |
 
@@ -190,7 +190,7 @@ The following table lists the properties you can use in your entry:
 |:---|:---|:---|
 | `$type` | | Includes: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `PortableDevice`<br/>- `bluetoothDevice`<br/>- `generic` |
 | enforcement | | - `$type`:<br/>- `allow`<br/>- `deny`<br/>- `auditAllow`<br/>- `auditDeny`<br/><br/>**When $type allow is selected, options value supports:** <br/>- `disable_audit_allow`<br/> Even if **Allow** happens and the **auditAllow** is setting configured, the system won't send event.<br/><br/>**When $type deny is selected, options value supports:** <br/>`disable_audit_deny`<br/>Even if **Block** happens and the **auditDeny** is setting configured, the system won't show notification or send event.<br/><br/>**When $type auditAllow is selected, options value supports:** <br/>`send_event`<br/><br/>**When $type auditDeny is selected, options value supports:** <br/>`send_event`<br/>`show_notification` |
-| `access`| |Specify one or more access rights for this rule. These may include either device specific granular permissions, or broader generic permissions. See table below for more details on the valid access types for a given entry $type. |
+| `access`| |Specify one or more access rights for this rule. These might include either device specific granular permissions, or broader generic permissions. See table below for more details on the valid access types for a given entry $type. |
 | `id`| UUID| |
 
 The following table lists the properties you can use in entry:
@@ -259,7 +259,7 @@ v2_full_disk_access                         : "approved"
 - `active` - feature version, you should see ["v2"]. (Device Control is enabled, but not configured.)
     - [] - Device Control isn't configured on this machine.
     - ["v1"] - You are on a preview version of Device Control. Migrate to version 2 using this guide. v1 is considered obsolete and not described in this documentation.
-    - ["v1","v2"] - You have both v1 and v2 enabled. Offboard from v1.
+    - ["v1,""v2"] - You have both v1 and v2 enabled. Offboard from v1.
 - `v1_configured` - v1 configuration is applied
 - `v1_enforcement_level` - when v1 is enabled
 - `v2_configured` - v2 configuration is applied
@@ -473,7 +473,7 @@ In this case, only have one access rule policy, but if you have multiple, make s
 ## Known Issues
 
 > [!WARNING]
-> Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control doesn't restrict other modes such as File Transfer, USB Tethering and MIDI.
+> Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control doesn't restrict other modes such as File Transfer, USB Tethering, and MIDI.
 
 > [!WARNING]
 > Device Control on macOS doesn't prevent software developed on XCode from being transferred to an external device.
