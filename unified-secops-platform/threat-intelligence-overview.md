@@ -22,14 +22,13 @@ ms.date: 01/24/2025
 
 # Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform
 
-Uncover and neutralize modern adversaries with threat intelligence in Microsoft’s unified SecOps platform. Whether you use Microsoft's threat intelligence or other sources important to your SecOps organization, **Threat intelligence** in the Defender portal unifies the tools needed to identify cyberattackers and their infrastructure.
+Uncover and neutralize modern adversaries with threat intelligence in Microsoft’s unified security operations (SecOps) platform. Whether you use Microsoft's threat intelligence or other sources important to your SecOps organization, **Threat intelligence** in the Microsoft Defender portal unifies the tools needed to identify cyberattackers and their infrastructure.
 
 :::image type="content" source="/unified-secops-platform/media/threat-intel-overview/usx-threat-intel.png" alt-text="Screenshot of Threat intelligence section of the Microsoft Defender portal." lightbox="/unified-secops-platform/media/threat-intel-overview/usx-threat-intel.png":::
 
-_Threat intelligence in Microsoft Defender portal_
+_Threat intelligence in the Defender portal_
 
-The emergence of new cybersecurity threats and threat actors and the continuous evolution of threat landscapes results in an ever-increasing amount of threat intelligence that security operations centers (SOCs) must investigate. This threat intelligence takes many forms—from specific indicators of compromise (IOCs) to reports and analyses—and can come from various sources. Microsoft's unified security operations (SecOps) platform in the Microsoft Defender portal consolidates all your threat intelligence in one location so SOCs can accurately assess this intelligence quickly to make informed decisions. 
-Microsoft's unified SecOps platform in the Defender portal pulls threat intelligence from the following sources:
+The emergence of new cybersecurity threats and threat actors and the continuous evolution of the threat landscape result in an ever-increasing amount of threat intelligence that security operations centers (SOCs) must investigate. This threat intelligence takes many forms—from specific indicators of compromise (IOCs) to reports and analyses—and can come from various sources. Microsoft's unified SecOps platform in the Defender portal consolidates all your threat intelligence in one location so SOCs can assess this intelligence quickly and accurately to make informed decisions. Microsoft's unified SecOps platform in the Defender portal pulls threat intelligence from the following sources:
 - Microsoft Defender XDR Threat analytics reports
 - Microsoft Defender Threat Intelligence articles and data sets
 - Microsoft Sentinel threat intelligence
@@ -69,11 +68,11 @@ For more information, see [What is Microsoft Defender Threat Intelligence?](/def
 ## Intelligence management
 **Intel management** is powered by [Microsoft Sentinel](/azure/sentinel/overview) and provides tools to update, search, and create threat intelligence and manage it at scale. 
 
-The most common forms of threat intelligence are threat indicators, or IOCs. Another facet of threat intelligence represents threat actors, their techniques, tactics, and procedures (TTPs), their infrastructure, and their victims. Intel management supports managing all these using the open-source standard for exchanging threat intelligence known as structured threat information expression (STIX).
+The most common forms of threat intelligence are threat indicators, or IOCs. Another facet of threat intelligence represents threat actors, their techniques, tactics, and procedures (TTPs), their infrastructure, and their victims. Intel management supports managing all these facets using structured threat information expression (STIX), the open-source standard for exchanging threat intelligence.
 
 Intel management operationalizes your threat intelligence while Microsoft Sentinel sources it with the following methods of ingestion: 
-- **Import threat intelligence** into Microsoft Sentinel by enabling data connectors to various threat intelligence platforms, including Microsoft’s own Defender Threat Intelligence.
-- **Connect threat intelligence** to Microsoft Sentinel by using the upload API to connect various TI platforms or custom applications.
+- **Import threat intelligence** into Microsoft Sentinel by enabling data connectors to various threat intelligence platforms, including Microsoft’s own Defender TI.
+- **Connect threat intelligence** to Microsoft Sentinel by using the upload API to connect various threat intelligence platforms or custom applications.
 - **Create threat intelligence** individually or import using a file from the Intel management interface.
 
 :::image type="content" source="/unified-secops-platform/media/threat-intel-overview/usx-sentinel-new-stix-object.png" alt-text="Screenshot of Intel management add new STIX object feature." lightbox="/unified-secops-platform/media/threat-intel-overview/usx-sentinel-new-stix-object.png":::
