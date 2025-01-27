@@ -42,7 +42,7 @@ Microsoft's unified SecOps platform in the Defender portal pulls threat intellig
 - Common attack surfaces
 - Prevalent malware
 
-:::image type="content" source="/defender/media/threat-analytics/ta_analystreport_mtp.png" alt-text="The analyst report section of a threat analytics report" lightbox="/defender/media/threat-analytics/ta_analystreport_mtp.png":::
+:::image type="content" source="/unified-secops-platform/media/threat-intel-overview/usx-threat-analytics.png" alt-text="The analyst report section of a threat analytics report" lightbox="/unified-secops-platform/media/threat-intel-overview/usx-threat-analytics.png":::
 
 _Analyst report section of a threat analytics report_
 
@@ -59,7 +59,7 @@ You can access Defender TI in the following pages within the **Threat intelligen
 - **Intel explorer** - Browse threat intelligence for relevant analyses, artifacts, and indicators.
 - **Intel projects** - Manage security artifacts for your entire tenant.
 
-:::image type="content" source="/defender/threat-intelligence/media/intel-explorer.png" alt-text="ti Overview Home Page Chrome Screenshot." lightbox="/defender/threat-intelligence/media/intel-explorer.png":::
+:::image type="content" source="/unified-secops-platform/media/threat-intel-overview/usx-intel-explorer" alt-text="Screenshot of Intel explorer page." lightbox="/unified-secops-platform/media/threat-intel-overview/usx-intel-explorer.png":::
 
 _Defender TI's **Intel explorer** page in the Defender portal_
 
