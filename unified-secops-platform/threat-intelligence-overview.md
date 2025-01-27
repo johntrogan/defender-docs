@@ -48,7 +48,7 @@ _Analyst report section of a threat analytics report_
 
 Each report provides an analysis of a tracked threat and extensive guidance on how to defend against that threat. It also incorporates data from your network, indicating whether the threat is active and if you have applicable protections in place. 
 
-[Learn more about Threat analytics](/defender-xdr/threat-analytics)
+For more information, see [Threat analytics in Microsoft Defender XDR](/defender-xdr/threat-analytics).
 
 ## Microsoft Defender Threat Intelligence
 
