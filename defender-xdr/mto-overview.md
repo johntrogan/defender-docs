@@ -8,17 +8,17 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - highpri
-  - tier1
-  - usx-security
+- m365-security
+- highpri
+- tier1
+- usx-security
 ms.topic: conceptual
-ms.date: 09/30/2024
+ms.date: 01/27/2025
 appliesto:
-  - Microsoft Defender XDR
-  - Microsoft Sentinel in the Microsoft Defender portal
-  - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender for Office 365 P2
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender for Office 365 P2
 ---
 
 # Microsoft Defender multitenant management
