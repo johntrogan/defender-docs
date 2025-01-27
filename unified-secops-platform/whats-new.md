@@ -33,11 +33,11 @@ Microsoft Sentinel-powered threat intelligence has moved in the Defender portal 
 
 :::image type="content" source="media/whats-new/intel-management-navigation.png" alt-text="Screenshot showing new menu placement for Microsoft Sentinel threat intelligence.":::
 
-Along with the new location, the enhance management interface is streamlined, making the manual process of creating individual threat intel easier with these key features:
+Along with the new location, the enhanced management interface brings a streamlined process for creating individual threat intel with these key features:
 
 - Define relationships as you create new STIX objects.
 - Curate existing threat intelligence with the new relationship builder.
-- Quickly create multiple objects by using the duplicate feature to copy the metadata from a new or existing threat intel.
+- Quickly create multiple objects by using the duplicate feature to copy the metadata from a new or existing threat intel object.
 
 Use advanced search to sort and filter your threat intelligence objects without even writing a Log Analytics query. For more information, see the following articles:
 
