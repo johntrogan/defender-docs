@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins can learn about threat classification in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 01/06/2025
+ms.date: 01/21/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -84,3 +84,5 @@ The results of threat classification are available in the following experiences 
 - [Explorer (Threat Explorer)](threat-explorer-real-time-detections-about.md)
 - [Incidents and alerts](mdo-sec-ops-manage-incidents-and-alerts.md)
 - [Advanced hunting](/defender-xdr/advanced-hunting-overview)
+- The [Threat protection status report](reports-email-security.md#view-data-by-email--phish-and-chart-breakdown-by-threat-classification-defender-for-office-365)
+- The [Mailflow status report](reports-email-security.md#mailflow-view-for-the-mailflow-status-report)
