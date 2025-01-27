@@ -6,7 +6,6 @@ author: emmwalshh
 ms.author: ewalsh
 ms.reviewer: joshbregman
 manager: deniseb
-ms.reviewer: yonghree
 ms.localizationpriority: medium
 ms.date: 10/23/2024
 audience: ITPro
