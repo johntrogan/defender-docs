@@ -68,7 +68,7 @@ _Defender TI's **Intel explorer** page in the Defender portal_
 ## Intelligence management
 **Intel management** is powered by [Microsoft Sentinel](/azure/sentinel/overview) and provides tools to update, search, and create threat intelligence and manage it at scale. 
 
-The most common forms of threat intelligence are threat indicators, or IOCs. Another facet of threat intelligence represents threat actors, their techniques, tactics, and procedures (TTPs), their infrastructure, and their victims. Intel management supports managing all these using the open-source standard for exchanging threat intelligence known as  structured threat information expression (STIX).
+The most common forms of threat intelligence are threat indicators, or IOCs. Another facet of threat intelligence represents threat actors, their techniques, tactics, and procedures (TTPs), their infrastructure, and their victims. Intel management supports managing all these using the open-source standard for exchanging threat intelligence known as structured threat information expression (STIX).
 
 Intel management operationalizes your threat intelligence while Microsoft Sentinel sources it with the following methods of ingestion: 
 - **Import threat intelligence** into Microsoft Sentinel by enabling data connectors to various threat intelligence platforms, including Microsoft’s own Defender Threat Intelligence.
