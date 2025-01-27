@@ -71,9 +71,6 @@ The following key capabilities are available for each tenant you have access to 
 |**Endpoints** > **Vulnerability management** > **Tenants** |For all tenants and at a tenant-specific level, explore vulnerability management information across different values such as exposed devices, security recommendations, weaknesses, and critical CVEs. |
 |**Configuration** > **Settings**|Lists the tenants you have access to. Use this page to view and manage your tenants.|
 
-> [!NOTE]
-> The content distribution capability is not yet available for all GCC, GCC High, and DoD customers.
-
 ## Next steps
 
 - [Set up Microsoft Defender multitenant management](mto-requirements.md)
