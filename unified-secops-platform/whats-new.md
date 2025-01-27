@@ -22,9 +22,28 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 
 ## January 2025
 
+- []
 - [Manage SecOps work natively with case management (Preview)](#case-management-preview)
 - [Unified device timeline in Microsoft Defender portal (Preview)](#unified-device-timeline-in-microsoft-defender-portal-preview)
 - [SOC optimization updates for unified coverage management](#soc-optimization-updates-for-unified-coverage-management)
+
+### Unified threat intelligence
+
+Microsoft Sentinel-powered threat intelligence has moved in the Defender portal to **Intel management**. In the Azure portal, the location remains unchanged.
+
+:::image type="content" source="media/whats-new/intel-management-navigation.png" alt-text="Screenshot showing new menu placement for Microsoft Sentinel threat intelligence.":::
+
+Along with the new location, the enhance management interface is streamlined, making the manual process of creating individual threat intel easier with these key features:
+
+- Define relationships as you create new STIX objects.
+- Curate existing threat intelligence with the new relationship builder.
+- Quickly create multiple objects by using the duplicate feature to copy the metadata from a new or existing threat intel.
+
+Use advanced search to sort and filter your threat intelligence objects without even writing a Log Analytics query. For more information, see the following articles:
+
+- [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md)
+- [New STIX objects in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/announcing-public-preview-new-stix-objects-in-microsoft-sentinel/4369164)
+- [Understand threat intelligence](/azure/sentinel/understand-threat-intelligence#create-and-manage-threat-intelligence)
 
 ### Case management (Preview)
 
