@@ -63,7 +63,7 @@ This procedure describes how to add the required certificate files used for secu
     | **FTP** |- **pure-ftpd.pem**: Includes the key and certificate data |
     | **Syslog** |- **ca.pem**: The certificate authority's certificate that was used to sign the client’s certificate. <br>- **server-key.pem** and **server-cert.pem**: The log collector's certificate and key <br><br>Syslog messages are sent over TLS to the log collector, which requires mutual TLS authentication, including authenticating both the client and server certificates. |
 
-Files are mandatory. If any of the files for the receiver type are 	missing, the update fails.
+Files are mandatory. If any of the files for the receiver type are missing, the update fails.
 
 1. In a terminal window, run:
 
@@ -161,7 +161,7 @@ docker cp Proxy-CA.crt Ubuntu-LogCollector:/var/adallom/ftp/discovery
 
 To secure the docker image and ensure that only one IP address is allowed to send the syslog messages to the log collector, create an IP table rule on the host machine to allow input traffic and drop the traffic coming over specific ports, such as TCP/601 or UDP/514, depending on the deployment.
 
-The following command shows an example of how to create an IP table rule that can be added to the host machine. This table rule allows the IP address `1.2.3.4`` to connect to the log collector container over TCP port 601, and drop all other connections coming from other IP addresses over the same port.
+The following command shows an example of how to create an IP table rule that can be added to the host machine. This table rule allows the IP address `1.2.3.4` to connect to the log collector container over TCP port 601, and drop all other connections coming from other IP addresses over the same port.
 
 ```bash
 iptables -I DOCKER-USER \! --src 1.2.3.4 -m tcp -p tcp --dport 601 -j DROP
@@ -171,7 +171,7 @@ iptables -I DOCKER-USER \! --src 1.2.3.4 -m tcp -p tcp --dport 601 -j DROP
 
 The container is now ready.
 
-Run the **collector_config** command using the API token that you used during the creation of your log collector. For example:
+Run the `collector_config` command using the API token that you used during the creation of your log collector. For example:
 
 :::image type="content" source="media/log-collector-advanced-tasks/docker-3.png" alt-text="Screenshot of the Create log collector dialog." border="false":::
 
