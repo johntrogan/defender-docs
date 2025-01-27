@@ -113,8 +113,8 @@ The Device Control for macOS policy includes settings, groups, and rules:
 Device control for macOS has similar capabilities to Device control for Windows, but macOS and Windows provide different underlying capabilities to manage devices, so there are some important differences:
 
 - macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices.  This is why on macOS there are a richer set of [access types](#access-types).  For example on a ```portableDevice``` device control for macOS can deny or allow ```download_photos_from_device```.
-- To stay consistent with Windows, there are ```generic_read```,```generic_write``` and ```generic_execute``` access types.  Policies with generic access types don't need to be changed if/when additional specific access types are added in the future.  The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
-- Creating a ```deny``` policy using generic access types is the best way to attempt to completely block all operations for that type of device (e.g. Android phones), but there may still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
+- To stay consistent with Windows, there are ```generic_read```,```generic_write``` and ```generic_execute``` access types.  Policies with generic access types don't need to be changed if/when more specific access types are added in the future.  The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
+- Creating a ```deny``` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there may still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
 
 
 ### Settings
@@ -168,8 +168,8 @@ Query type 2 is as follows:
 | clause $type | value | Description |
 |:---|:---|:---|
 | `primaryId` | One of: <br>- `apple_devices`<br>- `removable_media_devices` <br>- `portable_devices` <br>- `bluetooth_devices` | |
-| `vendorId` | 4 digit hexadecimal string | Matches a device's vendor ID |
-| `productId` | 4 digit hexadecimal string | Matches a device's product ID |
+| `vendorId` | Four digit hexadecimal string | Matches a device's vendor ID |
+| `productId` | Four digit hexadecimal string | Matches a device's product ID |
 | `serialNumber` | string | Matches a device's serial number. Doesn't match if the device doesn't have a serial number. |
 | `encryption` | apfs | Match if a device is apfs-encrypted. |
 | `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. <br> The group must be defined within the policy prior to the clause. |
@@ -180,8 +180,8 @@ Query type 2 is as follows:
 |:---|:---|:---|
 | `id` | GUID, a unique ID, represents the rule and will be used in the policy. | New-Guid (Microsoft.PowerShell.Utility) - PowerShell <br> uuidgen |
 | `name` | String, the name of the policy and will display on the toast based on the policy setting. | |
-| `includeGroups` | The group(s) that the policy will be applied to. If multiple groups are specified, the policy applies to any media in all those groups. If not specified, the rule applies to all devices. | The **id** value inside the group must be used in this instance. If multiple groups are in the `includeGroups`, it's _AND_. <br/> `"includeGroups": ["3f082cd3-f701-4c21-9a6a-ed115c28e217"]` |
-| `excludeGroups` | The group(s) that the policy doesn't apply to. | The **id** value inside the group must be used in this instance. If multiple groups are in the excludeGroups, it's _OR_. |
+| `includeGroups` | The groups that the policy will be applied to. If multiple groups are specified, the policy applies to any media in all those groups. If not specified, the rule applies to all devices. | The **id** value inside the group must be used in this instance. If multiple groups are in the `includeGroups`, it's _AND_. <br/> `"includeGroups": ["3f082cd3-f701-4c21-9a6a-ed115c28e217"]` |
+| `excludeGroups` | The groups that the policy doesn't apply to. | The **id** value inside the group must be used in this instance. If multiple groups are in the excludeGroups, it's _OR_. |
 | `entries` | One rule can have multiple entries; each entry with a unique GUID tells Device Control one restriction.| See entry properties table later in this article to get the details. |
 
 The following table lists the properties you can use in your entry:
@@ -221,7 +221,7 @@ The following table lists the properties you can use in entry:
 | **appleDevice** | backup_device | generic_read | |
 | appleDevice | update_device | generic_write | |
 | appleDevice | download_photos_from_device | generic_read | download photo from the specific iOS device to local machine |
-| appleDevice | download_files_from_device | generic_read | download file(s) from the specific iOS device to local machine |
+| appleDevice | download_files_from_device | generic_read | download files from the specific iOS device to local machine |
 | appleDevice | sync_content_to_device | generic_write | sync content from local machine to specific iOS device |
 | **portableDevice**| download_files_from_device | generic_read | |
 | portableDevice | send_files_to_device | generic_write | |
@@ -269,7 +269,7 @@ v2_full_disk_access                         : "approved"
 
 ## Reporting
 
-You are able to see the policy event on Advanced hunting and Device Control report. For more information, see [Protect your organization's data with Device Control](device-control-report.md).
+You're able to see the policy event on Advanced hunting and Device Control report. For more information, see [Protect your organization's data with Device Control](device-control-report.md).
 
 ## Scenarios
 
@@ -473,10 +473,10 @@ In this case, only have one access rule policy, but if you have multiple, make s
 ## Known Issues
 
 > [!WARNING]
-> Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control does not restrict other modes such as File Transfer, USB Tethering and MIDI.
+> Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control doesn't restrict other modes such as File Transfer, USB Tethering and MIDI.
 
 > [!WARNING]
-> Device Control on macOS does not prevent software developed on XCode from being transferred to an external device.
+> Device Control on macOS doesn't prevent software developed on XCode from being transferred to an external device.
 
 
 
