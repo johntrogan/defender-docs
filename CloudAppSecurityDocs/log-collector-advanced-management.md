@@ -50,9 +50,9 @@ You should be able to view the following contents:
 - `ssl_update`
 - `config.json`
 
-### Customize certificate files
+### Add certificate files
 
-This procedure describes how to customize the certificate files used for secure connections to the cloud discovery Docker instance.
+This procedure describes how to add the required certificate files used for secure connections to the cloud discovery Docker instance.
 
 1. Open an FTP client and connect to the log collector host.
 
@@ -63,7 +63,7 @@ This procedure describes how to customize the certificate files used for secure 
     | **FTP** |- **pure-ftpd.pem**: Includes the key and certificate data |
     | **Syslog** |- **ca.pem**: The certificate authority's certificate that was used to sign the client’s certificate. <br>- **server-key.pem** and **server-cert.pem**: The log collector's certificate and key <br><br>Syslog messages are sent over TLS to the log collector, which requires mutual TLS authentication, including authenticating both the client and server certificates. |
 
-    Filenames are mandatory. If any of the files are missing, the update fails.
+Files are mandatory. If any of the files for the receiver type are 	missing, the update fails.
 
 1. In a terminal window, run:
 
