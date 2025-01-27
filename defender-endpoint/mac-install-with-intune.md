@@ -2,10 +2,10 @@
 title: Intune-based deployment for Microsoft Defender for Endpoint on Mac
 description: Install Microsoft Defender for Endpoint on Mac, using Microsoft Intune.
 ms.service: defender-endpoint
-author: denisebmsft
-ms.author: deniseb
+author: ewalsh
+ms.author: emmwalshh
 manager: deniseb
-ms.reviewer: yongrhee
+ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:

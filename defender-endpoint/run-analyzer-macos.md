@@ -2,9 +2,9 @@
 title: Run the client analyzer on macOS
 description: Learn how to use the Defender for Endpoint Client Analyzer on Mac to identify health or performance issue causes.
 author: denisebmsft
-ms.author: deniseb
-manager: deniseb
-ms.reviewer: yongrhee
+ms.author: emmwalshh
+manager: ewalsh
+ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium

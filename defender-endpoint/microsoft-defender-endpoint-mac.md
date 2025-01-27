@@ -1,10 +1,10 @@
 ---
 title: Microsoft Defender for Endpoint on Mac
-ms.reviewer: yongrhee, pahuijbr
+ms.reviewer: joshbregman
 description: Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: emmwalshh
+author: ewalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

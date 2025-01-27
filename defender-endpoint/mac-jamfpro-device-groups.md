@@ -2,8 +2,9 @@
 title: Set up device groups in Jamf Pro
 description: Learn how to set up device groups in Jamf Pro for Microsoft Defender for Endpoint on macOS
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro

@@ -2,8 +2,9 @@
 title: Device control for macOS
 description: Learn how to configure Microsoft Defender for Endpoint on Mac to reduce threats from removable storage such as USB devices.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
