@@ -60,7 +60,7 @@ You can access Defender TI in the following pages within the **Threat intelligen
 - **Intel explorer** - Browse threat intelligence for relevant analyses, artifacts, and indicators.
 - **Intel projects** - Manage security artifacts for your entire tenant.
 
-:::image type="content" source="/unified-secops-platform/media/threat-intel-overview/usx-intel-explorer" alt-text="Screenshot of Intel explorer page." lightbox="/unified-secops-platform/media/threat-intel-overview/usx-intel-explorer.png":::
+:::image type="content" source="/unified-secops-platform/media/threat-intel-overview/usx-intel-explorer.png" alt-text="Screenshot of Intel explorer page." lightbox="/unified-secops-platform/media/threat-intel-overview/usx-intel-explorer.png":::
 
 _Defender TI's **Intel explorer** page in the Defender portal_
 
