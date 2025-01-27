@@ -172,3 +172,10 @@ As you can see, enabling the **Trust email from my contacts** setting reduces th
 
 - File name: outlk16.opax
 - Policy setting: **Trust e-mail from contacts**
+
+> [!IMPORTANT]
+> The following button lets you identify and resolve issues with the mailbox's safe senders and domains, blocked sender and domains in junk email settings.
+>
+<div class="nextstepaction">
+<p><a href="https://aka.ms/safeblockdiag" data-linktype="external">Run Tests: Mailbox safe/blocked sender list</a></p>
+</div>
