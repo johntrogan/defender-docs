@@ -17,6 +17,7 @@ ms.custom:
 - cx-ti
 ms.topic: conceptual
 ms.date: 01/24/2025
+# customer intent: As a security operations center business decision maker, I want to learn about threat intelligence tools available in Microsoft's unified SecOps platform to help me understand emerging threats affecting organizations like me and how to manage actionable intelligence.
 ---
 
 # Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform
