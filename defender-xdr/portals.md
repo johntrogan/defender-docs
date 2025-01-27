@@ -4,7 +4,7 @@ description: Find the right Microsoft admin center or portal for managing variou
 ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: dansimp
 author: dansimp
 manager: dansimp
@@ -14,7 +14,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 01/27/2025
 ---
 
 # Microsoft security portals and admin centers
