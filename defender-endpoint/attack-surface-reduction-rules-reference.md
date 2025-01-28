@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 01/07/2025
+ms.date: 01/28/2025
 search.appverid: met150
 ---
 
@@ -321,7 +321,7 @@ Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
 > If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled, this attack surface reduction rule is not required. For a more secure posture, we also recommend enabling [Credential Guard](/windows/security/identity-protection/credential-guard) with the LSA protection. 
-> If the LSA protection is enabled, the ASR rule is classified as "not applicable" in Defender for Endpoint management settings in the [Microsoft Defender XDR portal](https://security.microsoft.com). 
+> If the LSA protection is enabled, the ASR rule is classified as *not applicable* in Defender for Endpoint management settings in the [Microsoft Defender portal](https://security.microsoft.com). 
 
 This rule helps prevent credential stealing by locking down Local Security Authority Subsystem Service (LSASS).
 
