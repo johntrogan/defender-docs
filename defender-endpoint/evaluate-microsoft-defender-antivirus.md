@@ -9,7 +9,7 @@ ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: nextgen
-ms.date: 10/18/2018
+ms.date: 01/28/2025
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -62,7 +62,7 @@ You can also download a PowerShell that will enable all the settings described i
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-## Related topics
+## Related articles
 
 - Evaluate Microsoft Defender Antivirus using [Microsoft Defender Endpoint Security Settings Management (Endpoint security policies) ](/defender-endpoint/evaluate-mda-using-mde-security-settings-management)
 
