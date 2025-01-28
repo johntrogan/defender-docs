@@ -320,7 +320,8 @@ Dependencies: Microsoft Defender Antivirus
 ### Block credential stealing from the Windows local security authority subsystem
 
 > [!NOTE]
-> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled, this attack surface reduction rule is not required. For a more secure posture, we also recommend enabling [Credential Guard](/windows/security/identity-protection/credential-guard) with the LSA protection.
+> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled, this attack surface reduction rule is not required. For a more secure posture, we also recommend enabling [Credential Guard](/windows/security/identity-protection/credential-guard) with the LSA protection. 
+> If the LSA protection is enabled, the ASR rule is classified as "not applicable" in Defender for Endpoint management settings in the [Microsoft Defender XDR portal](https://security.microsoft.com). 
 
 This rule helps prevent credential stealing by locking down Local Security Authority Subsystem Service (LSASS).
 
@@ -339,7 +340,6 @@ Enabling this rule doesn't provide additional protection if you have LSA protect
 > In this scenario, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal. 
 > The *Block credential stealing from the Windows local security authority subsystem* ASR rule doesn't support WARN mode.
 > In some apps, the code enumerates all running processes and attempts to open them with exhaustive permissions. This rule denies the app's process open action and logs the details to the security event log. This rule can generate a lot of noise. If you have an app that simply enumerates LSASS, but has no real impact in functionality, there is no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
-
 Intune name: `Flag credential stealing from the Windows local security authority subsystem`
 
 Configuration Manager name: `Block credential stealing from the Windows local security authority subsystem`
