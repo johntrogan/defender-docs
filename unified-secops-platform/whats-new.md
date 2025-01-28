@@ -33,13 +33,14 @@ Microsoft Sentinel-powered threat intelligence has moved in the Defender portal 
 
 :::image type="content" source="media/whats-new/intel-management-navigation.png" alt-text="Screenshot showing new menu placement for Microsoft Sentinel threat intelligence.":::
 
-Along with the new location, the enhanced management interface brings a streamlined process for creating individual threat intel with these key features:
+Along with the new location, the management interface streamlines the creation and curation of threat intel with these key features:
 
 - Define relationships as you create new STIX objects.
 - Curate existing threat intelligence with the new relationship builder.
-- Quickly create multiple objects by using the duplicate feature to copy the metadata from a new or existing threat intel object.
+- Create multiple objects quickly by copying common metadata from a new or existing TI object with the duplicate feature.
+- Use advanced search to sort and filter your threat intelligence objects without even writing a Log Analytics query.
 
-Use advanced search to sort and filter your threat intelligence objects without even writing a Log Analytics query. For more information, see the following articles:
+For more information, see the following articles:
 
 - [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md)
 - [New STIX objects in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/announcing-public-preview-new-stix-objects-in-microsoft-sentinel/4369164)
@@ -47,7 +48,7 @@ Use advanced search to sort and filter your threat intelligence objects without 
 
 ### Case management (Preview)
 
-Case management is the first installment of an end-to-end solution that provides seamless management of your security work. SecOps teams maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal. Here's the initial set of scenarios and features that CMSK supports.
+Case management is the first installment of an end-to-end solution that provides seamless management of your security work. SecOps teams maintain security context, work more efficiently and respond faster to attacks when they manage case work without leaving the Defender portal. Here's the initial set of scenarios and features that case management supports.
 
 - Define your own case workflow with custom status values
 - Assign tasks to collaborators and configure due dates
