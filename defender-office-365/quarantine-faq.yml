@@ -224,7 +224,7 @@ sections:
       - question: |
           Why aren't users receiving notifications about their quarantined messages?
         answer: |
-          First, use [message trace](message-trace-defender-portal.md) to confirm that the recipient didn't receive a quarantine notifications:
+          First, use [message trace](message-trace-defender-portal.md) to confirm that the recipient didn't receive a quarantine notification:
 
           - **Sender**: `Quarantine@messaging.micosoft.com` or a [custom sender address](quarantine-policies.md#configure-global-quarantine-notification-settings-in-the-microsoft-defender-portal).
           - **Recipient**: The recipient's email address.
