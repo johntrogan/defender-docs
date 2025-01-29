@@ -81,7 +81,7 @@ Microsoft Defender for Endpoint on Android supports installation on both modes o
 
 ### Required Permissions
 
-To ensure optimal protection for your device, Microsoft Defender requests access to the following permissions: 
+To ensure optimal protection for your device, Microsoft Defender requests access to the following permissions during the device onboarding process: 
 
 **Storage Access**: This permission allows Microsoft Defender to access your device's storage in order to detect and remove any malicious or unwanted apps. 
 
