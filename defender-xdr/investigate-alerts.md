@@ -1,28 +1,24 @@
 ---
 title: Investigate alerts in Microsoft Defender XDR
 description: Investigate alerts seen across devices, users, and mailboxes.
-keywords: incidents, alerts, investigate, analyze, response, correlation, attack, machines, devices, users, identities, identity, mailbox, email, 365, microsoft, m365
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection:
-  - m365-security
-  - m365initiative-m365-defender
-  - tier1
+- m365-security
+- m365initiative-m365-defender
+- tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid:
-  - MOE150
-  - met150
-ms.date: 1/17/2025
+- MOE150
+- met150
+ms.date: 01/17/2025
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -126,8 +122,8 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 | Microsoft Defender XDR | `ra{GUID}` <br> `ta{GUID}` for alerts from ThreatExperts <br> `ea{GUID}` for alerts from custom detections |
 | Microsoft Defender for Office 365 | `fa{GUID}` <br> Example: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Defender for Endpoint | `da{GUID}` <br> `ed{GUID}` for alerts from custom detections |
-| Microsoft Defender for Identity | `aa{GUID}` <br> `ri{GUID}` for alerts from XDR detection engine <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i`, `ri638724443630474445_-1629192583` |
-| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> `rm{GUID}` for alerts from XDR detection engine <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
+| Microsoft Defender for Identity | `aa{GUID}` <br> `ri{GUID}` for alerts from XDR detection engine <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i`, `ri001122334455667788_-0123456789` |
+| Microsoft Defender for Cloud Apps |`ca{GUID}` <br> `ma{GUID}` for alerts from App Governance detections and policies <br> `rm{GUID}` for alerts from XDR detection engine <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Entra ID Protection | `ad{GUID}` |
 | App Governance | `ma{GUID}` |
 | Microsoft Data Loss Prevention | `dl{GUID}` |
@@ -192,10 +188,9 @@ The **Manage alert** pane allows you to view or specify:
 - A comment on the alert.
 
 > [!NOTE]
-> Around August 29th, 2022, previously supported alert determination values ('Apt' and 'SecurityPersonnel') will be deprecated and no longer available via the API.
-
-> [!NOTE]
-> One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is incrementally being rolled out and is currently in preview.
+> - In August 2022, previously supported alert determination values (`Apt` and `SecurityPersonnel`) were deprecated and are no longer available via the API.
+>
+> - One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
 >
 > Currently, modified tag names are only applied to alerts created *after* the update. Alerts that were generated before the modification will not reflect the updated tag name.
 
@@ -217,7 +212,7 @@ The **Recommendations** tab provides next-step actions and advice for investigat
 
 ## Tune an alert
 
-As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. An analyst's time is valuable, wanting to focus only on high severity and high priority alerts. Meanwhile, analysts are also required to triage and resolve lower priority alerts, which tends to be a manual process.
+As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. An analyst's time is valuable, wanting to focus only on high severity and high priority alerts. Meanwhile, analysts are also required to triage and resolve lower priority alerts, which tend to be a manual process.
 
 Alert tuning, previously known as *alert suppression*, provides the ability to tune and manage alerts in advance. This streamlines the alert queue and saves triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs and rule conditions are met.
 
@@ -288,6 +283,7 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
 > [!NOTE]
 > The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title. 
+> The *Hide alert* feature is only available in Defender for Endpoint alerts.
 
 <!--what does this mean?-->
 
