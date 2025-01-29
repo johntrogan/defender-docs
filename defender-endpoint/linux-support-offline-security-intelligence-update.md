@@ -187,7 +187,7 @@ Use the following sample `mdatp_managed.json` and update the parameters as per t
   },
   "antivirusEngine": {
     "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/",
-    "offlineDefintionUpdateFallbackToCloud":false,
+    "offlineDefinitionUpdateFallbackToCloud":false,
     "offlineDefinitionUpdate": "enabled"
   },
   "features": {
