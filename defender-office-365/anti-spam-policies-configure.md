@@ -87,7 +87,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
    - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
      > [!TIP]
-     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also applies to marketing.contoso.com unless you exclude marketing.contoso.com.
+     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
    Click in the appropriate box, start typing a value, and then select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
