@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 01/06/2025
+ms.date: 01/29/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -86,6 +86,9 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
      - The specified Microsoft 365 Groups.
    - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
+     > [!TIP]
+     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also applies to marketing.contoso.com unless you exclude marketing.contoso.com.
+
    Click in the appropriate box, start typing a value, and then select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
    For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users or groups, enter an asterisk (\*) by itself to see all available values.
@@ -108,10 +111,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    When you're finished on the **Users, groups, and domains** page, select **Next**.
 
-   > [!TIP]
-   > In Threat policies, subdomains are automatically included in the conditions unless explicitly excluded in the exceptions. For instance, if you create a policy for contoso.com, it will also apply to sub.contoso.com unless you specifically exclude the subdomain.
-
-6. On the **Bulk email threshold & spam properties** page, configure the following settings:
+5. On the **Bulk email threshold & spam properties** page, configure the following settings:
 
    - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
 
@@ -129,7 +129,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
      When you're finished on the **Bulk email threshold & spam properties** page, select **Next**.
 
-7. On the **Actions** page, configure the following settings:
+6. On the **Actions** page, configure the following settings:
 
    - **Message actions** section: Review or select the action to take on messages based on the spam filtering verdicts:
      - **Spam**
@@ -186,7 +186,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    When you're finished on the **Actions** page, select **Next**.
 
-8. On the **Allow & block list** page, you can configure message senders by email address or email domain who are allowed to skip spam filtering.
+7. On the **Allow & block list** page, you can configure message senders by email address or email domain who are allowed to skip spam filtering.
 
    In the **Allowed** section, you can configure allowed senders and allowed domains. In the **Blocked** section, you can add blocked senders and blocked domains.
 
@@ -227,11 +227,11 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    When you're finished on the **Allow & block list** page, select **Next**.
 
-9. On the **Review** page, review your settings. You can select **Edit** in each section to modify the settings within the section. Or you can select **Back** or the specific page in the wizard.
+8. On the **Review** page, review your settings. You can select **Edit** in each section to modify the settings within the section. Or you can select **Back** or the specific page in the wizard.
 
    When you're finished on the **Review** page, select **Create**.
 
-10. On the **New anti-spam policy created** page, you can select the links to view the policy, view anti-spam policies, and learn more about anti-spam policies.
+9. On the **New anti-spam policy created** page, you can select the links to view the policy, view anti-spam policies, and learn more about anti-spam policies.
 
    When you're finished on the **New anti-spam policy created** page, select **Done**.
 
