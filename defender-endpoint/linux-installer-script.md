@@ -59,10 +59,10 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
         ```
 
  > [!WARNING]
- > Repackaging the Defender for Endpoint installation package is not a supported scenario. Doing so can negatively impact the integrity of the product and lead to adverse results, including but not limited to triggering tampering alerts and updates failing to apply. 
+ > Repackaging the Defender for Endpoint installation package isn't a supported scenario. Doing so can negatively affect the integrity of the product and lead to adverse results, including but not limited to triggering tampering alerts and updates failing to apply. 
 
  > [!IMPORTANT]
- > If you miss this step, any command executed will show a warning message indicating that the product is unlicensed. Also the mdatp health command returns a value of false. 
+ > If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the mdatp health command returns a value of false. 
 
 1. Download the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) provided in our public [GitHub repository](https://github.com/microsoft/mdatp-xplat/) 
 2. Give executable permission to the installer script 
@@ -70,10 +70,10 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
     ```bash
     chmod +x mde_installer.sh
     ```
-3. Execute the installer script with appropriate parameters such as (onboard, channel, realtime protection, etc) based on your requirements.  
+3. Execute the installer script with appropriate parameters such as (onboard, channel, real-time protection, etc.) based on your requirements.  
 
 Sample use cases:  
-sudo ./mde_installer.sh --install --channel prod --onboard MicrosoftDefenderATPOnboardingLinuxServer.py -- min_req -y
+sudo ./mde_installer.sh--install--channel prod--onboard MicrosoftDefenderATPOnboardingLinuxServer.py--min_req -y
 
 1. Run an AV detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
@@ -102,7 +102,7 @@ sudo ./mde_installer.sh --install --channel prod --onboard MicrosoftDefenderATPO
       curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
       ```
       
-   - The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats:
+   - The files need to be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats:
    
      ```bash
      mdatp threat list
@@ -128,9 +128,9 @@ The following external package dependencies exist for the mdatp package:
 
 > [!NOTE]
 > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
-> If eBPF is not supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following additional dependency on the auditd package exists for mdatp:
+> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following extra dependency on the auditd package exists for mdatp:
 > - The mdatp RPM package requires `audit`, `semanage`.
-> - For DEBIAN the mdatp package requires `auditd`.
+> - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner the mdatp package requires `audit`.
 
 The mde-netfilter package also has the following package dependencies:
