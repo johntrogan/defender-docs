@@ -38,6 +38,8 @@ This article describes how to deploy Microsoft Defender for Endpoint on Linux us
 
  Automate deployment of Microsoft Defender for Endpoint on Linux using installer script. The script identifies the distribution and version, simplifies the selection of the right repository, sets up the device to pull the latest agent version, onboards the device to Defender portal using the onboarding package. This method greatly simplifies the deployment process.
 
+:::image type="content" source="media/linux-script-image.png" alt-text="Onboard Linux Server" lightbox="media/linux-script-image.png":::
+
 ## Prerequisites and system requirements
 
 Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements for the current software version.
