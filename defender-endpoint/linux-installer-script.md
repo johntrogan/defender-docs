@@ -182,4 +182,4 @@ Upgrading your operating system to a new major version after the product install
 - [Investigate agent health issues](health-status.md)
 
 > [!TIP]
-> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)
