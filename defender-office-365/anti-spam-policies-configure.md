@@ -108,7 +108,10 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    When you're finished on the **Users, groups, and domains** page, select **Next**.
 
-5. On the **Bulk email threshold & spam properties** page, configure the following settings:
+   > [!TIP]
+   > In Threat policies, subdomains are automatically included in the conditions unless explicitly excluded in the exceptions. For instance, if you create a policy for contoso.com, it will also apply to sub.contoso.com unless you specifically exclude the subdomain.
+
+6. On the **Bulk email threshold & spam properties** page, configure the following settings:
 
    - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
 
@@ -126,7 +129,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
      When you're finished on the **Bulk email threshold & spam properties** page, select **Next**.
 
-6. On the **Actions** page, configure the following settings:
+7. On the **Actions** page, configure the following settings:
 
    - **Message actions** section: Review or select the action to take on messages based on the spam filtering verdicts:
      - **Spam**
@@ -183,7 +186,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    When you're finished on the **Actions** page, select **Next**.
 
-7. On the **Allow & block list** page, you can configure message senders by email address or email domain who are allowed to skip spam filtering.
+8. On the **Allow & block list** page, you can configure message senders by email address or email domain who are allowed to skip spam filtering.
 
    In the **Allowed** section, you can configure allowed senders and allowed domains. In the **Blocked** section, you can add blocked senders and blocked domains.
 
@@ -224,11 +227,11 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    When you're finished on the **Allow & block list** page, select **Next**.
 
-8. On the **Review** page, review your settings. You can select **Edit** in each section to modify the settings within the section. Or you can select **Back** or the specific page in the wizard.
+9. On the **Review** page, review your settings. You can select **Edit** in each section to modify the settings within the section. Or you can select **Back** or the specific page in the wizard.
 
    When you're finished on the **Review** page, select **Create**.
 
-9. On the **New anti-spam policy created** page, you can select the links to view the policy, view anti-spam policies, and learn more about anti-spam policies.
+10. On the **New anti-spam policy created** page, you can select the links to view the policy, view anti-spam policies, and learn more about anti-spam policies.
 
    When you're finished on the **New anti-spam policy created** page, select **Done**.
 
