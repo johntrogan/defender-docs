@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/08/2025
+ms.date: 01/29/2025
 ---
 
 # Use the installer script to deploy Microsoft Defender for Endpoint on Linux
