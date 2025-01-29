@@ -79,6 +79,22 @@ Microsoft Defender for Endpoint on Android supports installation on both modes o
 >
 > You can connect to Google Play from Intune to deploy Microsoft Defender for Endpoint app, across Device Administrator and Android Enterprise enrollment modes.
 
+### Required Permissions
+
+To ensure optimal protection for your device, Microsoft Defender requests access to the following permissions: 
+
+**Storage Access**: This permission allows Microsoft Defender to access your device's storage in order to detect and remove any malicious or unwanted apps. 
+
+**VPN Setup**: Microsoft Defender sets up a local VPN to provide web protection. Please note that Microsoft respects your privacy and does not view your browsing content. 
+
+**Display Over Other Apps**: This permission enables Microsoft Defender to alert you when malicious network activity is blocked. 
+
+**Accessibility**: This helps to provide a safer browsing experience. 
+
+**Permanent Protection**: To ensure continuous protection, Microsoft Defender recommends remaining active when running in the background. This helps prevent Android from stopping the app to improve battery life, thereby ensuring your device stays better protected. 
+
+1. **Location Access**: Microsoft Defender uses your location to help secure your Wi-Fi network and enhance device protection.
+
 ## How to Configure Microsoft Defender for Endpoint on Android
 
 Guidance on how to configure Microsoft Defender for Endpoint on Android features is available in [Configure Microsoft Defender for Endpoint on Android features](android-configure.md).
