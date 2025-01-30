@@ -76,7 +76,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 - Removed support of macOS 12, the minimal requirement is now macOS 13.0 or later
 - Fix: Defender quarantines a file even if it marked as immutable
-- `mdatp health` can return [`out_of_date`](https://learn.microsoft.com/en-us/defender-endpoint/device-health-microsoft-defender-antivirus-health#up-to-date-definitions) status for `definitions_status`
+- `mdatp health` can return [`out_of_date`](device-health-microsoft-defender-antivirus-health#up-to-date-definitions) status for `definitions_status`
 - Bug and performance fixes
 
 ### Dec-2024 (Build: 101.24102.0018  | Release version: 20.124102.18.0)
