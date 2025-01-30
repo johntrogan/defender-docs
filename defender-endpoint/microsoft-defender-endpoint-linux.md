@@ -116,7 +116,7 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
  |`fuse`|`glustrefs`|
  |`fuseblk`|`Afs`|
  |`jfs`|`sshfs`|
- |`nfs` (v3 only)|`cifs`|
+ |`nfs` (v3 only, `no_root_squash` required for RTP)|`cifs`|
  |`overlay`|`smb`|
  |`ramfs`|`gcsfuse`|
  |`reiserfs`|`sysfs`|
