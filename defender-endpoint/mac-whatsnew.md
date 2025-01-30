@@ -2,9 +2,8 @@
 title: What's new in Microsoft Defender for Endpoint on Mac
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
-ms.reviewer: joshbregman
+author: deniseb
+ms.author: deniseb
 manager: deniseb
 ms.localizationpriority: medium
 ms.date: 01/24/2025
@@ -16,6 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: macos
 search.appverid: met150
+ms.reviewer: mavel
 ---
 
 # What's new in Microsoft Defender for Endpoint on Mac
@@ -76,7 +76,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 - Removed support of macOS 12, the minimal requirement is now macOS 13.0 or later
 - Fix: Defender quarantines a file even if it marked as immutable
-- `mdatp health` can return [`out_of_date`](device-health-microsoft-defender-antivirus-health#up-to-date-definitions) status for `definitions_status`
+- `mdatp health` can return [`out_of_date`](/defender-endpoint/device-health-microsoft-defender-antivirus-health.md#up-to-date-definitions) status for `definitions_status`
 - Bug and performance fixes
 
 ### Dec-2024 (Build: 101.24102.0018  | Release version: 20.124102.18.0)
