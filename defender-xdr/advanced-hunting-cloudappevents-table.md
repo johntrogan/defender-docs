@@ -67,10 +67,10 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `RawEventData` | `dynamic` | Raw event information from the source application or service in JSON format |
 | `AdditionalFields` | `dynamic` | Additional information about the entity or event |
 | `LastSeenForUser` | `dynamic`|Indicates the number of days since a specific attribute was last seen for the user. A value of 0 means the attribute was seen today, a negative value indicates the attribute is being seen for the first time, and a positive value represents the number of days since the attribute was last seen. For example: `{"ActionType":"0","OSPlatform":"4","ISP":"-1"}`|
-| `UncommonForUser` | `dynamic`|Lists the attributes in the event that are uncommon for the user, helping to rule out false positives and find anomalies. For example: `["ActivityType","ActionType"].` To filter out non-anomalous results: events with low or insignificant security value will not go through enrichment processes and will have a value of "", while high-value events will go through enrichment processes and, if no anomalies are found, will have a value of "[]".|
-| `AuditSource` | `string` |Audit data source. Possible values are one of the following: <br>- Defender for Cloud Apps access control <br>- Defender for Cloud Apps session control <br>- Defender for Cloud Apps app connector |
+| `UncommonForUser` | `dynamic`|Lists the attributes in the event that are uncommon for the user, helping to rule out false positives and find anomalies. For example: `["ActivityType","ActionType"].` To filter out non-anomalous results: events with low or insignificant security value won't go through enrichment processes and will have a value of "", while high-value events will go through enrichment processes and, if no anomalies are found, will have a value of "[]".|
+| `AuditSource` | `string` |Audit data source. Possible values are one of the following: <br>- Defender for Cloud Apps access control <br>- Defender for Cloud Apps session control <br> - Defender for Cloud Apps app connector |
 | `SessionData` |`dynamic` |The Defender for Cloud Apps session ID for access or session control. For example: `{InLineSessionId:"232342"}` |
-|`OAuthAppId`|`string`|A unique identifier that is assigned to an application when it is registered to Microsoft Entra with OAuth 2.0 protocol.|
+|`OAuthAppId`|`string`|A unique identifier that is assigned to an application when it's registered to Microsoft Entra with OAuth 2.0 protocol.|
 
 ## Apps and services covered
 
