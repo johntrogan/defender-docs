@@ -2,8 +2,8 @@
 title: Use the installer script to deploy Microsoft Defender for Endpoint on Linux
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using an installer script.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: gopkr; meghapriya
 ms.localizationpriority: medium
 manager: deniseb
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/29/2025
+ms.date: 01/30/2025
 ---
 
 # Use the installer script to deploy Microsoft Defender for Endpoint on Linux
@@ -36,7 +36,7 @@ This article describes how to deploy Microsoft Defender for Endpoint on Linux us
 
 ## Introduction
 
- Automate deployment of Microsoft Defender for Endpoint on Linux using installer script. The script identifies the distribution and version, simplifies the selection of the right repository, sets up the device to pull the latest agent version, onboards the device to Defender portal using the onboarding package. This method greatly simplifies the deployment process.
+Automate the deployment of Microsoft Defender for Endpoint on Linux using an installer script. The script identifies the distribution and version, selects the right repository, pulls the latest agent version, and onboards the device to the Defender portal. This method simplifies the deployment process.
 
 :::image type="content" source="media/linux-script-image.png" alt-text="Onboard Linux Server" lightbox="media/linux-script-image.png":::
 
@@ -47,10 +47,12 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 ## Installer script
 
 1. Download the onboarding package from Microsoft Defender portal:
+
     1. In the Microsoft Defender portal, go to Settings > Endpoints > Device management > Onboarding.
-    2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Local Script** as the deployment method.
-    3. Select **Download onboarding package**. Save the file as WindowsDefenderATPOnboardingPackage.zip.
-    4. From a command prompt, verify that you have the file, and extract the contents of the archive:
+    2. In the first drop-down menu, select **Linux Server** as the operating system.
+    3. In the second drop-down menu, select **Local Script** as the deployment method.
+    4. Select **Download onboarding package**. Save the file as WindowsDefenderATPOnboardingPackage.zip.
+    5. From a command prompt, verify that you have the file, and extract the contents of the archive:
 
         ```bash
         unzip WindowsDefenderATPOnboardingPackage.zip
@@ -67,12 +69,12 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
  > If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the mdatp health command returns a value of false. 
 
 1. Download the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) provided in our public [GitHub repository](https://github.com/microsoft/mdatp-xplat/) 
-2. Give executable permission to the installer script 
+2. Grant executable permissions to the installer script:
   
     ```bash
     chmod +x mde_installer.sh
     ```
-3. Execute the installer script with appropriate parameters such as (onboard, channel, real-time protection, etc.) based on your requirements.  
+3. Run the installer script with parameters like onboard, channel, and real-time protection according to your needs.
 
 Sample use cases:  
 sudo ./mde_installer.sh--install--channel prod--onboard MicrosoftDefenderATPOnboardingLinuxServer.py--min_req -y
@@ -91,7 +93,7 @@ sudo ./mde_installer.sh--install--channel prod--onboard MicrosoftDefenderATPOnbo
      mdatp config real-time-protection --value enabled
      ```
 
-   - Open a Terminal window and execute the following command to run a detection test:
+   - Open a terminal window and execute the following command to run a detection test:
    
      ``` bash
      curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
@@ -104,7 +106,7 @@ sudo ./mde_installer.sh--install--channel prod--onboard MicrosoftDefenderATPOnbo
       curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
       ```
       
-   - The files need to be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats:
+   - Quarantine the files using Defender for Endpoint on Linux. To list all detected threats, use the following command:
    
      ```bash
      mdatp threat list
@@ -118,7 +120,7 @@ sudo ./mde_installer.sh--install--channel prod--onboard MicrosoftDefenderATPOnbo
 
    - After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
-   - Look at the alert details, machine timeline, and perform your typical investigation steps.
+   - Check the alert details, machine timeline, and perform your typical investigation steps.
 
 ## Microsoft Defender for Endpoint package external package dependencies
 
