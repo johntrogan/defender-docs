@@ -520,7 +520,7 @@ Compare the output file (`/tmp/log.log`) to the messages stored in the `/var/ada
 When updating your log collector:
 
 - **Before installing the new version**, make sure to stop your log collector and remove the current image.
-- **After installing the new version**, [update your certificate files](#customize-certificate-files).
+- **After installing the new version**, [update your certificate files](#add-certificate-files).
 
 ## Next steps
 
