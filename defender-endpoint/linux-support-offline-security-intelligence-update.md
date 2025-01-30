@@ -15,7 +15,7 @@ ms.collection:
 - mde-linux
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/16/2024
+ms.date: 01/30/2025
 ---
 
 # Configure offline security intelligence update for Microsoft Defender for Endpoint on Linux 
