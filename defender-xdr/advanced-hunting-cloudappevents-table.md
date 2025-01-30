@@ -39,7 +39,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ActionType` | `string` | Type of activity that triggered the event |
 | `Application` | `string` | Application that performed the recorded action |
 | `ApplicationId` | `int` | Unique identifier for the application |
-| `AppInstanceId` | `int` | Unique identifier for the instance of an application. To convert this to Microsoft Defender for Cloud Apps App-connector-ID, use `CloudAppEvents| distinct ApplicationId,AppInstanceId,binary_or(binary_shift_left(AppInstanceId,20),ApplicationId|order by ApplicationId,AppInstanceId` |
+| `AppInstanceId` | `int` | Unique identifier for the instance of an application. To convert this to Microsoft Defender for Cloud Apps App-connector-ID, use `CloudAppEvents| distinct ApplicationId,AppInstanceId,binary_or(binary_shift_left(AppInstanceId,20),Application|order by ApplicationId,AppInstanceId` |
 | `AccountObjectId` | `string` | Unique identifier for the account in Microsoft Entra ID |
 | `AccountId` | `string` | An identifier for the account as found by Microsoft Defender for Cloud Apps. Could be Microsoft Entra ID, user principal name, or other identifiers. |
 | `AccountDisplayName` | `string` | Name displayed in the address book entry for the account user. This is usually a combination of the given name, middle initial, and surname of the user. |
@@ -67,7 +67,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `RawEventData` | `dynamic` | Raw event information from the source application or service in JSON format |
 | `AdditionalFields` | `dynamic` | Additional information about the entity or event |
 | `LastSeenForUser` | `dynamic`|Indicates the number of days since a specific attribute was last seen for the user. A value of 0 means the attribute was seen today, a negative value indicates the attribute is being seen for the first time, and a positive value represents the number of days since the attribute was last seen. For example: `{"ActionType":"0","OSPlatform":"4","ISP":"-1"}`|
-| `UncommonForUser` | `dynamic`|Lists the attributes in the event that are considered uncommon for the user. Using this data can help rule out false positives and find anomalies. For example: `["ActivityType","ActionType"]`|
+| `UncommonForUser` | `dynamic`|Lists the attributes in the event that are uncommon for the user, helping to rule out false positives and find anomalies. For example: `["ActivityType","ActionType"].` To filter out non-anomalous results: events with low or insignificant security value will not go through enrichment processes and will have a value of "", while high-value events will go through enrichment processes and, if no anomalies are found, will have a value of "[]".|
 | `AuditSource` | `string` |Audit data source. Possible values are one of the following: <br>- Defender for Cloud Apps access control <br>- Defender for Cloud Apps session control <br>- Defender for Cloud Apps app connector |
 | `SessionData` |`dynamic` |The Defender for Cloud Apps session ID for access or session control. For example: `{InLineSessionId:"232342"}` |
 |`OAuthAppId`|`string`|A unique identifier that is assigned to an application when it is registered to Microsoft Entra with OAuth 2.0 protocol.|
