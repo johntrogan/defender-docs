@@ -30,7 +30,11 @@ Microsoft Entra ID supports both browser-based and non browser-based policies. W
 
 Repeat this procedure to create a nonbrowser based Conditional Access policy. In the **Client apps** area, toggle the **Configure** option to **Yes**. Then, under **Modern authentication clients**, clear the **Browser** option. Leave all other default selections selected.
 
-Note: The Enterprise application “Microsoft Defender for Cloud Apps – Session Controls” is used internally by the Conditional Access App Control service. 
-Please ensure the CA policy does not restrict access to this application in the **Target resources**. 
-
 For more information, see [Conditional Access policies](/azure/active-directory/conditional-access/overview) and [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).
+
+> [!NOTE]
+> Microsoft Defender for Cloud Apps utilizes the application **Microsoft Defender for Cloud Apps - Session Controls** as part of the Conditional Access App Control service for user sign-in. This application is located within the 'Enterprise Applications' section of Entra ID. 
+To protect your SaaS applications with Session Controls, you must allow access to this application. 
+If you block access to this application through an Entra ID Conditional Access policy, end users will not be able to access the protected applications under session controls.  
+It is important to ensure that this application is not unintentionally restricted by any Conditional Access policies. For policies that restrict all or certain applications, please ensure this application is listed as an exception in the **Target resources** or confirm that the blocking policy is deliberate.  
+To ensure your location-based conditional access policies function correctly, include the **Microsoft Defender for Cloud Apps – Session Controls** application in those policies.
