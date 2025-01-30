@@ -121,6 +121,41 @@ You can create different group types. Here's one group example XML file for any 
 
    2. In the **Define device control policy rules** window, select **Enabled**, and then specify the network share file path containing the XML rules data.
 
+## Validating XML files
+
+Mpcmdrun has built in functionality to validate XML files that are utilized for GPO deployments. This allows customers to detect any syntax errors the DC engine may encounter when parsing through the settings. In order to perform this validation, administrators need to copy the following Powershell script and provide the appropriate file path for their XML files containing the Device Control rules and groups.
+
+```
+#Path to PolicyRules xml. Provide the filepath of the device control rules XML file
+$RulesXML="C:\Policies\PolicyRules.xml"
+
+#Path to Groups XML. Provide the filepath of the device control groups XML file
+$GroupsXML="C:\Policies\Groups.xml"
+
+#Retrieve the install path from Defender
+$DefenderPath=(Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Defender" -Name "InstallLocation").InstallLocation
+
+#Test PolicyRules
+& $DefenderPath\mpcmdrun.exe -devicecontrol -testpolicyxml $RulesXML -rules
+
+#Test Groups
+& $DefenderPath\mpcmdrun.exe -devicecontrol -testpolicyxml $GroupsXML -groups
+```
+
+
+If there are no errors the following output will be printed in the PowerShell console:
+
+
+```
+DC policy rules parsing succeeded
+Verifying absolute rules data against the original data
+Rules verified with success
+DC policy groups parsing succeeded
+Verifying absolute groups data against the original data
+Groups verified with success
+Has Group Dependency Loop: no
+```
+
 > [!NOTE]
 > To capture evidence of files being copied or printed, use [Endpoint DLP.](/purview/dlp-copy-matched-items-get-started?tabs=purview-portal%2Cpurview)
 > 
