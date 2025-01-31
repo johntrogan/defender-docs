@@ -54,7 +54,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
 
 > [!NOTE]
 >
-> - Only spoofed senders that were detected by spoof intelligence appear in the spoof intelligence insight. When you override the allow or block verdict in the insight, the spoofed sender becomes a manual allow or block entry that appears only on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. You can also manually create allow or block entries for spoofed senders before they're detected by spoof intelligence. For more information, see [Spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list).
+> - Only spoofed senders detected by Spoof Intelligence appear in this report. Emails that fail DMARC with an action of reject/quarantine do not appear, as they are processed based on Honor DMARC policies rather than Spoof Intelligence detection. When you override the allow or block verdict in the insight, the spoofed sender becomes a manual allow or block entry that appears only on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. You can also manually create allow or block entries for spoofed senders before they're detected by spoof intelligence. For more information, see [Spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list).
 >
 > - The **Action** values **Allow** or **Block** in the spoof intelligence insight refer to spoof _detection_ (whether Microsoft 365 identified the message as spoofed or not). The **Action** value doesn't necessarily affect the overall filtering of the message. For example, to avoid false positives, a spoofed message might be delivered if we find that it doesn't have malicious intent.
 >
@@ -106,7 +106,7 @@ To view information about the spoof intelligence detections, select **View spoof
 ### View information about spoof detections
 
 > [!NOTE]
-> Remember, only spoofed senders that were detected by spoof intelligence appear on this page.
+> Remember, Only spoofed senders detected by Spoof Intelligence appear in this report. Emails that fail DMARC with an action of reject/quarantine do not appear, as they are processed based on Honor DMARC policies rather than Spoof Intelligence detection.
 
 The **Spoof intelligence insight** page at <https://security.microsoft.com/spoofintelligence> is available when you select **View spoofing activity** from the spoof intelligence insight on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 
