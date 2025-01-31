@@ -93,7 +93,7 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 - **Permanent Protection**: To ensure continuous protection, Microsoft Defender recommends staying active while running in the background. This helps prevent Android from stopping the app to improve battery life, thereby ensuring your device remains well-protected.
 
-1. **Location Access**: Microsoft Defender uses your location to help secure your Wi-Fi network and enhance device protection.
+- **Location Access**: Microsoft Defender uses your location to help secure your Wi-Fi network and enhance device protection.
 
 ## How to Configure Microsoft Defender for Endpoint on Android
 
