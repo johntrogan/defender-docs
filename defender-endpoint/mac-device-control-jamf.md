@@ -72,17 +72,17 @@ A new device control property is now available to add to the user experience.
 
 1. In your Jamf console, select **Add/Remove properties**, select **Device Control**, and then select **Apply**.
 
-:::image type="content" source="media/macos-device-control-jamf-device-control-property.png" alt-text="Shows how to add Device Control in Microsoft Defender for Endpoint" lightbox="media/macos-device-control-jamf-device-control-property.png":::
+    :::image type="content" source="media/macos-device-control-jamf-device-control-property.png" alt-text="Shows how to add Device Control in Microsoft Defender for Endpoint" lightbox="media/macos-device-control-jamf-device-control-property.png":::
 
 2. Scroll down until you see the **Device Control** property (it's at the bottom of the list), and then select **Add/Remove properties**.
 
 3. Select **Device Control Policy**, and then select **Apply**.  
 
-:::image type="content" source="media/macos-device-control-jamf-device-control-add-remove-property.png" alt-text="Shows how to apply Device Control Policy in Microsoft Defender for Endpoint." lightbox="media/macos-device-control-jamf-device-control-add-remove-property.png":::
+    :::image type="content" source="media/macos-device-control-jamf-device-control-add-remove-property.png" alt-text="Shows how to apply Device Control Policy in Microsoft Defender for Endpoint." lightbox="media/macos-device-control-jamf-device-control-add-remove-property.png":::
 
 4. Copy and paste your device control policy JSON into the text box.
 
-:::image type="content" source="media/macos-device-control-jamf-device-control-policy-json.png" alt-text="Shows where to add the Device Control policy JSON in Microsoft Defender for Endpoint." lightbox="media/macos-device-control-jamf-device-control-policy-json.png":::
+    :::image type="content" source="media/macos-device-control-jamf-device-control-policy-json.png" alt-text="Shows where to add the Device Control policy JSON in Microsoft Defender for Endpoint." lightbox="media/macos-device-control-jamf-device-control-policy-json.png":::
 
 5. Save your changes.
 
