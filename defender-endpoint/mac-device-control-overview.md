@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 06/12/2024
+ms.date: 01/31/2025
 ---
 
 # Device Control for macOS
@@ -33,17 +33,15 @@ ms.date: 06/12/2024
 
 ## Requirements
 
-Device Control for macOS has the following prerequisites:
+Device control for Mac has the following prerequisites:
 
-> [!div class="checklist"]
->
-> - Microsoft Defender for Endpoint entitlement (can be trial)
-> - Minimum OS version: macOS 11 or higher
-> - Minimum product version: 101.34.20
+- Defender for Endpoint or Defender for Business licenses (can be a trial subscription)
+- Minimum OS version: macOS 11 or higher
+- Minimum product version: `101.34.20`
 
 ## Overview
 
-Microsoft Defender for Endpoint Device Control feature enables you to:
+Device control in Defender for Endpoint on macOS enables you to:
 
 - Audit, allow, or prevent the read, write, or execute access to removable storage; and 
 - Manage iOS and Portable devices, and Apple APFS encrypted devices and Bluetooth media, with or without exclusions.
@@ -72,12 +70,12 @@ Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/
 <dict> 
   <key>features</key>
   <array> 
-	<dict> 
-	  <key>name</key>
-	  <string>DC_in_dlp</string>
-	  <key>state</key>
-	  <string>enabled</string>
-	</dict>
+    <dict> 
+      <key>name</key>
+      <string>DC_in_dlp</string>
+      <key>state</key>
+      <string>enabled</string>
+    </dict>
   </array>
 </dict>
 ```
@@ -284,27 +282,27 @@ In this scenario, you need to create two groups: one group for any removable med
 ```json
 "settings": { 
 
-	"features": { 
+    "features": { 
 
-		"removableMedia": { 
+        "removableMedia": { 
 
-			"disable": false 
+            "disable": false 
 
-		} 
+        } 
 
-	}, 
+    }, 
 
-	"global": { 
+    "global": { 
 
-		"defaultEnforcement": "allow" 
+        "defaultEnforcement": "allow" 
 
-	}, 
+    }, 
 
-	"ux": { 
+    "ux": { 
 
-		"navigationTarget": "http://www.deskhelp.com" 
+        "navigationTarget": "http://www.deskhelp.com" 
 
-	} 
+    } 
 
 } 
 ```
@@ -384,85 +382,85 @@ Create access policy rule and put into `rules`:
 ```json
 "rules": [ 
 
-	{ 
+    { 
 
-		"id": "772cef80-229f-48b4-bd17-a69130092981", 
+        "id": "772cef80-229f-48b4-bd17-a69130092981", 
 
-		"name": "Deny RWX to all Removable Media Devices except Kingston", 
+        "name": "Deny RWX to all Removable Media Devices except Kingston", 
 
-		"includeGroups": [ 
+        "includeGroups": [ 
 
-			"3f082cd3-f701-4c21-9a6a-ed115c28e211" 
+            "3f082cd3-f701-4c21-9a6a-ed115c28e211" 
 
-		], 
+        ], 
 
-		"excludeGroups": [ 
+        "excludeGroups": [ 
 
-			"3f082cd3-f701-4c21-9a6a-ed115c28e212" 
+            "3f082cd3-f701-4c21-9a6a-ed115c28e212" 
 
-		], 
+        ], 
 
-		"entries": [ 
+        "entries": [ 
 
-			{ 
+            { 
 
-				"$type": "removableMedia", 
+                "$type": "removableMedia", 
 
-				"id": "A7CEE2F8-CE34-4B34-9CFE-4133F0361035", 
+                "id": "A7CEE2F8-CE34-4B34-9CFE-4133F0361035", 
 
-				"enforcement": { 
+                "enforcement": { 
 
-					"$type": "deny" 
+                    "$type": "deny" 
 
-				}, 
+                }, 
 
-				"access": [ 
+                "access": [ 
 
-					"read", 
+                    "read", 
 
-					"write", 
+                    "write", 
 
-					"execute" 
+                    "execute" 
 
-				] 
+                ] 
 
-			}, 
+            }, 
 
-			{ 
+            { 
 
-				"$type": "removableMedia", 
+                "$type": "removableMedia", 
 
-				"id": "18BA3DD5-4C9A-458B-A756-F1499FE94FB4", 
+                "id": "18BA3DD5-4C9A-458B-A756-F1499FE94FB4", 
 
-				"enforcement": { 
+                "enforcement": { 
 
-					"$type": "auditDeny", 
+                    "$type": "auditDeny", 
 
-					"options": [ 
+                    "options": [ 
 
-						"send_event", 
+                        "send_event", 
 
-						"show_notification" 
+                        "show_notification" 
 
-					] 
+                    ] 
 
-				}, 
+                }, 
 
-				"access": [ 
+                "access": [ 
 
-					"read", 
+                    "read", 
 
-					"write", 
+                    "write", 
 
-					"execute" 
+                    "execute" 
 
-				] 
+                ] 
 
-			} 
+            } 
 
-		] 
+        ] 
 
-	} 
+    } 
 
 ] 
 ```
