@@ -39,12 +39,12 @@ You can choose to configure and evaluate each setting independently, or all at o
 
 The guide is available:
 
-- [Evaluate Microsoft Defender Antivirus using PowerShell](microsoft-defender-antivirus-using-powershell.md)
-- in PDF format for offline viewing: [Download the guide in PDF format](https://www.microsoft.com/download/details.aspx?id=54795).
+- [Evaluate Microsoft Defender Antivirus using PowerShell](microsoft-defender-antivirus-using-powershell.md).
+- In PDF format for offline viewing: [Download the guide in PDF format](https://www.microsoft.com/download/details.aspx?id=54795).
 
 You can also download a PowerShell that will enable all the settings described in the guide automatically. You can obtain the script alongside the PDF download above, or individually from PowerShell Gallery:
 
-- [Download the PowerShell script to automatically configure the settings](https://aka.ms/wdeppscript)
+- [Download the PowerShell script to automatically configure the settings](https://aka.ms/wdeppscript).
 
 > [!IMPORTANT]
 > The guide is currently intended for single-machine evaluation of Microsoft Defender Antivirus. Enabling all of the settings in this guide may not be suitable for real-world deployment.
