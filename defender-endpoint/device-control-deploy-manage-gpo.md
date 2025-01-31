@@ -1,8 +1,8 @@
 ---
 title: Deploy and manage device control in Microsoft Defender for Endpoint with Group Policy           
 description: Learn how to deploy and manage device control in Defender for Endpoint using Group Policy
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb 
 ms.date: 01/09/2025
 ms.topic: overview
@@ -123,7 +123,7 @@ You can create different group types. Here's one group example XML file for any 
 
 ## Validating XML files
 
-Mpcmdrun has built in functionality to validate XML files that are utilized for GPO deployments. This allows customers to detect any syntax errors the DC engine may encounter when parsing through the settings. In order to perform this validation, administrators need to copy the following Powershell script and provide the appropriate file path for their XML files containing the Device Control rules and groups.
+Mpcmdrun has built in functionality to validate XML files that are used for GPO deployments. This feature enables customers to detect any syntax errors the DC engine may encounter while parsing the settings. To perform this validation, administrators should copy the following Powershell script and provide the appropriate file path for their XML files containing the Device Control rules and groups.
 
 ```
 #Path to PolicyRules xml. Provide the filepath of the device control rules XML file
