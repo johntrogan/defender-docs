@@ -54,7 +54,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
 
 > [!NOTE]
 >
-> - Only spoofed senders detected by spoof intelligence appear in this insight. Message from domains that fail DMARC where the DMARC policy is set to `p=reject` or `p=quarantine` don't appear in this insight. Those messages are processed based on the **Honor DMARC record policy when the message is detected as spoof** setting [in anti-phishing policies](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
+> - Only spoofed senders detected by spoof intelligence appear in this insight. Messages from domains that fail DMARC where the DMARC policy is set to `p=reject` or `p=quarantine` don't appear in this insight. Those messages are processed based on the **Honor DMARC record policy when the message is detected as spoof** setting [in anti-phishing policies](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
 >
 > - When you override the allow or block verdict in the spoof intelligence insight, the spoofed sender becomes a manual allow or block entry that appears only on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. You can also manually create allow or block entries for spoofed senders before they're detected by spoof intelligence. For more information, see [Spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list).
 >
@@ -106,7 +106,7 @@ To view information about the spoof intelligence detections, select **View spoof
 ### View information about spoof detections
 
 > [!NOTE]
-> Remember, only spoofed senders detected by spoof intelligence appear in this insight. Message from domains that fail DMARC where the DMARC policy is set to `p=reject` or `p=quarantine` don't appear in this insight. Those messages are processed based on the **Honor DMARC record policy when the message is detected as spoof** setting [in anti-phishing policies](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
+> Remember, only spoofed senders detected by spoof intelligence appear in this insight. Messages from domains that fail DMARC where the DMARC policy is set to `p=reject` or `p=quarantine` don't appear in this insight. Those messages are processed based on the **Honor DMARC record policy when the message is detected as spoof** setting [in anti-phishing policies](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
 
 The **Spoof intelligence insight** page at <https://security.microsoft.com/spoofintelligence> is available when you select **View spoofing activity** from the spoof intelligence insight on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 
