@@ -41,19 +41,29 @@ Before you get started with Removable Storage Access Control, you must confirm y
 
 ## Deploy policy by using JAMF
 
-### Step 1: Create policy JSON
+### Step 1: Creating a JSON policy
 
-Now, you have 'groups' and 'rules' and 'settings', combine 'settings' and 'groups' and rules into one JSON, here's the demo file: [https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/samples/deny_removable_media_except_kingston.json](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/samples/deny_removable_media_except_kingston.json). Make sure to validate your policy with the JSON schema so your policy format is correct: [https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json).
+Device Control on MacOS is defined through a JSON policy. This policy should have the appropriate groups, rules, and settings defined to tailor specific customer conditions. For example some enterprises might need to block all removable media devices entirely while others might have specific exceptions for a vendor or serial number. Microsoft has a [local Github repository](https://github.com/microsoft/mdatp-devicecontrol/tree/main/macOS/policy/samples"https://github.com/microsoft/mdatp-devicecontrol/tree/main/macos/policy/samples") that can be utilized as building blocks to assist enterprises in building their policies.
 
 See [Device Control for macOS](mac-device-control-overview.md) for information about settings, rules, and groups.
 
-### Step 2: Update MDE Preferences Schema
+### Step 2: Validating a JSON policy
+
+Enterprises need to validate their JSON policies after it has been created to ensure there are no syntax or configuration errors. The schema for device control policies that is used can be [located here](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json"https://github.com/microsoft/mdatp-devicecontrol/blob/main/macos/policy/device_control_policy_schema.json"). The Defender application has a built in functionality to compare provided JSON to the defined schema. 
+
+- Save your configuration on a local device as a .json file
+
+- Ensure you have access to "mdatp" commands. If your device is already onboarded then you will have this functionality.
+
+- Run **mdatp device-control policy validate --path <pathtojson>**
+
+### Step 3: Update MDE Preferences Schema
 
 The [MDE Preferences schema](https://github.com/microsoft/mdatp-xplat/blob/master/macos/schema/schema.json) is updated to include the new `deviceControl/policy` key. The existing MDE Preferences configuration profile should be updated to use the new schema file's content.
 
 :::image type="content" source="media/macos-device-control-jamf-mde-preferences-schema.png" alt-text="Shows where to edit the Microsoft Defender for Endpoint Preferences Schema to update." lightbox="media/macos-device-control-jamf-mde-preferences-schema.png":::
 
-### Step 3: Add Device Control Policy to MDE Preferences
+### Step 4: Add Device Control Policy to MDE Preferences
 
 A new 'Device Control' property is now available to add to the UX.  
 
