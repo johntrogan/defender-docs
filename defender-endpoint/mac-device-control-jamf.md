@@ -37,7 +37,7 @@ Device control in Microsoft Defender for Endpoint on macOS enables you to audit,
 
 Before you begin, confirm your subscription. To access and use device control, your subscription must include Defender for Endpoint Plan 1. For more information, see the following resources:
 
-- [Microsoft 365 Enterprise plans comparison table](https://go.microsoft.com/fwlink/p/?LinkID=2139145&clcid=0x409&culture=en-us&country=us)
+- [Microsoft 365 Enterprise plans comparison table](https://go.microsoft.com/fwlink/p/?LinkID=2139145&clcid=0x409&culture=&country=us)
 - [Understand subscriptions and licenses in Microsoft 365 for business](/microsoft-365/commerce/licenses/subscriptions-and-licenses)
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
