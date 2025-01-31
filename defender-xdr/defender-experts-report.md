@@ -19,7 +19,7 @@ ms.collection:
 - tier1
 - essentials-manage
 ms.topic: conceptual
-ms.date: 10/30/2024
+ms.date: 01/31/2025
 ---
 
 # Understand the Defender Experts for Hunting report in Microsoft Defender XDR
@@ -38,7 +38,7 @@ To view the report in your Microsoft Defender portal, go to **Reports**, select 
 
 Refer to the following screenshot of a sample report:
 
-![Screenshot of a Defender Experts for Hunting report.](/defender/media/defender-experts/defender-experts-hunting-report.png)
+:::image type="content" source="media/defender-experts-hunting-report.png" alt-text="Screenshot of Defender Experts for hunting report." lightbox="media/defender-experts-hunting-report.png":::
 
 ## Identify prevalent threats and other potential attack entry points
 
