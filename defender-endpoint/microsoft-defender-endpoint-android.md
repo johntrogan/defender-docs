@@ -83,15 +83,15 @@ Microsoft Defender for Endpoint on Android supports installation on both modes o
 
 To ensure optimal protection for your device, Microsoft Defender requests access to the following permissions during the device onboarding process:
 
-**Storage Access**: This permission enables Microsoft Defender to access your device's storage in order to detect and remove any malicious or unwanted apps.
+- **Storage Access**: This permission enables Microsoft Defender to access your device's storage in order to detect and remove any malicious or unwanted apps.
 
-**VPN Setup**: Microsoft Defender sets up a local VPN to provide web protection. Microsoft respects your privacy and doesn't view your browsing content.
+- **VPN Setup**: Microsoft Defender sets up a local VPN to provide web protection. Microsoft respects your privacy and doesn't view your browsing content.
 
-**Display Over Other Apps**: This permission enables Microsoft Defender to alert you when malicious network activity is blocked.
+- **Display Over Other Apps**: This permission enables Microsoft Defender to alert you when malicious network activity is blocked.
 
-**Accessibility**: This feature enhances your browsing experience by providing added security.
+- **Accessibility**: This feature enhances your browsing experience by providing added security.
 
-**Permanent Protection**: To ensure continuous protection, Microsoft Defender recommends staying active while running in the background. This helps prevent Android from stopping the app to improve battery life, thereby ensuring your device remains well-protected.
+- **Permanent Protection**: To ensure continuous protection, Microsoft Defender recommends staying active while running in the background. This helps prevent Android from stopping the app to improve battery life, thereby ensuring your device remains well-protected.
 
 1. **Location Access**: Microsoft Defender uses your location to help secure your Wi-Fi network and enhance device protection.
 
