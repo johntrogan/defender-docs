@@ -48,16 +48,15 @@ Device control in Defender for Endpoint on macOS enables you to:
 
 ## Prepare your endpoints
 
-- Microsoft Defender for Endpoint entitlement (can be trial)
-- Minimum OS version: macOS 11 or higher
 - Deploy Full Disk Access: you might have created and deployed this [https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) for other MDE features. You need to grant Full Disk Access permission for a new application: `com.microsoft.dlp.daemon`.
-- Enable Device Control on the MDE Preference setting:
 
-  - Data Loss Prevention (DLP)/Features/
+- Enable Device Control on your Defender for Endpoint preferences:
 
-  - For **Feature Name**, enter "DC_in_dlp"
+  - Data Loss Prevention (DLP)/Features
 
-  - For **State**, enter "enabled"
+  - For **Feature Name**, type `DC_in_dlp`
+
+  - For **State**, specify `enabled`
 
 Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tree/master/macos/schema).
 
@@ -82,7 +81,8 @@ Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/
 
 
 - Minimum product version: 101.91.92 or higher
-- Run _mdatp version_ through Terminal to see the product version on your client machine:
+
+- Run `mdatp version` through Terminal to see the product version on your client machine:
 
   :::image type="content" source="media/macos-device-control-mdatp-version-terminal.png " alt-text="Screenshot that shows the results when you run mdatp version in Terminal to see the product version on a client machine." lightbox="media/macos-device-control-mdatp-version-terminal.png ":::
 
@@ -90,10 +90,10 @@ Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/
 
 Policies determine the behavior of device control for macOS. The policy is targeted via Intune or JAMF to a collection of machines or users.  
 
-The Device Control for macOS policy includes settings, groups, and rules:
+The device control for macOS policy includes settings, groups, and rules:
 
 - Global setting called 'settings' allows you to define the global environment.
-- Group called 'groups' allows you to create media groups. For example, authorized USB group or encrypted USB group.
+- Group called `groups` allows you to create media groups. For example, authorized USB group or encrypted USB group.
 - Access policy rule called 'rules' allows you to create policy to restrict each group. For example, only allow authorized user to Write access-authorized USB group.
 
 
@@ -110,9 +110,10 @@ The Device Control for macOS policy includes settings, groups, and rules:
 
 Device control for macOS has similar capabilities to Device control for Windows, but macOS and Windows provide different underlying capabilities to manage devices, so there are some important differences:
 
-- macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices. This is why on macOS there are a richer set of [access types](#access-types). For example of a ```portableDevice``` device control for macOS can deny or allow ```download_photos_from_device```.
-- To stay consistent with Windows, there are ```generic_read```,```generic_write``` ,and ```generic_execute``` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
-- Creating a ```deny``` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there might still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
+- macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices. This is why on macOS there are a richer set of [access types](#access-types). For example, a `portableDevice` policy can deny or allow `download_photos_from_device`.
+
+- To stay consistent with Windows, there are `generic_read`,`generic_write` , and `generic_execute` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
+- Creating a `deny` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there might still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
 
 
 ### Settings
@@ -121,7 +122,7 @@ Here are the properties you can use when you create the groups, rules, and setti
 
 | Property name | Description | Options |
 |:---|:---|:---|
-| features | Feature specific configurations | You can set `disable` to false or true for following features: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `portableDevice`, including camera or PTP media<br/>- `bluetoothDevice`<br/><br/>The default is `true`, so if you don't configure this value, it won't apply even if you create a custom policy for `removableMedia`, because it's disabled by default. |
+| features | Feature specific configurations | You can set `disable` to false or true for following features: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `portableDevice`, including camera or PTP media<br/>- `bluetoothDevice`<br/><br/>The default is `true`, so if you don't configure this value, it doesn't apply, even if you create a custom policy for `removableMedia`, because it's disabled by default. |
 | global | Set default enforcement  | You can set `defaultEnforcement` to<br/>- `allow` (_default_)<br/>- `deny` |
 | ux | You can set a hyperlink on notification. | `navigationTarget: string`. Example: `"http://www.microsoft.com"` |
 
@@ -130,7 +131,7 @@ Here are the properties you can use when you create the groups, rules, and setti
 | Property name | Description | Options |
 |:---|:---|:---|
 | `$type` | The kind of group | "device" |
-| `id` | GUID, a unique ID, represents the group and will be used in the policy. | You can generate the ID through [New-Guid (Microsoft.PowerShell.Utility) - PowerShell](/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-7.2&preserve-view=true) or the uuidgen command on macOS |
+| `id` | GUID, a unique ID, represents the group and is used in the policy. | You can generate the ID through [New-Guid (Microsoft.PowerShell.Utility) - PowerShell](/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-7.2&preserve-view=true) or the uuidgen command on macOS |
 | `name` | Friendly name for the group. | string |
 | `query` | The media coverage under this group | See the **query** properties tables below for details. |
 
@@ -484,4 +485,5 @@ In this case, only have one access rule policy, but if you have multiple, make s
 - [Deploy Device Control by using JAMF](mac-device-control-jamf.md)
 - [Deploy Device Control manually](mac-device-control-manual.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
