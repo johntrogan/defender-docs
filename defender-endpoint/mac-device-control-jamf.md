@@ -62,27 +62,29 @@ You must validate your JSON policy after it's created to ensure there are no syn
 
 ### Step 3: Update your Defender for Endpoint preferences Schema
 
-The [Defender for Endpoint preferences schema](https://github.com/microsoft/mdatp-xplat/blob/master/macos/schema/schema.json) is updated to include the new `deviceControl/policy` key. The existing MDE Preferences configuration profile should be updated to use the new schema file's content.
+The [Defender for Endpoint preferences schema](https://github.com/microsoft/mdatp-xplat/blob/master/macos/schema/schema.json) includes the new `deviceControl/policy` key. The existing Defender for Endpoint preferences configuration profile should be updated to use the new schema file's content.
 
 :::image type="content" source="media/macos-device-control-jamf-mde-preferences-schema.png" alt-text="Shows where to edit the Microsoft Defender for Endpoint Preferences Schema to update." lightbox="media/macos-device-control-jamf-mde-preferences-schema.png":::
 
-### Step 4: Add Device Control Policy to MDE Preferences
+### Step 4: Add the device control policy to Defender for Endpoint preferences
 
-A new 'Device Control' property is now available to add to the UX.  
+A new device control property is now available to add to the user experience.  
 
-1. Select the topmost **Add/Remove properties** button, then select **Device Control** and press **Apply**.
+1. In your Jamf console, select **Add/Remove properties**, select **Device Control**, and then select **Apply**.
 
 :::image type="content" source="media/macos-device-control-jamf-device-control-property.png" alt-text="Shows how to add Device Control in Microsoft Defender for Endpoint" lightbox="media/macos-device-control-jamf-device-control-property.png":::
 
-2. Next, scroll down until you see the **Device Control** property (it's the bottommost entry), and select **Add/Remove properties** directly underneath it.
+2. Scroll down until you see the **Device Control** property (it's at the bottom of the list), and then select **Add/Remove properties**.
 
 3. Select **Device Control Policy**, and then select **Apply**.  
 
 :::image type="content" source="media/macos-device-control-jamf-device-control-add-remove-property.png" alt-text="Shows how to apply Device Control Policy in Microsoft Defender for Endpoint." lightbox="media/macos-device-control-jamf-device-control-add-remove-property.png":::
 
-4. To finish, copy and paste the Device Control policy JSON into the text box, and save your changes to the configuration profile.
+4. Copy and paste your device control policy JSON into the text box.
 
 :::image type="content" source="media/macos-device-control-jamf-device-control-policy-json.png" alt-text="Shows where to add the Device Control policy JSON in Microsoft Defender for Endpoint." lightbox="media/macos-device-control-jamf-device-control-policy-json.png":::
+
+5. Save your changes.
 
 ## See also
 
