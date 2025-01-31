@@ -33,7 +33,7 @@ ms.date: 01/31/2025
 
 Returns all known software vulnerabilities and their details for all devices, on a per-device basis.
 
-Different API calls get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
+Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
 
 1. [Export software vulnerabilities assessment **JSON response**](#1-export-software-vulnerabilities-assessment-json-response)  The API pulls all data in your organization as Json responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
