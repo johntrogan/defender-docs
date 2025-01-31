@@ -258,7 +258,7 @@ v2_full_disk_access                         : "approved"
 - `active` - feature version, you should see ["v2"]. (Device Control is enabled, but not configured.)
     - [] - Device Control isn't configured on this machine.
     - ["v1"] - You are on a preview version of Device Control. Migrate to version 2 using this guide. v1 is considered obsolete and not described in this documentation.
-    - ["v1,""v2"] - You have both v1 and v2 enabled. Offboard from v1.
+    - ["v1", "v2"] - You have both v1 and v2 enabled. Offboard from v1.
 - `v1_configured` - v1 configuration is applied
 - `v1_enforcement_level` - when v1 is enabled
 - `v2_configured` - v2 configuration is applied
