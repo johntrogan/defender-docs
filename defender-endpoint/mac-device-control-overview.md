@@ -133,7 +133,7 @@ Here are the properties you can use when you create the groups, rules, and setti
 | `$type` | The kind of group | "device" |
 | `id` | GUID, a unique ID, represents the group and is used in the policy. | You can generate the ID through [New-Guid (Microsoft.PowerShell.Utility) - PowerShell](/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-7.2&preserve-view=true) or the uuidgen command on macOS |
 | `name` | Friendly name for the group. | string |
-| `query` | The media coverage under this group | See the **query** properties tables below for details. |
+| `query` | The media coverage under this group | See the **query** property tables for details. |
 
 ### Query
 
@@ -144,7 +144,7 @@ Query type 1 is as follows:
 | Property name | Description | Options |
 |:---|:---|:---|
 | `$type` | Identify the logical operation to perform on the clauses | **all**: Any attributes under the **clauses** are an _And_ relationship. For example, if the administrator puts `vendorId` and `serialNumber`, for every connected USB, the system checks to see whether the USB meets both values.<br> **and**: is equivalent to _all_ <br> **any:** The attributes under the **clauses** are _Or_ relationship. For example, if administrator puts `vendorId` and `serialNumber`, for every connected USB, system does the enforcement as long as the USB has either an identical `vendorId` or `serialNumber` value. <br> **or**: is equivalent to _any_ |
-| `clauses` | Use media device property to set group condition. | An array of clause objects that are evaluated to determine group membership. See the [Clause](#clause) section below. |
+| `clauses` | Use media device property to set group condition. | An array of clause objects that are evaluated to determine group membership. See the [Clause](#clause) section. |
 
 Query type 2 is as follows:
 
@@ -171,15 +171,15 @@ Query type 2 is as follows:
 | `productId` | Four digit hexadecimal string | Matches a device's product ID |
 | `serialNumber` | string | Matches a device's serial number. Doesn't match if the device doesn't have a serial number. |
 | `encryption` | apfs | Match if a device is apfs-encrypted. |
-| `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. <br> The group must be defined within the policy prior to the clause. |
+| `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. <br> The group must be defined within the policy before the clause. |
 
 ### Access policy rule
 
 | Property name | Description | Options |
 |:---|:---|:---|
-| `id` | GUID, a unique ID, represents the rule and will be used in the policy. | New-Guid (Microsoft.PowerShell.Utility) - PowerShell <br> uuidgen |
-| `name` | String, the name of the policy and will display on the toast based on the policy setting. | |
-| `includeGroups` | The groups that the policy will be applied to. If multiple groups are specified, the policy applies to any media in all those groups. If not specified, the rule applies to all devices. | The **id** value inside the group must be used in this instance. If multiple groups are in the `includeGroups`, it's _AND_. <br/> `"includeGroups": ["3f082cd3-f701-4c21-9a6a-ed115c28e217"]` |
+| `id` | GUID, a unique ID, represents the rule and is used in the policy. | New-Guid (Microsoft.PowerShell.Utility) - PowerShell <br> uuidgen |
+| `name` | String, the name of the policy. Displays in the toast notification based on the policy setting. | |
+| `includeGroups` | The groups that the policy is applied to. If multiple groups are specified, the policy applies to any media in all those groups. If not specified, the rule applies to all devices. | The **id** value inside the group must be used in this instance. If multiple groups are in the `includeGroups`, it's _AND_. <br/> `"includeGroups": ["3f082cd3-f701-4c21-9a6a-ed115c28e217"]` |
 | `excludeGroups` | The groups that the policy doesn't apply to. | The **id** value inside the group must be used in this instance. If multiple groups are in the excludeGroups, it's _OR_. |
 | `entries` | One rule can have multiple entries; each entry with a unique GUID tells Device Control one restriction.| See entry properties table later in this article to get the details. |
 
