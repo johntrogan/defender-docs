@@ -43,7 +43,7 @@ If you're using Group Policy to manage Defender for Endpoint settings, you can u
 
 ## Set default enforcement
 
-You can set default access, such as `Deny` or `Allow` for all device control features, such as `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, and `PrinterDevices`.
+You can set default access, such as, `Deny` or `Allow` for all device control features, such as `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, and `PrinterDevices`.
 
 :::image type="content" source="media/set-default-enforcement-deny-gp.png" alt-text="Screenshot of set default enforcement." lightbox="media/set-default-enforcement-deny-gp.png":::
 
