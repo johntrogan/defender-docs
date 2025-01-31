@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 01/31/2025
 ---
 
 # Deploy and manage Device Control using JAMF
@@ -31,11 +31,14 @@ ms.date: 04/30/2024
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Microsoft Defender for Endpoint Device Control feature enables you to audit, allow, or prevent the read, write, or execute access to removable storage, and allows you to manage iOS and Portable device and Bluetooth media with or without exclusions.
+Device control in Microsoft Defender for Endpoint on macOS enables you to audit, allow, or prevent the read, write, or execute access to removable storage. Device control also allows you to manage iOS and portable devices and Bluetooth media, with or without exclusions.
 
 ## Licensing requirements
 
-Before you get started with Removable Storage Access Control, you must confirm your [Microsoft 365 subscription](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=3). To access and use Removable Storage Access Control, you must have Microsoft 365 E3.
+Before you begin, confirm your subscription. To access and use device control, your subscription must include Defender for Endpoint Plan 1. For more information, see the following resorces:
+
+- [Enterprise plans comparison table](https://go.microsoft.com/fwlink/p/?LinkID=2139145&clcid=0x409&culture=en-us&country=us)
+- [Understand subscriptions and licenses in Microsoft 365 for business](/microsoft-365/commerce/licenses/subscriptions-and-licenses)
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
