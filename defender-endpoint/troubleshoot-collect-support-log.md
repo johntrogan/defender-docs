@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 11/18/2024
+ms.date: 02/03/2025
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
