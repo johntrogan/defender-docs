@@ -33,8 +33,7 @@ App connector errors can be seen in the app connector dialog after attempting to
 > |GoogleJsonResponseException: 403 Forbidden|Google Workspace|Problem running the Google Workspace API.|If you just deployed the Defender for Cloud Apps App Connector for Google Workspace, check the following: If you clicked Unlimited, make sure that your Google Workspace account is really unlimited. If it is not, run the App Connector again and un-select the option for an unlimited account. Check that the scopes you defined during setup are correct. If this is not a new deployment and you see this error, it may be that you reached the API limit for today and Google Workspace events will be renewed tomorrow.|
 > |TokenResponseException: 400 Bad Request|Google Workspace|Either the connection to Google Workspace did not complete or is expired.|Follow the process to connect Google Workspace to Defender for Cloud Apps again.|
 > |HttpRequestFailure: Server returned: 401 Unauthorized|Okta|The Okta token is not valid.|Follow the process to connect Okta to Defender for Cloud Apps again.|
-> |
-IOException:|Okta|Internal error|Contact support|
+> |IOException:|Okta|Internal error|Contact support|
 > |HttpRequestFailure: Server returned: 404 Not Found|Okta|Internal error|Contact support|
 > |HttpRequestFailure: Server returned: 400 Bad Request: {"error":{"code":"AF20012","message":"Specified tenant ID (Tenant_ID goes here) is incorrectly configured in the system."|Microsoft 365 |No assigned Microsoft 365 licenses were found. |Assign at least one Microsoft 365 license to your tenant.|
 > |Microsoft.Office.Compliance.Audit.DataServiceException: Tenant 998cea7e-35cd-46a5-ab3c-8ec88a45d7d5 does not exist or {"error":"code":"AF20023","message":"The subscription was disabled."|Microsoft 365|Audit logging is not enabled in Microsoft 365|Enable audit logging in Microsoft 365. [Learn more](./connect-office-365.md#how-to-connect-microsoft-365-to-defender-for-cloud-apps)|
