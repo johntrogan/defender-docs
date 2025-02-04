@@ -120,53 +120,44 @@ After configuring the onboarding script, continue editing the same group policy 
 
 All policies are located under `Computer Configuration\Policies\Administrative Templates`.
 
-**Policy location:** \Windows Components\Windows Defender ATP
+**Policy location:** `\Windows Components\Windows Defender ATP`
 
-Policy|Setting
----|---
-Enable\Disable Sample collection|Enabled - "Enable sample collection on machines" checked
+|Policy|Setting|
+|---|---|
+|Enable\Disable Sample collection|Enabled - "Enable sample collection on machines" checked |
 
-<br>
 
-**Policy location:**  \Windows Components\Microsoft Defender Antivirus
+**Policy location:**  `\Windows Components\Microsoft Defender Antivirus`
 
-Policy|Setting
----|---
-Configure detection for potentially unwanted applications|Enabled, Block
+|Policy|Setting|
+|---|---|
+|Configure detection for potentially unwanted applications|Enabled, Block|
 
-<br>
+**Policy location:** `\Windows Components\Microsoft Defender Antivirus\MAPS`
 
-**Policy location:** \Windows Components\Microsoft Defender Antivirus\MAPS
+|Policy|Setting|
+|---|---|
+|Join Microsoft MAPS|Enabled, Advanced MAPS|
+|Send file samples when further analysis is required | Enabled, Send safe samples|
 
-Policy|Setting
----|---
-Join Microsoft MAPS|Enabled, Advanced MAPS
-Send file samples when further analysis is required | Enabled, Send safe samples
+**Policy location:** `\Windows Components\Microsoft Defender Antivirus\Real-time Protection`
 
-<br>
+|Policy|Setting|
+|---|---|
+|Turn off real-time protection|Disabled|
+|Turn on behavior monitoring|Enabled|
+|Scan all downloaded files and attachments|Enabled|
+|Monitor file and program activity on your computer|Enabled|
 
-**Policy location:** \Windows Components\Microsoft Defender Antivirus\Real-time Protection
-
-Policy|Setting
----|---
-Turn off real-time protection|Disabled
-Turn on behavior monitoring|Enabled
-Scan all downloaded files and attachments|Enabled
-Monitor file and program activity on your computer|Enabled
-
-<br>
-
-**Policy location:**  \Windows Components\Microsoft Defender Antivirus\Scan
+**Policy location:** `\Windows Components\Microsoft Defender Antivirus\Scan`
 
 These settings configure periodic scans of the endpoint. We recommend performing a weekly quick scan, performance permitting.
 
-Policy|Setting
----|---
-Check for the latest virus and spyware security intelligence before running a scheduled scan |Enabled
+|Policy|Setting|
+|---|---
+|Check for the latest virus and spyware security intelligence before running a scheduled scan |Enabled|
 
-<br>
-
-**Policy location:** \Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction
+**Policy location:** `\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction`
 
 Get the current list of attack surface reduction rules GUIDs from [Attack surface reduction rules deployment Step 3: Implement ASR rules](attack-surface-reduction-rules-deployment-implement.md). For additional, per rules details, see [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
@@ -176,15 +167,13 @@ Get the current list of attack surface reduction rules GUIDs from [Attack surfac
 
 1. Select the **Show** button.
 
-1. Add each GUID in the **Value Name** field with a Value of 2.
-
-   This will set each up for audit only.
+1. Add each GUID in the **Value Name** field with a value of `2`. This will set each up for audit only.
 
    :::image type="content" source="media/asr-guid.png" alt-text="The Attack surface reduction configuration" lightbox="media/asr-guid.png":::
 
-Policy|Location|Setting
----|---|---
-Configure Controlled folder access| \Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Controlled Folder Access| Enabled, Audit Mode
+|Policy|Location|Setting|
+|---|---|---|
+|Configure Controlled folder access| \Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard<br/>Controlled Folder Access| Enabled, Audit Mode |
 
 ## Run a detection test to verify onboarding
 
@@ -221,7 +210,7 @@ For security reasons, the package used to Offboard devices will expire 7 days af
 
 8. In the Name field, type an appropriate name for the scheduled task (for example, Defender for Endpoint Deployment).
 
-9. Go to the **Actions** tab and select **New...**. Ensure that **Start a program** is selected in the **Action** field. Enter the UNC path, using the file server's fully qualified domain name (FQDN), of the shared *WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd* file.
+9. Go to the **Actions** tab and select **New...**. Ensure that **Start a program** is selected in the **Action** field. Enter the UNC path, using the file server's fully qualified domain name (FQDN), of the shared `WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd` file.
 
 10. Select **OK** and close any open GPMC windows.
 
