@@ -29,9 +29,9 @@ search.appverid: met150
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-This article describes how to narrow down performance issues related to Defender for Endpoint on Linux. Diagnostic tools are available to help you understand and mitigate existing resource shortages and processes that are affecting performance. These diagnostic tools can be utilized to enhance visibility within the Microsoft Defender portal as well. Bottlenecks in one or more hardware subsystems mainly cause performance problems, depending on the profile of resource utilization on the system. Sometimes applications are sensitive to disk I/O resources and may need more CPU capacity, and sometimes some configurations are not sustainable, and may trigger too many new processes, and open too many file descriptors.
+This article describes how to narrow down performance issues related to Defender for Endpoint on Linux. Diagnostic tools are available to help you understand and mitigate existing resource shortages and processes that are affecting performance. These diagnostic tools can be utilized to enhance visibility within the Microsoft Defender portal as well. Bottlenecks in one or more hardware subsystems mainly cause performance problems, depending on the profile of resource utilization on the system. Sometimes applications are sensitive to disk I/O resources and may need more CPU capacity, and sometimes some configurations aren't sustainable, and may trigger too many new processes, and open too many file descriptors.
 
-Depending on the applications that you are running and your device characteristics, you may experience suboptimal performance when running Defender for Endpoint on Linux. In particular, applications or system processes that access many resources such as CPU, Disk, and Memory over a short timespan can lead to performance issues in Defender for Endpoint on Linux.
+Depending on the applications that you're running and your device characteristics, you may experience suboptimal performance when running Defender for Endpoint on Linux. In particular, applications or system processes that access many resources such as CPU, Disk, and Memory over a short timespan can lead to performance issues in Defender for Endpoint on Linux.
 
 > [!WARNING]
 > Before starting, **make sure that other security products are not currently running on the device**. Multiple security products may conflict and impact the host performance.
@@ -51,7 +51,7 @@ Real-time protection (RTP) is a feature of Defender for Endpoint on Linux that c
 
 The following steps can be used to troubleshoot and mitigate these issues:
 
-1. Disable real-time protection using one of the following methods and observe whether the performance improves. This approach helps narrow down whether Defender for Endpoint on Linux is contributing to the performance issues. If your device is not managed by your organization, real-time protection can be disabled from the command line:
+1. Disable real-time protection using one of the following methods and observe whether the performance improves. This approach helps narrow down whether Defender for Endpoint on Linux is contributing to the performance issues. If your device isn't managed by your organization, real-time protection can be disabled from the command line:
 
    ```bash
    mdatp config real-time-protection --value disabled
@@ -64,7 +64,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
    If your organization manages your device, your administrator can disable real-time protection using the instructions in [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
    > [!NOTE]
-   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component as well. For this, you need to add global exclusions from Antivirus and EDR. In this case, please follow the steps from the **Troubleshoot performance issues using Hot Event Sources section of this article.**
+   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component as well. In this case, you need to add global exclusions from Antivirus and EDR. In this case, please follow the steps from the **Troubleshoot performance issues using Hot Event Sources section of this article.**
 
 2. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on Linux.
 
