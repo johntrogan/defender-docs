@@ -26,8 +26,7 @@ search.appverid: met150
 **Applies to:**
 
 - Group Policy
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsgp-abovefoldlink)
@@ -36,21 +35,20 @@ search.appverid: met150
 > To use Group Policy (GP) updates to deploy the package, you must be on Windows Server 2008 R2 or later.
 >
 > For Windows Server 2019 and newer, you may need to replace `NT AUTHORITY\Well-Known-System-Account` with `NT AUTHORITY\SYSTEM` of the XML file that the Group Policy preference creates.
-
-> [!NOTE]
+>
 > If you're using the new, unified Microsoft Defender for Endpoint solution for Windows Server 2012 R2 and Windows Server 2016, make sure to use the latest ADMX files in your central store to get access to the correct Microsoft Defender for Endpoint policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
 
 Check out [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md) to see the various paths in deploying Defender for Endpoint.
 
 1. Open the GP configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
 
-    1. In the navigation pane, select **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
+   1. In the navigation pane, select **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
 
-    1. Select the operating system.
+   1. Select the operating system.
 
-    1. In the **Deployment method** field, select **Group policy**.
+   1. In the **Deployment method** field, select **Group policy**.
 
-    1. Click **Download package** and save the .zip file.
+   1. Click **Download package** and save the .zip file.
 
 2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called *OptionalParamsPolicy* and the file *WindowsDefenderATPOnboardingScript.cmd*.
 
@@ -88,16 +86,16 @@ You can use Group Policy (GP) to configure settings, such as settings for the sa
 1. On your GP management device, copy the following files from the
     configuration package:
 
-    - Copy `AtpConfiguration.admx` into `C:\Windows\PolicyDefinitions`.
+   - Copy `AtpConfiguration.admx` into `C:\Windows\PolicyDefinitions`.
 
-    - Copy `AtpConfiguration.adml` into `C:\Windows\PolicyDefinitions\en-US`.
+   - Copy `AtpConfiguration.adml` into `C:\Windows\PolicyDefinitions\en-US`.
 
-    If you're using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), copy the following files from the
+   If you're using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), copy the following files from the
     configuration package:
 
-    - Copy `AtpConfiguration.admx` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions`.
+   - Copy `AtpConfiguration.admx` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions`.
 
-    - Copy `AtpConfiguration.adml` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions\en-US`.
+   - Copy `AtpConfiguration.adml` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions\en-US`.
 
 2. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the GPO you want to configure and click **Edit**.
 
@@ -125,7 +123,6 @@ All policies are located under `Computer Configuration\Policies\Administrative T
 |Policy|Setting|
 |---|---|
 |Enable\Disable Sample collection|Enabled - "Enable sample collection on machines" checked |
-
 
 **Policy location:**  `\Windows Components\Microsoft Defender Antivirus`
 
@@ -188,13 +185,13 @@ For security reasons, the package used to Offboard devices will expire 7 days af
 
 1. Get the offboarding package from the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
 
-    1. In the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**.
+   1. In the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**.
 
-    1. Select the operating system.
+   1. Select the operating system.
     
-    1. In the **Deployment method** field, select **Group policy**.
+   1. In the **Deployment method** field, select **Group policy**.
 
-    1. Click **Download package** and save the .zip file.
+   1. Click **Download package** and save the .zip file.
 
 2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a file named *WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd*.
 
@@ -224,7 +221,9 @@ With Group Policy there isn't an option to monitor deployment of policies on the
 ## Monitor devices using the portal
 
 1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
-2. Click **Devices inventory**.
+
+2. Select **Devices inventory**.
+
 3. Verify that devices are appearing.
 
 > [!NOTE]
@@ -238,17 +237,17 @@ Create a new Group Policy or group these settings in with the other policies. Th
 
 2. Browse to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Real-time Protection**.
 
-    :::image type="content" source="media/realtime-protect.png" alt-text="Real-time protection" lightbox="media/realtime-protect.png":::
+   :::image type="content" source="media/realtime-protect.png" alt-text="Real-time protection" lightbox="media/realtime-protect.png":::
 
-1. In the Quarantine folder, configure removal of items from Quarantine folder.
+1. In the **Quarantine** folder, configure removal of items from Quarantine folder.
 
-    :::image type="content" source="media/removal-items-quarantine1.png" alt-text="Removal items quarantine folder" lightbox="media/removal-items-quarantine1.png":::
+   :::image type="content" source="media/removal-items-quarantine1.png" alt-text="Removal items quarantine folder" lightbox="media/removal-items-quarantine1.png":::
 
-    :::image type="content" source="media/config-removal-items-quarantine2.png" alt-text="config-removal quarantine" lightbox="media/config-removal-items-quarantine2.png":::
+   :::image type="content" source="media/config-removal-items-quarantine2.png" alt-text="config-removal quarantine" lightbox="media/config-removal-items-quarantine2.png":::
 
-4. In the Scan folder, configure the scan settings.
+4. In the **Scan** folder, configure the scan settings.
 
-    :::image type="content" source="media/gpo-scans.png" alt-text="gpo scans" lightbox="media/gpo-scans.png":::
+   :::image type="content" source="media/gpo-scans.png" alt-text="gpo scans" lightbox="media/gpo-scans.png":::
 
 ### Monitor all files in Real time protection
 
@@ -264,7 +263,7 @@ Browse to **Computer Configuration** \> **Policies** \> **Administrative Templat
  
 2. Browse to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Defender SmartScreen** > **Microsoft Edge**.
 
-    :::image type="content" source="media/configure-windows-defender-smartscreen.png" alt-text="Configure windows defender smart screen on Microsoft Edge" lightbox="media/configure-windows-defender-smartscreen.png":::
+   :::image type="content" source="media/configure-windows-defender-smartscreen.png" alt-text="Configure windows defender smart screen on Microsoft Edge" lightbox="media/configure-windows-defender-smartscreen.png":::
 
 ### Configure Potentially Unwanted Applications
 
@@ -303,17 +302,20 @@ Browse to **Computer Configuration** \> **Policies** \> **Administrative Templat
 ### Configure cloud deliver timeout and protection level
 
 Browse to **Computer Configuration** \> **Policies** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **MpEngine**.
+
 When you configure cloud protection level policy to **Default Microsoft Defender Antivirus blocking policy** this will disable the policy. This is what is required to set the protection level to the windows default.
 
 :::image type="content" source="media/config-extended-cloud-check.png" alt-text="config extended cloud check" lightbox="media/config-extended-cloud-check.png":::
 
 :::image type="content" source="media/cloud-protection-level.png" alt-text="config cloud protection level" lightbox="media/cloud-protection-level.png":::
 
-## Related topics
+## Related articles
+
 - [Onboard Windows devices using Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
 - [Onboard Windows devices using Mobile Device Management tools](configure-endpoints-mdm.md)
 - [Onboard Windows devices using a local script](configure-endpoints-script.md)
 - [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)
 - [Run a detection test on a newly onboarded Microsoft Defender for Endpoint devices](run-detection-test.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
