@@ -57,6 +57,7 @@ This article is updated frequently to let you know what's new in the latest rele
 What's new
 
 - Fixed a bug that incorrectly reported the DefenderEngineVersion to the security portal.
+- The MDATP package 101.24112.0003 will be gradually made available for each distribution.
 
 
 ### Jan-2025 Build: 101.24112.0001 | Release version: 30.124112.0001.0
