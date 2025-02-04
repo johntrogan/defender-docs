@@ -285,7 +285,7 @@ Examples:
 - Add an exclusion for a process:
 
     ```bash
-    mdatp exclusion process add --name /usr/bin/cat --scope global 
+    mdatp exclusion process add --path /usr/bin/cat --scope global 
     ```
 
     ```console
@@ -295,13 +295,17 @@ Examples:
     ```bash
     mdatp exclusion process remove --name /usr/bin/cat  --scope global
     ```
+    
+   > [!NOTE]
+   > Only full path is supported for setting process exclusion with `global` scope.
+   > Use only --path flag
 
     ```console
     Process exclusion removed successfully
     ```
 
    ```bash
-    mdatp exclusion process add --name /usr/bin/cat --scope epp 
+    mdatp exclusion process add --name cat --scope epp 
     ```
 
     ```console
@@ -310,7 +314,7 @@ Examples:
 
 
     ```bash
-    mdatp exclusion process remove --name /usr/bin/cat  --scope epp
+    mdatp exclusion process remove --name cat --scope epp
     ```
 
     ```console
@@ -321,15 +325,13 @@ Examples:
 
     ```bash
     mdatp exclusion process add --name cat --scope epp
-    mdatp exclusion process add --name /usr/bin/dog --scope global
+    mdatp exclusion process add --path /usr/bin/dog --scope global
     ```
 
     ```console
     Process exclusion configured successfully
     ```
     
-    > [!NOTE]
-    > Use full path for process exclusion with `global` scope.
 
 ## Validate exclusions lists with the EICAR test file
 
