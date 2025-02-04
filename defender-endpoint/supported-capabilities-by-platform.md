@@ -64,7 +64,7 @@ The following table gives information about the supported Microsoft Defender for
 > - On Linux Server, network protection, web protection, and custom network indicators are currently in preview.
 > - On Linux Server and Mac, [Device response capabilities: collect investigation package ](respond-machine-alerts.md) is currently in preview. You can also use [Live Response](live-response.md).
 > - On Linux Server and Mac, [File response capabilities: collect file, deep analysis, block file, stop, and quarantine processes](respond-file-alerts.md) are currently in preview. You can also use [Live Response](live-response.md).
-> - Endpoint & network device discovery is supported on Windows Server 2019 or later, and on Windows 10 and 11.
+> - Endpoint & network device discovery is supported on Windows Server 2019 or later, and on Windows 10 and Windows 11.
 > - Microsoft Defender Vulnerability Management is not supported on Rocky and Alma currently.
 > - For Windows 7, Windows 8.1, and Windows Server 2008 R2, use System Center Endpoint Protection (SCEP) for the EDR sensor and antivirus protection.
 
