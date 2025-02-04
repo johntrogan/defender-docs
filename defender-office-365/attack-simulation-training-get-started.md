@@ -54,7 +54,8 @@ Watch this short video to learn more about Attack simulation training.
     - **Global Administrator**¹
     - **Security Administrator**
     - **Attack Simulation Administrators**²: Create and manage all aspects of attack simulation campaigns.
-    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
+    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later. 
+    - **Security Operator and Security Reader**: View all aspects of attack simulation campaigns. Cannot create or manage all aspects of attack simulation campaigns (e.g. creating or editing simulations, training campaigns, simulation automation, payload automation, content (e.g. tenant payloads, notifications) or changing global settings). 
 
     > [!IMPORTANT]
     > ¹ Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
