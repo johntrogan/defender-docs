@@ -109,7 +109,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
    ```bash
    mdatp diagnostic real-time-protection-statistics --sort --top 4
    ```
-   The output of the which is a list of the top 4 contributors to performance issues. For example, the output of the command will be something like the following:
+   The output is a list of the top four contributors to performance issues. For example, the output of the command is something like the following:
 
    ```console
    =====================================
@@ -143,10 +143,10 @@ The following steps can be used to troubleshoot and mitigate these issues:
    =====================================
    ```
 
-   To improve the performance of Defender for Endpoint on Linux, locate the one with the highest number under the `Total files scanned` row and add an antivirus exclusion for it (carefully evaluate if it is safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+   To improve the performance of Defender for Endpoint on Linux, locate the one with the highest number under the `Total files scanned` row and add an antivirus exclusion for it (carefully evaluate if it's safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
    > [!NOTE]
-   > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off are not counted. Additionally, only events which triggered scans are counted.
+   > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off aren't counted. Additionally, only events which triggered scans are counted.
 
 ## Troubleshoot performance issues using Hot Event Sources
 
@@ -154,8 +154,9 @@ The following steps can be used to troubleshoot and mitigate these issues:
 -  Performance issues in files and executables which are consuming most CPU cycles in the entire filesystem.
 
 Hot event sources is a feature that allows customers to identify which process or directory is responsible for high resource consumption. To investigate which process/executable is generating the most noise, follow these steps.
-   > [!NOTE]
-   > These commands require you to have root permissions. Ensure that sudo can be used.
+
+> [!NOTE]
+> These commands require you to have root permissions. Ensure that sudo can be used.
 
 First, check the log level on your machine.
 
@@ -284,7 +285,7 @@ Once you've finished the investigation, you can change the log level back to "in
    Log level configured successfully
    ```
 
-To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in the count row and add a global process exclusion (if it's an executable) or a global file/folder exclusion (if it's a file) for it (carefully evaluate if it is safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+To improve the performance of Defender for Endpoint on Linux, locate the path with the highest number in the count row and add a global process exclusion (if it's an executable) or a global file/folder exclusion (if it's a file) for it (carefully evaluate if it's safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
 ## Troubleshoot performance issues using eBPF Statistics
 
@@ -320,9 +321,10 @@ To collect current statistics using eBPF statistics, run:
    288 : 19
    41 : 15
    ```
+   
 This command monitors the system for 20 seconds and shows the results. Here the top initiator path (postgresql/12/bin/psql) shows the path of the process that generated the most system calls.
 
-To improve the performance of Defender for Endpoint on Linux, locate the one with the highest `count` in the `Top initiator path` row and add a global process exclusion for it (carefully evaluate if it is safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
+To improve the performance of Defender for Endpoint on Linux, locate the one with the highest `count` in the `Top initiator path` row and add a global process exclusion for it (carefully evaluate if it's safe to exclude). For more information, see [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md).
 
 ## Configure Global Exclusions for better performance
 
