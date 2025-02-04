@@ -100,7 +100,7 @@ CveId|String|Unique identifier assigned to the security vulnerability under the 
 CvssScore|String|The CVSS score of the CVE.|6.2
 DeviceId|String|Unique identifier for the device in the service.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
 DeviceName|String|Fully qualified domain name (FQDN) of the device.|johnlaptop.europe.contoso.com
-DiskPaths|Array\[string\]|Disk evidence that the product is installed on the device.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]
+DiskPaths|Array[string]|Disk evidence that the product is installed on the device.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]
 ExploitabilityLevel|String|The exploitability level of this vulnerability (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit
 FirstSeenTimestamp|String|First time this product CVE was seen on the device.|2020-11-03 10:13:34.8476880
 ID|String|Unique identifier for the record.|123ABG55_573AG&mnp!
@@ -110,7 +110,7 @@ RbacGroupName|String|The role-based access control (RBAC) group. If this device 
 RecommendationReference|String|A reference to the recommendation ID related to this software.|va-_-microsoft-_-silverlight
 RecommendedSecurityUpdate (optional)|String|Name or description of the security update provided by the software vendor to address the vulnerability.|April 2020 Security Updates
 RecommendedSecurityUpdateId (optional)|String|Identifier of the applicable security updates or identifier for the corresponding guidance or knowledge base (KB) articles|4550961
-RegistryPaths|Array\[string\]|Registry evidence that the product is installed in the device.|["HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight"]
+RegistryPaths|Array[string]|Registry evidence that the product is installed in the device.|["HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight"]
 SecurityUpdateAvailable|Boolean|Indicates whether a security update is available for the software.| Possible values are true or false.
 SoftwareName|String|Name of the software product.|Chrome
 SoftwareVendor|String|Name of the software vendor.|Google
@@ -297,7 +297,7 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 > [!NOTE]
 >
 > - The files are GZIP compressed & in multiline JSON format.
-> - The download URLs are valid for 6 hours.
+> - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
 >
 > - Each record is 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
@@ -309,7 +309,7 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
-Export files|array\[string\]|A list of download URLs for files holding the current snapshot of the organization.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|String|The time that the export was generated.|2021-05-20T08:00:00Z
 |
 
