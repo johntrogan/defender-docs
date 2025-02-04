@@ -58,7 +58,6 @@ What's new
 
 - Fixed a bug that incorrectly reported the DefenderEngineVersion to the security portal.
 
-- Starting from 2411, the MDATP package release to Production on packages.microsoft.com will follow a gradual rollout mechanism which spans over a week. The other release rings, insiderFast and insiderSlow, are unaffected by this change.
 
 ### Jan-2025 Build: 101.24112.0001 | Release version: 30.124112.0001.0
 
