@@ -7,7 +7,7 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 01/13/2025
+ms.date: 02/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -66,7 +66,7 @@ Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender fo
 - Apply the installation package
 - Follow the onboarding steps for the corresponding tool
 
-**Windows Server Semi-Annual Enterprise Channel, Windows Server 2019, and Windows 2025**:
+**Windows Server Semi-Annual Enterprise Channel, Windows Server 2019, Windows Server 2022, and Windows 2025**:
 
 - Download the onboarding package
 - Follow the onboarding steps for the corresponding tool
@@ -237,7 +237,7 @@ This script can be used in various scenarios, including those scenarios describe
     > [!NOTE]
     > The recommended execution policy setting is `Allsigned`. This requires importing the script's signing certificate into the Local Computer Trusted Publishers store if the script is running as SYSTEM on the endpoint.
 
-    Replace \\\servername-or-dfs-space\share-name with the UNC path, using the file server's fully qualified domain name (FQDN), of the shared *install.ps1* file. The installer package md4ws.msi must be placed in the same directory. Ensure that the permissions of the UNC path allow write access to the computer account that is installing the package, to support creation of log files. If you wish to disable the creation of log files (not recommended), you can use the -noETL -noMSILog parameters.
+    Replace `\\servername-or-dfs-space\share-name` with the UNC path, using the file server's fully qualified domain name (FQDN), of the shared `install.ps1` file. The installer package md4ws.msi must be placed in the same directory. Ensure that the permissions of the UNC path allow write access to the computer account that is installing the package, to support creation of log files. If you wish to disable the creation of log files (not recommended), you can use the `-noETL -noMSILog` parameters.
 
     For scenarios where you want Microsoft Defender Antivirus to coexist with non-Microsoft antimalware solutions, add the $Passive parameter to set passive mode during installation.
 
@@ -252,6 +252,7 @@ For more configuration settings, see [Configure sample collection settings](conf
 The following steps are only applicable if you're using a third-party anti-malware solution. You need to apply the following Microsoft Defender Antivirus passive mode setting. Verify that it was configured correctly:
 
 1. Set the following registry entry:
+
     - Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
     - Name: `ForceDefenderPassiveMode`
     - Type: `REG_DWORD`
@@ -279,11 +280,11 @@ The following steps are only applicable if you're using a third-party anti-malwa
 
 ### Download package
 
-1. In Microsoft Defender XDR, go to **Settings > Endpoints > Device Management > Onboarding**.
+1. In Microsoft Defender XDR, go to **Settings** > **Endpoints** > **Device Management** > **Onboarding**.
 
-2. Select **Windows Server 1803, 2019, and 2025**.
+2. Select **Windows Server 1803, 2019, and 2022**.
 
-3. Select **Download package**. Save it as WindowsDefenderATPOnboardingPackage.zip.
+3. Select **Download package**. Save it as `WindowsDefenderATPOnboardingPackage.zip`.
 
 4. Follow the steps provided in the [Complete the onboarding steps](#step-3-complete-the-onboarding-steps) section.
 
@@ -329,7 +330,7 @@ After successfully onboarding devices to the service, you'll need to configure t
 
 ## Offboard Windows servers
 
-You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, and Windows Server 2025 in the same method available for Windows 10 client devices.
+You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, Windows Server 2019 Core edition, Windows Server 2022, and Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks) using the same method available for Windows 10 client devices.
 
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
