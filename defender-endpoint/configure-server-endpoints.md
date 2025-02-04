@@ -274,7 +274,9 @@ The following steps are only applicable if you're using a third-party anti-malwa
 
 - To automatically, deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
 
-## Windows Server Semi-Annual Enterprise Channel (SAC), Windows Server 2019, and Windows Server 2022
+## Windows Server Semi-Annual Enterprise Channel (SAC), Windows Server 2019, and Windows Server 2022, and Windows Server 2025
+
+Support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
 
 ### Download package
 
