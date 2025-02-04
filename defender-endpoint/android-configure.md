@@ -106,9 +106,9 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 6. Add the required groups to which the policy has to be applied. Review and create the policy.
 
 > [!NOTE]
->
-> - The other config keys of Network Protection will only work if the parent key '**Enable Network Protection in Microsoft Defender'** is enabled.
+- The other config keys of Network Protection will only work if the parent key '**Enable Network Protection in Microsoft Defender'** is enabled.
 > - Users need to enable location permission (which is an optional permission) and need to grant "Allow All the Time" permission to ensure protection against Wi-Fi threat, even when the app is not actively in use. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
+**An open wi-fi network alert** is generated whenever a user connects to an open Wi-Fi network. If the user reconnects to the same network within a seven-day period, no new alert will be generated. However, connecting to a different open Wi-Fi network will result in an immediate alert.
 
 ## Privacy Controls
 
