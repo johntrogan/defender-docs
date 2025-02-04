@@ -44,6 +44,8 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
   - Outlook for Microsoft 365:
     - **Current channel**: Version 16.0.17827.15010 or later.
     - **Monthly Enterprise Channel**: Version 16.0.18025.20000 or later.
+    - **Semi-Annual Channel (Preview)**:  Release 2502, build 16.0.18526.20024
+    - **Semi-Annual Channel**:  Release 2502, build 16.0.18526.20024
   - Outlook for Mac version 16.89 (24090815) or later.
   - Outlook for iOS and Android version 4.2446 or later.
   - The new Outlook for Windows.
