@@ -64,7 +64,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
    If your organization manages your device, your administrator can disable real-time protection using the instructions in [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
    > [!NOTE]
-   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component as well. In this case, you need to add global exclusions from Antivirus and EDR. In this case, please follow the steps from the **Troubleshoot performance issues using Hot Event Sources section of this article.**
+   > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component as well. In this case, you need to add global exclusions from Antivirus and EDR. In this case, follow the steps in the section, [Troubleshoot performance issues using Hot Event Sources](#troubleshoot-performance-issues-using-hot-event-sources).
 
 2. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on Linux.
 
