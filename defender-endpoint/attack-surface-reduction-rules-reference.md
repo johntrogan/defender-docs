@@ -135,11 +135,10 @@ The following table lists the supported operating systems for rules that are cur
 | [Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) | Y | N  |  N |
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later | Y | Y |
 
-(<a id="fn1">1</a>) Refers to the modern unified solution for Windows Server 2012 and 2016. For more information, see [Onboard Windows Servers to the Defender for Endpoint service](configure-server-endpoints.md).
-
-(<a id="fn1">2</a>) For Windows Server 2016 and Windows Server 2012 R2, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
-
-(<a id="fn1">3</a>) Version and build number apply only to Windows10.
+> [!NOTE]
+> - For Windows Server 2012 R2 and Windows Server 2016, use the [modern, unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution). If you're using Configuration Manager, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
+> - For Windows client devices, "version 1809 or later" and "version 1903 (build 18362)" apply to Windows 10 only.
+> - Support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
 
 ## ASR rules supported configuration management systems
 
