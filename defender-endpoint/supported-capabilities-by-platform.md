@@ -55,20 +55,19 @@ The following table gives information about the supported Microsoft Defender for
 ||||||
 |**Response**     |         |         |         ||
 |[Automated Investigation & Response (AIR)](automated-investigations.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)  |  ![No](media/svg/check-no.svg)       |  ![No](media/svg/check-no.svg)        |
-|[Device response capabilities: collect investigation package ](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) <sup>[3]</sup>       |  ![Yes.](media/svg/check-yes.svg) <sup>[3]</sup>        |
+|[Device response capabilities: collect investigation package ](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) <br/>(preview)  |  ![Yes.](media/svg/check-yes.svg) <br/>(preview) |
 |[Device response capabilities: run antivirus scan](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg)        |  ![Yes.](media/svg/check-yes.svg)         |
 |[Device isolation](respond-machine-alerts.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg)       |  ![Yes.](media/svg/check-yes.svg)    |
-|File response capabilities: collect file, deep analysis, block file, stop, and quarantine processes        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) <sup>[4]</sup> |  ![Yes.](media/svg/check-yes.svg) <sup>[4]</sup> |
+|File response capabilities: collect file, deep analysis, block file, stop, and quarantine processes  | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)   |  ![Yes.](media/svg/check-yes.svg) <br/>(preview) |  ![Yes.](media/svg/check-yes.svg) <br/>(preview) |
 |[Live Response](live-response.md)       | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg) |  ![Yes.](media/svg/check-yes.svg)       |  ![Yes.](media/svg/check-yes.svg)      |
 
 > [!NOTE]
 > - Support for Windows Server 2025 is rolling out beginning in February 2025 and over the next several weeks.
 > - For Windows Server 2012 R2 and Windows Server 2016, use the modern, unified solution. See [Onboard Windows Servers to the Defender for Endpoint service](configure-server-endpoints.md).
 > - On Linux Server, network protection, web protection, and custom network indicators are currently in preview.
+> - On Linux Server and Mac, [Device response capabilities: collect investigation package ](respond-machine-alerts.md) is currently in preview. You can also use [Live Response](live-response.md).
+> - On Linux Server and Mac, [File response capabilities: collect file, deep analysis, block file, stop, and quarantine processes](respond-file-alerts.md) are currently in preview. You can also use [Live Response](live-response.md).
 
-<sup>[2]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview)).
-
-<sup>[3]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview)). Or you can also use Live Response [2].
 
 <sup>[4]</sup> Collect file only. Or, you can use Live Response [2].
 
