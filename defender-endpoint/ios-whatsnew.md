@@ -29,6 +29,28 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+#### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
+
+**February 2025:**
+
+As part of our Microsoft Defender for Mobile application, we currently have Open Wi-Fi detection as part of our Network Protection feature set. When enabled, this feature raises an alert in the Security portal. In its current state, the alert acts as an informational one with no action required by the SOC analyst/admin. It serves as a key piece of information that helps when triaging incidents involving mobile devices.
+
+**Current Behaviour:**
+
+- Every time the end user connects to an open Wi-Fi network, an alert is raised.
+
+- If the user goes out of the open Wi-Fi range and reconnects to the same network, another alert is raised.
+
+Based on our research insights and inputs from Microsoft and other SOC teams, we are implementing a caching behaviour to ensure the value of the alerts remains and also does not cause fatigue to SOC teams due to sheer volume.
+
+**New behaviour:** 
+
+- Every time the end user connects to an open Wi-Fi network, an alert is raised.
+
+- If a user re-connects to the same open wi-fi in the next 7 days, another alert won't be raised.
+
+Please note that if a user connects to a different open Wi-Fi network, an alert will be immediately generated, and there is no change to that behaviour.
+
 ## Upgrading your experience: UX enhancements you should know about
 
 **January 2025**:
