@@ -293,7 +293,7 @@ Examples:
     ```
 
     ```bash
-    mdatp exclusion process remove --name /usr/bin/cat  --scope global
+    mdatp exclusion process remove --path /usr/bin/cat  --scope global
     ```
     
    > [!NOTE]
