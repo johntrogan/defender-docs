@@ -175,7 +175,7 @@ Examples:
     Extension exclusion removed successfully
     ```
 
-- Add/Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with global scope)* :
+- Add or Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with global scope)*:
 
     ```bash
     mdatp exclusion file add --path /var/log/dummy.log --scope epp
@@ -209,7 +209,7 @@ Examples:
     File exclusion removed successfully"
     ```
 
-- Add/Remove an exclusion for a folder:
+- Add or Remove an exclusion for a folder:
 
     ```bash
     mdatp exclusion folder add --path /var/log/ --scope epp
@@ -298,7 +298,7 @@ Examples:
     
    > [!NOTE]
    > Only full path is supported for setting process exclusion with `global` scope.
-   > Use only --path flag
+   > Use only `--path` flag
 
     ```console
     Process exclusion removed successfully
