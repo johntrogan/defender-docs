@@ -14,18 +14,14 @@ In the case of a valid threat, or **true positive**, Defender for Identity enabl
 The information monitored by Defender for Identity is presented in the form of activities. Defender for Identity currently supports monitoring of the following activity types:
 
 > [!NOTE]
-- This article is relevant for all Defender for Identity sensor types.
-- Defender for Identity monitored activities appear on both the user and machine profile page.
-- Defender for Identity monitored activities are also available in Microsoft Defender XDR's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
-
-
-#### 
+> - This article is relevant for all Defender for Identity sensor types.
+> - Defender for Identity monitored activities appear on both the user and machine profile page.
+> - Defender for Identity monitored activities are also available in Microsoft Defender XDR's Advanced Hunting page.
 
 > [!TIP]
 > For detailed information on all supported event types (`ActionType` values) in Advanced Hunting Identity-related tables, use the built-in schema reference available in Microsoft Defender XDR.
 
-##   
-Monitored user activities: User account AD attribute changes
+## Monitored user activities: User account AD attribute changes
 
 |Monitored activity|Description|
 |---------------------|------------------|
