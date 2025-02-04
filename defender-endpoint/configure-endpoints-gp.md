@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 09/15/2023
+ms.date: 02/04/2025
 ms.subservice: onboard
 search.appverid: met150
 ---
@@ -35,10 +35,10 @@ search.appverid: met150
 > [!NOTE]
 > To use Group Policy (GP) updates to deploy the package, you must be on Windows Server 2008 R2 or later.
 >
-> For Windows Server 2019 and newer, you may need to replace NT AUTHORITY\Well-Known-System-Account with NT AUTHORITY\SYSTEM of the XML file that the Group Policy preference creates.
+> For Windows Server 2019 and newer, you may need to replace `NT AUTHORITY\Well-Known-System-Account` with `NT AUTHORITY\SYSTEM` of the XML file that the Group Policy preference creates.
 
 > [!NOTE]
-> If you're using the new, unified Microsoft Defender for Endpoint solution for Windows Server 2012 R2 and 2016, please ensure you are using the latest ADMX files in your central store to get access to the correct Microsoft Defender for Endpoint policy options. Please reference [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
+> If you're using the new, unified Microsoft Defender for Endpoint solution for Windows Server 2012 R2 and Windows Server 2016, make sure to use the latest ADMX files in your central store to get access to the correct Microsoft Defender for Endpoint policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
 
 Check out [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md) to see the various paths in deploying Defender for Endpoint.
 
@@ -88,16 +88,16 @@ You can use Group Policy (GP) to configure settings, such as settings for the sa
 1. On your GP management device, copy the following files from the
     configuration package:
 
-    - Copy _AtpConfiguration.admx_ into _C:\\Windows\\PolicyDefinitions_
+    - Copy `AtpConfiguration.admx` into `C:\Windows\PolicyDefinitions`.
 
-    - Copy _AtpConfiguration.adml_ into _C:\\Windows\\PolicyDefinitions\\en-US_
+    - Copy `AtpConfiguration.adml` into `C:\Windows\PolicyDefinitions\en-US`.
 
     If you're using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), copy the following files from the
     configuration package:
 
-    - Copy _AtpConfiguration.admx_ into _\\\\\<forest.root\>\\SysVol\\\<forest.root\>\\Policies\\PolicyDefinitions_
+    - Copy `AtpConfiguration.admx` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions`.
 
-    - Copy _AtpConfiguration.adml_ into _\\\\\<forest.root\>\\SysVol\\\<forest.root\>\\Policies\\PolicyDefinitions\\en-US_
+    - Copy `AtpConfiguration.adml` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions\en-US`.
 
 2. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the GPO you want to configure and click **Edit**.
 
