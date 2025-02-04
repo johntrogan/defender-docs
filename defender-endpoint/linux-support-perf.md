@@ -6,7 +6,7 @@ ms.author: deniseb
 author: deniseb
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-ms.date: 12/04/2024
+ms.date: 02/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -29,7 +29,7 @@ search.appverid: met150
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-This document provides instructions on how to narrow down performance issues related to Defender for Endpoint on Linux using the available diagnostic tools to be able to understand and mitigate the existing resource shortages and the processes that are making the system into such situations. These diagnostic tools can be utilized to enhance visibility within the portal as well. Bottlenecks in one or more hardware subsystems mainly cause performance problems, depending on the profile of resource utilization on the system. Sometimes applications are sensitive to disk I/O resources and may need more CPU capacity, and sometimes some configurations are not sustainable, and may trigger too many new processes, and open too many file descriptors.
+This article describes how to narrow down performance issues related to Defender for Endpoint on Linux. Diagnostic tools are available to help you understand and mitigate existing resource shortages and processes that are affecting performance. These diagnostic tools can be utilized to enhance visibility within the Microsoft Defender portal as well. Bottlenecks in one or more hardware subsystems mainly cause performance problems, depending on the profile of resource utilization on the system. Sometimes applications are sensitive to disk I/O resources and may need more CPU capacity, and sometimes some configurations are not sustainable, and may trigger too many new processes, and open too many file descriptors.
 
 Depending on the applications that you are running and your device characteristics, you may experience suboptimal performance when running Defender for Endpoint on Linux. In particular, applications or system processes that access many resources such as CPU, Disk, and Memory over a short timespan can lead to performance issues in Defender for Endpoint on Linux.
 
@@ -37,9 +37,10 @@ Depending on the applications that you are running and your device characteristi
 > Before starting, **make sure that other security products are not currently running on the device**. Multiple security products may conflict and impact the host performance.
 
 There are three distinct ways to troubleshoot noisy processes and directories using the Diagnostic tools from Microsoft Defender for Endpoint on Linux:
-1. Using Real-time Protection Statistics
-2. Using Hot Event Sources
-3. Using eBPF Statistics
+
+- Using Real-time Protection Statistics
+- Using Hot Event Sources
+- Using eBPF Statistics
 
 ## Troubleshoot performance issues using Real-time Protection Statistics
 
