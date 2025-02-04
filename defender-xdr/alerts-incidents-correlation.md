@@ -45,7 +45,7 @@ For more information on moving an alert from one incident to another, see [Move 
 
 ## Incident correlation and merging
 
-The Defender portal's correlation activities don't stop when incidents are created. Defender continues to detect commonalities and relationships between incidents, and between alerts across incidents. When two or more incidents are determined to be sufficiently alike, Defender merges the incidents into a single incident.
+The Defender portal's correlation activities don't stop when incidents are created. Defender continues to detect commonalities and relationships between incidents and alerts across incidents. When two or more incidents are determined to be sufficiently alike, Defender merges the incidents into a single incident.
 
 ### Criteria for merging incidents
 
