@@ -1105,9 +1105,7 @@
     items:
     - name: Reports
       items:
-        - name: Monthly security summary
-          href: monthly-security-summary-report.md
-        - name: Threat protection reports
+        - name: Microsoft Defender for Endpoint reports
           href: threat-protection-reports.md
         - name: Device health reports
           href: device-health-reports.md
