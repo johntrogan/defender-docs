@@ -114,7 +114,7 @@ You can use Group Policy (GP) to configure settings, such as settings for the sa
 
 ### Update endpoint protection configuration
 
-After configuring the onboarding script, continue editing the same group policy to add endpoint protection configurations. Perform group policy edits from a system running Windows 10 or Server 2019, Windows 11, or Windows Server 2022 to ensure you have all of the required Microsoft Defender Antivirus capabilities. You may need to close and reopen the group policy object to register the Defender ATP configuration settings.
+After configuring the onboarding script, continue editing the same group policy to add endpoint protection configurations. Perform group policy edits from a system running Windows 10, Windows 11, or Windows Server 2019 and later to ensure you have all of the required Microsoft Defender Antivirus capabilities. You may need to close and reopen the group policy object to register the Defender ATP configuration settings.
 
 All policies are located under `Computer Configuration\Policies\Administrative Templates`.
 
