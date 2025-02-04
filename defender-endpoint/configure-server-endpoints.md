@@ -57,7 +57,7 @@ Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender fo
 > - If you use Defender for Endpoint before using Microsoft Defender for Cloud, your data is stored in the location you specified when you created your tenant even if you integrate with Microsoft Defender for Cloud at a later time.
 > - Once configured, you can't change the location where your data is stored. If you need to move your data to another location, you need to contact Microsoft Support to reset the tenant.
 > - Server endpoint monitoring utilizing this integration has been disabled for Office 365 GCC customers.
-> - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022, Windows Server 2019, Windows Server 2025, and Windows 10 or later, doesn't support this gateway.
+> - Previously, the use of the Microsoft Monitoring Agent (MMA) on Windows Server 2016 and Windows Server 2012 R2 and previous versions of Windows Server allowed for the OMS / Log Analytics gateway to provide connectivity to Defender cloud services. The new solution, like Microsoft Defender for Endpoint on Windows Server 2022 and later, Windows Server 2019, and Windows 10 or later, doesn't support this gateway.
 > - Linux servers onboarded through Microsoft Defender for Cloud have their initial configuration set to run Defender Antivirus in [passive mode](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
 
 **Windows Server 2016 and Windows Server 2012 R2**:
@@ -70,8 +70,6 @@ Microsoft Defender for Endpoint integrates seamlessly with Microsoft Defender fo
 
 - Download the onboarding package
 - Follow the onboarding steps for the corresponding tool
-
-## Windows Server 2016 and Windows Server 2012 R2
 
 ### Functionality in the modern unified solution
 
@@ -230,16 +228,16 @@ This script can be used in various scenarios, including those scenarios describe
 
 8. Go to the **Actions** tab and select **New...** Ensure that **Start a program** is selected in the **Action** field. The [installer script](server-migration.md#installer-script) handles the installation, and immediately perform the onboarding step after installation completes. Select *C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe* then provide the arguments:
 
-    ```powershell
-    -ExecutionPolicy RemoteSigned \\servername-or-dfs-space\share-name\install.ps1 -OnboardingScript \\servername-or-dfs-space\share-name\windowsdefenderatponboardingscript.cmd
-    ```
+   ```powershell
+   -ExecutionPolicy RemoteSigned \\servername-or-dfs-space\share-name\install.ps1 -OnboardingScript \\servername-or-dfs-space\share-name\windowsdefenderatponboardingscript.cmd
+   ```
 
-    > [!NOTE]
-    > The recommended execution policy setting is `Allsigned`. This requires importing the script's signing certificate into the Local Computer Trusted Publishers store if the script is running as SYSTEM on the endpoint.
+   > [!NOTE]
+   > The recommended execution policy setting is `Allsigned`. This requires importing the script's signing certificate into the Local Computer Trusted Publishers store if the script is running as SYSTEM on the endpoint.
 
-    Replace `\\servername-or-dfs-space\share-name` with the UNC path, using the file server's fully qualified domain name (FQDN), of the shared `install.ps1` file. The installer package md4ws.msi must be placed in the same directory. Ensure that the permissions of the UNC path allow write access to the computer account that is installing the package, to support creation of log files. If you wish to disable the creation of log files (not recommended), you can use the `-noETL -noMSILog` parameters.
+   Replace `\\servername-or-dfs-space\share-name` with the UNC path, using the file server's fully qualified domain name (FQDN), of the shared `install.ps1` file. The installer package md4ws.msi must be placed in the same directory. Ensure that the permissions of the UNC path allow write access to the computer account that is installing the package, to support creation of log files. If you wish to disable the creation of log files (not recommended), you can use the `-noETL -noMSILog` parameters.
 
-    For scenarios where you want Microsoft Defender Antivirus to coexist with non-Microsoft antimalware solutions, add the $Passive parameter to set passive mode during installation.
+   For scenarios where you want Microsoft Defender Antivirus to coexist with non-Microsoft antimalware solutions, add the $Passive parameter to set passive mode during installation.
 
 9. Select **OK** and close any open GPMC windows.
 
@@ -253,10 +251,10 @@ The following steps are only applicable if you're using a third-party anti-malwa
 
 1. Set the following registry entry:
 
-    - Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
-    - Name: `ForceDefenderPassiveMode`
-    - Type: `REG_DWORD`
-    - Value: `1`
+   - Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
+   - Name: `ForceDefenderPassiveMode`
+   - Type: `REG_DWORD`
+   - Value: `1`
 
    :::image type="content" source="media/atp-verify-passive-mode.png" alt-text="Screenshot of the passive mode verification result.":::
 
@@ -301,24 +299,24 @@ After onboarding the device, you can choose to run a detection test to verify th
 
 1. Run the following command to verify that Microsoft Defender Antivirus is installed:
 
-    > [!NOTE]
-    > This verification step is only required if you're using Microsoft Defender Antivirus as your active antimalware solution.
+   > [!NOTE]
+   > This verification step is only required if you're using Microsoft Defender Antivirus as your active antimalware solution.
 
-    ```cmd
-    sc.exe query Windefend
-    ```
+   ```cmd
+   sc.exe query Windefend
+   ```
 
-    If the result is 'The specified service doesn't exist as an installed service', then you need to install Microsoft Defender Antivirus.
+   If the result is 'The specified service doesn't exist as an installed service', then you need to install Microsoft Defender Antivirus.
 
-    For information on how to use Group Policy to configure and manage Microsoft Defender Antivirus on your Windows servers, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md).
+   For information on how to use Group Policy to configure and manage Microsoft Defender Antivirus on your Windows servers, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md).
 
 2. Run the following command to verify that Microsoft Defender for Endpoint is running:
 
-    ```cmd
-    sc.exe query sense
-    ```
+   ```cmd
+   sc.exe query sense
+   ```
 
-    The result should show it's running. If you encounter issues with onboarding, see [Troubleshoot onboarding](troubleshoot-onboarding.md).
+   The result should show it's running. If you encounter issues with onboarding, see [Troubleshoot onboarding](troubleshoot-onboarding.md).
 
 ## Run a detection test
 
