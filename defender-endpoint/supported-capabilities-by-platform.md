@@ -51,7 +51,7 @@ The following table gives information about the supported Microsoft Defender for
 |[Passive Mode](microsoft-defender-antivirus-compatibility.md)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|
 |Sense detection sensor|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|
 |[Endpoint & network device discovery](device-discovery.md)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg) <br/>(See note below) |![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
-|[Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg) <sup>[6]</sup>|
+|[Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg)|![Yes.](media/svg/check-yes.svg) <br/>(preview)|
 ||||||
 |**Response**     |         |         |         ||
 |[Automated Investigation & Response (AIR)](automated-investigations.md)        | ![Yes.](media/svg/check-yes.svg)        | ![Yes.](media/svg/check-yes.svg)  |  ![No](media/svg/check-no.svg)       |  ![No](media/svg/check-no.svg)        |
@@ -68,9 +68,7 @@ The following table gives information about the supported Microsoft Defender for
 > - On Linux Server and Mac, [Device response capabilities: collect investigation package ](respond-machine-alerts.md) is currently in preview. You can also use [Live Response](live-response.md).
 > - On Linux Server and Mac, [File response capabilities: collect file, deep analysis, block file, stop, and quarantine processes](respond-file-alerts.md) are currently in preview. You can also use [Live Response](live-response.md).
 > - Endpoint & network device discovery is supported on Windows Server 2019 or later, and on Windows 10 and 11.
-
-<sup>[6]</sup>  Microsoft Defender Vulnerability Management is not supported on Rocky and Alma currently.
-> [!NOTE]
-> Windows 7, 8.1, Windows Server 2008 R2 include support for the EDR sensor, and antivirus using System Center Endpoint Protection (SCEP).
+> - Microsoft Defender Vulnerability Management is not supported on Rocky and Alma currently.
+> - For Windows 7, Windows 8.1, and Windows Server 2008 R2, use System Center Endpoint Protection (SCEP) for the EDR sensor and antivirus protection.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
