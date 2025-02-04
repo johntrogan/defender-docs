@@ -46,17 +46,17 @@ You can generate a PDF report of the summary, by selecting **Generate PDF repo
 
 ## Threat protection report
 
-To gather data on Defender for Endpoint threat protection information, you can use the Microsoft Defender alerts queue or create advanced hunting queries. The following sections provide guidance on how to use these tools to find the information you need.
+To gather data on Defender for Endpoint threat protection information, you can use the Microsoft Defender portal's alerts queue or create advanced hunting queries. The following sections provide guidance on how to use these tools to find the information you need.
 
 ### Use the alert queue filter in the Microsoft Defender portal
 
-You can use the Microsoft Defender portal alerts view, filtered against Defender for Endpoint, to see the current status of alerts for protected devices. For alert status, such as *unresolved*, you can filter against *New* and *In progress* items. [Learn more about the alerts queue](/defender-xdr/investigate-alerts).
+You can use the Microsoft Defender portal alerts view, using Defender for Endpoint as the **detection source**, to see the current status of alerts for protected devices. Use the **Status** filter to see *New*, *In progress*, and *Resolved* alerts. [Learn more about the alerts queue](/defender-xdr/investigate-alerts).
 
 ### Use advanced hunting queries
 
-You can also use advanced hunting queries to find Defender for Endpoint threat protection information. [Learn more about advanced hunting in Defender XDR](/defender-xdr/advanced-hunting-overview). See the following section for a sample advanced hunting query that shows endpoint-related threat protection details.
+You can also use advanced hunting queries to find Defender for Endpoint threat protection information. [Learn more about advanced hunting in Defender XDR](/defender-xdr/advanced-hunting-overview). The following sample advanced hunting queries show alert-related information.
 
-#### Alert status
+#### Alert information by severity, detection source, and category
 
 ```kusto
 // Severity
@@ -78,7 +78,7 @@ AlertInfo
 | render columnchart
 ```
 
-#### Alert trend
+#### Alert trends by severity, detection source, and category
 
 ```kusto
 // Severity
