@@ -26,7 +26,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### New attack paths tab on the Identity profile page
 
-This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see [Overview of attack path within Exposure Managment.](/security-exposure-management/work-attack-paths-overview) 
+This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see [Overview of attack path within Exposure Management.](/security-exposure-management/work-attack-paths-overview) 
 
 Additional identity page enhancements:
 
@@ -475,7 +475,7 @@ This version includes the following improvements:
 
     For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
 
-- **Health issues**: Added the *The 'Remove learning period' toggle was automatically switched off for this tenant* health issue
+- **Health issues**: The 'Remove learning period' toggle was automatically switched off for this tenant* health issue.
 
 This version also includes bug fixes for cloud services and the Defender for Identity sensor.
 
