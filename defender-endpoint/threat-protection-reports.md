@@ -105,6 +105,8 @@ AlertInfo
 The following reports provide in-depth information about events and actions related to Defender for Endpoint capabilities:
 
 - [Device health reports](device-health-reports.md)
+  - [Microsoft Defender Antivirus health report](device-health-microsoft-defender-antivirus-health.md)
+  - [Sensor health & OS report](device-health-sensor-health-os.md)
 - [Host firewall reporting](host-firewall-reporting.md)
 - [Web protection monitoring report](web-protection-monitoring.md)
 - [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
