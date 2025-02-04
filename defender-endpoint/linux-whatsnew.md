@@ -43,6 +43,23 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### Jan-2025 Build: 101.24112.0003 | Release version: 30.124112.0003.0
+
+| Build:             | **101.24112.0003**    |
+| -------- | -------- |
+|Released:| February 04, 2025|
+| Released:          | **February 04, 2025** |
+| Published:         | **February 04, 2025** |
+| Release version:   | **30.124112.0003.0** |
+| Engine version:    | **1.1.24090.13**        |
+| Signature version: | **1.421.1681.0**      |
+
+What's new
+
+- Fixed a bug that incorrectly reported the DefenderEngineVersion to the security portal.
+
+- Starting from 2411, the MDATP package release to Production on packages.microsoft.com will follow a gradual rollout mechanism which spans over a week. The other release rings, insiderFast and insiderSlow, are unaffected by this change.
+
 ### Jan-2025 Build: 101.24112.0001 | Release version: 30.124112.0001.0
 
 | Build:             | **101.24112.0001**    |
@@ -1263,7 +1280,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 ##### What's new
 
-  - Added new switches to the command-line tool:
+- Added new switches to the command-line tool:
   - Control degree of parallelism for on-demand scans. This can be configured through `mdatp config maximum-on-demand-scan-threads --value [number-between-1-and-64]`. By default, a degree of parallelism of `2` is used.
   - Control whether scans after security intelligence updates are enabled or disabled. This can be configured through `mdatp config scan-after-definition-update --value [enabled/disabled]`. By default, this setting is set to `enabled`.
   - Changing the product log level now requires elevation
