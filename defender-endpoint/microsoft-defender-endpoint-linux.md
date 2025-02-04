@@ -116,7 +116,7 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
  |`fuse`|`glustrefs`|
  |`fuseblk`|`Afs`|
  |`jfs`|`sshfs`|
- |`nfs` (v3 only, `no_root_squash` required for RTP)|`cifs`|
+ |`nfs` (v3 only)|`cifs`|
  |`overlay`|`smb`|
  |`ramfs`|`gcsfuse`|
  |`reiserfs`|`sysfs`|
@@ -125,6 +125,9 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
  |`vfat`||
  |`xfs`||
   
+  > [!NOTE]
+  > If Real-Time Protection is enabled, ensure that the `no_root_squash` export option is set for NFS v3. Without this option, scanning NFS v3 will fail.
+
   > [!NOTE]
   > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient extended Berkeley Packet Filter (eBPF) technology.
   > If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, then Audit framework (`auditd`) must be enabled on your system.
