@@ -6,7 +6,7 @@ ms.subservice: ngp
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 11/12/2024
+ms.date: 01/30/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -41,7 +41,7 @@ In endpoint protection solutions, a false positive is an entity, such as a file 
 
 Continue here if the "Alert source" is "Microsoft Defender for Endpoint".
 
-The next step is to review the “detection source”:
+The next step is to review the "detection source":
 
 |Detection source| Information|
 | -------- | -------- |
