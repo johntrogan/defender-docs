@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/30/2025
+ms.date: 02/05/2025
 ---
 
 # Use the installer script to deploy Microsoft Defender for Endpoint on Linux
@@ -36,7 +36,7 @@ This article describes how to deploy Microsoft Defender for Endpoint on Linux us
 
 ## Introduction
 
-Automate the deployment of Microsoft Defender for Endpoint on Linux using an installer script. The script identifies the distribution and version, selects the right repository, pulls the latest agent version, and onboards the device to the Defender portal. This method simplifies the deployment process.
+This article describes how to automate the deployment of Microsoft Defender for Endpoint on Linux using an installer script. The script identifies the distribution and version, selects the right repository, pulls the latest agent version, and onboards the device to Defender for Endpoint. This method simplifies the deployment process.
 
 :::image type="content" source="media/linux-script-image.png" alt-text="Onboard Linux Server" lightbox="media/linux-script-image.png":::
 
