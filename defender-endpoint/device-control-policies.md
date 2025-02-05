@@ -64,7 +64,7 @@ To further refine access to devices, device control uses policies. A policy is a
 
 Rules and groups are identified by Global Unique ID (GUIDs). If device control policies are deployed using a management tool other than Intune, the GUIDs must be generated. You can generate the GUIDs by using [PowerShell](/powershell/module/microsoft.powershell.utility/new-guid).
 
-For schema details, see [JSON schema for Mac](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json).
+For schema details, see the [JSON schema for Mac](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/policy/device_control_policy_schema.json).
 
 ## Users
 
@@ -75,7 +75,7 @@ Device control policies can be applied to users and/or user groups. On Windows, 
 
 ### Best practices for using device control with users and user groups
 
-- To create a rule for an individual user on Windows, create an entry with a  `Sid` condition for each user in a [rule](#rules)
+- To create a rule for an individual user on Windows, create an entry with a  `Sid` condition for each user in a [rule](#rules).
 
 - To create a rule for a user group on Windows and Intune, **either** create an entry with a `Sid` condition for each user group in a [rule] and target the policy to a machine group in Intune **or** create a rule without conditions and target the policy with Intune to the user group.
 
