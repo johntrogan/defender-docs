@@ -68,17 +68,10 @@ For schema details, see [JSON schema for Mac](https://github.com/microsoft/mdatp
 
 ## Users
 
-Device control policies can be applied to users and/or user groups.
+Device control policies can be applied to users and/or user groups. On Windows, device control policies can have a condition to target users or user groups defined in Entra Id or local Active Directory. It is possible to define policies which will allow specific users to have more or less permissions based on enterprise needs. Device control actively looks at user sessions and makes enforcement decisions based on policies that target specific users or groups. This means that some actions such as locking a device or signing out of the user profile could cause the user conditions to be unsatisfied which is expected behavior.
 
 > [!NOTE]
 > In the articles related to device control, groups of users are referred to as <i>user groups</i>.  The term <i>groups</i> refer to [groups](#groups) defined in the device control policy.
-
-Using Intune, on either Mac and Windows, device control policies can be targeted to user groups defined in Entra Id.
-
-On Windows, a user or user group can be a condition on an [entry](#entries) in a policy.
-
-Entries with user or user groups can reference objects from either Entra Id or a local Active Directory.
-
 ### Best practices for using device control with users and user groups
 
 - To create a rule for an individual user on Windows, create an entry with a  `Sid` condition foreach user in a [rule](#rules)
