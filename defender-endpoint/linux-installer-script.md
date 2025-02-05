@@ -36,7 +36,7 @@ This article describes how to deploy Microsoft Defender for Endpoint on Linux us
 
 ## Introduction
 
-This article describes how to automate the deployment of Microsoft Defender for Endpoint on Linux using an installer script. The script identifies the distribution and version, selects the right repository, pulls the latest agent version, and onboards the device to Defender for Endpoint. This method simplifies the deployment process.
+This article describes how to automate the deployment of Microsoft Defender for Endpoint on Linux using an installer script. The script identifies the distribution and version, selects the right repository, pulls the latest agent version, and onboards the device to Defender for Endpoint. This method greatly simplifies the deployment process and is one of the most recommended methods.
 
 :::image type="content" source="media/linux-script-image.png" alt-text="Onboard Linux Server" lightbox="media/linux-script-image.png":::
 
@@ -46,37 +46,56 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 
 ## Installer script
 
-1. Download the onboarding package from Microsoft Defender portal:
+1. Download the onboarding package from Microsoft Defender portal by following these steps:
 
-    1. In the Microsoft Defender portal, go to Settings > Endpoints > Device management > Onboarding.
+    1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+    
     2. In the first drop-down menu, select **Linux Server** as the operating system.
+    
     3. In the second drop-down menu, select **Local Script** as the deployment method.
-    4. Select **Download onboarding package**. Save the file as WindowsDefenderATPOnboardingPackage.zip.
+    
+    4. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
+    
     5. From a command prompt, verify that you have the file, and extract the contents of the archive:
 
         ```bash
         unzip WindowsDefenderATPOnboardingPackage.zip
         ```
+
         ```console
         Archive:  WindowsDefenderATPOnboardingPackage.zip
         inflating: MicrosoftDefenderATPOnboardingLinuxServer.py
         ```
 
- > [!WARNING]
- > Repackaging the Defender for Endpoint installation package isn't a supported scenario. Doing so can negatively affect the integrity of the product and lead to adverse results, including but not limited to triggering tampering alerts and updates failing to apply. 
+       > [!WARNING]
+       > Repackaging the Defender for Endpoint installation package isn't a supported scenario. Doing so can negatively affect the integrity of the product and lead to adverse results, including but not limited to triggering tampering alerts and updates failing to apply. 
 
- > [!IMPORTANT]
- > If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the mdatp health command returns a value of false. 
+       > [!IMPORTANT]
+       > If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the mdatp health command returns a value of false. 
 
-1. Download the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) provided in our public [GitHub repository](https://github.com/microsoft/mdatp-xplat/) 
+2. Download the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) provided in our public [GitHub repository](https://github.com/microsoft/mdatp-xplat/).
+
 2. Grant executable permissions to the installer script:
   
-    ```bash
-    chmod +x mde_installer.sh
-    ```
-3. Run the installer script with parameters like onboard, channel, and real-time protection according to your needs.
+   ```bash
+   chmod +x mde_installer.sh
+   ```
 
-Sample use cases:  
+3. Run the installer script with parameters like *onboard*, *channel*, and *real-time protection*, according to your business needs. The following table lists several use cases and sample commands:
+
+   | Use case | Command |
+   |---|---|
+   | Fresh install | `sudo ~/mde_installer.sh --install --channel prod --onboard ~/MicrosoftDefenderATPOnboardingLinuxServer.py --min_req -y –-mdatp "xx.xx.xx.xx" ` |
+   | Upgrading to the latest version | `sudo ~/mde_installer.sh --upgrade -y` |
+   | Upgrading to a specific version | `sudo ~/mde_installer.sh --upgrade -y –-mdatp 101.24082.0004` |
+   | Downgrading to a specific version | `sudo ~/mde_installer.sh --downgrade -y –-mdatp 101.24082.0004` |
+   | Remove `mdatp` | `sudo ~/mde_installer.sh --remove -y` |
+
+   **Sample use cases**
+
+   - Fresh install:
+
+
 sudo ./mde_installer.sh--install--channel prod--onboard MicrosoftDefenderATPOnboardingLinuxServer.py--min_req -y
 
 1. Run an AV detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
