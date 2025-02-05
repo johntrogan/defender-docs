@@ -34,7 +34,7 @@ By default device control is disabled, so access to all types of devices is allo
 
 ## Controlling default behavior
 
-When device control is enabled, it's enabled for all device types by default. The default enforcement can also be changed from *Allow* to *Deny*. Your security team can also configure the types of devices that device control protects. The following table below illustrates how various combinations of settings change the access control decision.
+When device control is enabled, it's enabled for all device types by default. The default enforcement can also be changed from *Allow* to *Deny*. Your security team can also configure the types of devices that device control protects. The following table illustrates how various combinations of settings change the access control decision.
 
 | Is device control enabled? | Default behavior | Device types |
 |---|---|---|
@@ -52,7 +52,7 @@ For more information, see the following articles:
 
 ## Policies
 
-To further refine access to devices, device control uses policies.  A policy is a set of rules and groups. How rules and groups are defined varies slightly among management experiences and operating systems, as described in the following table.
+To further refine access to devices, device control uses policies. A policy is a set of rules and groups. How rules and groups are defined varies slightly among management experiences and operating systems, as described in the following table.
 
 | Management tool    | Operating system | How rules and groups are managed |
 |---|---|---|
@@ -68,7 +68,7 @@ For schema details, see [JSON schema for Mac](https://github.com/microsoft/mdatp
 
 ## Users
 
-Device control policies can be applied to users and/or user groups. On Windows, device control policies can have a condition to target users or user groups defined in [Microsoft Entra Id or Windows Server Active Directory](/entra/fundamentals/compare). You can define policies that allow specific users to have more or less permissions based on business needs. Device control actively looks at user sessions and makes enforcement decisions based on policies that target specific users or groups. This means that some actions, such as locking a device or signing out of the user profile, could cause user conditions to be unsatisfied, which is expected behavior.
+Device control policies can be applied to users and/or user groups. On Windows, device control policies can have a condition to target users or user groups defined in [Microsoft Entra ID or Windows Server Active Directory](/entra/fundamentals/compare). You can define policies that allow specific users to have more or less permissions based on business needs. Device control actively looks at user sessions and makes enforcement decisions based on policies that target specific users or groups. This means that some actions, such as locking a device or signing out of the user profile, could cause user conditions to be unsatisfied, which is expected behavior.
 
 > [!NOTE]
 > In the articles related to device control, groups of users are referred to as *user groups*.  The term *groups* refers to [groups](#groups) defined in the device control policy.
@@ -82,10 +82,10 @@ Device control policies can be applied to users and/or user groups. On Windows, 
 - On Mac, use Intune and target the policy to a user group in Entra Id.
 
 > [!WARNING]
-> Do not use both user/user group conditions in rules and user group targeting in Intune.
+> Don't use both user/user group conditions in rules and user group targeting in Intune.
 
 > [!NOTE]
-> If network connectivity is an issue, use Intune user group targeting **or** a local Active Directory groups.  User/user group conditions that reference Entra Id should **only** be used in environments that have a reliable connection to Entra Id.
+> If network connectivity is an issue, use Intune user group targeting **or** a local Active Directory groups. User/user group conditions that reference Entra Id should **only** be used in environments that have a reliable connection to Microsoft Entra ID.
 
 ## Rules
 
