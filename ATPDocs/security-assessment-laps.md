@@ -13,7 +13,7 @@ Microsoft's "Local Administrator Password Solution" (LAPS) provides management o
 
 This security assessment supports [legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) and [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
-## What risk does not implementing LAPS pose to an organization?
+## What risk does not implement LAPS pose to an organization?
 
 LAPS provides a solution to the issue of using a common local account with an identical password on every computer in a domain. LAPS resolves this issue by setting a different, rotated random password for the common local administrator account on every computer in the domain.
 
@@ -29,13 +29,12 @@ LAPS simplifies password management while helping customers implement more recom
 
     ![Select domain with devices unprotected by LAPS.](media/cas-isp-laps-2.png)
    
-1. Take appropriate action on those devices by downloading, installing and configuring or troubleshooting [Microsoft LAPS](https://go.microsoft.com/fwlink/?linkid=2104282) using the documentation provided in the download.
+1. Take appropriate action on those devices by downloading, installing, and configuring or troubleshooting [Microsoft LAPS](https://go.microsoft.com/fwlink/?linkid=2104282) or [Windows LAPS](/windows-server/identity/laps/laps-overview). 
 
     ![Remediate devices unprotected by LAPS.](media/laps-unprotected-devices.png)
-   
+
 > [!NOTE]
-> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
-> 
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it will be marked as **Completed**.
 
 ## See also
 
