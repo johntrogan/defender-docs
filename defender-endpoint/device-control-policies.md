@@ -214,7 +214,7 @@ An entry supports the following optional conditions:
 - User/User Group Condition: Applies the action only to the user/user group identified by the SID
 
 > [!NOTE]
-> For user groups and users that are stored in Microsoft Entra Id, use the object id in the condition.  For user groups and users that are stored locally, use the Security Identifier (SID)
+> For user groups and users that are stored in Microsoft Entra ID, use the object id in the condition.  For user groups and users that are stored locally, use the Security Identifier (SID)
 > [!NOTE]
 > On Windows, The SID of the user who's signed in can be retrieved by running the PowerShell command `whoami /user`.
 
@@ -269,7 +269,7 @@ The following table provides more context for the XML code snippet:
 | `AccessMask` | Defines the access | See the following section [Understand mask access](#understand-mask-access-windows) |
 | `Sid` | Local user SID or user SID group, or the SID of the Microsoft Entra object or the Object ID. It defines whether to apply this policy over a specific user or user group. One entry can have a maximum of one SID and an entry without any SID means to apply the policy over the device. | SID |
 | `ComputerSid` | Local computer SID or computer SID group, or the SID of the Microsoft Entra object or the Object Id. It defines whether to apply this policy over a specific device or device group. One entry can have a maximum of one ComputerSID and an entry without any ComputerSID means to apply the policy over the device. If you want to apply an Entry to a specific user and specific device, add both SID and ComputerSID into the same Entry. | SID |
-| `Parameters` | Condition for an entry, such as network condition. | Can add groups (non-device types) or even put parameters into parameters. For more information, see the [advanced conditions](#advanced-conditions) section (in this article).  |
+| `Parameters` | Condition for an entry, such as network condition. | Can add groups (nondevice types) or even put parameters into parameters. For more information, see the [advanced conditions](#advanced-conditions) section (in this article).  |
 
 #### Understand mask access (Windows)
 
@@ -338,8 +338,8 @@ The following table describes the device type specific access and how they map t
 |---|---|---|---|---|---|
 | `appleDevice` | `backup_device` |  | X |  |  |
 | `appleDevice` | `update_device` |  |  | X |   |
-| `appleDevice` | `download_photos_from_device` | download photo(s) from the specific iOS device to local device | X  |  |  |
-| `appleDevice` | `download_files_from_device` | download file(s) from the specific iOS device to local device | X  |  |  |
+| `appleDevice` | `download_photos_from_device` | download photos from the specific iOS device to local device | X  |  |  |
+| `appleDevice` | `download_files_from_device` | download files from the specific iOS device to local device | X  |  |  |
 | `appleDevice` | `sync_content_to_device` | sync content from local device to specific iOS device |  | X |  |
 | `portableDevice` | `download_files_from_device` | X  |  |  |
 | `portableDevice` | `send_files_to_device`  |  |  | X |  |
@@ -373,7 +373,7 @@ The properties can be matched in four ways:  `MatchAll`, `MatchAny`, `MatchExclu
 - `MatchExcludeAll`: The properties are an "And" relationship, any items that do NOT meet are covered. For example, if administrator puts `DeviceID` and `InstancePathID` and uses `MatchExcludeAll`, for every connected USB, system enforces as long as the USB doesn't have both identical `DeviceID` and `InstanceID` value.
 - `MatchExcludeAny`: The properties are an "Or" relationship, any items that do NOT meet are covered. For example, if administrator puts `DeviceID` and `InstancePathID` and uses `MatchExcludeAny`, for every connected USB, system enforces as long as the USB doesn't have either an identical `DeviceID` or `InstanceID` value.
 
-Groups are used two ways:  to select devices for inclusion/exclusion in rules, and to filter access for advanced conditions.  This table summarizes the group types and how they're used.
+Groups are used two ways:  to select devices for inclusion/exclusion in rules, and to filter access for advanced conditions. This table summarizes the group types and how they're used.
 
 | Type | Description | O/S | Include/Exclude Rules | Advanced conditions |
 |---|---|---|---|---|
@@ -390,7 +390,7 @@ The devices that are in scope for the policy determined by a list of included gr
 | `FriendlyNameId`  | The friendly name in Windows Device Manager | Y | N | Y |
 | `PrimaryId` | The type of the device | Y | Y | Y |
 | `VID_PID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. Product ID is the four-digit product code that the vendor assigns to the device. Wildcards are supported. For example, `0751_55E0` | Y | N | Y |
-|`PrinterConnectionId` | The type of printer connection: <br/>- `USB`:  A printer connected through USB port of a computer. <br/>- `Network`:  A network printer is a printer that is accessible by network connection, making it usable by other computers connected to the network.<br/>- `Corporate`:  A corporate printer is a print queue shared through on-premise Windows Print Server.<br/>- `Universal`:  Universal Print is a modern print solution that organizations can use to manage their print infrastructure through cloud services from Microsoft.  [What is Universal Print? - Universal Print \| Microsoft Docs](/universal-print/discover-universal-print)  <br/>- `File`:  'Microsoft Print to PDF' and 'Microsoft XPS Document Writer' or other printers using a FILE: or PORTPROMPT: port<br/>- `Custom`: printer that is not connecting through Microsoft print port<br/>- `Local`: printer not any of above type, e.g. print through RDP or redirect printers | N | N | Y |
+|`PrinterConnectionId` | The type of printer connection: <br/>- `USB`:  A printer connected through USB port of a computer. <br/>- `Network`:  A network printer is a printer that is accessible by network connection, making it usable by other computers connected to the network.<br/>- `Corporate`:  A corporate printer is a print queue shared through on-premises Windows Print Server.<br/>- `Universal`:  Universal Print is a modern print solution that organizations can use to manage their print infrastructure through cloud services from Microsoft.  [What is Universal Print? - Universal Print \| Microsoft Docs](/universal-print/discover-universal-print)  <br/>- `File`:  'Microsoft Print to PDF' and 'Microsoft XPS Document Writer' or other printers using a FILE: or PORTPROMPT: port<br/>- `Custom`: printer that isn't connecting through Microsoft print port<br/>- `Local`: printer not any of previously mentioned types. For example print through RDP or redirect printers | N | N | Y |
 | `BusId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `DeviceId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `HardwareId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
