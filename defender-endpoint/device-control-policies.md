@@ -4,7 +4,7 @@ description: Learn about Device control policies in Defender for Endpoint
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb
-ms.date: 10/11/2024
+ms.date: 02/05/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -68,10 +68,11 @@ For schema details, see [JSON schema for Mac](https://github.com/microsoft/mdatp
 
 ## Users
 
-Device control policies can be applied to users and/or user groups. On Windows, device control policies can have a condition to target users or user groups defined in Entra Id or local Active Directory. It is possible to define policies which will allow specific users to have more or less permissions based on enterprise needs. Device control actively looks at user sessions and makes enforcement decisions based on policies that target specific users or groups. This means that some actions such as locking a device or signing out of the user profile could cause the user conditions to be unsatisfied which is expected behavior.
+Device control policies can be applied to users and/or user groups. On Windows, device control policies can have a condition to target users or user groups defined in [Microsoft Entra Id or Windows Server Active Directory](/entra/fundamentals/compare). You can define policies that allow specific users to have more or less permissions based on business needs. Device control actively looks at user sessions and makes enforcement decisions based on policies that target specific users or groups. This means that some actions, such as locking a device or signing out of the user profile, could cause user conditions to be unsatisfied, which is expected behavior.
 
 > [!NOTE]
-> In the articles related to device control, groups of users are referred to as <i>user groups</i>.  The term <i>groups</i> refer to [groups](#groups) defined in the device control policy.
+> In the articles related to device control, groups of users are referred to as *user groups*.  The term *groups* refers to [groups](#groups) defined in the device control policy.
+
 ### Best practices for using device control with users and user groups
 
 - To create a rule for an individual user on Windows, create an entry with a  `Sid` condition foreach user in a [rule](#rules)
