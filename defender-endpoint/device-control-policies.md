@@ -85,7 +85,7 @@ Device control policies can be applied to users and/or user groups. On Windows, 
 > Don't use both user/user group conditions in rules and user group targeting in Intune.
 
 > [!NOTE]
-> If network connectivity is an issue, use Intune user group targeting **or** a local Active Directory groups. User/user group conditions that reference Entra Id should **only** be used in environments that have a reliable connection to Microsoft Entra ID.
+> If network connectivity is an issue, use Intune user group targeting **or** a local Active Directory groups. User/user group conditions that reference Microsoft Entra ID should **only** be used in environments that have a reliable connection to Microsoft Entra ID.
 
 ## Rules
 
