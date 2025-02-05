@@ -383,14 +383,14 @@ Groups are used two ways:  to select devices for inclusion/exclusion in rules, a
 | File | Filter file properties | Windows |  | X |
 | Print Job | Filter properties of the file being printed | Windows |  | X |
 
-The devices that are in scope for the policy determined by a list of included groups and a list of excluded groups. A rule applies if the device is in all of the included groups and none of the excluded groups.  Groups can be composed from the properties of devices. The following properties can be used:
+The devices that are in scope for the policy determined by a list of included groups and a list of excluded groups. A rule applies if the device is in all of the included groups and none of the excluded groups. Groups can be composed from the properties of devices. The following properties can be used:
 
 | Property | Description | Windows devices | Mac devices | Printers |
 |---|---|---|---|---|
 | `FriendlyNameId`  | The friendly name in Windows Device Manager | Y | N | Y |
 | `PrimaryId` | The type of the device | Y | Y | Y |
 | `VID_PID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. Product ID is the four-digit product code that the vendor assigns to the device. Wildcards are supported. For example, `0751_55E0` | Y | N | Y |
-|`PrinterConnectionId` | The type of printer connection: <br/>- `USB`:  A printer connected through USB port of a computer. <br/>- `Network`:  A network printer is a printer that is accessible by network connection, making it usable by other computers connected to the network.<br/>- `Corporate`:  A corporate printer is a print queue shared through on-premises Windows Print Server.<br/>- `Universal`:  Universal Print is a modern print solution that organizations can use to manage their print infrastructure through cloud services from Microsoft.  [What is Universal Print? - Universal Print \| Microsoft Docs](/universal-print/discover-universal-print)  <br/>- `File`:  'Microsoft Print to PDF' and 'Microsoft XPS Document Writer' or other printers using a FILE: or PORTPROMPT: port<br/>- `Custom`: printer that isn't connecting through Microsoft print port<br/>- `Local`: printer not any of previously mentioned types. For example print through RDP or redirect printers | N | N | Y |
+|`PrinterConnectionId` | The type of printer connection: <br/>- `USB`:  A printer connected through USB port of a computer. <br/>- `Network`:  A network printer is a printer that is accessible by network connection, making it usable by other computers connected to the network.<br/>- `Corporate`:  A corporate printer is a print queue shared through on-premises Windows Print Server.<br/>- `Universal`:  Universal Print is a modern print solution that organizations can use to manage their print infrastructure through cloud services from Microsoft.  [What is Universal Print? - Universal Print \| Microsoft Docs](/universal-print/discover-universal-print)  <br/>- `File`:  'Microsoft Print to PDF' and 'Microsoft XPS Document Writer' or other printers using a FILE: or PORTPROMPT: port<br/>- `Custom`: printer that isn't connecting through Microsoft print port<br/>- `Local`: printer not any of previously mentioned types. For example, print through RDP or redirect printers | N | N | Y |
 | `BusId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `DeviceId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `HardwareId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
@@ -398,7 +398,7 @@ The devices that are in scope for the policy determined by a list of included gr
 | `SerialNumberId` | Information about the device (for more information, see the sections that follow this table) | Y | Y | N |
 | `PID` | Product ID is the four-digit product code that the vendor assigns to the device | Y | Y | N |
 | `VID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. | Y | Y | N |
-|`DeviceEncryptionStateId`|(Preview) The BitLocker encryption state of a device.  Valid values are `BitlockerEncrypted` or `Plain`|Y|N|N|
+|`DeviceEncryptionStateId`|(Preview) The BitLocker encryption state of a device. Valid values are `BitlockerEncrypted` or `Plain`|Y|N|N|
 | `APFS Encrypted` | If the device is APFS encrypted | N | Y | N |
 
 ### Using Windows Device Manager to determine device properties
@@ -425,7 +425,7 @@ For Windows devices, you can use Device Manager to understand the properties of 
 
 ### Using reports and advanced hunting to determine properties of devices
 
-Device properties have slightly different labels in advanced hunting. The table below maps the labels in the portal to the `propertyId` in a device control policy.
+Device properties have slightly different labels in advanced hunting. The following table maps the labels in the portal to the `propertyId` in a device control policy.
 
 | Microsoft Defender Portal property | Device control property Id |
 |---|---|
@@ -442,7 +442,7 @@ Device properties have slightly different labels in advanced hunting. The table 
 You can configure groups in Intune, by using an XML file for Windows, or by using a JSON file on Mac. Select each tab for more details.
 
 > [!NOTE]
-> The `Group Id` in XML and `id` in JSON is used to identify the group within device control.  Its not a reference to any other such as a [user group](#users) in Entra Id.
+> The `Group Id` in XML and `id` in JSON is used to identify the group within device control.  It's not a reference to any other such as a [user group](#users) in Microsoft Entra ID.
 
 ### [**Intune**](#tab/Removable)
 
@@ -540,7 +540,7 @@ The following values are supported as clauses:
 | `productId` | four-digit hexadecimal string | Matches a device's product ID |
 | `serialNumber` | string | Matches a device's serial number. Doesn't match if the device doesn't have a serial number. |
 | `encryption` | apfs | Match if a device is apfs-encrypted. |
-| `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. The group must be defined within the policy prior to the clause. |
+| `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. The group must be defined within the policy before the clause. |
 
 Here's an example query:
 
@@ -582,7 +582,7 @@ This query matches all devices that don't have the specified serial number.
 
 ## Advanced conditions
 
-Entries can be further restricted based on parameters. Parameters apply advanced conditions that go beyond the device. Advanced conditions allow for fine-grained control based on Network, VPN Connection, File or Print Job being evaluated.
+Entries can be further restricted based on parameters. Parameters apply advanced conditions that go beyond the device. Advanced conditions allow for fine-grained control based on Network, VPN Connection, File, or Print Job being evaluated.
 
 > [!NOTE]
 > Advanced conditions are only supported in the XML format.
@@ -636,7 +636,7 @@ The following table describes VPN connection conditions:
 | `VPNServerAddressId` | The string value of `VPNServerAddress`. Wildcards are supported. |
 | `VPNDnsSuffixId` | The string value of `VPNDnsSuffix`. Wildcards are supported. |
 
-These properties are added to the DescriptorIdList of a group of type VPNConnection, as shown in the following snippet:
+These properties are added to the `DescriptorIdList` of a group of type `VPNConnection`, as shown in the following snippet:
 
 ```xml
 
