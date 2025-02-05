@@ -6,7 +6,7 @@ description: Windows Server includes automatic exclusions, based on server role.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 08/21/2023
+ms.date: 02/04/2025
 author: emmwalshh
 ms.author: ewalsh
 ms.topic: conceptual
@@ -334,7 +334,7 @@ Because predefined exclusions only exclude **default paths**, if you move NTDS a
 
 You can disable the automatic exclusion lists with Group Policy, PowerShell cmdlets, and WMI.
 
-### Use Group Policy to disable the auto-exclusions list on Windows Server 2016, Windows Server 2019, and Windows Server 2022
+### Use Group Policy to disable the auto-exclusions list on Windows Server 2016, Windows Server 2019, and later
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725752(v=ws.11)). Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
