@@ -75,7 +75,7 @@ Device control policies can be applied to users and/or user groups. On Windows, 
 
 ### Best practices for using device control with users and user groups
 
-- To create a rule for an individual user on Windows, create an entry with a  `Sid` condition foreach user in a [rule](#rules)
+- To create a rule for an individual user on Windows, create an entry with a  `Sid` condition for each user in a [rule](#rules)
 
 - To create a rule for a user group on Windows and Intune, **either** create an entry with a `Sid` condition for each user group in a [rule] and target the policy to a machine group in Intune **or** create a rule without conditions and target the policy with Intune to the user group.
 
