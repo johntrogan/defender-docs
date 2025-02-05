@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 01/13/2025
+ms.date: 01/29/2025
 ---
 
 # Defender for Endpoint onboarding Windows Server
@@ -39,7 +39,7 @@ For guidance on how to download and use Windows Security Baselines for Windows s
 
 You'll need to complete the following general steps to successfully onboard Windows Server. Supported versions include Windows Server 2008 R2, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks).
 
-:::image type="content" source="media/server-onboarding.png" alt-text="Server Onboarding" lightbox="media/server-onboarding.png":::
+:::image type="content" source="media/server-onboarding-diagram-2025.png" alt-text="Server Onboarding" lightbox="media/server-onboarding-diagram-2025.png":::
 
 ### Windows Server 2012 R2 and Windows Server 2016
 
