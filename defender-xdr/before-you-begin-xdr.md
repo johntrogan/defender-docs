@@ -55,7 +55,7 @@ Defender Experts for XDR also covers servers—whether on premises or on a hyper
 
 ### Ask Defender Experts
 
-[Ask Defender Experts](experts-on-demand.md) is intended to provide a better understanding of complex threats affecting your organization. It focuses on products included in Microsoft Defender XDR (Defender for Endpoint, Defender for Office 365, Defender for Cloud Apps, and Defender for Identity). [See sample questions you can ask Defender Experts](experts-on-demand#sample-questions-you-can-ask-from-defender-experts.md).
+[Ask Defender Experts](experts-on-demand.md) is intended to provide a better understanding of complex threats affecting your organization. It focuses on products included in Microsoft Defender XDR (Defender for Endpoint, Defender for Office 365, Defender for Cloud Apps, and Defender for Identity). [See sample questions you can ask Defender Experts](experts-on-demand.md#sample-questions-you-can-ask-from-defender-experts).
 
 As part of the service's built-in [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md), customers are assigned 10 **Ask Defender Experts** credits, which you can use to submit questions, at the start of each calendar quarter. Unused credits from the current quarter roll up to the next one. You can use up to 20 credits only per quarter. All unused credits expire by the end of the calendar year or at the end of your subscription term, whichever comes first.
 
