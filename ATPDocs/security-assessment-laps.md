@@ -23,15 +23,12 @@ LAPS simplifies password management while helping customers implement more recom
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have some (or all) compatible Windows devices that aren't protected by LAPS, or that haven't had their LAPS managed password changed in the last 60 days.
 
-    ![See which domains have devices unprotected by LAPS.](media/cas-isp-laps-1.png)
+   ![See which domains have devices unprotected by LAPS.](media/cas-isp-laps-1.png)
    
 1. For domains that are partially protected, select the relevant row to view the list of devices not protected by LAPS in that domain.
 
     ![Select domain with devices unprotected by LAPS.](media/cas-isp-laps-2.png)
    
-       > [!NOTE]
-    > If the entire domain is not protected with LAPS, you won't see the list of all the unprotected devices.
-
 1. Take appropriate action on those devices by downloading, installing and configuring or troubleshooting [Microsoft LAPS](https://go.microsoft.com/fwlink/?linkid=2104282) using the documentation provided in the download.
 
     ![Remediate devices unprotected by LAPS.](media/laps-unprotected-devices.png)
@@ -43,4 +40,4 @@ LAPS simplifies password management while helping customers implement more recom
 ## See also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
