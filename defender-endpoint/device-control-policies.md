@@ -79,7 +79,7 @@ Device control policies can be applied to users and/or user groups. On Windows, 
 
 - To create a rule for a user group on Windows and Intune, **either** create an entry with a `Sid` condition for each user group in a [rule] and target the policy to a machine group in Intune **or** create a rule without conditions and target the policy with Intune to the user group.
 
-- On Mac, use Intune and target the policy to a user group in Entra Id.
+- On Mac, use Intune and target the policy to a user group in Microsoft Entra ID.
 
 > [!WARNING]
 > Don't use both user/user group conditions in rules and user group targeting in Intune.
@@ -148,7 +148,7 @@ The following table provides more context for the XML code snippet:
 | `Name` | String, the name of the policy and displays on the toast based on the policy setting. | |
 | `IncludedIdList` | The groups that the policy applies to. If multiple groups are added, the media must be a member of each group in the list to be included. | The Group ID/GUID must be used at this instance. <br/><br/>The following example shows the usage of GroupID: `<IncludedIdList> <GroupId> {EAA4CCE5-F6C9-4760-8BAD-FDCC76A2ACA1}</GroupId> </IncludedIdList>` |
 | `ExcludedIDList` | The groups that the policy doesn't apply to. If multiple groups are added, the media must be a member of a group in the list to be excluded. | The Group ID/GUID must be used at this instance. |
-| `Entry` | One PolicyRule can have multiple entries; each entry with a unique GUID tells device control one restriction. | See  Entry properties table below to get details. |
+| `Entry` | One PolicyRule can have multiple entries; each entry with a unique GUID tells device control one restriction. | See the Entry Properties table in this article to get details. |
 
 ### [**JSON (Mac)**](#tab/JSON)
 
@@ -196,7 +196,7 @@ Device control policies define access (called an entry) for a set of devices. En
 
 There are two types of entries: enforcement entries (Allow/Deny) and audit entries (AuditAllow/AuditDeny).  
 
-Enforcement entries for a rule are evaluated in order until all of the requested permissions have been matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
+Enforcement entries for a rule are evaluated in order until all of the requested permissions are matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
 
 ### Audit entries
 
@@ -205,7 +205,7 @@ Audit events control the behavior when device control enforces a rule (allow/den
 Device control can also create an event that is available in Advanced Hunting.
 
 > [!IMPORTANT]
-> There is a limit of 300 events per device per day. Audit entries are processed after the enforcement decision has been made.  All corresponding audit entries are evaluated.
+> There's a limit of 300 events per device per day. Audit entries are processed after the enforcement decision is made.  All corresponding audit entries are evaluated.
 
 ### Conditions
 
