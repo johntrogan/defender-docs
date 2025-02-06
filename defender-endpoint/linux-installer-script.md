@@ -176,13 +176,13 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 - For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](/defender-endpoint/linux-resources#log-installation-issues). 
 
-- For information about common installation issues, see Installation issues. 
+- For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install). 
 
-- If the health of the device is false, see Defender for Endpoint agent health issues. 
+- If the health of the device is false, see [Investigate agent health issues](health-status.md). 
 
-- For product performance issues, see Troubleshoot performance issues. 
+- For product performance issues, see [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md). 
 
-- For proxy and connectivity issues, see Troubleshoot cloud connectivity issues. 
+- For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md). 
 
 - To get support from Microsoft, open a support ticket, and provide the log files created by using the client analyzer. 
 
