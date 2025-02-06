@@ -172,11 +172,21 @@ The `mde-netfilter` package also has the following package dependencies:
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
-## Log installation issues
+## Troubleshoot installation issues
 
-See [Log installation issues](linux-resources.md#log-installation-issues) for more information on how to find the automatically generated log that is created by the installer when an error occurs.
+- For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](/defender-endpoint/linux-resources#log-installation-issues). 
 
-## How to migrate from Insiders-Fast to Production channel
+- For information about common installation issues, see Installation issues. 
+
+- If the health of the device is false, see Defender for Endpoint agent health issues. 
+
+- For product performance issues, see Troubleshoot performance issues. 
+
+- For proxy and connectivity issues, see Troubleshoot cloud connectivity issues. 
+
+- To get support from Microsoft, open a support ticket, and provide the log files created by using the client analyzer. 
+
+## How to swtich between channels
 
 1. Uninstall the `Insiders-Fast channel` version of Defender for Endpoint on Linux.
 
