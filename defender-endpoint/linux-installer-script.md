@@ -143,18 +143,24 @@ Run an antivirus detection test to verify that the device is properly onboarded 
 
 ## Microsoft Defender for Endpoint package external package dependencies
 
-The following external package dependencies exist for the mdatp package:
+If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the required dependencies. 
 
-- The mdatp RPM package requires `glibc >= 2.17`, `policycoreutils`, `selinux-policy-targeted`, `mde-netfilter`
-- With DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `mde-netfilter`
-- For Mariner the mdatp package requires `attr`,  `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`, `mde-netfilter`
+The following external package dependencies exist for the `mdatp` package:
+
+| Package | Requirements |
+|--|--|
+| `mdatp RPM` | - `glibc >= 2.17`<br>- `policycoreutils`<br>- `selinux-policy-targeted`<br>- `mde-netfilter` |
+| DEBIAN | - `libc6 >= 2.23`<br>- `uuid-runtime`<br>- `mde-netfilter` |
+| Mariner | - `attr`<br>- `diffutils`<br>- `libacl`<br>- `libattr`<br>- `libselinux-utils`<br>- `selinux-policy`<br>- `policycoreutils`<br>- `mde-netfilter` |
 
 > [!NOTE]
-> From version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
-> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following extra dependency on the auditd package exists for mdatp:
-> - The mdatp RPM package requires `audit`, `semanage`.
-> - With DEBIAN, the mdatp package requires `auditd`.
-> - For Mariner, the mdatp package requires `audit`.
+> Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
+> If `eBPF` isn't supported on your machines, or if there are specific requirements to remain on `Auditd`, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or older, the following extra dependency package exists for mdatp:
+> | Package | Requirements |
+> |--|--|
+> | `mdatp RPM` | - `audit`<br>-  `semanage` |
+> | DEBIAN | `auditd` |
+> | Mariner | `audit`| 
 
 The mde-netfilter package also has the following package dependencies:
 
