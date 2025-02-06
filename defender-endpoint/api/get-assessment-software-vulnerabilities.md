@@ -94,29 +94,29 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 
 <br>
 
-Property (ID)|Data type|Description|Example of a returned value
-:---|:---|:---|:---
-CveId|String|Unique identifier assigned to the security vulnerability under the Common Vulnerabilities and Exposures (CVE) system.|CVE-2020-15992
-CvssScore|String|The CVSS score of the CVE.|6.2
-DeviceId|String|Unique identifier for the device in the service.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
-DeviceName|String|Fully qualified domain name (FQDN) of the device.|johnlaptop.europe.contoso.com
-DiskPaths|Array[string]|Disk evidence that the product is installed on the device.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]
-ExploitabilityLevel|String|The exploitability level of this vulnerability (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit
-FirstSeenTimestamp|String|First time this product CVE was seen on the device.|2020-11-03 10:13:34.8476880
-ID|String|Unique identifier for the record.|123ABG55_573AG&mnp!
-LastSeenTimestamp|String|Last time the software was reported on the device.|2020-11-03 10:13:34.8476880
-OSPlatform|String|Platform of the operating system running on the device. This property indicates specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See Microsoft Defender Vulnerability Management supported operating systems and platforms for details.|Windows10 and Windows 11
-RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." If the organization doesn't contain any RBAC groups, the value is "None."|Servers
-RecommendationReference|String|A reference to the recommendation ID related to this software.|va-_-microsoft-_-silverlight
-RecommendedSecurityUpdate (optional)|String|Name or description of the security update provided by the software vendor to address the vulnerability.|April 2020 Security Updates
-RecommendedSecurityUpdateId (optional)|String|Identifier of the applicable security updates or identifier for the corresponding guidance or knowledge base (KB) articles|4550961
-RegistryPaths|Array[string]|Registry evidence that the product is installed in the device.|["HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight"]
-SecurityUpdateAvailable|Boolean|Indicates whether a security update is available for the software.| Possible values are true or false.
-SoftwareName|String|Name of the software product.|Chrome
-SoftwareVendor|String|Name of the software vendor.|Google
-SoftwareVersion|String|Version number of the software product.|81.0.4044.138
-VulnerabilitySeverityLevel|String|Severity level assigned to the security vulnerability based on the CVSS score.|Medium
-|
+|Property (ID)|Data type|Description|Example of a returned value|
+|:---|:---|:---|:---|
+|CveId|String|Unique identifier assigned to the security vulnerability under the Common Vulnerabilities and Exposures (CVE) system.|CVE-2020-15992|
+|CvssScore|Double|The CVSS score of the CVE.|6.2|
+|DeviceId|String|Unique identifier for the device in the service.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1|
+|DeviceName|String|Fully qualified domain name (FQDN) of the device.|johnlaptop.europe.contoso.com|
+|DiskPaths|Array[string]|Disk evidence that the product is installed on the device.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]|
+|ExploitabilityLevel|String|The exploitability level of this vulnerability (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit|
+|FirstSeenTimestamp|String|First time this product CVE was seen on the device.|2020-11-03 10:13:34.8476880|
+|ID|String|Unique identifier for the record.|123ABG55_573AG&mnp!|
+|LastSeenTimestamp|String|Last time the software was reported on the device.|2020-11-03 10:13:34.8476880|
+|OSPlatform|String|Platform of the operating system running on the device. This property indicates specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See Microsoft Defender Vulnerability Management supported operating systems and platforms for details.|Windows10 and Windows 11|
+|RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." If the organization doesn't contain any RBAC groups, the value is "None."|Servers|
+|RecommendationReference|String|A reference to the recommendation ID related to this software.|va-_-microsoft-_-silverlight|
+|RecommendedSecurityUpdate (optional)|String|Name or description of the security update provided by the software vendor to address the vulnerability.|April 2020 Security Updates|
+|RecommendedSecurityUpdateId (optional)|String|Identifier of the applicable security updates or identifier for the corresponding guidance or knowledge base (KB) articles|4550961|
+|RegistryPaths|Array[string]|Registry evidence that the product is installed in the device.|["HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight"]|
+|SecurityUpdateAvailable|Boolean|Indicates whether a security update is available for the software.| Possible values are true or false.|
+|SoftwareName|String|Name of the software product.|Chrome|
+|SoftwareVendor|String|Name of the software vendor.|Google|
+|SoftwareVersion|String|Version number of the software product.|81.0.4044.138|
+|VulnerabilitySeverityLevel|String|Severity level assigned to the security vulnerability based on the CVSS score.|Medium|
+|||||
 
 ### 1.6 Examples
 
