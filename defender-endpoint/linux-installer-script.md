@@ -147,7 +147,7 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 The following external package dependencies exist for the `mdatp` package:
 
-| Package | Requirements |
+| Package | Dependencies |
 |--|--|
 | `mdatp RPM` | - `glibc >= 2.17`<br>- `policycoreutils`<br>- `selinux-policy-targeted`<br>- `mde-netfilter` |
 | DEBIAN | - `libc6 >= 2.23`<br>- `uuid-runtime`<br>- `mde-netfilter` |
@@ -156,20 +156,21 @@ The following external package dependencies exist for the `mdatp` package:
 > [!NOTE]
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
 > If `eBPF` isn't supported on your machines, or if there are specific requirements to remain on `Auditd`, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or older, the following extra dependency package exists for mdatp:
-> | Package | Requirements |
+> | Package | Dependencies |
 > |--|--|
 > | `mdatp RPM` | - `audit`<br>-  `semanage` |
 > | DEBIAN | `auditd` |
 > | Mariner | `audit`| 
 
-The mde-netfilter package also has the following package dependencies:
+The `mde-netfilter` package also has the following package dependencies:
 
-- With DEBIAN, the mde-netfilter package requires `libnetfilter-queue1`, `libglib2.0-0`
-- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
-- For Mariner, the mde-netfilter package requires `libnfnetlink`, `libnetfilter_queue`
+| Package | Dependencies |
+|--|--|
+| DEBIAN | - `libnetfilter-queue1`<br/>- `libglib2.0-0` |
+| RPM | - `libmnl` <br/>- `libnfnetlink`<br/>- `libnetfilter_queue`<br/>- `glib2` |
+| Mariner | - `libnfnetlink`<br/>- `libnetfilter_queue` |
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
-
 
 ## Log installation issues
 
