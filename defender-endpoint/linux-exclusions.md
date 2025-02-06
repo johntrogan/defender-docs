@@ -175,7 +175,7 @@ Examples:
     Extension exclusion removed successfully
     ```
 
-- Add/Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with global scope)* :
+- Add or Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with global scope)*:
 
     ```bash
     mdatp exclusion file add --path /var/log/dummy.log --scope epp
@@ -209,7 +209,7 @@ Examples:
     File exclusion removed successfully"
     ```
 
-- Add/Remove an exclusion for a folder:
+- Add or Remove an exclusion for a folder:
 
     ```bash
     mdatp exclusion folder add --path /var/log/ --scope epp
@@ -285,7 +285,7 @@ Examples:
 - Add an exclusion for a process:
 
     ```bash
-    mdatp exclusion process add --name /usr/bin/cat --scope global 
+    mdatp exclusion process add --path /usr/bin/cat --scope global 
     ```
 
     ```console
@@ -293,15 +293,19 @@ Examples:
     ```
 
     ```bash
-    mdatp exclusion process remove --name /usr/bin/cat  --scope global
+    mdatp exclusion process remove --path /usr/bin/cat  --scope global
     ```
+    
+   > [!NOTE]
+   > Only full path is supported for setting process exclusion with `global` scope.
+   > Use only `--path` flag
 
     ```console
     Process exclusion removed successfully
     ```
 
    ```bash
-    mdatp exclusion process add --name /usr/bin/cat --scope epp 
+    mdatp exclusion process add --name cat --scope epp 
     ```
 
     ```console
@@ -310,7 +314,7 @@ Examples:
 
 
     ```bash
-    mdatp exclusion process remove --name /usr/bin/cat  --scope epp
+    mdatp exclusion process remove --name cat --scope epp
     ```
 
     ```console
@@ -321,15 +325,13 @@ Examples:
 
     ```bash
     mdatp exclusion process add --name cat --scope epp
-    mdatp exclusion process add --name /usr/bin/dog --scope global
+    mdatp exclusion process add --path /usr/bin/dog --scope global
     ```
 
     ```console
     Process exclusion configured successfully
     ```
     
-    > [!NOTE]
-    > Use full path for process exclusion with `global` scope.
 
 ## Validate exclusions lists with the EICAR test file
 
