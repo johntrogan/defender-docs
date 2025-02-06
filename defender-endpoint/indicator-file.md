@@ -53,7 +53,7 @@ Understand the following prerequisites before you create indicators for files:
 
 - [Behavior Monitoring is enabled](behavior-monitor.md)
 
-- [Cloud-based protection is turned on](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+- [Cloud-based protection is turned on](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus).
 
 - [Cloud Protection network connectivity is functional](configure-network-connections-microsoft-defender-antivirus.md)
 
