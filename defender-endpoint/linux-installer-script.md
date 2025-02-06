@@ -184,9 +184,11 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 - For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md). 
 
-- To get support from Microsoft, open a support ticket, and provide the log files created by using the client analyzer. 
+- To get support from Microsoft, open a support ticket, and provide the log files created by using the [Microsoft Defender for Endpoint client analyzer tool](run-analyzer-linux.md). 
 
 ## How to swtich between channels
+
+To switch channels, such as changing from Insiders-Fast to Production, follow these steps:
 
 1. Uninstall the `Insiders-Fast channel` version of Defender for Endpoint on Linux.
 
@@ -194,7 +196,7 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
    sudo yum remove mdatp
    ```
 
-1. Disable the Defender for Endpoint on Linux Insiders-Fast repo
+2. Disable the Defender for Endpoint on Linux Insiders-Fast repo.
 
    ```bash
    sudo yum repolist
@@ -207,15 +209,21 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
 
-1. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
+3. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
 
-## Uninstallation
+Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as [channel]): 
+- `insiders-fast`
+- `insiders-slow`
+- `prod` 
 
-See [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) for details on how to remove Defender for Endpoint on Linux from client devices.
+Each of these channels corresponds to a Linux software repository. The instructions in this article describe configuring your device to use one of these repositories. 
 
-## Upgrade 
+The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first ones to receive updates and new features, followed later by insiders-slow and lastly by prod. 
 
-Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](/defender-endpoint/linux-resources#uninstall-defender-for-endpoint-on-linux) the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the below steps. 
+In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either `insiders-fast` or `insiders-slow`. 
+
+> [!WARNING]
+> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location. 
 
 ## See also
 
