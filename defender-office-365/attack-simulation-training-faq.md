@@ -59,10 +59,10 @@ Both phishing simulation URLs and admin URLs might be blocked or dropped by your
 While we have seen few customers being blocked at this layer, it does happen. If you encounter problems, consider configuring the following URLs to bypass scanning by your security devices or filters as required:
 
 - The simulated phishing URLs as described in [Get started using Attack simulation training](attack-simulation-training-get-started.md).
-- <https://security.microsoft.com/attacksimulator>
-- <https://security.microsoft.com/attacksimulationreport>
-- <https://security.microsoft.com/trainingassignments>
-- <http://asttrainingfdendpoint-a6fva0cjbsbbereq.b02.azurefd.net/>
+- `https://security.microsoft.com/attacksimulator`
+- `https://security.microsoft.com/attacksimulationreport`
+- `https://security.microsoft.com/trainingassignments`
+- `http://asttrainingfdendpoint-a6fva0cjbsbbereq.b02.azurefd.net/`
 
 ### Simulation messages not delivered to all targeted users
 
