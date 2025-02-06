@@ -69,7 +69,7 @@ Access and session control regions help provide a faster user experience and inc
 
 Users are likely to be served from the closest region. For example, a user with a UK IP address is probably to be served by the UK West region.
 
-When there is a high load or outage, the user may be served from a different region.
+When there's a high load or outage, the user may be served from a different region.
 
 Configure your firewall for Conditional Access app control using the settings relevant to your environment. Microsoft Edge users benefit from in-browser protection. Access and session controls are applied in other browsers using a reverse proxy.
 
@@ -207,7 +207,7 @@ To enable cloud discovery features using a log collector and detect Shadow IT in
 
 > [!NOTE]
 >
-> - If your firewall requires a static IP address access list and does not support allowing based on URL, allow the log collector to initiate outbound traffic to the [Microsoft Azure datacenter IP ranges](https://www.microsoft.com/download/details.aspx?id=56519) on port 443.
+> - If your firewall requires a static IP address access list and doesn't support allowing based on URL, allow the log collector to initiate outbound traffic to the [Microsoft Azure datacenter IP ranges](https://www.microsoft.com/download/details.aspx?id=56519) on port 443.
 > - If you didn't specify a proxy when you set up the log collector, you need to allow http connections on port 80 for the URLs listed on the [Azure TLS certificate changes](/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me) page. This is used for checking certificate revocation status when you connect to the Defender for Cloud Apps APIs.
 
 ## Next steps
