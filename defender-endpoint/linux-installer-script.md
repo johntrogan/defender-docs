@@ -32,19 +32,15 @@ ms.date: 02/06/2025
 > [!TIP]
 > Looking for advanced guidance on deploying Microsoft Defender for Endpoint on Linux? See [Advanced deployment guide on Defender for Endpoint on Linux](comprehensive-guidance-on-linux-deployment.md).
 
-This article describes how to deploy Microsoft Defender for Endpoint on Linux using an installer script.
-
 ## Introduction
 
- Automated deployment of Microsoft Defender for Endpoint on Linux using an installer script. The script identifies the distribution and version, simplifies the selection of the right repository, sets up the device to pull the latest agent version, onboards the device to Defender for Endpoint using the onboarding package. This method simplifies the deployment process and is one of the most recommended methods
-
-:::image type="content" source="media/linux-script-image.png" alt-text="Onboard Linux Server" lightbox="media/linux-script-image.png":::
+ Automate the deployment of Microsoft Defender for Endpoint on Linux using an installer script. This script identifies the distribution and version, selects the right repository, sets up the device to pull the latest agent version, and onboards the device to Defender for Endpoint using the onboarding package. This method is highly recommended for simplifying the deployment process.
 
 ## Prerequisites and system requirements
 
-Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements for the current software version.
+Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements.
 
-## Installer script
+## Deployment process
 
 1. Download the onboarding package from Microsoft Defender portal by following these steps:
 
@@ -55,6 +51,8 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
     3. In the second drop-down menu, select **Local Script** as the deployment method.
     
     4. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
+   
+   :::image type="content" source="media/linux-script-image.png" alt-text="Onboard Linux Server" lightbox="media/linux-script-image.png":::
     
     5. From a command prompt, extract the contents of the archive:
 
@@ -81,26 +79,70 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
    chmod +x mde_installer.sh
    ```
 
-4. Execute the installer script with appropriate parameters such as (onboard, channel, real-time protection, etc.) based on your requirements.  
+4. Execute the installer script and provide the onboarding package as a parameter to install the agent and onboard the device to the Defender portal.
+
+   ```bash
+
+   sudo ./mde_installer.sh --install --onboard ~/MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req -y
+
+   ```
+
+   This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
+
+   Additionally you can pass more paramenters based on your requirements to modify the installation. Check help for all the available options:
+
+   ```bash
+
+    ❯ ./mde_installer.sh --help
+   mde_installer.sh v0.7.0
+   usage: basename ./mde_installer.sh [OPTIONS]
+   Options:
+   -c|--channel         specify the channel(insiders-fast / insiders-slow / prod) from which you want to install. Default: prod
+   -i|--install         install the product
+   -r|--remove          uninstall the product
+   -u|--upgrade         upgrade the existing product to a newer version if available
+   -l|--downgrade       downgrade the existing product to a older version if available
+   -o|--onboard         onboard the product with <onboarding_script>
+   -f|--offboard        offboard the product with <offboarding_script>
+   -p|--passive-mode    set real time protection to passive mode
+   -a|--rtp-mode        set real time protection to active mode. passive-mode and rtp-mode are mutually exclusive
+   -t|--tag             set a tag by declaring <name> and <value>, e.g: -t GROUP Coders
+   -m|--min_req         enforce minimum requirements
+   -x|--skip_conflict   skip conflicting application verification
+   -w|--clean           remove repo from package manager for a specific channel
+   -y|--yes             assume yes for all mid-process prompts (default, depracated)
+   -n|--no              remove assume yes sign
+   -s|--verbose         verbose output
+   -v|--version         print out script version
+   -d|--debug           set debug mode
+   --log-path <PATH>    also log output to PATH
+   --http-proxy <URL>   set http proxy
+   --https-proxy <URL>  set https proxy
+   --ftp-proxy <URL>    set ftp proxy
+   --mdatp              specific version of mde to be installed. will use the latest if not provided
+   -h|--help            display help
+
+   ```
 
    | Sample use cases | Command |
    |---|---|
-   | For fresh install | `sudo ~/mde_installer.sh --install --channel prod --onboard ~/MicrosoftDefenderATPOnboardingLinuxServer.py --min_req -y –-mdatp "xx.xx.xx.xx" ` |
+   | Install a specific agent version | `sudo ~/mde_installer.sh --install --channel prod --onboard ~/MicrosoftDefenderATPOnboardingLinuxServer.py --min_req -y –-mdatp 101.24082.0004 ` |
    |For upgrading to the latest version | `sudo ~/mde_installer.sh --upgrade -y` |
    | For upgrading to a specific version | `sudo ~/mde_installer.sh --upgrade -y –-mdatp 101.24082.0004` |
    | To downgrade to a specific version | `sudo ~/mde_installer.sh --downgrade -y –-mdatp 101.24082.0004` |
    | To remove `mdatp` | `sudo ~/mde_installer.sh --remove -y` |
 
-This command deploys Defender agent version xx.xx.xx.xx to the production channel, check for min system requisites and onboard the device to Defender Portal. Check help for all the available options.
 
    > [!NOTE]
    > Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
 
 ## Verify deployment status
 
-Run an AV detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+1. In the [Microsoft Defender portal](https://security.microsoft.com), open the device inventory. It might take 5-20 mins for the device to show up in the portal
 
-1. Ensure that real-time protection is enabled (denoted by a result of `true` from running the following command):
+2. Run an AV detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+
+-  Ensure that real-time protection is enabled (denoted by a result of `true` from running the following command):
 
    ```bash
    mdatp health --field real_time_protection_enabled
@@ -117,19 +159,19 @@ Run an AV detection test to verify that the device is properly onboarded and rep
    curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
    ```
 
-    - You can run more detection tests on zip files using either of the following commands: 
+   - You can run more detection tests on zip files using either of the following commands: 
      
       ```bash
       curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
       curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
       ```
-    - The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats: 
+   - The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats: 
 
       ```bash
       mdatp threat list
       ```
 
-2. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+3. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
    1. Verify that the onboarded Linux server appears in the Microsoft Defender portal. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
    2. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and run the following command: `./mde_linux_edr_diy.sh`.
@@ -217,9 +259,13 @@ In order to preview new features and provide early feedback, it's recommended th
 > [!WARNING]
 > Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location. 
 
-## See also
+## How to configure policies for Microsoft Defender on Linux
 
-- [Investigate agent health issues](health-status.md)
+You can configure antivirus and EDR settings on your endpoints. For more information, see the following articles:
+
+- [Set preferences for Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-preferences) describes the available settings
+- [Security settings management](https://learn.microsoft.com/en-us/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
+
 
 > [!TIP]
 > Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
