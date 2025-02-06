@@ -89,7 +89,7 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 
    This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
 
-   Additionally you can pass more paramenters based on your requirements to modify the installation. Check help for all the available options:
+   Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
 
    ```bash
 
