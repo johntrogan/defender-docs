@@ -68,8 +68,6 @@ Selecting an identified suspicious activity opens a flyout panel detailing the i
 
 :::image type="content" source="media/suspicious-activity-detail-panel.png" alt-text="Screenshot of a flyout panel displaying a list of devices impacted by a detected suspicious activity." lightbox="media/suspicious-activity-detail-panel.png":::
 
-![Screenshot of a flyout panel displaying a list of devices impacted by a detected suspicious activity.](/defender/media/defender-experts/suspicious-activity-detail-panel.png)
-
 If applicable, the page also provides links to view related Defender Expert Notifications.
 
 ## Know and understand the security weak spots in your environment
