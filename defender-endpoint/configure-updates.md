@@ -88,12 +88,18 @@ Set-MpPreference
 -DisableGradualRelease 1|0
 -DefinitionUpdatesChannel Staged|Broad|NotConfigured
 ```
-
 Example:
 
 Use `Set-MpPreference -PlatformUpdatesChannel Beta` to configure platform updates to arrive from the Beta Channel.
 
 For more information on the parameters and how to configure them, see [Set-MpPreference](/powershell/module/defender/set-mppreference) (Microsoft Defender Antivirus).
+
+## Registry
+
+These settings can be confirmed in the registry under HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+-EngineRing
+-PlatformRing
+-SignaturesRing
 
 > [!NOTE]
 > You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts) for guidance on this topic.
