@@ -270,8 +270,8 @@ In order to preview new features and provide early feedback, it's recommended th
 
 You can configure antivirus and EDR settings on your endpoints. For more information, see the following articles:
 
-- [Set preferences for Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-preferences) describes the available settings
-- [Security settings management](https://learn.microsoft.com/en-us/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
+- [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes the available settings
+- [Security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal.
 
 
 > [!TIP]
