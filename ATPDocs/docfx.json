@@ -45,14 +45,6 @@
       "ms.service": "microsoft-defender-for-identity",
       "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
       "ms.suite": "ems"
-      "contributors_to_exclude": [
-        "rjagiewich",
-        "claydetels19",
-        "garycentric",
-        "padmagit77",
-        "aditisrivastava07",
-        "Ruchika-mittal01"
-      ]
     },
     "fileMetadata": {},
     "template": [],
