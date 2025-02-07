@@ -50,16 +50,14 @@
       "searchScope": ["Microsoft's unified security operations platform"],
       "contributors_to_exclude": [
         "dstrome",
-        "shdyas",
         "rjagiewich",
-        "American-Dipper",
         "claydetels19",
-        "jborsecnik",
-        "v-stchambers",
-        "Stacyrch140",
         "garycentric",
         "alekyaj",
-        "beccarobins"
+        "beccarobins",
+        "padmagit77",
+        "aditisrivastava07",
+        "Ruchika-mittal01"
       ]
     },
     "fileMetadata": {},

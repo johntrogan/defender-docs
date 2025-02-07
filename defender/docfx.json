@@ -51,18 +51,14 @@
       "searchScope": ["Microsoft Defender"],
       "contributors_to_exclude": [
         "dstrome",
-        "shdyas",
         "rjagiewich",
-        "American-Dipper",
         "claydetels19",
-        "jborsecnik",
-        "v-stchambers",
-        "Stacyrch140",
         "garycentric",
         "alekyaj",
         "padmagit77",
         "aditisrivastava07",
-        "beccarobins"
+        "beccarobins",
+        "Ruchika-mittal01"
       ]
     },
     "fileMetadata": {},
