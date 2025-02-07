@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/06/2025
+ms.date: 02/07/2025
 ---
 
 # Use the installer script to deploy Microsoft Defender for Endpoint on Linux
@@ -138,34 +138,35 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 
 ## Verify deployment status
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), open the device inventory. It might take 5-20 mins for the device to show up in the portal
+1. In the [Microsoft Defender portal](https://security.microsoft.com), open the device inventory. It might take 5-20 mins for the device to show up in the portal.
 
-2. Run an AV detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+2. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
--  Ensure that real-time protection is enabled (denoted by a result of `true` from running the following command):
+   1. Ensure that real-time protection is enabled (denoted by a result of `true` from running the following command):
 
-   ```bash
-   mdatp health --field real_time_protection_enabled
-   ```
+      ```bash
+      mdatp health --field real_time_protection_enabled
+      ```
 
-   If it isn't enabled, execute the following command:
+      If it isn't enabled, execute the following command:
 
-   ```bash
-   mdatp config real-time-protection --value enabled
-   ```
-   - Open a Terminal window and execute the following command to run a detection test: 
-    
-   ```bash
-   curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
-   ```
+      ```bash
+      mdatp config real-time-protection --value enabled
+      ```
+   2. Open a Terminal window and execute the following command to run a detection test: 
 
-   - You can run more detection tests on zip files using either of the following commands: 
+      ```bash
+      curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
+      ```
+
+   3. You can run more detection tests on zip files using either of the following commands: 
      
       ```bash
       curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
       curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
       ```
-   - The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats: 
+   
+      The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats: 
 
       ```bash
       mdatp threat list
@@ -174,8 +175,13 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 3. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
    1. Verify that the onboarded Linux server appears in the Microsoft Defender portal. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
-   2. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and run the following command: `./mde_linux_edr_diy.sh`.
+
+   2. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and run the following command: 
+   
+      `./mde_linux_edr_diy.sh`
+   
    3. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
+   
    4. Check the alert details, machine timeline, and perform your typical investigation steps.
 
 ## Microsoft Defender for Endpoint package external package dependencies
