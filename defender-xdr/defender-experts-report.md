@@ -19,7 +19,7 @@ ms.collection:
 - tier1
 - essentials-manage
 ms.topic: conceptual
-ms.date: 01/31/2025
+ms.date: 02/07/2025
 ---
 
 # Understand the Defender Experts for Hunting report in Microsoft Defender XDR
@@ -46,7 +46,7 @@ Signals from Microsoft Defender XDR and investigations by Defender Experts for H
 
 The report provides you with the total number of Defender Experts Notifications our experts have sent for your chosen period: 
 
-![Screenshot of the top section of the report showing the number of threats identified](/defender/media/defender-experts/report-top-section-dens.png)
+:::image type="content" source="media/report-top-section-dens.png" alt-text="Screenshot of the top section of the report showing the number of threats identified." lightbox="media/report-top-section-dens.png":::
 
 To view these notifications, select **View Defender Experts Notifications**. This button redirects you to the Microsoft Defender XDR incidents page. Defender Expert for Hunting alerts or Defender Experts Notifications are labeled with **Defender Experts**.
 
@@ -65,6 +65,8 @@ You can filter the activities displayed in the table by choosing any of the foll
 
 If an activity has a related Defender Expert Notification, its corresponding icon also appears under the activity name.
 Selecting an identified suspicious activity opens a flyout panel detailing the impacted devices and users: 
+
+:::image type="content" source="media/suspicious-activity-detail-panel.png" alt-text="Screenshot of a flyout panel displaying a list of devices impacted by a detected suspicious activity." lightbox="media/suspicious-activity-detail-panel.png":::
 
 ![Screenshot of a flyout panel displaying a list of devices impacted by a detected suspicious activity.](/defender/media/defender-experts/suspicious-activity-detail-panel.png)
 
