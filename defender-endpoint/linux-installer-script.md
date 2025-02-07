@@ -124,10 +124,10 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 
    ```
 
-   | Sample use cases | Command |
+   | Scenario | Command |
    |---|---|
    | Install a specific agent version | `sudo ~/mde_installer.sh --install --channel prod --onboard ~/MicrosoftDefenderATPOnboardingLinuxServer.py --min_req -y –-mdatp 101.24082.0004 ` |
-   |For upgrading to the latest version | `sudo ~/mde_installer.sh --upgrade -y` |
+   | To upgrade to the latest version | `sudo ~/mde_installer.sh --upgrade -y` |
    | For upgrading to a specific version | `sudo ~/mde_installer.sh --upgrade -y –-mdatp 101.24082.0004` |
    | To downgrade to a specific version | `sudo ~/mde_installer.sh --downgrade -y –-mdatp 101.24082.0004` |
    | To remove `mdatp` | `sudo ~/mde_installer.sh --remove -y` |
@@ -252,6 +252,7 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 3. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
 
 Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as [channel]): 
+
 - `insiders-fast`
 - `insiders-slow`
 - `prod` 
