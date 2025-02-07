@@ -61,10 +61,10 @@ You can filter the activities displayed in the table by choosing any of the foll
 - **DEX notified** – Displays activities with corresponding Defender Expert Notifications only.
 - **All activities** – Displays all true positive, benign true positive, and false positive activities.  
 
-![Screenshot of the top section of the Threat categories section showing the dropdown menu.](/defender/media/defender-experts/threat-categories-filter.png)
+:::image type="content" source="/defender/media/defender-experts/threat-categories-filter.png" alt-text="Screenshot of the top section of the Threat categories section showing the dropdown menu." lightbox="/defender/media/defender-experts/threat-categories-filter.png":::
 
 If an activity has a related Defender Expert Notification, its corresponding icon also appears under the activity name.
-Selecting an identified suspicious activity opens a flyout panel detailing the impacted devices and users: 
+Selecting an identified suspicious activity opens a flyout panel detailing the impacted devices and users:
 
 :::image type="content" source="media/suspicious-activity-detail-panel.png" alt-text="Screenshot of a flyout panel displaying a list of devices impacted by a detected suspicious activity." lightbox="media/suspicious-activity-detail-panel.png":::
 
