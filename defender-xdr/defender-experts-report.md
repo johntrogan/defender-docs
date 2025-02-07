@@ -64,6 +64,7 @@ You can filter the activities displayed in the table by choosing any of the foll
 :::image type="content" source="/defender/media/defender-experts/threat-categories-filter.png" alt-text="Screenshot of the top section of the Threat categories section showing the dropdown menu." lightbox="/defender/media/defender-experts/threat-categories-filter.png":::
 
 If an activity has a related Defender Expert Notification, its corresponding icon also appears under the activity name.
+
 Selecting an identified suspicious activity opens a flyout panel detailing the impacted devices and users:
 
 :::image type="content" source="media/suspicious-activity-detail-panel.png" alt-text="Screenshot of a flyout panel displaying a list of devices impacted by a detected suspicious activity." lightbox="media/suspicious-activity-detail-panel.png":::
@@ -74,7 +75,7 @@ If applicable, the page also provides links to view related Defender Expert Noti
 
 The **Top trending suspicious activities** section of the report identifies up to 20 suspicious activities that were consistently observed in your environment in the last three months, sorted based on their severity rating and frequency of occurrence:
 
-![Screenshot of the Top trending suspicious activities section of the report.](/defender/media/defender-experts/top-trending-suspicious-activities.png)
+:::image type="content" source="/defender/media/defender-experts/top-trending-suspicious-activities.png" alt-text="Screenshot of the Top trending suspicious activities section of the report." lightbox="/defender/media/defender-experts/top-trending-suspicious-activities.png":::
 
 By showing the most critical and frequently observed activities, you can assess and evaluate their impact and develop strategies to prevent or mitigate potential threats to your environment
 
