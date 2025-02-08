@@ -51,8 +51,13 @@
       "searchScope": ["Microsoft Defender Endpoint"],
       "contributors_to_exclude": [
         "dstrome",
+        "shdyas",
         "rjagiewich",
         "claydetels19",
+        "American-Dipper", 
+        "jborsecnik",
+        "v-stchambers",
+        "Stacyrch140", 
         "garycentric",
         "alekyaj",
         "beccarobins",
