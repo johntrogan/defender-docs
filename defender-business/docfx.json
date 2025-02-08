@@ -51,8 +51,13 @@
       "searchScope": ["Microsoft Defender Business"],
       "contributors_to_exclude": [
         "dstrome",
+        "shydas",
         "rjagiewich",
+        "American-Dipper", 
         "claydetels19",
+        "jborsecnik"
+        "v-stchambers", 
+        "Stacyrch140"
         "garycentric",
         "alekyaj",
         "beccarobins",
