@@ -454,9 +454,33 @@ You can disable QUIC at the web browser level. However, this method of disabling
 
 ## Optimizing network protection performance
 
-Network protection includes performance optimization that allows `block` mode to asynchronously inspect long-lived connections, which might provide a performance improvement. This optimization can also help with app compatibility problems. This capability is on by default. You can turn off this capability by using the following PowerShell cmdlet:
+Network protection includes performance optimization that allows `block` mode to asynchronously inspect long-lived connections, which might provide a performance improvement. This optimization can also help with app compatibility problems. This capability is on by default. 
 
-`Set-MpPreference -AllowSwitchToAsyncInspection $false`
+#### Use CSP to enable AllowSwitchToAsyncInspection
+
+[https://learn.microsoft.com/en-us/windows/client-management/mdm/defender-csp#configurationallowswitchtoasyncinspection](/windows/client-management/mdm/defender-csp)
+
+#### __Use Group Policy to enable Turn on asynchronous inspection__
+
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+
+1. Right-click the Group Policy Object you want to configure, and then select __Edit__.
+
+1. In the __Group Policy Management Editor__ go to __Computer configuration__ and then select __Administrative templates__.
+
+1. Expand the tree to __Windows components__ > __Microsoft Defender Antivirus__ > __Network inspection system__.
+
+1. Double-click __Turn on asynchronous inspection__ and set the option to __Enabled__.
+
+1. Select __OK__. 
+
+1. This enables network protection to improve performance by switching from real-time inspection to asynchronous inspection.
+
+#### Use Microsoft Defender Antivirus Powershell cmdlet to enable Turn on asynchronous inspection
+
+#### You can turn on this capability by using the following PowerShell cmdlet:
+
+`Set-MpPreference -AllowSwitchToAsyncInspection $true`
 
 ## See also
 
