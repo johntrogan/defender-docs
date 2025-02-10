@@ -3,7 +3,7 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 01/16/2025
+ms.date: 02/10/2025
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
@@ -63,9 +63,7 @@ The following table summarizes network protection areas of coverage.
 - Encrypted URLs (full path) are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge).
 - Encrypted URLs (FQDN only) are blocked in non-Microsoft browsers.
 - URLs loaded via HTTP connection coalescing, such as content loaded by modern CDNs, are only blocked on Microsoft browsers (Internet Explorer, Microsoft Edge), unless the CDN URL itself is added to the indicator list.
-
 - Network Protection will block connections on both standard and non-standard ports.
-
 - Full URL path blocks are applied for unencrypted URLs.
 
 There might be up to two hours of latency (usually less) between the time when the action is taken and the URL/IP is blocked.
@@ -125,7 +123,7 @@ Support for Command and Control servers (C2) is an important part of this ransom
 #### Network protection: New toast notifications
 
 | New mapping  | Response category  | Sources |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | `phishing` | `Phishing` | `SmartScreen` |
 | `malicious` | `Malicious` | `SmartScreen` |
 | `command and control` | `C2` | `SmartScreen` |
@@ -135,7 +133,7 @@ Support for Command and Control servers (C2) is an important part of this ransom
 | `by your IT admin` | `CustomPolicy` |   |
 
 > [!NOTE]
-> **customAllowList** does not generate notifications on endpoints.
+> `customAllowList` does not generate notifications on endpoints.
 
 ### New notifications for network protection determination
 
@@ -297,7 +295,7 @@ Defender for Endpoint provides detailed reporting into events and blocks as part
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Copy the XML directly](overview-attack-surface-reduction.md).
+1. [Copy the XML directly](/defender-endpoint/overview-attack-surface-reduction#copy-the-xml-directly).
 
 2. Select **OK**.
 
@@ -454,9 +452,34 @@ You can disable QUIC at the web browser level. However, this method of disabling
 
 ## Optimizing network protection performance
 
-Network protection includes performance optimization that allows `block` mode to asynchronously inspect long-lived connections, which might provide a performance improvement. This optimization can also help with app compatibility problems. This capability is on by default. You can turn off this capability by using the following PowerShell cmdlet:
+Network protection includes performance optimization that allows `block` mode to asynchronously inspect long-lived connections, which might provide a performance improvement. This optimization can also help with app compatibility problems. This capability is on by default. 
 
-`Set-MpPreference -AllowSwitchToAsyncInspection $false`
+#### Use CSP to enable AllowSwitchToAsyncInspection
+
+[/windows/client-management/mdm/defender-csp](/windows/client-management/mdm/defender-csp#configurationallowswitchtoasyncinspection)
+
+#### Use Group Policy to enable Turn on asynchronous inspection
+
+This procedure enables network protection to improve performance by switching from real-time inspection to asynchronous inspection.
+
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+
+2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+
+3. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
+
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+
+5. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
+
+6. Select **OK**. 
+
+
+#### Use Microsoft Defender Antivirus Powershell cmdlet to enable Turn on asynchronous inspection
+
+You can turn on this capability by using the following PowerShell cmdlet: 
+
+`Set-MpPreference -AllowSwitchToAsyncInspection $true`
 
 ## See also
 
