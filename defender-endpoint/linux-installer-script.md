@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/07/2025
+ms.date: 02/10/2025
 ---
 
 # Use the installer script to deploy Microsoft Defender for Endpoint on Linux
@@ -153,20 +153,20 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
       ```bash
       mdatp config real-time-protection --value enabled
       ```
-   2. Open a Terminal window and execute the following command to run a detection test: 
+   1. Open a Terminal window and execute the following command to run a detection test: 
 
       ```bash
       curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
       ```
 
-   3. You can run more detection tests on zip files using either of the following commands: 
+   1. You can run more detection tests on zip files using either of the following commands: 
      
       ```bash
       curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
       curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
       ```
-   
-      The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats: 
+
+   1. The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats: 
 
       ```bash
       mdatp threat list
