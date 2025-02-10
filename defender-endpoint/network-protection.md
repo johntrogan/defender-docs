@@ -158,25 +158,25 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 > [!NOTE]
 > The images shown in this article for both the `warn` experience and `block` experience use "blocked url" as example placeholder text. In a functioning environment, the actual url or domain is listed.  
 
-#### Use CSP to enable __Convert warn verdict to block__
+#### Use CSP to enable `Convert warn verdict to block`
 
 [https://learn.microsoft.com/en-us/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock](/windows/client-management/mdm/defender-csp)
 
-#### __Use Group Policy to enable Convert warn verdict to block__
+#### Use Group Policy to enable Convert warn verdict to block
+
+By enabling this setting, network protection blocks network traffic instead of displaying a warning.
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-1. Right-click the Group Policy Object you want to configure, and then select __Edit__.
+2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-1. In the __Group Policy Management Editor__ go to __Computer configuration__ and then select __Administrative templates__.
+3. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
 
-1. Expand the tree to __Windows components__ > __Microsoft Defender Antivirus__ > __Network inspection system__.
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
 
-1. Double-click __Convert warn verdict to block__ and set the option to __Enabled__.
+5. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
 
-1. Select __OK__. 
-
-1. By enabling this setting, network protection blocks network traffic instead of displaying a warning.
+6. Select **OK**. 
 
 #### Block experience
 
@@ -468,7 +468,6 @@ You can disable QUIC at the web browser level. However, this method of disabling
 |---|---|
 | Microsoft Edge | `edge://flags/#enable-quic` |
 | Google Chrome | `chrome://flags/#enable-quic` |
-
 
 ## Optimizing network protection performance
 
