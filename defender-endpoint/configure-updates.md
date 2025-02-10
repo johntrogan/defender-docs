@@ -49,7 +49,7 @@ The following table lists the available group policy settings for configuring up
 ## Group Policy
 
 > [!NOTE]
-> An updated Defender ADMX template are published together with the 21H2 release of Windows 10. A non-localized version is available for download at [defender-updatecontrols](https://github.com/microsoft/defender-updatecontrols) on GitHub.
+> An updated Defender ADMX template is published together with the 21H2 release of Windows 10. A non-localized version is available for download at [defender-updatecontrols](https://github.com/microsoft/defender-updatecontrols) on GitHub.
 
 You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) to configure and manage Microsoft Defender Antivirus on your endpoints. In general, you can use the following procedure to configure or change Microsoft Defender Antivirus group policy settings:
 
