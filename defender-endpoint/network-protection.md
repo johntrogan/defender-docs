@@ -23,8 +23,7 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 - Microsoft Defender Antivirus
 
@@ -34,7 +33,7 @@ search.appverid: met150
 - macOS
 - Linux
 
-Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink).
+Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us).
 
 ## Overview of network protection
 
@@ -157,6 +156,26 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 
 > [!NOTE]
 > The images shown in this article for both the `warn` experience and `block` experience use "blocked url" as example placeholder text. In a functioning environment, the actual url or domain is listed.  
+
+#### Use CSP to enable `Convert warn verdict to block`
+
+[/windows/client-management/mdm/defender-csp](/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock)
+
+#### Use Group Policy to enable Convert warn verdict to block
+
+By enabling this setting, network protection blocks network traffic instead of displaying a warning.
+
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+
+2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+
+3. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+
+4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+
+5. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
+
+6. Select **OK**. 
 
 #### Block experience
 
@@ -448,7 +467,6 @@ You can disable QUIC at the web browser level. However, this method of disabling
 |---|---|
 | Microsoft Edge | `edge://flags/#enable-quic` |
 | Google Chrome | `chrome://flags/#enable-quic` |
-
 
 ## Optimizing network protection performance
 
