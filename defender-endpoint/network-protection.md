@@ -456,7 +456,7 @@ Network protection includes performance optimization that allows `block` mode to
 
 #### Use CSP to enable AllowSwitchToAsyncInspection
 
-[https://learn.microsoft.com/en-us/windows/client-management/mdm/defender-csp#configurationallowswitchtoasyncinspection](/windows/client-management/mdm/defender-csp)
+[/windows/client-management/mdm/defender-csp](/windows/client-management/mdm/defender-csp#configurationallowswitchtoasyncinspection)
 
 #### Use Group Policy to enable Turn on asynchronous inspection
 
