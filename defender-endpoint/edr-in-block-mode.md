@@ -14,7 +14,7 @@ ms.custom:
 - next-gen
 - mde-edr
 - admindeeplinkDEFENDER
-ms.date: 06/25/2024
+ms.date: 02/10/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -92,21 +92,19 @@ For more information on the Defender CSP used for EDR in block mode, see "Config
 
 ### Group Policy
 
-__Use Group Policy to enable EDR in block mode__
+You can use Group Policy to enable EDR in block mode.
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-1. Right-click the Group Policy Object you want to configure, and then select __Edit__.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-1. In the __Group Policy Management Editor__ go to __Computer configuration__ and then select __Administrative templates__.
+2. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
 
-1. Expand the tree to __Windows components__ > __Microsoft Defender Antivirus__ > __Features__.
+3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Features**.
 
-1. Double-click **Enable EDR in block mode** and set the option to __Enabled__.
+4. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
 
-1. Select __OK__. 
-
-1. This setting allows EDR in block mode.
+5. Select **OK**. 
 
 ## Requirements for EDR in block mode
 
