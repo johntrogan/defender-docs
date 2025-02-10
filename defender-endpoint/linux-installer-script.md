@@ -27,8 +27,6 @@ ms.date: 02/10/2025
 - Microsoft Defender for Endpoint Server
 - [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
-
 > [!TIP]
 > Looking for advanced guidance on deploying Microsoft Defender for Endpoint on Linux? See [Advanced deployment guide on Defender for Endpoint on Linux](comprehensive-guidance-on-linux-deployment.md).
 
@@ -52,7 +50,7 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
     
     4. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
    
-   :::image type="content" source="media/linux-script-image.png" alt-text="Onboard Linux Server" lightbox="media/linux-script-image.png":::
+   :::image type="content" source="media/linux-script-image.png" alt-text="Screenshot showing the options to select to download the onboarding package" lightbox="media/linux-script-image.png":::
     
     5. From a command prompt, extract the contents of the archive:
 
