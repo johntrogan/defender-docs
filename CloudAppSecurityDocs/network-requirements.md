@@ -46,6 +46,9 @@ dev.virtualearth.net
 flow.microsoft.com
 static2.sharepointonline.com
 *.blob.core.windows.net
+discoveryresources-cdn-prod.cloudappsecurity.com
+discoveryresources-cdn-gov.cloudappsecurity.com
+
 ```
 
 Additionally, the following items should be allowed, depending on which data center you use:
