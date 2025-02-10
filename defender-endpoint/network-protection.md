@@ -159,7 +159,7 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 
 #### Use CSP to enable `Convert warn verdict to block`
 
-[https://learn.microsoft.com/en-us/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock](/windows/client-management/mdm/defender-csp)
+[/windows/client-management/mdm/defender-csp](/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock)
 
 #### Use Group Policy to enable Convert warn verdict to block
 
