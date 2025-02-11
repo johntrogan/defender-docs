@@ -176,6 +176,24 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 1. Select **Next**.
 1. On the **Review + create** tab, review your policy settings, and then select **Save**.
 
+#### Enable Tamper Protection
+
+1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
+1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
+1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
+1. Select **Security Experience** from the **Select Template** drop-down list.
+1. Select **Create policy**. The **Create a new policy** page appears.
+1. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
+1. Select **Next**.
+1. On the **Configuration settings** page, expand the groups of settings.
+1. From these groups of settings, select those settings that you want to manage with this profile.
+1. Set the policies for the chosen groups of settings by configuring the settings as described in the following tables:
+
+|Description| Setting|
+| -------- | -------- |
+| TamperProtection (Device)   | On|
+|||
+
 #### Check the platform update version
 
 The latest "Platform Update" version Production channel (GA) is available in [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update).
