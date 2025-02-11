@@ -28,7 +28,7 @@ ms.date: 01/03/2025
 - [Microsoft Defender XDR](/defender-xdr)
 
 > [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
 ## Overview
 
