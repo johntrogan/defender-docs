@@ -61,7 +61,7 @@ You can choose to exclude a single device or multiple devices at the same time.
 You can also exclude a device from its device page.
 
 > [!NOTE]
-> Excluding active devices is not recommended, since it is especially risky to not have visibility into their vulnerability info. If a device is active and you try to exclude it, you'll get a warning message and a confirmation pop-up asking if you are sure you want to exclude an active device.
+> Excluding active devices isn't recommended, since it's especially risky to not have visibility into their vulnerability info. If a device is active and you try to exclude it, you'll get a warning message and a confirmation pop-up asking if you're sure you want to exclude an active device.
 
 It can take up to 10 hours for a device to be fully excluded from vulnerability management views and data.
 
