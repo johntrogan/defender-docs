@@ -44,7 +44,7 @@ Use the following advanced features to get better protected from potentially mal
 
 ## Restrict correlation to within scoped device groups
 
-This configuration can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. By turning on this setting, an incident composed of alerts that cross-device groups will no longer be considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC will see several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
+This configuration can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. When this setting is turned on, an incident composed of alerts that cross-device groups are no longer considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC sees several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
 
 > [!NOTE]
 > - Changing this setting impacts future alert correlations only.
@@ -57,7 +57,7 @@ Endpoint detection and response (EDR) in block mode provides protection from mal
 
 ## Automatically resolve alerts
 
-Turn this setting on to automatically resolve alerts where no threats were found or where detected threats were remediated. If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
+Turn on this setting to automatically resolve alerts where no threats were found or where detected threats were remediated. If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
 
 > [!NOTE]
 > - The result of the auto-resolve action may influence the Device risk level calculation which is based on the active alerts found on a device.
