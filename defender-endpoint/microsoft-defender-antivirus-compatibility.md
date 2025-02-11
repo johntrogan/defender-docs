@@ -11,7 +11,7 @@ ms.author: ewalsh
 ms.custom: 
 - nextgen
 - partner-contribution
-ms.reviewer: pahuijbr, dmcwee
+ms.reviewer: pahuijbr, dmcwee, yongrhee
 manager: deniseb
 ms.collection: 
 - m365-security
