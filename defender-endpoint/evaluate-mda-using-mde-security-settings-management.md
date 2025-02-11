@@ -192,7 +192,6 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 |Description| Setting|
 | -------- | -------- |
 | TamperProtection (Device)   | On|
-|||
 
 #### Check the platform update version
 
