@@ -191,7 +191,21 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
 |Description| Setting|
 | -------- | -------- |
-| TamperProtection (Device)   | On|
+| TamperProtection (Device) | On|
+
+#### Check the Cloud Protection network connectivity
+
+It is important to check that the Cloud Protection network connectivity is working during your pen testing.
+
+CMD (Run as admin)
+
+
+```
+cd "C:\Program Files\Windows Defender"
+MpCmdRun.exe -ValidateMapsConnection
+```
+
+For more information [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 
 #### Check the platform update version
 
