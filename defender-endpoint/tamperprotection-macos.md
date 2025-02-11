@@ -65,12 +65,12 @@ Here's an example of a system message in response to a blocked action:
 
 ![Screenshot of operation blocked message.](media/operation-blocked.png)
 
-You can configure the tamper protection mode by providing the mode name as enforcement-level.
+You can configure the "tamper protection" mode by providing the mode name as enforcement-level.
 
 > [!NOTE]
 >
-> - The mode change will apply immediately.
-> - If you used JAMF during the initial configuration, then you'll need to update the configuration using JAMF as well.
+> - The mode change applies immediately.
+> - If you used JAMF during the initial configuration, then you need to update the configuration using JAMF as well.
 
 ## Before you begin
 
