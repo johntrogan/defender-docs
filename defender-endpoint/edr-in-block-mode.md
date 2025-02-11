@@ -34,7 +34,7 @@ search.appverid: met150
 
 - Windows
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
 
 This article describes EDR in block mode, which helps protect devices that are running a non-Microsoft antivirus solution (with Microsoft Defender Antivirus in passive mode).
 
