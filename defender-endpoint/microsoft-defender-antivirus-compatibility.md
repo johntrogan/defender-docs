@@ -36,6 +36,8 @@ Microsoft Defender Antivirus is available on endpoints running the following ver
 
 - Windows 11
 - Windows 10 
+- Windows Server 2025
+
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1803, or newer
@@ -105,7 +107,10 @@ The following table summarizes the state of Microsoft Defender Antivirus in seve
 
 ## Windows Server and passive mode
 
-On Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, or  Windows Server 2012 R2, Microsoft Defender Antivirus doesn't enter passive mode automatically when you install a non-Microsoft antivirus product. In those cases, set Microsoft Defender Antivirus to passive mode to prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key as follows:
+> [!TIP]
+> If you are planning to keep Microsoft Defender Antivirus in passive mode for your Windows Servers, ForceDefenderPassiveMode setting needs to be set before the onboarding to Microsoft Defender for Endpoint.
+
+On Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, or Windows Server 2012 R2, Microsoft Defender Antivirus doesn't enter passive mode automatically when you install a non-Microsoft antivirus product. In those cases, set Microsoft Defender Antivirus to passive mode to prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key as follows:
 
 - Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
 - Name: `ForceDefenderPassiveMode`
