@@ -2,8 +2,8 @@
 title: Deploy Microsoft Defender for Endpoint on Linux manually
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux manually from the command line.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/10/2025
+ms.date: 02/11/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -296,13 +296,13 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 ## Troubleshoot installation issues
 
-- For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](/defender-endpoint/linux-resources#log-installation-issues). 
+- For details on how to find the log that's generated when an installation error occurs, see [Log installation issues](/defender-endpoint/linux-resources#log-installation-issues). 
 
-- For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install). 
+- For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
 
 - If the health of the device is false, see [Investigate agent health issues](health-status.md). 
 
-- For product performance issues, see [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md). 
+- For product performance issues, see [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md).
 
 - For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md). 
 
@@ -340,14 +340,14 @@ Defender for Endpoint on Linux can be deployed from one of the following channel
 - `insiders-slow`
 - `prod` 
 
-Each of these channels corresponds to a Linux software repository. The instructions in this article describe configuring your device to use one of these repositories. 
+Each of these channels corresponds to a Linux software repository. This article describes how to configure your device to use one of these repositories.
 
-The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first ones to receive updates and new features, followed later by insiders-slow and lastly by prod. 
+The choice of channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first to receive updates and new features, followed later by insiders-slow and lastly by prod.
 
 In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either `insiders-fast` or `insiders-slow`. 
 
 > [!WARNING]
-> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location. 
+> Switching channels after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location. 
 
 ## How to configure policies for Microsoft Defender for Endpoint on Linux
 
