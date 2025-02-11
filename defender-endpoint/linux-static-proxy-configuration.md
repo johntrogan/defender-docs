@@ -48,7 +48,7 @@ During installation, the `HTTPS_PROXY` environment variable must be passed to th
   ```
 
   > [!CAUTION]
-  > Note that above two methods could define the proxy to use for other applications on your system. Use this method with caution, or only if this is meant to be a generally global configuration.
+  > The above two methods could define the proxy to use for other applications on your system. Use this method with caution, or only if this is meant to be a global configuration.
 
 - The `HTTPS_PROXY` variable is prepended to the installation or uninstallation commands. For example, with the APT package manager, prepend the variable as follows when installing Microsoft Defender for Endpoint:
 
@@ -57,11 +57,11 @@ During installation, the `HTTPS_PROXY` environment variable must be passed to th
   ```
 
   > [!NOTE]
-  > Do not add sudo between the environment variable definition and apt, otherwise the variable will not be propagated.
+  > Don't add sudo between the environment variable definition and apt, otherwise the variable won't be propagated.
 
 The `HTTPS_PROXY` environment variable may similarly be defined during uninstallation.
 
-Note that installation and uninstallation will not necessarily fail if a proxy is required but not configured. However, telemetry won't be submitted, and the operation could take longer due to network timeouts.
+Installation and uninstallation won't necessarily fail if a proxy is required but not configured. However, telemetry won't be submitted, and the operation could take longer due to network timeouts.
 
 ## Post installation configuration
 
