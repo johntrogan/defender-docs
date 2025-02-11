@@ -204,7 +204,7 @@ To enable Network Protection for Windows Servers, for now, please use Powershell
 | 01443614-cd74-433a-b99e-2ecdc07bfc25<br><br>**Note:** (Block executable files from running unless they meet a prevalence, age, or trusted list criterion) | 1 (Block) |
 | 26190899-1602-49e8-8b27-eb1d0a1ce869<br><br>**Note:** (Block Office communication application from creating child processes) | 1 (Block) |
 | d4f940ab-401b-4efc-aadc-ad5f3c50688a<br><br>**Note:** (Block all Office applications from creating child processes) | 1 (Block) |
-| c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb<br><br>**Note:** ( \[PREVIEW\] Block use of copied or impersonated system tools) | 1 (Block) |
+| c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb<br><br>**Note:** ( [PREVIEW] Block use of copied or impersonated system tools) | 1 (Block) |
 | d3e037e1-3eb8-44c8-a917-57927947596d<br><br>**Note:** (Block JavaScript or VBScript from launching downloaded executable content) | 1 (Block) |
 | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2<br><br>**Note:** (Block credential stealing from the Windows local security authority subsystem) | 1 (Block) |
 | a8f5898e-1dc8-49a9-9878-85004b8a61e6<br><br>**Note:** (Block Web shell creation for Servers) | 1 (Block) |
@@ -214,7 +214,7 @@ To enable Network Protection for Windows Servers, for now, please use Powershell
 | e6db77e5-3df2-4cf1-b95a-636979351e5b<br><br>**Note:** (Block persistence through WMI event subscription) | 1 (Block) |
 | c1db55ab-c21a-4637-bb3f-a12568109d35<br><br>**Note:** (Use advanced protection against ransomware) | 1 (Block) |
 | d1e49aac-8f56-4280-b9ba-993a6d77406c<br><br>**Note:** (Block process creations originating from PSExec and WMI commands) | 1 (Block)<br><br>**Note:** If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 ('audit') instead of 1('block'). |
-| 33ddedf1-c6e0-47cb-833e-de6133960387<br><br>**Note:** ( \[PREVIEW\] Block rebooting machine in Safe Mode) | 1 (Block) |
+| 33ddedf1-c6e0-47cb-833e-de6133960387<br><br>**Note:** ( [PREVIEW] Block rebooting machine in Safe Mode) | 1 (Block) |
 
 > [!TIP]
 > Some rules may block behavior you find acceptable in your organization. In these cases, change the rule from 'Enabled' to 'Audit' to prevent unwanted blocks.
@@ -228,6 +228,26 @@ Navigate to **Computer Configuration** > **Administrative Templates** > **Window
 | Configure Controlled Folder Access | Enabled, Block |
 
 Assign the policies to the OU where the test machines are located.
+
+#### Enable Tamper Protection
+
+In the Microsoft XDR portal (security.microsoft.com), go to Settings > Endpoints > Advanced features > Tamper Protection > On.
+
+For more information [How do I configure or manage tamper protection?](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection)
+
+#### Check the Cloud Protection network connectivity
+
+It is important to check that the Cloud Protection network connectivity is working during your pen testing.
+
+CMD (Run as admin)
+
+
+```
+cd "C:\Program Files\Windows Defender"
+MpCmdRun.exe -ValidateMapsConnection
+```
+
+For more information [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 
 ## Check the Platform Update version
 
