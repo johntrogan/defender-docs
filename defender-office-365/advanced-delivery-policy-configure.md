@@ -132,7 +132,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 >
 > Currently, the advanced delivery policy for third-party phishing simulations doesn't support simulations within the same organization (`DIR:INT`), especially when email is routed through an Exchange Server gateway before Microsoft 365 in Hybrid mail flow. To work around this issue, you have the following options:
 >
-> - Create a dedicated [send connector](/exchange/mail-flow/mail-routing/connector-selection) that doesn't authenticate the phishing simulation messages as internal.
+> - Create a dedicated [Receive connector](https://learn.microsoft.com/en-us/exchange/mail-flow/connectors/receive-connectors?view=exchserver-2019#receive-connector-authentication-mechanisms) that doesn't authenticate the phishing simulation messages as internal.
 > - Configure the phishing simulation to bypass the Exchange Server infrastructure and route mail directly to your Microsoft 365 MX record (for example, contoso-com.mail.protection.outlook.com).
 > - Although you can set intra-organization message scanning to None in [anti-spam policies](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-create-anti-spam-policies) we don't recommend this option because it affects other email messages.
 >
