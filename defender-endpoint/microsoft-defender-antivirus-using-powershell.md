@@ -126,6 +126,26 @@ Microsoft Defender Exploit Guard provides features that help protect devices fro
 
 Some rules may block behavior you find acceptable in your organization. In these cases, change the rule from Enabled to Audit to prevent unwanted blocks.
 
+#### Enable Tamper Protection
+
+In the Microsoft XDR portal (security.microsoft.com), go to Settings > Endpoints > Advanced features > Tamper Protection > On.
+
+For more information [How do I configure or manage tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) 
+
+#### Check the Cloud Protection network connectivity
+
+It is important to check that the Cloud Protection network connectivity is working during your pen testing.
+
+CMD (Run as admin)
+
+
+```
+cd "C:\Program Files\Windows Defender"
+MpCmdRun.exe -ValidateMapsConnection
+```
+
+For more information [Use the cmdline tool to validate cloud-delivered protection ](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+
 ## One-click Microsoft Defender Offline Scan
 
 Microsoft Defender Offline Scan is a specialized tool that comes with Windows 10 or newer, and allows you to boot a machine into a dedicated environment outside of the normal operating system. It's especially useful for potent malware, such as rootkits.
