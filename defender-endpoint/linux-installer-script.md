@@ -108,7 +108,7 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
    -m|--min_req         enforce minimum requirements
    -x|--skip_conflict   skip conflicting application verification
    -w|--clean           remove repo from package manager for a specific channel
-   -y|--yes             assume yes for all mid-process prompts (default, depracated)
+   -y|--yes             assume yes for all mid-process prompts (default, deprecated)
    -n|--no              remove assume yes sign
    -s|--verbose         verbose output
    -v|--version         print out script version
@@ -136,7 +136,7 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 
 ## Verify deployment status
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), open the device inventory. It might take 5-20 mins for the device to show up in the portal.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
 2. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
