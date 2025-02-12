@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender Antivirus with other security produc
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 01/30/2025
+ms.date: 02/11/2025
 ms.topic: conceptual
 author: emmwalshh
 ms.author: ewalsh
@@ -114,7 +114,7 @@ On Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 20
 
 You can view your protection status in PowerShell by using the command [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus). Check the value for `AMRunningMode`. You should see **Normal**, **Passive**, or **EDR Block Mode** if Microsoft Defender Antivirus is enabled on the endpoint. 
 
-For passive mode to work on endpoints running Windows Server 2016 and Windows Server 2012 R2, those endpoints must be onboarded with the modern, unified solution described in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2). 
+For passive mode to work on endpoints running Windows Server 2016 and Windows Server 2012 R2, those endpoints must be onboarded with the modern, unified solution described in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution). 
 
 
 > [!IMPORTANT]
@@ -178,10 +178,10 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 
 1. When Microsoft Defender Antivirus is in passive mode, real-time protection behaves in the following ways with Microsoft Endpoint Data Loss Prevention (Endpoint DLP):
 
-   |Microsoft Defender Antivirus in passive mode| Real-time protection state|
-   | -------- | -------- |
-   |Endpoint DLP is disabled|Disabled <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement.|
-   |Endpoint DLP is enabled|Enabled for DLP specific functionalities <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement. <br/><br/>Make sure to add Microsoft Defender Antivirus and Microsoft Defender for Endpoint binaries to the exclusion list of the non-Microsoft antivirus or EDR solution.|
+   |Microsoft Defender Antivirus in passive mode| Real-time protection state| Behavior Monitoring state|
+   | -------- | -------- | -------- |
+   |Endpoint DLP is disabled|Disabled <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement. | Disabled <br/><br/> Doesn't provide any antivirus Behavior Monitoring blocking or enforcement.|
+   |Endpoint DLP is enabled|Enabled for DLP specific functionalities <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement. <br/><br/>Make sure to add Microsoft Defender Antivirus and Microsoft Defender for Endpoint binaries to the exclusion list of the non-Microsoft antivirus or EDR solution. | Enabled for DLP specific functionalities <br/><br/> Doesn't provide any antivirus Behavior Monitoring blocking or enforcement.|
 
 2. When Microsoft Defender Antivirus is in passive mode, scans aren't scheduled. If scans *are* scheduled in your configuration, the schedule is ignored. Unless:
 
