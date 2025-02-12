@@ -122,7 +122,6 @@ Two new ASR rules are now in public preview:
    - Act quickly! Defender Boxed is available only for a short period of time.
 - (GA) [User Contain](https://www.microsoft.com/en-us/security/blog/2023/10/11/microsoft-defender-for-endpoint-now-stops-human-operated-attacks-on-its-own) can now contain compromised users automatically stopping Human Operated Ransomware in its track using [Automatic Attack Disruption](/defender-xdr/automatic-attack-disruption).
 
-
 ## November 2023
 
 - [Microsoft Defender Core service overview](microsoft-defender-core-service-overview.md) is now available for consumers and is planned to begin rolling out to enterprise customers in early 2024.
