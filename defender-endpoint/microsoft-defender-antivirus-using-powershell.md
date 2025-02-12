@@ -128,9 +128,9 @@ Some rules might block behavior you find acceptable in your organization. In the
 
 #### Enable Tamper Protection
 
-In the Microsoft XDR portal (security.microsoft.com), go to Settings > Endpoints > Advanced features > Tamper Protection > On.
+In the Microsoft XDR portal (security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
-For more information [How do I configure or manage tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) 
+For more information, see [How do I configure or manage tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection). 
 
 #### Check the Cloud Protection network connectivity
 
@@ -144,7 +144,7 @@ cd "C:\Program Files\Windows Defender"
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
-For more information [Use the cmdline tool to validate cloud-delivered protection ](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+For more information, see [Use the cmdline tool to validate cloud-delivered protection ](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 
 ## One-select Microsoft Defender Offline Scan
 
