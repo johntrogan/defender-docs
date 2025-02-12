@@ -49,24 +49,24 @@ To configure the options that you must use to test the protection features, perf
 1. From these groups of settings, select those settings that you want to manage with this profile.
 1. Set the policies for the chosen groups of settings by configuring the settings as described in the following tables:
 
-**Real-time Protection (Always-on protection, real-time scanning)**:
+   **Real-time Protection (Always-on protection, real-time scanning)**:
 
-|Description|Settings|
-|---|---|
-|Allow Real-time Monitoring|Allowed|
-|Real Time Scan Direction|Monitor all files (bi-directional)|
-|Allow Behavior Monitoring|Allowed|
-|Allow On Access Protection|Allowed|
-|PUA Protection|PUA Protection on|
+   |Description|Settings|
+   |---|---|
+   |Allow Real-time Monitoring|Allowed|
+   |Real Time Scan Direction|Monitor all files (bi-directional)|
+   |Allow Behavior Monitoring|Allowed|
+   |Allow On Access Protection|Allowed|
+   |PUA Protection|PUA Protection on|
 
-**Cloud protection features**:
+   **Cloud protection features**:
 
-|Description|Setting|
-|---|---|
-|Allow Cloud Protection|Allowed|
-|Cloud Block Level|High|
-|Cloud Extended Time-out|Configured, 50|
-|Submit Samples Consent|Send all samples automatically|
+   |Description|Setting|
+   |---|---|
+   |Allow Cloud Protection|Allowed|
+   |Cloud Block Level|High|
+   |Cloud Extended Time-out|Configured, 50|
+   |Submit Samples Consent|Send all samples automatically|
 
 Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
 
@@ -169,7 +169,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
    |Enable Controlled Folder Access|Enabled|
 
 > [!TIP]
-> Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions."  Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
+> Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
 1. Select **Next**.
 2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
@@ -187,11 +187,11 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 1. Select **Next**.
 1. On the **Configuration settings** page, expand the groups of settings.
 1. From these groups, select the settings that you want to manage with this profile.
-1. Set the policies for the chosen groups of settings by configuring the them as described in the following tables:
+1. Set the policies for the chosen groups of settings by configuring them as described in the following table:
 
-|Description| Setting|
-| -------- | -------- |
-| TamperProtection (Device) | On|
+   |Description| Setting|
+   | -------- | -------- |
+   | TamperProtection (Device) | On|
 
 #### Check the Cloud Protection network connectivity
 
