@@ -29,7 +29,7 @@ ms.date: 03/03/2024
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 > [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article provides troubleshooting information for [network protection](network-protection.md), in cases, such as:
 

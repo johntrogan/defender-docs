@@ -26,7 +26,7 @@ ms.topic: reference
 - [Microsoft Defender XDR](/defender-xdr)
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us).
+> Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
 
 This page covers the Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
 

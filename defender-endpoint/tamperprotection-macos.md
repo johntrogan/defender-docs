@@ -27,7 +27,7 @@ ms.date: 08/01/2024
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Tamper protection in macOS helps prevent unwanted changes to security settings from being made by unauthorized users. Tamper protection helps prevent unauthorized removal of Microsoft Defender for Endpoint on macOS. This capability also helps important security files, processes, and configuration settings from being tampered.
 

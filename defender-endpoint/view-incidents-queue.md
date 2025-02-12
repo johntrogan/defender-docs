@@ -28,7 +28,7 @@ ms.date: 01/06/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The **Incidents queue** shows a collection of incidents that were flagged from devices in your network. It helps you sort through incidents to prioritize and create an informed cybersecurity response decision.
 

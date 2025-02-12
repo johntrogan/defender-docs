@@ -26,7 +26,7 @@ ms.topic: conceptual
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint.
 
