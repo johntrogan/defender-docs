@@ -34,7 +34,7 @@ This article explains how to enable and test the key protection features in Micr
 
 We recommend you use [this evaluation PowerShell script](https://aka.ms/wdeppscript) to configure these features, but you can individually enable each feature with the cmdlets described in the rest of this document.
 
-See the following product documentation libraries for more information about our EPP products:
+For more information about our EPP products, see the following product documentation libraries:
 
 - [Microsoft Defender Antivirus](https://aka.ms/wdavdocs)
 - [Microsoft Defender Exploit Guard](https://aka.ms/wdegdocs)
@@ -49,9 +49,8 @@ This guide provides the [Microsoft Defender Antivirus cmdlets](/powershell/modul
 
 To use these cmdlets:
 
-> 1\. Open an elevated instance of PowerShell (choose to Run as administrator).
->
-> 2\. Enter the command listed in this guide and press Enter.
+1. Open an elevated instance of PowerShell (choose to Run as administrator).
+1. Enter the command listed in this guide and press **Enter**.
 
 You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference?view=windowsserver2022-ps&preserve-view=true).
 
@@ -78,7 +77,7 @@ More details are available in [Use next-gen technologies in Microsoft Defender A
 
 Microsoft Defender AV scans files as soon as they're seen by Windows, and will monitor running processes for known or suspected malicious behaviors. If the antivirus engine discovers malicious modification, it will immediately block the process or file from running.
 
-See [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md) for more details on these options.
+For more details on these options, see [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md).
 
 | Description | PowerShell Command |
 |---|---|
