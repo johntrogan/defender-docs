@@ -176,14 +176,16 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
       
    1. Grant executable permissions to the script:
    
-            ```bash
+      ```bash
       chmod +x mde_linux_edr_diy.sh
       ```
       
    1. Run the following command: 
+
       ```bash
       ./mde_linux_edr_diy.sh
       ```
+      
    3. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
    
    4. Check the alert details, machine timeline, and perform your typical investigation steps.
