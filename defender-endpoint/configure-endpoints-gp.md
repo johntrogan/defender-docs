@@ -29,7 +29,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 > [!NOTE]
 > To use Group Policy (GP) updates to deploy the package, you must be on Windows Server 2008 R2 or later.

@@ -25,7 +25,7 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Security baselines ensure that security features are configured according to guidance from both security experts and expert Windows system administrators. When deployed, the Defender for Endpoint security baseline sets Defender for Endpoint security controls to provide optimal protection.
 

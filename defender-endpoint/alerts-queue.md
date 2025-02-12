@@ -24,7 +24,7 @@ search.appverid: met150
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The **Alerts queue** shows a list of alerts that were flagged from devices in your network. By default, the queue displays alerts seen in the last 7 days in a grouped view. The most recent alerts are shown at the top of the list helping you see the most recent alerts first.
 

@@ -29,7 +29,7 @@ ms.date: 06/25/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 If you want to use basic permissions management for the Microsoft Defender portal, keep in mind that permissions are set to either full access or read only. For granular control over permissions, [use role-based access control](rbac.md).
 
