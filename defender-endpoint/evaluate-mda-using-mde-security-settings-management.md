@@ -164,7 +164,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
    |Block Office applications from injecting code into other processes|Block|
    |Block persistence through WMI event subscription|Block|
    |Use advanced protection against ransomware|Block|
-   |Block process creations originating from PSExec and WMI commands|Block <br/> Please note thatIf you have Configuration Manager (formerly SCCM), or other management tools that use WMI you might need to set this to **Audit** instead of **Block**.|
+   |Block process creations originating from PSExec and WMI commands|Block (If you have Configuration Manager (formerly SCCM), or other management tools that use WMI you might need to set this to **Audit** instead of **Block**)|
    |[PREVIEW] Block rebooting machine in Safe Mode|Block|
    |Enable Controlled Folder Access|Enabled|
 
@@ -195,7 +195,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
 #### Check the Cloud Protection network connectivity
 
-It's important to check that the Cloud Protection network connectivity is working during your pen testing.
+It's important to check that the Cloud Protection network connectivity is working during your penetration testing.
 
 CMD (Run as admin)
 
