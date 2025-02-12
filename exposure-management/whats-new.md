@@ -24,6 +24,14 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
+## February 2025
+
+The following predefined classification rules were added to the critical assets list:
+
+| Classification                                       | Description                                                  |
+| :--------------------------------------------------- | :----------------------------------------------------------- |
+| Azure Key Vault with high number of operations       | This rule identifies and classifies Azure Key Vaults that experience a high volume of operations, indicating their criticality within the cloud environment. |
+
 ## January 2025
 
 ### Metrics enhancements
