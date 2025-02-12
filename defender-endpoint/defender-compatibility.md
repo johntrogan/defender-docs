@@ -3,8 +3,9 @@ title: Antivirus solution compatibility with Defender for Endpoint
 description: Learn about how Windows Defender works with Microsoft Defender for Endpoint. Also learn how Defender for Endpoint works when a third-party anti-malware client is used.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: ewalsh
+author: emmwalshh
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -26,7 +27,7 @@ ms.subservice: ngp
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-defendercompat-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The Microsoft Defender for Endpoint agent depends on Microsoft Defender Antivirus for some capabilities such as file scanning.
 
@@ -36,7 +37,7 @@ The Microsoft Defender for Endpoint agent depends on Microsoft Defender Antiviru
 For optimal protection, configure the following settings for devices that are onboarded to Defender for Endpoint, whether Microsoft Defender Antivirus is the active antimalware solution or not:
 
 - [Security intelligence updates](microsoft-defender-antivirus-updates.md#security-intelligence-updates) (which also updates the scan engine)
-- [Platform updates](microsoft-defender-antivirus-updates.md#monthly-platform-and-engine-versions)
+- [Platform updates](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
 
 For more information, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).
 

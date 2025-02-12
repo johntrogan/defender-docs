@@ -4,8 +4,8 @@ ms.reviewer:
 description: Learn how you can use APIs to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 01/25/2022
 manager: deniseb
@@ -39,7 +39,7 @@ Defender for Endpoint exposes much of its data and actions through a set of prog
 
 Watch this video for a quick overview of Defender for Endpoint's APIs.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4d73M]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f6300637-b48e-49d7-aa76-2778a711ae6c]
 
 In general, you'll need to take the following steps to use the APIs:
 

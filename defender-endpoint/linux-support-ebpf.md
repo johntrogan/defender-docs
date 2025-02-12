@@ -2,8 +2,8 @@
 title: Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux
 description: eBPF-based sensor deployment in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: deniseb
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
@@ -15,19 +15,18 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/22/2024
+ms.date: 12/02/2024
 ---
 
 # Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
+**Applies to**:
 
-- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- 
+- Microsoft Defender for Endpoint Server
+- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+
 > [!NOTE]
 > Starting with Defender for Endpoint on Linux, version `101.2408.0000`, AuditD is no longer be supported as a supplementary event provider. For more information, see the FAQs at the end of this article.
 
@@ -62,6 +61,10 @@ The eBPF sensor for Microsoft Defender for Endpoint on Linux is supported on the
 | Oracle Linux RHCK  | 7.9                  | 3.10.0-1160    |
 | Oracle Linux UEK   | 7.9                  | 5.4            |
 | Amazon Linux 2     | 2                    | 5.4.261-174.360|
+| Rocky Linux 8      | 8.7                  | 4.18.0-425     |
+| Rocky Linux 9      | 9.2                  | 5.14.0-284     |
+| Alma Linux 8       | 8.4                  | 4.18.0-305     |
+| Alma Linux 9       | 9.2                  | 5.14.0-284     |
 
 > [!NOTE]
 > Oracle Linux 8.8 with kernel version 5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64 will result in kernel hang when eBPF is enabled as supplementary subsystem provider. This kernel version should not be used for eBPF mode. Refer to Troubleshooting and Diagnostics section for mitigation steps.
@@ -118,7 +121,9 @@ Post reboot, run the following command to check if audit rules were cleared:
 The output of previous command should show no rules or any user added rules. In case where the rules weren't removed, do the following steps to clear the audit rules file:
 
 1. Switch to ebpf mode.
+
 2. Remove the file `/etc/audit/rules.d/mdatp.rules`.
+
 3. Reboot the machine.
 
 ### Troubleshooting and Diagnostics
@@ -133,33 +138,39 @@ uname -a
 
 1. Enabling eBPF on RHEL 8.1 version with SAP might result in kernel panic. To mitigate this issue, you can take one of the following steps:
 
-    - Use a distro version higher than RHEL 8.1.
-    - Switch to AuditD mode if you need to use RHEL 8.1 version.
+   - Use a distro version higher than RHEL 8.1.
+   - Switch to AuditD mode if you need to use RHEL 8.1 version.
 
 2. Using Oracle Linux 8.8 with kernel version **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** might result in kernel panic. To mitigate this issue, you can take one of the following steps:
 
-    - Use a kernel version higher or lower than **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** on Oracle Linux 8.8 if you want to use eBPF as supplementary subsystem provider. The minimum kernel version for Oracle Linux is RHCK 3.10.0 and Oracle Linux UEK is 5.4.
-    - Switch to AuditD mode if you need to use the same kernel version
+   - Use a kernel version higher or lower than **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** on Oracle Linux 8.8 if you want to use eBPF as supplementary subsystem provider. The minimum kernel version for Oracle Linux is RHCK 3.10.0 and Oracle Linux UEK is 5.4.
+   - Switch to AuditD mode if you need to use the same kernel version
 
-```bash
-sudo mdatp config  ebpf-supplementary-event-provider  --value disabled
-```
+      ```bash
+      sudo mdatp config  ebpf-supplementary-event-provider  --value disabled
+      ```
 
-The following two sets of data help analyze potential issues and determine the most effective resolution options.
+   - The following two sets of data help analyze potential issues and determine the most effective resolution options.
 
-1. Collect a diagnostic package from the client analyzer tool by using the following instructions: [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md).
+      1. Collect a diagnostic package from the client analyzer tool by using the following instructions: [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md).
 
-2. Collect a debug diagnostic package when Defender for Endpoint is utilizing high resources by using the following instructions: [Microsoft Defender for Endpoint on Linux resources](linux-resources.md#collect-diagnostic-information).
+      2. Collect a debug diagnostic package when Defender for Endpoint is utilizing high resources by using the following instructions: [Microsoft Defender for Endpoint on Linux resources](linux-resources.md#collect-diagnostic-information).
+
+3. System hangs on Oracle Linux 7.9 running Defender for Linux when ksplice is used for live kernel patching. 
+
+    - Auto-install patching of ksplice simply adds a cron job to the endpoint.
+    - To mitigate the hang issue, you can create a cron job which will first stop the mdatp service, apply ksplice based patching, then start the service.  
+    - As kernel patching is few seconds activity so this will not have major exposure in terms of security.  
 
 #### Troubleshooting performance issues
 
-If you see increased resource consumption by Microsoft Defender on your endpoints, it's important to identify the process/mount-point/files that are causing most of the CPU/Memory utilization. You can then apply the necessary exclusions. After applying possible antivirusexclusions, if `wdavdaemon` (parent process) is still consuming the resources, use the ebpf-statistics command to get the top system call count:
+If you see increased resource consumption by Microsoft Defender on your endpoints, it's important to identify the process/mount-point/files that are causing most of the CPU/Memory utilization. You can then apply the necessary exclusions. After applying possible antivirus exclusions, if `wdavdaemon` (parent process) is still consuming the resources, use the ebpf-statistics command to get the top system call count:
 
-```Bash
+```bash
 sudo mdatp diagnostic  ebpf-statistics
 ```
 
-```Output
+```console
 Output
 Monitor 20 seconds
 Top file paths:
@@ -198,7 +209,7 @@ The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint o
 
 - Resource Efficiency: eBPF uses fewer resources, which helps maintain system stability even under heavy load conditions.
 
-- Scalability: eBPF’s architecture is more scalable, making it a better choice for environments with growing or complex workloads.
+- Scalability: eBPF's architecture is more scalable, making it a better choice for environments with growing or complex workloads.
 
 - Modern Technology: eBPF represents a modern, forward-looking technology that aligns with future Linux kernel developments, ensuring better long-term support.
 

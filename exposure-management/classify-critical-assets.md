@@ -6,16 +6,12 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 08/20/2024
+ms.date: 11/04/2024
 ---
 
 # Review and classify critical assets
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Prerequisites
 

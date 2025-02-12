@@ -27,6 +27,8 @@
        href: mail-flow-about.md
      - name: Microsoft Defender portal overview
        href: /defender-xdr/microsoft-365-defender-portal
+     - name: Integrate non-Microsoft security services with Microsoft 365
+       href: mdo-integrate-security-service.md
 
    - name: Evaluate
      items:
@@ -36,7 +38,9 @@
        href: trial-user-guide-defender-for-office-365.md
 
    - name: Deploy
-     items:
+     items: 
+     - name: Pilot and deploy Defender for Office 365
+       href: /defender-xdr/pilot-deploy-defender-office-365?toc=/defender-office-365/TOC.json&bc=/defender-office-365/breadcrumb/toc.json
      - name: Get started with Microsoft Defender for Office 365
        href: mdo-deployment-guide.md
      - name: Step 1 - Configure email authentication
@@ -110,6 +114,8 @@
      items:
        - name: Defender for Office 365 SecOps Guide
          href: mdo-sec-ops-guide.md
+       - name: Threat classification
+         href: mdo-threat-classification.md
        - name: Defender for Office 365 in Microsoft Teams
          href: mdo-support-teams-about.md
        - name: Security recommendations for priority accounts
@@ -240,6 +246,8 @@
              href: tenant-allow-block-list-files-configure.md
            - name: Allow or block URLs using the Tenant Allow/Block List
              href: tenant-allow-block-list-urls-configure.md
+           - name: Allow or block IPv6 addresses using the Tenant Allow/Block List
+             href: tenant-allow-block-list-ip-addresses-configure.md
          - name: Admin submissions
            href: submissions-admin.md
          - name: Create block sender lists
@@ -438,7 +446,7 @@
            items:
            - name: AIR overview
              href: air-about.md
-           - name: How automated investigation and response works
+           - name: AIR examples
              href: air-examples.md
          - name: Review and approve (or reject) pending actions
            href: air-review-approve-pending-completed-actions.md

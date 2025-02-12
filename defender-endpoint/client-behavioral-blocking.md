@@ -1,8 +1,8 @@
 ---
 title: Client behavioral blocking
 description: Client behavioral blocking is part of behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
-author: siosulli
-ms.author: siosulli
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.reviewer: shwetaj
 audience: ITPro
@@ -32,7 +32,7 @@ ms.date: 07/22/2024
 **Platform**
 - Windows
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Overview
 
@@ -46,7 +46,7 @@ Antivirus protection works best when paired with cloud protection.
 
 [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) can detect suspicious behavior, malicious code, fileless and in-memory attacks, and more on a device. When suspicious behaviors are detected, Microsoft Defender Antivirus monitors and sends those suspicious behaviors and their process trees to the cloud protection service. Machine learning differentiates between malicious applications and good behaviors within milliseconds, and classifies each artifact. In almost real time, as soon as an artifact is found to be malicious, it's blocked on the device.
 
-Whenever a suspicious behavior is detected, an [alert](alerts-queue.md) is generated and is visible while the attack was detected and stopped; alerts, such as an "initial access alert," are triggered and appear in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender) (formerly Microsoft Defender XDR).
+Whenever a suspicious behavior is detected, an [alert](alerts-queue.md) is generated and is visible while the attack was detected and stopped; alerts, such as an "initial access alert," are triggered and appear in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).
 
 Client behavioral blocking is effective because it not only helps prevent an attack from starting, it can help stop an attack that has begun executing. And, with [feedback-loop blocking](feedback-loop-blocking.md) (another capability of behavioral blocking and containment), attacks are prevented on other devices in your organization.
 

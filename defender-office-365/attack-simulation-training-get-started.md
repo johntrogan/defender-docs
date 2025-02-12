@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to use Attack simulation training to run simulated phishing and password attacks in their Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 3/21/2024
+ms.date: 02/04/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -33,7 +33,7 @@ In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses 
 This article explains the basics of Attack simulation training.
 
 Watch this short video to learn more about Attack simulation training.
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWMhvB]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
 > [!NOTE]
 > Attack simulation training replaces the old Attack Simulator v1 experience that was available in the Security & Compliance Center at **Threat management** \> **Attack simulator** or <https://protection.office.com/attacksimulator>.
@@ -49,22 +49,38 @@ Watch this short video to learn more about Attack simulation training.
 - For more information about the availability of Attack simulation training across different Microsoft 365 subscriptions, see [Microsoft Defender for Office 365 service description](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
+
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): You need membership in one of the following roles:
     - **Global Administrator**¹
     - **Security Administrator**
     - **Attack Simulation Administrators**²: Create and manage all aspects of attack simulation campaigns.
-    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
+    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later. 
+    - **Security Operator and Security Reader**³: View all aspects of attack simulation campaigns.
 
     > [!IMPORTANT]
     > ¹ Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
-    ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
+    >
+    > ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
+    >
+    >   Members of Attack Payload Author have the following limitations in attack simulation training:
+    >
+    >   - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
+    >   - They can't change global settings.
+    >   - They can't change content (for example, notifications), but they can change payloads.
+    >   - They can't view tenant simulation reports, aggregate reports, simulation automation records, or payload automation records.
+    >
+    > ³ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
+    >
+    >   - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
+    >   - They can't change global settings.
+    >   - They can't change content (for example, tenant payloads or notifications).
+    >   - They can access data through read APIs with user scope, but they can't use write APIs.
 
     Currently, [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) isn't supported.
 
 - There are no corresponding PowerShell cmdlets for Attack simulation training.
 
-- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, BRA, CAN, CHE, DEU, ESP, FRA, GBR, IND, ISR, ITA, JPN, KOR, LAM, MEX, NOR, POL, QAT, SGP, SWE, and ZAF.
+- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, BRA, CAN, CHE, DEU, ESP, FRA, GBR, IND, ISR, ITA, JPN, KOR, LAM, MEX, NOR, NZL, POL, QAT, SGP, SWE, TWN and ZAF.
 
   > [!NOTE]
   > NOR, ZAF, ARE and DEU are the latest additions. All features except reported email telemetry are available in these regions. We're working to enable the features and we'll notify customers as soon as reported email telemetry becomes available.
@@ -87,19 +103,21 @@ In Attack simulation training, multiple types of social engineering techniques a
 
 The following social engineering techniques are available:
 
-- **Credential Harvest**: An attacker sends the recipient a message that contains a URL. When the recipient clicks on the URL, they're taken to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
+- **Credential Harvest**: An attacker sends the recipient a message that contains a link<sup>\*</sup>. When the recipient clicks on the link, they're taken to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
 
-- **Malware Attachment**: An attacker sends the recipient a message that contains an attachment. When the recipient opens the attachment, arbitrary code (for example, a macro) is run on the user's device to help the attacker install additional code or further entrench themselves.
+- **Malware Attachment**: An attacker sends the recipient a message that contains an attachment. When the recipient opens the attachment, arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
 
-- **Link in Attachment**: This technique is a hybrid of a credential harvest. An attacker sends the recipient a message that contains a URL inside of an attachment. When the recipient opens the attachment and clicks on the URL, they're taken to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
+- **Link in Attachment**: This technique is a hybrid of a credential harvest. An attacker sends the recipient a message that contains a link inside of an attachment. When the recipient opens the attachment and clicks on the link, they're taken to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
 
-- **Link to Malware**: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint Online or Dropbox). When the recipient clicks on the URL, the attachment opens, and arbitrary code (for example, a macro) is run on the user's device to help the attacker install additional code or further entrench themselves.
+- **Link to Malware**<sup>\*</sup>: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint Online or Dropbox). When the recipient clicks on the link, the attachment opens, and arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
 
-- **Drive-by-url**: An attacker sends the recipient a message that contains a URL. When the recipient clicks on the URL, they're taken to a website that tries to run background code. This background code attempts to gather information about the recipient or deploy arbitrary code on their device. Typically, the destination website is a well-known website that has been compromised or a clone of a well-known website. Familiarity with the website helps convince the user that the link is safe to click. This technique is also known as a _watering hole attack_.
+- **Drive-by-url**<sup>\*</sup>: An attacker sends the recipient a message that contains a link. When the recipient clicks on the link, they're taken to a website that tries to run background code. This background code attempts to gather information about the recipient or deploy arbitrary code on their device. Typically, the destination website is a well-known website that has been compromised or a clone of a well-known website. Familiarity with the website helps convince the user that the link is safe to click. This technique is also known as a _watering hole attack_.
 
-- **OAuth Consent Grant**: An attacker creates a malicious Azure Application that seeks to gain access to data. The application sends an email request that contains a URL. When the recipient clicks on the URL, the consent grant mechanism of the application asks for access to the data (for example, the user's Inbox).
+- **OAuth Consent Grant**<sup>\*</sup>: An attacker creates a malicious Azure Application that seeks to gain access to data. The application sends an email request that contains a link. When the recipient clicks on the link, the consent grant mechanism of the application asks for access to the data (for example, the user's Inbox).
 
 - **How-to Guide**: A teaching guide that contains instructions for users (for example, how to report phishing messages).
+
+<sup>\*</sup> The link can be a URL or a QR code.
 
 The URLs that are used by Attack simulation training are listed in the following table:
 
@@ -171,11 +189,13 @@ _End user notifications_ in the simulation send periodic reminders to users (for
 
 ### Payloads
 
-Although Attack simulation contains many built-in payloads for the available social engineering techniques, you can create custom payloads to better suit your business needs, including [copying and customizing an existing payload](attack-simulation-training-payloads.md#copy-payloads). You can create payloads at any time before you create the simulation or during the creation of the simulation. To create payloads, see [Create a custom payload for Attack simulation training](attack-simulation-training-payloads.md#create-payloads).
+Although Attack simulation training contains many built-in payloads for the available social engineering techniques, you can create custom payloads to better suit your business needs, including [copying and customizing an existing payload](attack-simulation-training-payloads.md#copy-payloads). You can create payloads at any time before you create the simulation or during the creation of the simulation. To create payloads, see [Create a custom payload for Attack simulation training](attack-simulation-training-payloads.md#create-payloads).
 
 In simulations that use **Credential Harvest** or **Link in Attachment** social engineering techniques, _login pages_ are part of the payload that you select. The login page is the web page where users enter their credentials. Each applicable payload uses a default login page, but you can change the login page that's used. You can select from built-in login pages, custom login pages that you already created, or you can create a new login page to use during the creation of the simulation or the payload. To create login pages, see [Login pages in Attack simulation training](attack-simulation-training-login-pages.md).
 
 The best training experience for simulated phishing messages is to make them as close as possible to real phishing attacks that your organization might experience. What if you could capture and use harmless versions of real-world phishing messages that were detected in Microsoft 365 and use them in simulated phishing campaigns? You can, with _payload automations_ (also known as _payload harvesting_). To create payload automations, see [Payload automations for Attack simulation training](attack-simulation-training-payload-automations.md).
+
+Attack simulation training also supports using QR codes in payloads. You can choose from the list of built-in QR code payloads, or you can create custom QR code payloads. For more information, see [QR code payloads in Attack simulation training](attack-simulation-training-payloads.md#qr-code-payloads).
 
 ### Reports and insights
 
@@ -218,6 +238,17 @@ But, sometimes you don't want to wait for users to take correct or incorrect act
 
 - **Training campaigns**: A Training campaign is a training-only assignment for the targeted users. You can directly assign training without putting users through the test of a simulation. Training campaigns make it easy to conduct learning sessions like monthly cybersecurity awareness training. For more information, see [Training campaigns in Attack simulation training](attack-simulation-training-training-campaigns.md).
 
+  > [!TIP]
+  > [Training modules](attack-simulation-training-training-modules.md) are used in Training campaigns, but you can also use Training modules when you [assign training](attack-simulation-training-simulations.md#assign-training) in regular simulations.
+
 - **How-to Guides in simulations**: Simulations based on the **How-to Guide** social engineering technique don't attempt to test users. A How-to guide is a lightweight learning experience that users can view directly in their Inbox. For example, the following built-in **How-to Guide** payloads are available, and you can create your own (including [copying and customizing an existing payload](attack-simulation-training-payloads.md#copy-payloads)):
   - **Teaching guide: How to report phishing messages**
   - **Teaching Guide: How to recognize and report QR phishing messages**
+
+> [!TIP]
+> Attack simulation training provides the following built-in training options for QR code-based attacks:
+>
+> - Training modules:
+>   - **Malicious digital QR codes**
+>   - **Malicious printed QR codes**
+> - How-to Guides in simulations: **Teaching Guide: How to recognize and report QR phishing messages**

@@ -8,7 +8,7 @@ manager: deniseb
 audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to
-ms.date: 8/7/2023
+ms.date: 01/24/2025
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -32,7 +32,7 @@ appliesto:
 > [!NOTE]
 > If you're an admin in a Microsoft 365 organization with Exchange Online mailboxes, we recommend that you use the **Submissions** page in the Microsoft Defender portal. For more information, see [Use Admin Submission to submit suspected spam, phish, URLs, and files to Microsoft](submissions-admin.md).
 
-The Microsoft Report Message and Report Phishing add-ins for Outlook and inbuild report button on Outlook on the web (formerly known as Outlook Web App or OWA), new Outlook for Windows, legacy Outlook for Windows makes it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
+The Microsoft Report Message and Report Phishing add-ins for Outlook and the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) make it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
 
 Microsoft uses these user-reported messages to improve the effectiveness of email protection technologies. For example, suppose that people are reporting many messages using the Report Phishing add-in. This information surfaces in the Security Dashboard and other reports. Your organization's security team can use this information as an indication that anti-phishing policies might need to be updated.
 
@@ -66,15 +66,10 @@ After the add-in is installed and enabled, users see the following icons based o
 
 - **Outlook on the web**:
 
-  - <u>The Report Message add-in</u>:
+  - <u>The Report Message or Report Phishing icons in Outlook on the web (formerly known as Outlook Web App or OWA)</u>:
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="media/owa-report-message-icon.png" alt-text="The Report Message add-in icon in Outlook on the web." lightbox="media/owa-report-message-icon.png":::
-
-  - <u>The Report Phishing add-in</u>:
-
-    > [!div class="mx-imgBorder"]
-    > :::image type="content" source="media/OWA-ReportPhishing.png" alt-text="The Report Phishing add-in icon in Outlook on the web." lightbox="media/OWA-ReportPhishing.png":::
+    > :::image type="content" source="media/owa-report-message-icon.png" alt-text="The Report Message or Report Phishing add-in icons in Outlook on the web." lightbox="media/owa-report-message-icon.png":::
 
 ## What do you need to know before you begin?
 
@@ -185,7 +180,7 @@ Install and configure the Report Message or Report Phishing add-ins for the orga
 
 ### Get the Report Message or the Report Phishing add-ins for your Microsoft 365 GCC or GCC High organization
 
-Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High need to use the steps in this section to get the Report Message or Report Phishing add-ins for their organizations. These steps apply to Outlook and Outlook on the web (formerly known as Outlook Web App or OWA) and don't apply to Outlook for iOS and Android.
+Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High need to use the steps in this section to get the Report Message or Report Phishing add-ins for their organizations. These steps apply to Outlook and Outlook on the web and don't apply to Outlook for iOS and Android.
 
 > [!NOTE]
 > It could take up to 24 hours for the add-in to appear in your organization.

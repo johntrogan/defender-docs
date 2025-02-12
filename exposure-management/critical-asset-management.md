@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 08/20/2024
+ms.date: 11/04/2024
 ---
 
 # Overview of critical asset management
@@ -15,10 +15,6 @@ In [Microsoft Security Exposure Management](microsoft-security-exposure-manageme
 
 - Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions. Critical asset identification contributes to availability and business continuity.
 - You can prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets first.
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Predefined classifications
 

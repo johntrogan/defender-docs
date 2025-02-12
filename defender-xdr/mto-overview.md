@@ -2,23 +2,23 @@
 title: Microsoft Defender multitenant management
 description: Learn about multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Microsoft unified security operations platform.
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - highpri
-  - tier1
-  - usx-security
+- m365-security
+- highpri
+- tier1
+- usx-security
 ms.topic: conceptual
-ms.date: 08/19/2024
+ms.date: 01/27/2025
 appliesto:
-  - Microsoft Defender XDR
-  - Microsoft Sentinel in the Microsoft Defender portal
-  - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender for Office 365 P2
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender for Office 365 P2
 ---
 
 # Microsoft Defender multitenant management
@@ -37,6 +37,12 @@ For more information, see:
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
 - [Multitenant organizations documentation](/azure/active-directory/multi-tenant-organizations/)
 
+Multitenant management is also available to US government customers. Refer to the table below for specific scenarios for GCC, GCC High, DoD, and Commercial customers.
+
+| Scenario | Availability |
+| ------ | ------ |
+|Multitenant management | Available to all GCC, GCC High, DoD, and Commercial customers.|
+|Cross cloud collaboration| - Both DoD and GCC High customers can manage tenants in each other's clouds. </br></br> - GCC customers can manage tenants in the Commercial cloud. |
 
 ## Benefits of multitenant management
 

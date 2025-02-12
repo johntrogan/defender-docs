@@ -6,16 +6,12 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 08/20/2024
+ms.date: 11/04/2024
 ---
 
 # Review security recommendations
 
 This article describes how to work with security recommendations in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
-
-Security Exposure Management is currently in public preview.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Prerequisites
 
@@ -30,17 +26,16 @@ Security Exposure Management is currently in public preview.
 
 1. Sort the recommendations by any of the headings or filter them based on your task needs. Sorting includes all of the headers:
     - **Name** - Name.
-    - **Compliance state** - Compliant or not compliant.
+    - **State** - Compliant or not compliant.
     - **Impact** - High, low, or medium impact.
+    - **Workload** - Which workload the recommendations relate to.
+    - **Domain** - Device, apps, data, or identity.
     - **Last calculated** - Last time the recommendation was calculated.
     - **Last state change** - Last time the recommendation state changed.
     - **Related initiatives** - The number of related initiatives.
     - **Related metrics** - The number of related metrics.
-    - **Source** - The assessment standard source.
-    - **Workload** - Which workload the recommendations relate to.
-    - **Domain** - Device, apps, data, or identity.
-
-1. Filter recommendations by state, source, impact, workload, and domain.
+   
+1. Filter recommendations by state, impact, workload, and domain.
 
 1. Select a recommendation to view and review details.
 

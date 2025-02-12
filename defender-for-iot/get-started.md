@@ -17,7 +17,7 @@ One trial license is available per tenant. The trial license is limited to a max
 
 When you finish setting up the trial license, you can continue to [set up a site](set-up-sites.md) to monitor your OT devices at the production site level.
 
-[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+[!INCLUDE [defender-iot-license-preview](includes/defender-for-iot-license-notice.md)]
 
 ## Add a trial license
 

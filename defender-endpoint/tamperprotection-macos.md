@@ -2,8 +2,8 @@
 title: Protect macOS security settings with tamper protection
 description: Use tamper protection to prevent malicious apps from changing important macOS security settings.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -27,14 +27,14 @@ ms.date: 08/01/2024
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-rbac-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Tamper protection in macOS helps prevent unwanted changes to security settings from being made by unauthorized users. Tamper protection helps prevent unauthorized removal of Microsoft Defender for Endpoint on macOS. This capability also helps important security files, processes, and configuration settings from being tampered.
 
 > [!IMPORTANT]
-> Starting March of 2023, Microsoft Defender for Endpoint on macOS respects the selection for tamper protection applied via the global tamper protection switch under advanced settings in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). You can choose to enforce (block/audit/disable) your own macOS tamper protection settings by using a Mobile Device Management (MDM) solution such as Intune or JAMF (recommended). If the tamper protection setting was not enforced via MDM, a local administrator can continue to manually change the setting with the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
+> Starting March of 2023, Microsoft Defender for Endpoint on macOS respects the selection for tamper protection applied via the global tamper protection switch under advanced settings in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). You can choose to enforce (block/audit/disable) your own macOS tamper protection settings by using a Mobile Device Management (MDM) solution such as Intune or JAMF (recommended). If the tamper protection setting wasn't enforced via MDM, a local administrator can continue to manually change the setting with the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
 
-You can set tamper protection in the following modes:
+You can set the "tamper protection" setting in the following modes:
 
 |Article|Description|
 |---|---|
@@ -65,17 +65,20 @@ Here's an example of a system message in response to a blocked action:
 
 ![Screenshot of operation blocked message.](media/operation-blocked.png)
 
-You can configure the tamper protection mode by providing the mode name as enforcement-level.
+You can configure the "tamper protection" mode by providing the mode name as enforcement-level.
 
 > [!NOTE]
 >
-> - The mode change will apply immediately.
-> - If you used JAMF during the initial configuration, then you'll need to update the configuration using JAMF as well.
+> - The mode change applies immediately.
+> - If you used JAMF during the initial configuration, then you need to update the configuration using JAMF as well.
 
 ## Before you begin
 
+Make sure that the following requirements are met:
+
 - Supported macOS versions: Big Sur (11), or later
 - Minimum required version for Defender for Endpoint: `101.70.19`
+- You have an appropriate role assigned (see [Create and manage roles for role-based access control](user-roles.md))
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -87,7 +90,7 @@ You can configure the tamper protection mode by providing the mode name as enfor
 - Ensure that Defender for Endpoint has **Full Disk Access** authorization.
 
    > [!NOTE]
-   > Both having SIP enabled and all configuration done via MDM is not mandatory, but required for a fully secured device, as otherwise a local admin still can make tampering changes that macOS manages. For example, enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md), will eliminate the risk of a Global Administrator revoking **Full Disk Access** Authorization by a local admin.
+   > Both having SIP enabled and all configuration done via MDM is not mandatory, but is required for a fully secured device. Otherwise, a local administrator can make tampering changes that macOS manages. For example, enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md), will eliminates the risk of a Security Administrator revoking **Full Disk Access** Authorization by a local admin.
 
 ## Configure tamper protection on macOS devices
 
@@ -134,7 +137,7 @@ sudo mdatp config tamper-protection enforcement-level --value block
 ![Image of manual configuration command](media/manual-config-cmd.png)
 
 > [!NOTE]
-> You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Global Administrator will be able to undo it.
+> You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Security Administrator will be able to undo it.
 
 2. Verify the result.
 
@@ -409,14 +412,14 @@ As an example, macOS can upgrade Defender's package, if tamper protection verifi
 There are other exclusions as well.
 For example, macOS MDM process can replace Microsoft's Defender's managed configuration files.
 
-There are situations when a Global Administrator needs to restart Defender on all or some managed devices.
+There are situations when a Security Administrator needs to restart Defender on all or some managed devices.
 Typically it's done by creating and running a JAMF's policy that runs a script on remote devices (or similar operations for other MDM vendors.)
 
 In order to avoid marking those policy-initiated operations, Microsoft Defender detects those MDM policy processes for JAMF and Intune, and permits tampering operations from them. At the same time, tamper protection blocks the same script from restarting Microsoft Defender, if it's started from a Terminal locally.
 
 However, those policy running processes are vendor specific.
 While Microsoft Defender provides built-in exclusions for JAMF and Intune, it can't provide those exclusions for all possible MDM vendors.
-Instead, a Global Administrator can add their own exclusions to tamper protection.
+Instead, a Security Administrator can add their own exclusions to tamper protection.
 Exclusions can be done only through MDM profile, not local configuration.
 
 To do that, you need to first figure out the path to the MDM helper process that runs policies. You can do it either by following the MDM vendor's documentation. You can also initiate tampering with a test policy, get an alert in the Security Portal, inspect the hierarchy of processes that initiated the attack, and pick the process that looks like an MDM helper candidate.
@@ -497,7 +500,7 @@ Configure [preferences](mac-preferences.md#exclusions), for example for JAMF:
 </plist>
 ```
 
-Note, that excluding a scripting interpreter (like Ruby from the example above) instead of a compiled executable isn't secure, as it can run *any script*, not just the one that a Global Administrator uses.
+Note, that excluding a scripting interpreter (like Ruby from the example above) instead of a compiled executable isn't secure, as it can run *any script*, not just the one that a Security Administrator uses.
 
 To minimize the risk, we recommend using extra `args` to allow only specific scripts to run with scripting interpreters.
 In the example above, only `/usr/bin/ruby /usr/local/bin/global_mdatp_restarted.rb` is permitted to restart Defender.
@@ -530,7 +533,7 @@ configuration_is_managed                    : false
 
 - `tamper_protection` is the *effective* mode. If this mode is the mode you intended to use, then you're all set.
 - `configuration_source` indicates how tamper protection enforcement level is set. It must match how you configured tamper protection. (If you set its mode through a managed profile, and `configuration_source` shows something different, then you most probably misconfigured your profile.)
-  - `mdm` - it's configured through a managed profile. Only a Global Administrator can change it with an update to the profile!
+  - `mdm` - it's configured through a managed profile. Only a Security Administrator can change it with an update to the profile!
   - `local` - it's configured with `mdatp config` command
   - `portal` - default enforcement level set in Security Portal
   - `defaults` - not configured, the default mode is used

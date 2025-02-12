@@ -37,7 +37,7 @@ On an ongoing basis, you need to identify the highest priority incidents for ana
 - [Prioritizing](incident-queue.md) to determining the highest priority incidents through filtering and sorting of the incident queue. This is also known as triaging.
 - [Managing](manage-incidents.md) incidents by modifying their title, assigning them to an analyst, adding tags and comments, and when resolved, classifying them.
 
-For each incident, use your incident response workflow to analyze the incident and its alerts and data to contain the attack, eradicate the threat, recover from the attack, and learn from it. See [this example](incidents-overview.md#example-incident-response-workflow-for-microsoft-365-defender) for Microsoft Defender XDR.
+For each incident, use your incident response workflow to analyze the incident and its alerts and data to contain the attack, eradicate the threat, recover from the attack, and learn from it.
 
 ## Automated investigation and remediation
 
@@ -51,7 +51,12 @@ For more information, see [Automated investigation and response in Microsoft Def
 
 It's not enough to respond to attacks as they occur. For extended, multi-phase attacks such as ransomware, you must proactively search for the evidence of an attack in progress and take action to stop it before it completes.
 
-Advanced hunting is a query-based threat hunting tool in Microsoft Defender XDR that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. This flexible access to the Microsoft Defender XDR data enables unconstrained hunting for both known and potential threats.
+Advanced hunting is a query-based threat hunting tool in Microsoft Defender XDR that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. 
+
+> [!TIP]
+> You can extend the 30 days of raw data of advanced hunting using [Microsoft XDR Streaming API](/defender-xdr/streaming-api) and [Microsoft Defender for Endpoint Streaming API](/defender-endpoint/api/raw-data-export).
+
+This flexible access to the Microsoft Defender XDR data enables unconstrained hunting for both known and potential threats.
 
 You can use the same threat hunting queries to build custom detection rules. These rules run automatically to check for and then respond to suspected breach activity, misconfigured machines, and other findings.
 

@@ -1,9 +1,9 @@
 ---
 title: Configure general Defender for Endpoint settings 
-description: Use the settings page to configure general settings, permissions, apis, and rules.
+description: Use the settings page to configure general settings, permissions, APIs, and rules.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -26,7 +26,7 @@ ms.date: 01/19/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-prefsettings-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Use the **Settings > Endpoints** menu to modify general settings, advanced features, enable the preview experience, email notifications, and the custom threat intelligence feature.
 
@@ -35,7 +35,7 @@ Use the **Settings > Endpoints** menu to modify general settings, advanced featu
 Topic | Description
 :---|:---
 General settings | Modify your general settings that were previously defined as part of the onboarding process.
-Permissions | Manage portal access using RBAC as well as device groups.
+Permissions | Manage portal access using RBAC and device groups.
 APIs | Enable the threat intel and SIEM integration.
 Rules | Configure suppressions rules and automation settings.
 Device management | Onboard and offboard devices.

@@ -2,8 +2,8 @@
 title: Troubleshoot Microsoft Defender for Endpoint onboarding issues
 description: Troubleshoot issues that might arise during the onboarding of devices or to the Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 05/02/2024
+ms.date: 01/15/2025
 ---
 
 # Troubleshoot Microsoft Defender for Endpoint onboarding issues
@@ -24,12 +24,12 @@ ms.date: 05/02/2024
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+
 - Windows Server 2012 R2
 - Windows Server 2016
 - [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
 You might need to troubleshoot the Microsoft Defender for Endpoint onboarding process if you encounter issues.
 This page provides detailed steps to troubleshoot onboarding issues that might occur when deploying with one of the deployment tools and common errors that might occur on the devices.
@@ -85,6 +85,7 @@ If the script fails and the event is an error, you can check the event ID in the
 |`10`|Onboarding data couldn't be written to registry|Check the permissions on the registry, specifically <p> `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`. <p> Verify that the script has been run as an administrator.|
 |`15`|Failed to start SENSE service|Check the service health (`sc query sense` command). Make sure it's not in an intermediate state (*'Pending_Stopped'*, *'Pending_Running'*) and try to run the script again (with administrator rights). <p> If the device is running Windows 10, version 1607 and running the command `sc query sense` returns `START_PENDING`, reboot the device. If rebooting the device doesn't address the issue, upgrade to KB4015217 and try onboarding again.|
 |`15`|Failed to start SENSE service|If the message of the error is: System error 577  or error 1058 has occurred, you need to enable the Microsoft Defender Antivirus ELAM driver, see [Ensure that Microsoft Defender Antivirus is not disabled by a policy](#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy) for instructions.|
+|`15`|Failed to start SENSE service|The SENSE Feature on Demand (FoD) may not be installed. To determine whether it is installed, enter the following command from an Admin CMD/PowerShell prompt: `DISM.EXE /Online /Get-CapabilityInfo /CapabilityName:Microsoft.Windows.Sense.Client~~~~` If it returns an error or the state is not "Installed," then the SENSE FoD must be installed. See [Available Features on Demand: SENSE Client for Microsoft Defender for Endpoint](/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod?view=windows-11&preserve-view=true) for installation instructions.|
 |`30`|The script failed to wait for the service to start running|The service could have taken more time to start or has encountered errors while trying to start. For more information on events and errors related to SENSE, see [Review events and errors using Event viewer](event-error-codes.md).|
 |`35`|The script failed to find needed onboarding status registry value|When the SENSE service starts for the first time, it writes onboarding status to the registry location <p> `HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status`. <p> The script failed to find it after several seconds. You can manually test it and check if it's there. For more information on events and errors related to SENSE, see [Review events and errors using Event viewer](event-error-codes.md).|
 |`40`|SENSE service onboarding status isn't set to **1**|The SENSE service has failed to onboard properly. For more information on events and errors related to SENSE, see [Review events and errors using Event viewer](event-error-codes.md).|
@@ -298,10 +299,7 @@ If the verification fails and your environment is using a proxy to connect to th
    >   
    > If Microsoft Defender Antivirus is in passive mode, these drivers are set to manual (`0`).
 
-## Troubleshoot onboarding issues 
-
-> [!NOTE]
-> The following troubleshooting guidance is only applicable for Windows Server 2016 and earlier versions of Windows Server.
+## Troubleshoot onboarding issues on Windows Server 2016 and earlier versions of Windows Server.
 
 If you encounter issues while onboarding a server, go through the following verification steps to address possible issues.
 

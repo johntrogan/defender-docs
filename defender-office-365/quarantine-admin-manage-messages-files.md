@@ -18,10 +18,11 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint Online, OneDrive for Business, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 08/07/2024
+ms.date: 02/11/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
 # Manage quarantined messages and files as an admin
@@ -42,7 +43,7 @@ You view and manage quarantined messages in the Microsoft Defender portal or in 
 
 Watch this short video to learn how to manage quarantined messages as an admin.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGPF]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=038517f8-6eb7-46b8-b6cc-034a2c45ae06]
 
 [!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
@@ -90,6 +91,13 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Em
 
 By default, only the first 100 entries are shown until you scroll down to the bottom of the list, which loads more results.
 
+> [!TIP]
+> For answers to frequently asked questions about quarantined messages, select :::image type="icon" source="media/m365-cc-sc-refresh-icon.png" border="false"::: **Resolution to common issues** at the top of the page. Or, see the following articles:
+>
+> - [Quarantined email messages in EOP and Defender for Office 365](quarantine-about.md)
+> - [Quarantine policies](quarantine-policies.md)
+> - [Use quarantine notifications to release and report quarantined messages](quarantine-quarantine-notifications.md)
+
 On the **Email** tab, you can decrease the vertical spacing in the list by clicking :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal** and then selecting :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
 You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
@@ -106,6 +114,10 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **None**
   - **Message sender is blocked by recipient settings**
   - **Message sender is blocked by administrator settings**
+
+  > [!TIP]
+  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+
 - **Released by**<sup>\*</sup>
 - **Message ID**
 - **Policy name**
@@ -149,9 +161,12 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Blocked sender**: One of the following values:
   - **Don't show blocked senders** (default)
   - **Show all senders**
+
+  > [!TIP]
+  > If a sender is blocked and **Don't show blocked senders** is selected, messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+
 - **Release status**: Select one or more of the following values
   - **Needs review**
-  - **Approved**
   - **Denied**
   - **Release requested**
   - **Released**
@@ -215,7 +230,7 @@ In the details flyout that opens, the following information is available:
   - **Not yet released to**, **Released to**, and/or **Released by**: Depending on the state of the message, one or more of the following values might be available:
     - **Not yet released to**: Email addresses of recipients that the message hasn't been released to.
     - **Released to**: Email addresses of recipients that the message has been released to.
-    - **Released by**: The admin that released the message using the format: `<email address of admin who released the message> released for <recipient>`. For example, `admin@contoso.onmicrosoft.com released to laura@contoso.onmicrosoft.com`.
+    - **Released by**: The admin that released the message using the format: `<email address of admin who released the message> released for <recipient>`. For example, `admin@contoso.onmicrosoft.com released to laura@contoso.onmicrosoft.com`. If the end user releases the message, it shows the end user's SMTP address. If the release is carried out by the system, it says, "System released". If the release is not carried by an admin, an end user, or the system, it defaults to "Admin."
 
 The rest of the details flyout contains the **Delivery details**, **Email details**, **URLs**, and **Attachments** sections that are part of the _Email summary panel_. For more information, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
@@ -280,7 +295,7 @@ If you don't release or remove a message, it's automatically deleted from quaran
 >
 > - Admins can use [message trace](message-trace-defender-portal.md) to determine if a released message was delivered to the recipient's Inbox.
 >
-> - Selecting **Move to mailbox folder** \> **Inbox** on quarantined messages in :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** from other Defender for Office 365 features (for example, Explorer (Threat Explorer) or the Email entity page) also allows you to release messages from quarantine. For more information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+> - Selecting **Move or delete** \> **Inbox** on quarantined messages in :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** from other Defender for Office 365 features (for example, Explorer (Threat Explorer) or the Email entity page) also allows you to release messages from quarantine. For more information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 After you select the message, use either of the following methods to release it:
 
@@ -293,14 +308,14 @@ In the **Release email to recipient inboxes** flyout that opens, configure the f
   - **Release to all recipients**
   - **Release to one or more of the original recipients of the email**: Enter the recipients in the **Recipients** box that appears.
 
-- **Send a copy of this message to another recipient**: If you select this option, select one or more recipients by clicking in the **Recipients** box that appears.
+- **Send a copy of this message to another recipient**: If you select this option, select one or more recipients by clicking in the **Recipients** box that appears. Select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: to remove an entry.
 
 - **Submit the message to Microsoft to improve detection**: If you select this option, the erroneously quarantined message is reported to Microsoft as a false positive. Depending on the results of their analysis, the service-wide spam filter rules might be adjusted to allow the message through.
 
   Selecting this option reveals the following options:
 
   - **Allow this message**: If you select this option, allow entries are added to the [Tenant Allow/Block List](tenant-allow-block-list-about.md) for the sender and any related URLs or attachments in the message. The following options also appear:
-    - **Remove entry after**: The default value is **30 days**, but you can also select **1 day**, **7 days**, or a **Specific date** that's less than 30 days.
+    - **Remove entry after**: The default value is **45 days after last used date**, but you can also select **1 day**, **7 days**, **30 days**, or a **Specific date** that's less than 30 days.
     - **Allow entry note**: Enter an optional note that contains additional information.
 
 When you're finished on the **Release email to recipient inboxes** flyout, select **Release message**.
@@ -320,12 +335,16 @@ If you don't release or remove a message, it's automatically deleted from quaran
 
 After you select the message, use either of the following methods to approve or deny the release request:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Approve release** or :::image type="icon" source="media/m365-cc-sc-deny-icon.png" border="false"::: **Deny**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** and then select **Approve release** or :::image type="icon" source="media/m365-cc-sc-deny-icon.png" border="false"::: **Deny release**.
+- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release** or :::image type="icon" source="media/m365-cc-sc-deny-icon.png" border="false"::: **Deny**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release email** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-deny-icon.png" border="false"::: **Deny release**.
 
-If you select **Approve release**, an **Approve release** flyout opens where you can review information about the message. To approve the request, select **Approve release**. A **Release approved** flyout opens where you can select the link to learn more about releasing messages. Select **Done** when you're finished on the **Release approved** flyout. Back on the **Email** tab, the **Release status** value of the message changes to **Approved**.
+If you select **Release** or **Release email**, a **Release email to recipient inboxes** flyout opens. The options are the same as described in [Release quarantined email](#release-quarantined-email).
 
-If you select **Deny**, a **Deny release** flyout opens where you can review information about the message. To deny the request, select **Deny release**. A **Release denied** flyout opens where you can select the link to learn more about releasing messages. Select **Done** when you're finished on the **Release denied** flyout. Back on the **Email** tab, the **Release status** value of the message changes to **Denied**.
+After you release the message, the **Release status** value of the message changes to **Released** on the **Email** tab.
+
+If you select **Deny** or **Deny release**, a **Deny release** flyout opens where you can review information about the message. When you select **Deny release**, a **Release denied** flyout opens where you can select the link to learn more about releasing messages. Select **Done** when you're finished on the **Release denied** flyout.
+
+Back on the **Email** tab, the **Release status** value of the message changes to **Denied**.
 
 > [!TIP]
 > You can deny release for all recipients only. You can't deny release for specific recipients.
@@ -373,9 +392,9 @@ Use :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false":
 
 Select the **Microsoft Message Header Analyzer** link to analyze the header fields and values in depth. Paste the message header into the **Insert the message header you would like to analyze** section (CTRL+V or right-click and choose **Paste**), and then select **Analyze headers**.
 
-#### Report email to Microsoft for review from quarantine
+#### Submit email to Microsoft for review from quarantine
 
-After you select the message, use either of the following methods to report the message to Microsoft for analysis:
+After you select the message, use either of the following methods to submit the message to Microsoft for analysis:
 
 - **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit for review**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit for review**.
@@ -392,7 +411,7 @@ In the **Submit to Microsoft for analysis** flyout that opens, configure the fol
 
   - **I've confirmed it's clean** (default): Select this option if you're sure that the message is clean, and then select **Next**. Then the following settings are available:
     - **Allow this email**: If you select this option, allow entries are added to the [Tenant Allow/Block List](tenant-allow-block-list-about.md) for the sender and any related URLs or attachments in the message. The following options also appear:
-    - **Remove entry after**: The default value is **30 days**, but you can also select **1 day**, **7 days**, or a **Specific date** that's less than 30 days.
+    - **Remove entry after**: The default value is **45 days after last used date**, but you can also select **1 day**, **7 days**, **30 days**, or a **Specific date** that's less than 30 days.
     - **Allow entry note**: Enter an optional note that contains additional information.
 
   - **It appears clean**: Select this option if you're unsure and you want a verdict from Microsoft.
@@ -493,19 +512,21 @@ In organizations with Microsoft Defender for Office 365 (add-on licenses or incl
 
 When you select up to 100 quarantined messages on the **Email** tab by selecting the check boxes next to the first column, the following bulk actions are available on the **Email** tab (depending on the **Release status** values of the messages that you selected):
 
-- [Release quarantined email](#release-quarantined-email)
+- [Release quarantined email messages](#release-quarantined-email):
+  - Not available for messages with the **Release status** value **Released**.
+  - [Approve user release requests](#approve-or-deny-release-requests-from-users-for-quarantined-email) if the **Release status** value of the messages is **Released requested**.
 
-  The only available options to select for bulk actions are **Send a copy of this message to other recipients in your organization** and **Send the message to Microsoft to improve detection (false positive)**.
+  The only available options to select for bulk actions are **Send a copy of this message to other recipients** and **Send the message to Microsoft to improve detection (false positive)**.
 
 - [Approve or deny release requests from users for quarantined email](#approve-or-deny-release-requests-from-users-for-quarantined-email)
 
 - [Delete email from quarantine](#delete-email-from-quarantine)
 
-- [Report email to Microsoft for review from quarantine](#report-email-to-microsoft-for-review-from-quarantine)
+- [Submit email messages to Microsoft for review](#submit-email-to-microsoft-for-review-from-quarantine)
 
   The only available options to select for bulk actions are **Allow emails with similar attributes** and the related **Remove allow entry after** and **Allow entry note** options.
 
-- [Download email from quarantine](#download-email-from-quarantine)
+- [Download email messages from quarantine](#download-email-from-quarantine)
 
 :::image type="content" source="media/quarantine-message-bulk-actions.png" alt-text="Screenshot of the available actions on the Email tab of the Quarantine page after you select the check box of multiple quarantined messages." lightbox="media/quarantine-message-bulk-actions.png":::
 
@@ -629,7 +650,10 @@ If you don't release or delete the file from quarantine, the file is removed fro
 
 After you select the file, select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release file** in the file details flyout that opens.
 
-In the **Release files and report them to Microsoft** flyout that opens, view the file details in the **Report files to Microsoft for analysis** section, decide whether to select **Report files to Microsoft for analysis**, and then select **Release**.
+In the **Release files and report them to Microsoft** flyout that opens, view the file details in the **Release the following files** section, and then select **Release**.
+
+> [!TIP]
+> Currently, you can't report quarantined files to Microsoft as you release them.
 
 In the **Files have been released** flyout that opens, select **Done**.
 
@@ -786,12 +810,12 @@ This action isn't available for Teams messages that have already been released (
 
 If you don't release or remove a message, it's automatically deleted from quarantine after the date shown in the **Expires** column.
 
-After you select the message, use either of the following methods to release it:
+After you select the message, use either of the following methods to release it to all chat participants:
 
 - **On the Teams messages tab**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
 
-In the **Release to all chat participants** flyout that opens, decide whether to select **Submit the message to Microsoft to improve detection (false positive)**, and then select **Release**.
+In the **Release message to your Teams app** flyout that opens, decide whether to select **Submit the message to Microsoft to improve detection (false positive)**, and then select **Release**.
 
 #### Delete Teams messages from quarantine
 
@@ -818,9 +842,9 @@ In the flyout that opens, choose one of the following tabs:
 - **Source**: Shows the HTML version of the message body with all links disabled.
 - **Plain text**: Shows the message body in plain text.
 
-#### Report Teams messages to Microsoft for review from quarantine
+#### Submit Teams messages to Microsoft for review from quarantine
 
-After you select the message, use either of the following methods to report the message to Microsoft for analysis:
+After you select the message, use either of the following methods to submit the message to Microsoft for analysis:
 
 - **On the Teams messages tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit for review**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit for review**.
@@ -851,7 +875,7 @@ When you select multiple quarantined messages on the **Teams messages** tab by s
 
 - [Release quarantined Teams messages](#release-quarantined-teams-messages)
 - [Delete Teams messages from quarantine](#delete-teams-messages-from-quarantine)
-- [Report Teams messages to Microsoft for review from quarantine](#report-teams-messages-to-microsoft-for-review-from-quarantine)
+- [Submit Teams messages to Microsoft for review from quarantine](#submit-teams-messages-to-microsoft-for-review-from-quarantine)
 - [Download Teams messages from quarantine](#download-teams-messages-from-quarantine)
 
 :::image type="content" source="media/quarantine-teams-bulk-action.png" alt-text="Screenshot of the available actions on the Teams messages tab of the Quarantine page after you select multiple quarantined Teams messages." lightbox="media/quarantine-teams-bulk-action.png":::

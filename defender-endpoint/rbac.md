@@ -2,8 +2,8 @@
 title: Use role-based access control to grant fine-grained access to Microsoft Defender portal
 description: Create roles and groups within your security operations to grant access to the portal.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -29,11 +29,11 @@ ms.date: 06/26/2024
 - Microsoft Entra ID
 - Office 365
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-rbac-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Using role-based access control (RBAC), you can create roles and groups within your security operations team to grant appropriate access to the  portal. Based on the roles and groups you create, you have fine-grained control over what users with access to the portal can see and do.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bJ2a]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c9903800-3d26-4b30-bd0b-fed00dfc6a5c]
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -66,9 +66,9 @@ To implement role-based access, you'll need to define admin roles, assign corres
 Before using RBAC, it's important that you understand the roles that can grant permissions and the consequences of turning on RBAC.
 
 > [!WARNING]
-> Before enabling the feature, it's important that you have a Global Administrator role or Security Administrator role in Microsoft Entra ID and that you have your Microsoft Entra groups ready to reduce the risk of being locked out of the portal.
+> Before enabling the feature, it's important that you have an appropriate role, such as Security Administrator assigned in Microsoft Entra ID, and that you have your Microsoft Entra groups ready to reduce the risk of being locked out of the portal.
 
-When you first sign in to the Microsoft Defender portal, you're granted either full access or read only access. Full access rights are granted to users with Security Administrator or Global Administrator roles in Microsoft Entra ID. Read only access is granted to users with a Security Reader role in Microsoft Entra ID.
+When you first sign in to the Microsoft Defender portal, you're granted either full access or read only access. Full access rights are granted to users with the Security Administrator role in Microsoft Entra ID. Read only access is granted to users with a Security Reader role in Microsoft Entra ID.
 
 Someone with a Defender for Endpoint Global Administrator role has unrestricted access to all devices, regardless of their device group association and the Microsoft Entra user groups assignments.
 

@@ -3,8 +3,8 @@ title: Investigate incidents in Microsoft Defender for Endpoint
 description: See associated alerts, manage the incident, and see alert metadata to help you investigate an incident
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -35,7 +35,7 @@ When you investigate an incident, you'll see:
 - Incident comments and actions
 - Tabs (alerts, devices, investigations, evidence, graph)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUV]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=46fe6a58-ea33-4f79-a1ec-26ae86d68033]
 
 ## Analyze incident details
 

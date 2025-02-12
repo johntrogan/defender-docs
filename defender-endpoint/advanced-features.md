@@ -2,8 +2,8 @@
 title: Configure advanced features in Microsoft Defender for Endpoint
 description: Turn on advanced features such as block file in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: deniseb
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 06/21/2024
+ms.date: 10/17/2024
 ---
 
 # Configure advanced features in Defender for Endpoint
@@ -26,7 +26,7 @@ ms.date: 06/21/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-advancedfeats-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Depending on the Microsoft security products that you use, some advanced features might be available for you to integrate Defender for Endpoint with.
 
@@ -44,7 +44,7 @@ Use the following advanced features to get better protected from potentially mal
 
 ## Restrict correlation to within scoped device groups
 
-This configuration can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. By turning on this setting, an incident composed of alerts that cross-device groups will no longer be considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC will see several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
+This configuration can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. When this setting is turned on, an incident composed of alerts that cross-device groups are no longer considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC sees several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
 
 > [!NOTE]
 > - Changing this setting impacts future alert correlations only.
@@ -57,7 +57,7 @@ Endpoint detection and response (EDR) in block mode provides protection from mal
 
 ## Automatically resolve alerts
 
-Turn this setting on to automatically resolve alerts where no threats were found or where detected threats were remediated. If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
+Turn on this setting to automatically resolve alerts where no threats were found or where detected threats were remediated. If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
 
 > [!NOTE]
 > - The result of the auto-resolve action may influence the Device risk level calculation which is based on the active alerts found on a device.
@@ -98,7 +98,7 @@ Turning on this feature allows you to create indicators for IP addresses, domain
 
 To use this feature, devices must be running Windows 10 version 1709 or later, or Windows 11. They should also have network protection in block mode and version 4.18.1906.3 or later of the antimalware platform [see KB 4052623](https://go.microsoft.com/fwlink/?linkid=2099834).
 
-For more information, see [Manage indicators](manage-indicators.md).
+For more information, see [Overview of indicators](indicators-overview.md).
 
 > [!NOTE]
 > Network protection leverages reputation services that process requests in locations that might be outside of the location you've selected for your Defender for Endpoint data.
@@ -184,7 +184,7 @@ After configuring the [Security policy violation indicators](/microsoft-365/comp
 
 ## Microsoft Intune connection
 
-Defender for Endpoint can be integrated with [Microsoft Intune](/intune/what-is-intune) to [enable device risk-based conditional access](/intune/advanced-threat-protection). When you [turn on this feature](configure-conditional-access.md), you'll be able to share Defender for Endpoint device information with Intune, enhancing policy enforcement.
+Defender for Endpoint can be integrated with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to [enable device risk-based conditional access](/mem/intune/protect/advanced-threat-protection). When you [turn on this feature](configure-conditional-access.md), you'll be able to share Defender for Endpoint device information with Intune, enhancing policy enforcement.
 
 > [!IMPORTANT]
 > You'll need to enable the integration on both Intune and Defender for Endpoint to use this feature. For more information on specific steps, see [Configure Conditional Access in Defender for Endpoint](configure-conditional-access.md).

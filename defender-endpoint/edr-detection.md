@@ -2,8 +2,8 @@
 title: EDR detection test for verifying device's onboarding and reporting service
 description: EDR detection test to verify the device's proper onboarding and reporting to the service.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/15/2024
+ms.date: 09/04/2024
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
@@ -57,25 +57,28 @@ Run an EDR detection test to verify that the device is properly onboarded and re
 
 
 ```bash
-curl -o ~/Downloads/MDE Linux DIY.zip https://aka.ms/MDE-Linux-EDR-DIY
+curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
 ```
 
-1. Extract the zip 
+2. Extract the zip 
 
 ```bash
 unzip ~/Downloads/MDE-Linux-EDR-DIY.zip
 ```
 
-1. And run the following command: 
+3. And run the following command to give the script executable permission: 
 
 ```bash
-./mde_linux_edr_diy.sh
+chmod +x ./mde_linux_edr_diy.sh
 ```
 
-After a few minutes, a detection should be raised in Microsoft Defender XDR.
+4. Run the following command to execute the script:
+```bash
+ ./mde_linux_edr_diy.sh
+```
 
-3. Look at the alert details, machine timeline, and perform your typical investigation steps.
-
+5. After a few minutes, a detection should be raised in Microsoft Defender XDR. Look at the alert details, machine timeline, and perform your typical investigation steps.
+ 
 ### macOS
 
 1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract.
@@ -136,7 +139,7 @@ If you're experiencing issues with application compatibility or performance, you
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Manage suppression rules](manage-suppression-rules.md)
-- [Create indicators of compromise (IoC)](manage-indicators.md)
+- [Create indicators of compromise (IoC)](indicators-overview.md)
 - [Create and manage custom detections rules](/defender-xdr/custom-detection-rules)
 
 Also, see the [Microsoft Defender for Endpoint Security Operations Guide](mde-sec-ops-guide.md).

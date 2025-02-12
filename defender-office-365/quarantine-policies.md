@@ -44,7 +44,7 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 
 ## What do you need to know before you begin?
 
-- In Microsoft 365 operated by 21Vianet, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
+- In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Quarantine policies** page, use <https://security.microsoft.com/quarantinePolicies>.
 
@@ -467,7 +467,7 @@ You can use the procedures in this section to customize the **Sender display nam
 
 - The **Subject** field of quarantine notification messages.
 
-- The **Disclaimer** text that's added to the bottom of quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify as show in the following screenshot:
+- The **Disclaimer** text that's added to the bottom of quarantine notifications (max. 200 characters). The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify as show in the following screenshot:
 
 :::image type="content" source="media/quarantine-tags-esn-customization-disclaimer.png" alt-text="A custom disclaimer at the bottom of a quarantine notification." lightbox="media/quarantine-tags-esn-customization-disclaimer.png":::
 

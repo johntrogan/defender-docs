@@ -3,10 +3,10 @@ title: Address false positives/negatives in Microsoft Defender for Endpoint
 description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: siosulli
-author: siosulli
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 07/18/2023
+ms.date: 01/30/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -16,7 +16,7 @@ ms.collection:
 - m365solution-fpfn
 - highpri
 - tier1
-ms.topic: how-to
+ms.topic: solution-overview
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom: 
 - FPFN
@@ -36,6 +36,19 @@ search.appverid: met150
 - Windows
 
 In endpoint protection solutions, a false positive is an entity, such as a file or a process that was detected and identified as malicious even though the entity isn't actually a threat. A false negative is an entity that wasn't detected as a threat, even though it actually is malicious. False positives/negatives can occur with any threat protection solution, including [Defender for Endpoint](microsoft-defender-endpoint.md).
+
+ If you have Microsoft Defender XDR, review the "Alerts sources" as described in [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts?tabs=settings).
+
+Continue here if the "Alert source" is "Microsoft Defender for Endpoint".
+
+The next step is to review the "detection source":
+
+|Detection source| Information|
+| -------- | -------- |
+|EDR|The alert is related to Microsoft Defender for Endpoint – Endpoint Detection and Response <br/> • Solution: Submit the False Positive to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives) <br/> • Work-around: Add an EDR exclusion|
+|Antivirus|The alert relates to Microsoft Defender Antivirus in Active mode (Primary) where it will block.  If Microsoft Defender Antivirus is in Passive mode, EDR in block mode might just detect.<br/> • Solution: Submit the False Positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/> • Work-around: Add [Indicators - File hash - allow ](/defender-endpoint/defender-endpoint-false-positives-negatives)or an [AV exclusion](/defender-endpoint/defender-endpoint-false-positives-negatives)|
+| Custom TI| Custom indicators (Indicators - [file hash](/defender-endpoint/indicator-file) or [ip address or URL](/defender-endpoint/indicator-ip-domain) or [certificates](/defender-endpoint/indicator-certificates)) <br/> • Solution: How to[ manage indicators](/defender-endpoint/indicator-manage).   <br/><br/> Or if you see CustomEnterpriseBlock, it could be  <br/> <br/> 1) Automated Investigation and Response (AutoIR) –  <br/> • Solution: Submit the False Positive to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives) <br/> • Work-around: [Automation folder exclusions  ](/defender-endpoint/manage-automation-folder-exclusions)<br/> 2) Custom detection rules deriving from Advanced Hunting (AH) –  <br/> • Solution: [Manage existing custom detection rules  ](/defender-xdr/custom-detection-rules)<br/> 3) EDR in block mode –  <br/> • Solution: Submit the False Positive(s) to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/> • Work-around: [Indicators – File hash – allow](/defender-endpoint/defender-endpoint-false-positives-negatives) or [AV exclusions](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/> 4) Live Response –  <br/> • Solution: Submit the False Positive(s) to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/> • Work-around: [Indicators – File hash – allow](/defender-endpoint/defender-endpoint-false-positives-negatives) or [AV exclusions](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/> 5) PUA protection –  <br/> • Solution: Submit the False Positive(s) to [https://aka.ms/wdsi](/defender-endpoint/defender-endpoint-false-positives-negatives)<br/> • Work-around: [Indicators – File hash – allow](/defender-endpoint/defender-endpoint-false-positives-negatives) or [AV exclusions](/defender-endpoint/defender-endpoint-false-positives-negatives)|
+| Smartscreen|[ Smartscreen](https://feedback.smartscreen.microsoft.com/smartscreenfaq.aspx) [report unsafe site](https://www.microsoft.com/en-us/wdsi/support/report-unsafe-site) or it could be related to a [Network Protection detection](https://www.microsoft.com/wdsi/support/report-exploit-guard)|
 
 :::image type="content" source="media/false-positives-overview.png" alt-text="The definition of false positive and negatives in the Microsoft Defender portal" lightbox="media/false-positives-overview.png":::
 
@@ -197,17 +210,70 @@ An exclusion is an entity, such as a file or URL, that you specify as an excepti
 
 To define exclusions across Microsoft Defender for Endpoint, perform the following tasks:
 
-- [Define exclusions for Microsoft Defender Antivirus](#exclusions-for-microsoft-defender-antivirus)
 - [Create "allow" indicators for Microsoft Defender for Endpoint](#indicators-for-defender-for-endpoint)
+- [Define exclusions for Microsoft Defender Antivirus](#exclusions-for-microsoft-defender-antivirus)
+- For Attack Surface Reduction Rule exclusions [Configure attack surface reduction per-rule exclusions](/defender-endpoint/attack-surface-reduction-rules-deployment-test#configure-attack-surface-reduction-per-rule-exclusions) or you can leverage [ASR rule only exclusions](/defender-endpoint/enable-attack-surface-reduction#exclude-files-and-folders-from-attack-surface-reduction-rules)
 
 > [!NOTE]
-> Microsoft Defender Antivirus exclusions apply only to antivirus protection, not across other Microsoft Defender for Endpoint capabilities. To exclude files broadly, use exclusions for Microsoft Defender Antivirus and [custom indicators](manage-indicators.md) for Microsoft Defender for Endpoint.
+> Microsoft Defender Antivirus exclusions apply only to antivirus protection, not across other Microsoft Defender for Endpoint capabilities. To exclude files broadly, use [custom indicators](indicators-overview.md) for Microsoft Defender for Endpoint and exclusions for Microsoft Defender Antivirus.
+> ASR Rules can leverage ASR Rule Exclusions - where the exclusions apply to all ASR Rules; ASR per Rule Exclusions; Defender AV exclusions; as well as allow indicators defined in Custom Indicators.
 
-The procedures in this section describe how to define exclusions and indicators.
+The procedures in this section describe how to define indicators and exclusions.
+
+### Indicators for Defender for Endpoint
+
+[Indicators](indicators-overview.md) (specifically, indicators of compromise, or IoCs) enable your security operations team to define the detection, prevention, and exclusion of entities. For example, you can specify certain files to be omitted from scans and remediation actions in Microsoft Defender for Endpoint. Or, indicators can be used to generate alerts for certain files, IP addresses, or URLs.
+
+To specify entities as exclusions for Defender for Endpoint, create "allow" indicators for those entities. Such "allow" indicators apply to [next-generation protection](microsoft-defender-antivirus-windows.md) and [automated investigation & remediation](automated-investigations.md).
+
+"Allow" indicators can be created for:
+
+- [Files](#indicators-for-files)
+- [IP addresses, URLs, and domains](#indicators-for-ip-addresses-urls-or-domains)
+- [Application certificates](#indicators-for-application-certificates)
+
+:::image type="content" source="media/false-positives-indicators.png" alt-text="The Indicator types" lightbox="media/false-positives-indicators.png":::
+
+#### Indicators for files
+
+When you [create an "allow" indicator for a file, such as an executable](indicator-file.md), it helps prevent files that your organization is using from being blocked. Files can include portable executable (PE) files, such as `.exe` and `.dll` files.
+
+Before you create indicators for files, make sure the following requirements are met:
+
+- Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
+- Antimalware client version is 4.18.1901.x or later
+- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), or Windows Server 2019, or Windows Server 2022
+- The [Block or allow feature is turned on](advanced-features.md)
+
+#### Indicators for IP addresses, URLs, or domains
+
+When you [create an "allow" indicator for an IP address, URL, or domain](indicator-ip-domain.md), it helps prevent the sites or IP addresses your organization uses from being blocked.
+
+Before you create indicators for IP addresses, URLs, or domains, make sure the following requirements are met:
+
+- Network protection in Defender for Endpoint is enabled in block mode (see [Enable network protection](enable-network-protection.md))
+- Antimalware client version is 4.18.1906.x or later
+- Devices are running Windows 10, version 1709, or later, or Windows 11
+
+Custom network indicators are turned on in the [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender). To learn more, see [Advanced features](advanced-features.md).
+
+#### Indicators for application certificates
+
+When you [create an "allow" indicator for an application certificate](indicator-certificates.md), it helps prevent applications, such as internally developed applications, that your organization uses from being blocked. `.CER` or `.PEM` file extensions are supported.
+
+Before you create indicators for application certificates, make sure the following requirements are met:
+
+- Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md)
+- Antimalware client version is 4.18.1901.x or later
+- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), or Windows Server 2019, or Windows Server 2022
+- Virus and threat protection definitions are up to date
+
+> [!TIP]
+> When you create indicators, you can define them one by one, or import multiple items at once. Keep in mind there's a limit of 15,000 indicators for a single tenant. And, you might need to gather certain details first, such as file hash information. Make sure to review the prerequisites before you [create indicators](indicators-overview.md).
 
 ### Exclusions for Microsoft Defender Antivirus
 
-In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. Make sure that you define exclusions sparingly, and that you only include the files, folders, processes, and process-opened files that are resulting in false positives. In addition, make sure to review your defined exclusions regularly. We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to define or edit your antivirus exclusions; however, you can use other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy) (see [Manage Microsoft Defender for Endpoint](preferences-setup.md).
+In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. Make sure that you define exclusions sparingly, and that you only include the files, folders, processes, and process-opened files that are resulting in false positives. In addition, make sure to review your defined exclusions regularly. We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to define or edit your antivirus exclusions; however, you can use other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy) (see [Manage Microsoft Defender for Endpoint](preferences-setup.md)).
 
 > [!TIP]
 > Need help with antivirus exclusions? See [Configure and validate exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md).
@@ -247,57 +313,6 @@ In general, you shouldn't need to define exclusions for Microsoft Defender Antiv
 7. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).)
 
 8. On the **Review + create** tab, review the settings, and then choose **Create**.
-
-### Indicators for Defender for Endpoint
-
-[Indicators](manage-indicators.md) (specifically, indicators of compromise, or IoCs) enable your security operations team to define the detection, prevention, and exclusion of entities. For example, you can specify certain files to be omitted from scans and remediation actions in Microsoft Defender for Endpoint. Or, indicators can be used to generate alerts for certain files, IP addresses, or URLs.
-
-To specify entities as exclusions for Defender for Endpoint, create "allow" indicators for those entities. Such "allow" indicators apply to [next-generation protection](microsoft-defender-antivirus-windows.md) and [automated investigation & remediation](automated-investigations.md).
-
-"Allow" indicators can be created for:
-
-- [Files](#indicators-for-files)
-- [IP addresses, URLs, and domains](#indicators-for-ip-addresses-urls-or-domains)
-- [Application certificates](#indicators-for-application-certificates)
-
-:::image type="content" source="media/false-positives-indicators.png" alt-text="The Indicator types" lightbox="media/false-positives-indicators.png":::
-
-#### Indicators for files
-
-When you [create an "allow" indicator for a file, such as an executable](indicator-file.md), it helps prevent files that your organization is using from being blocked. Files can include portable executable (PE) files, such as `.exe` and `.dll` files.
-
-Before you create indicators for files, make sure the following requirements are met:
-
-- Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
-- Antimalware client version is 4.18.1901.x or later
-- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2), or Windows Server 2019, or Windows Server 2022
-- The [Block or allow feature is turned on](advanced-features.md)
-
-#### Indicators for IP addresses, URLs, or domains
-
-When you [create an "allow" indicator for an IP address, URL, or domain](indicator-ip-domain.md), it helps prevent the sites or IP addresses your organization uses from being blocked.
-
-Before you create indicators for IP addresses, URLs, or domains, make sure the following requirements are met:
-
-- Network protection in Defender for Endpoint is enabled in block mode (see [Enable network protection](enable-network-protection.md))
-- Antimalware client version is 4.18.1906.x or later
-- Devices are running Windows 10, version 1709, or later, or Windows 11
-
-Custom network indicators are turned on in the [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender). To learn more, see [Advanced features](advanced-features.md).
-
-#### Indicators for application certificates
-
-When you [create an "allow" indicator for an application certificate](indicator-certificates.md), it helps prevent applications, such as internally developed applications, that your organization uses from being blocked. `.CER` or `.PEM` file extensions are supported.
-
-Before you create indicators for application certificates, make sure the following requirements are met:
-
-- Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md)
-- Antimalware client version is 4.18.1901.x or later
-- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2), or Windows Server 2019, or Windows Server 2022
-- Virus and threat protection definitions are up to date
-
-> [!TIP]
-> When you create indicators, you can define them one by one, or import multiple items at once. Keep in mind there's a limit of 15,000 indicators for a single tenant. And, you might need to gather certain details first, such as file hash information. Make sure to review the prerequisites before you [create indicators](manage-indicators.md).
 
 ## Part 4: Submit a file for analysis
 

@@ -37,7 +37,7 @@ The campaigns feature lets you see the overall picture of an email attack faster
 
 Watch this short video on how campaigns in Microsoft Defender for Office 365 help you understand coordinated email attacks that target your organization.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGBL8]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=0ed63ec3-48b1-4a6b-88d3-d3bb27b22c55]
 
 ## What is a campaign?
 
@@ -183,7 +183,7 @@ The available properties and their associated values are described in the follow
 |Internet Message ID|Text. Separate multiple values by commas. <br/><br/> Available in the **Message-ID** header field in the message header. An example value is `<08f1e0f6806a47b4ac103961109ae6ef@server.domain>` (note the angle brackets).|
 |Network Message ID|Text. Separate multiple values by commas. <br/><br/> A GUID value that's available in the **X-MS-Exchange-Organization-Network-Message-Id** header field in the message header.|
 |Sender IP|Text. Separate multiple values by commas.|
-|Attachment SHA256|Text. Separate multiple values by commas. <br/><br/> To find the SHA256 hash value of a file in Windows, run the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`.|
+|Attachment SHA256|Text. Separate multiple values by commas. <br/><br/> To find the SHA256 hash value of a file, run the following command in PowerShell: `Get-FileHash -Path "<Path>\<Filename>" -Algorithm SHA256`.|
 |Cluster ID|Text. Separate multiple values by commas.|
 |Alert ID|Text. Separate multiple values by commas.|
 |Alert Policy ID|Text. Separate multiple values by commas.|
