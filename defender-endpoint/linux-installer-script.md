@@ -50,7 +50,7 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
     
     4. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
    
-   :::image type="content" source="media/linux-script-image.png" alt-text="Screenshot showing the options to select to download the onboarding package." lightbox="media/linux-script-image.png":::
+      :::image type="content" source="media/linux-script-image.png" alt-text="Screenshot showing the options to select to download the onboarding package." lightbox="media/linux-script-image.png":::
     
     5. From a command prompt, extract the contents of the archive:
 
