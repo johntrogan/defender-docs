@@ -48,7 +48,6 @@ This guide provides the Microsoft Defender Antivirus Group Policy that configure
 
    > [!TIP]
    > 1. The Windows one works with the Windows Servers.
-   >
    > 1. Even if you're running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
 
 2. Create a 'Central Store' to host the latest .admx and .adml templates.
@@ -231,9 +230,9 @@ Assign the policies to the OU where the test machines are located.
 
 #### Enable Tamper Protection
 
-In the Microsoft XDR portal (security.microsoft.com), go to Settings > Endpoints > Advanced features > Tamper Protection > On.
+In the Microsoft XDR portal (security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
-For more information [How do I configure or manage tamper protection?](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection)
+For more information, see [How do I configure or manage tamper protection?](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
 
 #### Check the Cloud Protection network connectivity
 
@@ -247,7 +246,7 @@ cd "C:\Program Files\Windows Defender"
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
-For more information [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+For more information, see [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 
 ## Check the Platform Update version
 
