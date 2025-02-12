@@ -32,6 +32,8 @@ The following predefined classification rules were added to the critical assets 
 | :--------------------------------------------------- | :----------------------------------------------------------- |
 | Azure Key Vault with high number of operations       | This rule identifies and classifies Azure Key Vaults that experience a high volume of operations, indicating their criticality within the cloud environment. |
 
+For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
+
 ## January 2025
 
 ### Metrics enhancements
