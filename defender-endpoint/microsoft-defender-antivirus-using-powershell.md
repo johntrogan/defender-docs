@@ -143,7 +143,7 @@ cd "C:\Program Files\Windows Defender"
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
-For more information, see [Use the cmdline tool to validate cloud-delivered protection ](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+For more information, see [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 
 ## One-select Microsoft Defender Offline Scan
 
