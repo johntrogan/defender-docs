@@ -27,7 +27,7 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 A typical advanced persistent threat lifecycle (or APT) involves some data exfiltration -- the point at which data is *taken* from the organization. In those situations, sensitivity labels can tell security operations where to start by spelling out what data is highest priority to protect.
 

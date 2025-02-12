@@ -32,7 +32,7 @@ To become a Defender for Endpoint solution partner, complete steps outlined in t
 
 ## Step 1: Subscribe to a Microsoft Defender for Endpoint license
 
-Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us). Subscribing allows you to use a Microsoft Defender for Endpoint tenant with up to three devices to developing solutions that integrate with Microsoft Defender for Endpoint.
+Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630). Subscribing allows you to use a Microsoft Defender for Endpoint tenant with up to three devices to developing solutions that integrate with Microsoft Defender for Endpoint.
 
 ## Step 2: Fulfill the solution validation and certification requirements
 
