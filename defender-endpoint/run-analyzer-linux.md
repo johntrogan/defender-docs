@@ -26,7 +26,7 @@ f1.keywords: NOCSH
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 If you're experiencing reliability or device health issues with Defender for Endpoint on Linux, and you contact support, you might be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool. This article describes how to use the client analyzer tool locally on the device or together with live response. In either case, you can use a Python-based solution or a binary version that has no external Python dependency. 
 
